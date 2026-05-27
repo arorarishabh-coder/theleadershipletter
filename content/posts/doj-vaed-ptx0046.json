@@ -1,0 +1,58 @@
+{
+  "slug": "doj-vaed-ptx0046",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "Control Who Builds On Your Platform Before You Open The Doors",
+  "documentTitle": "Email from Neal Mohan to Jonathan Bellack et al. Re: PubMatic Ad Price Prediction (June 25, 2009)",
+  "dateAuthored": "2009-06-25",
+  "authorsName": [
+    "Neal Mohan",
+    "Jonathan Bellack",
+    "Brad Bender",
+    "Ari Paparo"
+  ],
+  "authorsCompany": "Google LLC",
+  "recipientNames": [
+    "Jonathan Bellack",
+    "Brad Bender",
+    "Ari Paparo",
+    "adsense-doubleclick-pm",
+    "Joerg Heilig",
+    "Noah Weiss"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "We should discuss this offline. I'm not comfortable opening up the XFP APIs to the YMs at this point.\n\n— Neal Mohan\n\nJonathan Bellack had written: We are not including the Yield Managers in the trusted tester program, but once we take the API public in Q3/Q4 when the GAM pubs upgrade, we won't be able to pick and choose who gets access. We will have a terms of service and can look at what non-compete constraints we might want, but I think we should be as inclusive as possible to drive platform stickiness. Plus there are not any APIs into the ad selection process due to latency concerns, so the yield managers won't be able to do dynamic allocation. They try a workaround like updating the CPM of network line items dynamically but our initial API quotas will likely put a limit on how up-to-date they could keep things. I also expect that over time we'll institute API charges for 3rd-parties like what AdWords does, so this is actually a good revenue opportunity too.\n\nNeal Mohan had earlier noted: Of all the 3rd party developer categories, yield managers are the ones I am most nervous about in terms of access to our new XFP API. It's fine if they participate via the AdX seller APIs.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0046-p1.png",
+      "caption": "Source document — Email from Neal Mohan to Jonathan Bellack et al. Re: PubMatic Ad Price Prediction (June 25, 2009) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0046 — DOJ public archive (page 1)",
+      "alt": "Email from Neal Mohan to Jonathan Bellack et al. Re: PubMatic Ad Price Prediction (June 25, 2009) — page 1"
+    },
+    {
+      "url": "/screenshots/doj-vaed-ptx0046-p2.png",
+      "caption": "Source document — Email from Neal Mohan to Jonathan Bellack et al. Re: PubMatic Ad Price Prediction (June 25, 2009) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0046 — DOJ public archive (page 2)",
+      "alt": "Email from Neal Mohan to Jonathan Bellack et al. Re: PubMatic Ad Price Prediction (June 25, 2009) — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/atr/media/1368451/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0046 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Control Who Builds On Your Platform Before You Open The Doors",
+  "lessonBody": "## 1. Core Message\nGoogle is preparing to open the XFP (ad server) API to third-party developers. Neal Mohan is nervous about one specific group: yield managers, who help publishers route ad inventory to the highest bidder. Jonathan Bellack argues for broad inclusion to drive 'platform stickiness' and notes the API has built-in technical limits that will stop yield managers from doing real dynamic allocation. Mohan wants to keep the conversation offline and is not comfortable opening the API to yield managers yet.\n\n## 2. What the Executive Is Really Thinking\nYield managers are the competitive threat closest to Google's own ad-selection business. If they get API access, they could help publishers route inventory away from Google's exchange (AdX). Mohan says it directly: of all third-party developer categories, yield managers are 'the ones I am most nervous about.' He is fine with them using the AdX seller APIs (which keep Google in the middle) but not the XFP APIs (which could let them compete with Google's allocation logic).\n\nBellack is thinking about the trade-off: openness builds platform lock-in, and Google can quietly limit competitors through API quotas, terms of service, non-compete clauses, and the fact that there are 'not any APIs into the ad selection process due to latency concerns.' In other words, the platform looks open but the most valuable surface — ad selection — stays closed.\n\n## 3. Key Management Lessons\n\n### Decide who you let build on your platform before the door opens\n#### What it means\nOnce a platform goes public, you cannot easily exclude individual players without legal or PR cost. Bellack flags this plainly: 'we won't be able to pick and choose who gets access.'\n#### Why it matters\nThe pre-launch window is when you set the rules, the quotas, and the terms of service. After launch, every exclusion looks like discrimination.\n#### MBA Perspective\nThis is Platform Strategy. The platform owner has to balance openness (which drives adoption and stickiness) against the risk of empowering competitors who ride your rails to attack you.\n#### Real-world application\nBefore opening any API, integration, or marketplace, write down which categories of partner are friends, neutrals, and threats. Bake the constraints into the terms of service on day one — not after a complaint.\n\n### Use technical architecture as a competitive moat\n#### What it means\nBellack notes there are no APIs into ad selection 'due to latency concerns,' and 'initial API quotas will likely put a limit' on workarounds. The technical design itself caps what competitors can do.\n#### Why it matters\nRules can be challenged. Architecture is harder to argue with. 'It's a latency issue' is a more durable answer than 'we won't let you.'\n#### MBA Perspective\nCompetitive Moats through product design. The most defensible restrictions are the ones that look like engineering choices rather than commercial ones.\n#### Real-world application\nWhen designing a developer platform, separate the surfaces you want partners on from the surfaces you want to keep proprietary. Make the second category genuinely hard to reach for technical reasons, not just policy ones.\n\n### Turn ecosystem access into a revenue line\n#### What it means\nBellack says: 'over time we'll institute API charges for 3rd-parties like what AdWords does, so this is actually a good revenue opportunity too.'\n#### Why it matters\nAPIs are usually framed as a cost (engineering, support, abuse risk). Reframing them as a revenue product changes which partners you welcome and which you price out.\n#### MBA Perspective\nPlatform Strategy with a take-rate. Pricing is also a filter: charging for access naturally selects for partners who add enough value to absorb the cost.\n#### Real-world application\nIf you run a developer ecosystem, model API access as a future SKU, not free infrastructure. Even a modest fee filters out low-value integrations and funds the platform team.\n\n### Take sensitive decisions offline\n#### What it means\nMohan's first line is: 'We should discuss this offline.' He does not want the debate over excluding a category of competitor to live in email.\n#### Why it matters\nWritten records of selective exclusion become exhibits — as this one did. Senior leaders learn to separate the decision channel from the discoverable channel.\n#### MBA Perspective\nNot a framework so much as a governance habit. The cost of a careless sentence in email scales with the company's market position.\n#### Real-world application\nFor decisions involving competitors, pricing, or exclusion, decide in person or by phone. Use email for the neutral output, not the reasoning.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nGoogle wants its ad server (XFP/DFP) to be the default for large publishers. Opening APIs drives stickiness. But yield managers sit between publishers and ad buyers and could redirect demand away from Google's exchange. The strategy is: open the platform broadly, but keep the ad-selection surface closed and the competitive partners constrained by quotas and terms.\n\n### Risk Analysis\nThe risk Mohan is managing is enabling a competitor inside his own platform. If yield managers get full API access, they could let publishers run real-time auctions that bypass AdX. The mitigation is layered: exclude them from the trusted tester program now, limit what the public API exposes later, and rely on quotas plus terms of service to constrain workarounds.\n\n### Build vs Buy Analysis\nNot directly raised, but implied. If yield managers become a serious threat through this API, the options narrow to: tighten the API, build competing functionality natively, or acquire the threatening players. Google later did several of these.\n\n### Market Dynamics\nThe ad tech stack in 2009 had multiple layers — ad server, exchange, yield manager, network — and Google sat in several of them. Whoever controlled the ad server controlled the entry point. Yield managers were the natural challenger layer, which is why they made Mohan nervous.\n\n### Long-Term Strategic Implications\nIf the strategy works, Google's ad server becomes the universal platform and competitors are quietly throttled into irrelevance. If it fails — or is later seen as deliberately exclusionary — the same emails that document the strategy become evidence in an antitrust case. Both outcomes are visible in the public record around this exhibit.\n\n## 5. Hidden Insights\n- The phrase 'platform stickiness' shows Bellack understood network effects: the more developers on XFP, the harder it is for publishers to leave.\n- Naming yield managers specifically — not 'competitors' generally — shows precise threat mapping. Leadership knew exactly which third-party category could hurt them.\n- The willingness to use quotas and terms of service as soft exclusion tools shows awareness that overt exclusion would not survive scrutiny.\n- 'Discuss this offline' implies the team already knew some of these decisions were sensitive enough to keep out of writing.\n- The fact that AdX seller APIs are acceptable but XFP APIs are not reveals the real prize: control of the ad-selection moment, not the ad-serving plumbing.",
+  "pullQuote": "Once you open a platform to everyone, you lose the right to choose who gets to compete with you on it — so pick your moment carefully.",
+  "leadershipTraits": [
+    "thinks in threats",
+    "maps competitors precisely",
+    "uses architecture as strategy",
+    "cautious about written records"
+  ]
+}

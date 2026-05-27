@@ -1,0 +1,44 @@
+{
+  "slug": "doj-vaed-ptx0059",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "Why Google Walled Off Its Own Ad Businesses",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — PTX0059: Email from Neal Mohan to Barry Salzman (October 18, 2010)",
+  "dateAuthored": "2010-10-18",
+  "authorsName": [
+    "Neal Mohan"
+  ],
+  "authorsCompany": "Google LLC",
+  "recipientNames": [
+    "Barry Salzman"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "One other very very important reason to keep adx out of the buy side team is that would be a HUGE conflict perception in the market. Just like adx / ym needs to be neutral on the sell-side and can't be one with adsense, on the buy side the same sales team cannot sell our DSP (invite) and pitch to other DSPs at the same time. That is why we moved the invite org from Scott to Jason on the pm side.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0059-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — PTX0059: Email from Neal Mohan to Barry Salzman (October 18, 2010) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0059 — DOJ public archive",
+      "alt": "United States v. Google LLC (Ad Tech) — PTX0059: Email from Neal Mohan to Barry Salzman (October 18, 2010) — page 1"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/atr/media/1368386/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0059 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Why Google Walled Off Its Own Ad Businesses",
+  "lessonBody": "## 1. Core Message\nNeal Mohan tells Barry Salzman why AdX (Google's ad exchange) must stay separate from the buy-side team. If the same sales team sold Google's own DSP (Invite Media) while also pitching to rival DSPs, customers would see a conflict of interest. He notes this mirrors the existing rule on the sell side: AdX and YouTube Monetization (\"ym\") must stay neutral and not be merged with AdSense. To enforce the buy-side version of this rule, Invite was moved out from under Scott to Jason on the product management side.\n\n## 2. What the Executive Is Really Thinking\nGoogle was building positions on every layer of the ad stack: the exchange (AdX), the sell-side tools (AdSense, YouTube monetization), and now a buy-side DSP (Invite Media, acquired in 2010). That breadth creates a problem. Rival DSPs are also customers of AdX. If they sense Google's sales team is steering them away from the exchange or favoring Invite, they leave. Mohan is protecting AdX's volume — the exchange only works if the biggest buyers keep showing up. The fix is structural: split reporting lines so no single salesperson is both seller and competitor to the customer.\n\n## 3. Key Management Lessons\n\n### Perception of conflict can be as damaging as actual conflict\n#### What it means\nMohan calls it a \"HUGE conflict perception in the market.\" He is not debating whether the conflict is real. He is saying the market will *believe* it exists, and that belief alone is the threat.\n#### Why it matters\nCustomers who suspect they are being played will route around you, even if your behavior is clean.\n#### MBA Perspective\nThis is Platform Strategy 101. A platform that hosts competing participants must be — and appear to be — neutral, or participants defect.\n#### Real-world application\nA marketplace owner launching its own private-label product should put that product under a separate team, with separate metrics, so third-party sellers trust the platform isn't tilted against them.\n\n### Use the org chart as a control mechanism\n#### What it means\nThe solution wasn't a policy memo. It was moving Invite from one executive (Scott) to another (Jason) so reporting lines enforced the separation.\n#### Why it matters\nRules that depend on individual restraint break under quota pressure. Structure makes the rule automatic.\n#### MBA Perspective\nVertical Integration creates conflicts of interest across layers; the standard mitigation is internal separation of duties, modeled on how investment banks split research from trading.\n#### Real-world application\nIf your company has two business lines that could undercut each other, give them different bosses, different P&Ls, and different sales teams — even if it's less efficient.\n\n### Treat sell-side precedent as the template for the buy-side\n#### What it means\nMohan explicitly maps the new rule onto an existing one: \"Just like adx / ym needs to be neutral on the sell-side and can't be one with adsense, on the buy side the same sales team cannot sell our DSP...\"\n#### Why it matters\nReusing a proven internal pattern shortens debate and gives the policy legitimacy.\n#### Real-world application\nWhen you face a new governance question, ask: have we already solved its mirror image somewhere else in the company? Copy that.\n\n### Neutrality is a moat, not a constraint\n#### What it means\nKeeping AdX neutral isn't a sacrifice. It's what lets AdX attract buyers and sellers who would otherwise refuse to use it.\n#### Why it matters\nA neutral middle layer can extract value from many participants who would never trust an integrated competitor.\n#### MBA Perspective\nNetwork Effects only compound if all sides keep joining. Bias on one side breaks the loop.\n#### Real-world application\nAn app store, payments network, or B2B marketplace should publish — and structurally enforce — neutrality rules early, before scale makes them harder to retrofit.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nGoogle is playing on multiple layers of the ad stack at once. The competitive logic is to win each layer on its own merits while not letting one layer's ambitions cannibalize another's customer base. AdX needed rival DSPs as customers; Invite needed to win deals against those same rivals. Keeping the sales motions separate lets both compete without one poisoning the other.\n\n### Risk Analysis\nThe risk Mohan is trying to avoid is customer flight from AdX. If rival DSPs perceive that Google's sales force is conflicted, they pull spend, AdX liquidity drops, and the whole exchange weakens. That is a bigger loss than any short-term Invite sales boost.\n\n### Build vs Buy Analysis\nThe document doesn't discuss the Invite acquisition directly, but the email is dated months after Google bought Invite Media in 2010. The reorganization shows the post-acquisition challenge: a bought asset has to be placed in the org in a way that doesn't damage existing assets. Buying capability is fast; integrating it without breaking adjacent businesses is the hard part.\n\n### Market Dynamics\nThe ad tech stack in 2010 had distinct layers — DSPs, exchanges, SSPs, ad servers — and players on each layer were customers of the others. That interdependence forced a norm of neutrality at the exchange. Google's move signals it understood this norm and was willing to constrain itself organizationally to preserve it.\n\n### Long-Term Strategic Implications\nIf the separation holds, Google keeps both AdX volume and Invite growth. If it slips — if sales teams quietly favor in-house tools — rivals notice, trust erodes, and regulators eventually take interest. The fact that this email later became a DOJ trial exhibit suggests the separation question never fully went away.\n\n## 5. Hidden Insights\n- **Awareness of being the dominant platform.** Mohan writes as someone who knows Google is big enough that its internal arrangements are watched by the market.\n- **Trust as inventory.** AdX's neutrality is treated as an asset worth protecting at the cost of sales-team efficiency.\n- **Pre-emptive defense.** The reorg happens before any visible scandal — Mohan is solving for perception, not reacting to a complaint.\n- **Acquisition integration is a structural question, not just a cultural one.** Where Invite reports matters more than how Invite's team feels.\n- **The email's existence as a trial exhibit hints at what's not in the four sentences:** how consistently this separation was actually maintained over the years that followed is a question this document alone cannot answer.",
+  "pullQuote": "When you sit on both sides of a market, the appearance of fairness is a product feature — and you have to build the org chart to protect it.",
+  "leadershipTraits": [
+    "thinks in market perception, not just internal logic",
+    "uses org structure to enforce strategy",
+    "reuses proven internal patterns",
+    "protects platform neutrality as an asset"
+  ]
+}

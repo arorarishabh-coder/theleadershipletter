@@ -1,0 +1,89 @@
+// Shared types for the UI layer. Mirrors prisma schema until we wire DB.
+
+export type SourceType =
+  | "sec_edgar"
+  | "court_exhibit"
+  | "congress"
+  | "foreign_gov"
+  | "self_published"
+  | "press_quoted";
+
+export type LicensingPath = "public_domain" | "self_published" | "fair_use_excerpt";
+
+export type PostTopic =
+  | "competition"
+  | "product"
+  | "acquisitions"
+  | "app-stores"
+  | "ai"
+  | "strategy"
+  | "partnerships"
+  | "crisis-management"
+  | "fundraising"
+  | "comms"
+  | "technology"
+  | "board-governance"
+  | "leadership-transitions"
+  | "recruiting"
+  | "founding-moments"
+  | "finance"
+  | "policy";
+
+export interface PostScreenshot {
+  url: string;
+  caption: string;
+  alt: string;
+}
+
+export interface Post {
+  slug: string;
+  publishedAt: string;
+  isFeatured: boolean;
+
+  // From Document
+  title: string;
+  documentTitle: string;
+  dateAuthored: string;
+  authorsName: string[];
+  authorsCompany: string;
+  recipientNames: string[];
+  topics: PostTopic[];
+  leaderSlugs: string[];
+  excerptForBlog: string;
+  screenshots: PostScreenshot[];
+  sourceType: SourceType;
+  sourceUrl: string;
+  sourceCase: string;
+  sourceCitation: string;
+  licensingPath: LicensingPath;
+  // Provenance: how the body text was obtained. "ocr_transcribed" = the document
+  // was a scanned image and the text is a Claude transcription of the public-record
+  // PDF (may contain transcription errors; flag for editorial review).
+  textSource?: "extracted" | "ocr_transcribed";
+  // Newsletter publishing state. beehiivPostId is legacy (Beehiiv); resendBroadcastId
+  // is the current delivery path (Resend Broadcasts). newsletterSentAt = last send.
+  beehiivPostId?: string;
+  resendBroadcastId?: string;
+  newsletterSentAt?: string;
+
+  // From Analysis
+  lessonTitle: string;
+  lessonBody: string;
+  pullQuote: string;
+  leadershipTraits: string[];
+}
+
+export interface Leader {
+  slug: string;
+  name: string;
+  companies: string[];
+  era: string;
+  bio: string;
+  portraitUrl?: string;
+}
+
+export interface Topic {
+  slug: PostTopic;
+  label: string;
+  blurb: string;
+}

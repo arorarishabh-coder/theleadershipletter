@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #F4EFE6;
+    --color-bg-deep: #EBE3D2;
+    --color-ink: #1A1A1F;
+    --color-ink-faded: #5E5A52;
+    --color-accent: #8E2A1F;
+    --color-rule: #C9C1AE;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern", "liga", "calt";
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    background-image:
+      radial-gradient(at 12% 8%, rgba(166, 128, 62, 0.04) 0px, transparent 50%),
+      radial-gradient(at 88% 92%, rgba(142, 42, 31, 0.03) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(142, 42, 31, 0.15);
+    color: #1A1A1F;
+  }
+
+  /* Typography flourishes for article body */
+  .prose-archive {
+    @apply font-serif text-read text-ink;
+    font-variation-settings: "opsz" 18;
+  }
+
+  .prose-archive p {
+    @apply mb-7;
+  }
+
+  .prose-archive p + p {
+    text-indent: 0;
+  }
+
+  .prose-archive > p:first-of-type::first-letter {
+    @apply font-display float-left text-7xl leading-[0.85] mr-3 mt-2;
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 100;
+    color: var(--color-ink);
+  }
+
+  .prose-archive h2 {
+    @apply font-display text-display-3 text-ink mt-14 mb-5 font-medium;
+    font-variation-settings: "opsz" 60, "wght" 500;
+    letter-spacing: -0.015em;
+  }
+
+  .prose-archive h3 {
+    @apply font-display text-2xl text-ink mt-10 mb-3 font-medium;
+    font-variation-settings: "opsz" 36, "wght" 500;
+  }
+
+  .prose-archive h4 {
+    @apply font-mono text-[11px] uppercase tracking-dateline text-brick mt-6 mb-2 font-medium;
+  }
+
+  .prose-archive a {
+    @apply text-brick underline decoration-brick/30 underline-offset-4 transition-colors hover:text-brick-deep hover:decoration-brick;
+  }
+
+  .prose-archive em {
+    font-style: italic;
+    font-variation-settings: "opsz" 18, "wght" 400;
+  }
+
+  .prose-archive strong {
+    @apply font-semibold;
+  }
+
+  .prose-archive blockquote {
+    @apply my-8 pl-5 border-l-2 border-brick text-ink-faded italic;
+  }
+
+  .prose-archive ul {
+    @apply list-disc pl-6 mb-7 space-y-2;
+  }
+
+  .prose-archive ol {
+    @apply list-decimal pl-6 mb-7 space-y-2;
+  }
+
+  /* Headline display optical sizing */
+  .display-headline {
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50;
+  }
+
+  .display-headline-bold {
+    font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 0;
+  }
+
+  /* Dateline / mono treatments */
+  .dateline {
+    @apply font-mono text-dateline uppercase tracking-dateline text-ink-faded;
+  }
+
+  .dateline-strong {
+    @apply font-mono text-dateline uppercase tracking-dateline text-ink;
+  }
+
+  /* Hairline rule */
+  .hairline {
+    @apply border-rule;
+    border-top-width: 1px;
+  }
+
+  .hairline-strong {
+    @apply border-ink;
+    border-top-width: 1px;
+  }
+
+  /* Document frame — museum exhibit treatment */
+  .document-frame {
+    @apply relative bg-white p-6 shadow-document;
+    border: 2px solid #1A1A1F;
+    background-image: linear-gradient(white, white),
+      linear-gradient(135deg, #A6803E 0%, #7A5E2E 100%);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .document-frame::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(166, 128, 62, 0.4);
+    pointer-events: none;
+  }
+
+  /* Article card hover underline animation */
+  .card-title {
+    background-image: linear-gradient(to right, currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease-out, color 0.2s ease-out;
+  }
+
+  .card-title-link:hover .card-title {
+    background-size: 100% 1px;
+    color: var(--color-accent);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}

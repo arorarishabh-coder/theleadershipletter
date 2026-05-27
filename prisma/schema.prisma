@@ -1,0 +1,168 @@
+// The Leadership Letter — data model
+// See plan: C:\Users\risha\.claude\plans\eventual-mixing-dijkstra.md
+// See CHARTER.md for editorial rules these models must enforce.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Source tracking ----------
+
+enum SourceType {
+  sec_edgar
+  court_exhibit
+  congress
+  foreign_gov
+  self_published
+  press_quoted
+}
+
+enum LicensingPath {
+  public_domain
+  self_published
+  fair_use_excerpt
+}
+
+enum AnalysisModel {
+  claude_haiku_4_5
+  claude_sonnet_4_6
+  claude_opus_4_7
+}
+
+// A registry of ingestion sources (one per crawler)
+model Source {
+  id           String     @id @default(cuid())
+  type         SourceType
+  name         String     @unique
+  baseUrl      String
+  description  String?
+  isActive     Boolean    @default(true)
+  lastCrawledAt DateTime?
+  createdAt    DateTime   @default(now())
+
+  documents Document[]
+}
+
+// ---------- Documents (raw material) ----------
+
+model Document {
+  id              String        @id @default(cuid())
+  sourceId        String
+  source          Source        @relation(fields: [sourceId], references: [id])
+  sourceType      SourceType
+  sourceUrl       String        // original public URL
+  sourceCase      String?       // e.g. "FTC v. Meta Platforms, 1:20-cv-03590"
+  sourceCitation  String?       // e.g. "Docket #82-3, filed 2021-08-19"
+
+  title           String
+  dateAuthored    DateTime?     // when the letter/memo was written
+  dateIngested    DateTime      @default(now())
+
+  // People
+  authorsName     String[]
+  authorsCompany  String?
+  recipientNames  String[]
+
+  // Editorial metadata
+  topics          String[]      // ["acquisition", "crisis", "board", ...]
+  leaderIds       String[]      // back-refs to Leader.id (denormalized for fast query)
+
+  // Content
+  fullTextPdfUrl  String?       // re-hosted PDF in Vercel Blob
+  fullTextOcr     String?       // extracted text for search
+  excerptForBlog  String        // the ≤300-word fair-use quote we publish
+
+  // Screenshots (visual proof of provenance — required by CHARTER quality bar #5)
+  screenshotUrls     String[]   // Vercel Blob URLs, PNGs of source pages
+  screenshotCaptions String[]   // parallel array: "Page 4 of 12", "Article header", etc.
+
+  // Licensing posture
+  licensingPath   LicensingPath
+
+  // Triage state
+  triageVerdict   String?       // "publish_candidate" | "low_signal" | "skip"
+  triageReason    String?
+
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  analyses        Analysis[]
+  publication     Publication?
+
+  @@index([sourceType])
+  @@index([dateAuthored])
+  @@index([authorsCompany])
+}
+
+// ---------- Analysis (Claude output) ----------
+
+model Analysis {
+  id                    String        @id @default(cuid())
+  documentId            String
+  document              Document      @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  claudeModel           AnalysisModel
+  lessonTitle           String
+  lessonBody            String        // markdown, 600–900 words
+  leadershipTraits      String[]      // ["decisiveness", "vision", "delegation", ...]
+  pullQuote             String        // ≤25 words capturing the lesson
+
+  promptVersion         String        // tracks prompt evolution
+  inputTokens           Int?
+  outputTokens          Int?
+  cacheReadTokens       Int?
+  cacheCreationTokens   Int?
+
+  generatedAt           DateTime      @default(now())
+
+  publication           Publication?
+}
+
+// ---------- Publication (the live post) ----------
+
+model Publication {
+  id              String     @id @default(cuid())
+  documentId      String     @unique
+  document        Document   @relation(fields: [documentId], references: [id])
+  analysisId      String     @unique
+  analysis        Analysis   @relation(fields: [analysisId], references: [id])
+
+  slug            String     @unique
+  publishedAt     DateTime
+  isFeatured      Boolean    @default(false)
+
+  // Newsletter
+  newsletterSentAt DateTime?
+  beehiivPostId    String?
+
+  // SEO + social
+  ogImageUrl      String?    // auto-generated OG image (different from source screenshots)
+
+  // QA
+  qaPassedAt      DateTime?
+  qaNotes         String?
+
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+
+  @@index([publishedAt])
+}
+
+// ---------- Leaders (people index — auto-rolled-up) ----------
+
+model Leader {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  companies   String[]
+  era         String?  // "1976–2011" etc.
+  bio         String?  // 1-2 sentences
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

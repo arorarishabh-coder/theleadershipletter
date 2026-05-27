@@ -1,0 +1,52 @@
+{
+  "name": "corporate-letters",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "db:seed": "tsx scripts/seed.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "ingest:dry": "tsx scripts/ingest.ts --dry-run",
+    "discover": "tsx scripts/discover.ts",
+    "screenshots": "tsx scripts/screenshots.ts",
+    "publish": "tsx scripts/publish.ts",
+    "test-email": "tsx scripts/test-email.ts",
+    "prune-covers": "tsx scripts/prune-covers.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.98.0",
+    "@prisma/client": "^5.20.0",
+    "@sparticuz/chromium": "^130.0.0",
+    "@vercel/blob": "^0.25.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.6.1",
+    "mupdf": "^1.27.0",
+    "next": "14.2.15",
+    "pdfjs-dist": "^4.7.76",
+    "puppeteer-core": "^23.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8.4.47",
+    "prisma": "^5.20.0",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}

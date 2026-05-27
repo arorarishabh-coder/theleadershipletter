@@ -1,0 +1,54 @@
+{
+  "slug": "doj-vaed-ptx0066",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "When Competitors Force You to Cannibalize Yourself",
+  "documentTitle": "AdWords Cross-Exchange Buying Update — Project AwBid Status Email",
+  "dateAuthored": "2011-02-18",
+  "authorsName": [
+    "Zachary Goldberg"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "zgoldberg@google.com",
+    "Brad Bender",
+    "Jason Miller",
+    "Jonathan Bellack",
+    "Scott Spencer"
+  ],
+  "topics": [
+    "competition",
+    "product",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Welcome to the first of several updates on the status of project \"AwBid\" enabling cross exchange buying in AdWords. We'll be sending out these updates throughout this year as we hit our major milestones. What is AwBid? AwBid is a project to enable AdWords buyers to access additional inventory outside of the traditional AdSense and Ad Exchange publishers. Through AwBid, buyers in AdWords will have access to Yahoo! owned and operated content, Windows Live and Hotmail content (via AppNexus) as well as inventory available on many third party ad exchanges such as AdMeld, PubMatic, Rubicon and adBrite. The goal is to integrate the new inventory sources as seamlessly as possible into AdWords. We are working on a very aggressive timeline for this project as many of our competitors are already offering a similar feature. We understand that many of you have concerns about how this will affect other parts of our business, particularly AdX and AdSense. The AWBid team is working closely with the product managers for our display business (GDN, Invite, AdX, and AdSense) to understand the strategic implications of this effort and how to manage them thoughtfully. We don't plan to launch this change just yet. We will make sure we've worked through the strategic questions and have everyone on board before we do.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0066-p1.png",
+      "caption": "Source document — AdWords Cross-Exchange Buying Update — Project AwBid Status Email · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0066 — DOJ public archive (page 1)",
+      "alt": "AdWords Cross-Exchange Buying Update — Project AwBid Status Email — page 1"
+    },
+    {
+      "url": "/screenshots/doj-vaed-ptx0066-p2.png",
+      "caption": "Source document — AdWords Cross-Exchange Buying Update — Project AwBid Status Email · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0066 — DOJ public archive (page 2)",
+      "alt": "AdWords Cross-Exchange Buying Update — Project AwBid Status Email — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/atr/media/1369436/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0066 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "When Competitors Force You to Cannibalize Yourself",
+  "lessonBody": "## 1. Core Message\nGoogle is building \"AwBid,\" a feature that lets AdWords buyers purchase ad inventory from outside Google's own network — including Yahoo!, Microsoft properties via AppNexus, and rival exchanges like AdMeld, PubMatic, Rubicon, and adBrite. The author admits this could hurt Google's own display businesses (AdX, AdSense, GDN). The team is moving on an \"aggressive timeline\" because competitors already offer this, but is pausing the launch until internal stakeholders are aligned.\n\n## 2. What the Executive Is Really Thinking\nThe email reveals a classic innovator's dilemma. AdWords buyers want one place to buy ads across the whole web. If Google doesn't give them that, someone else will. The author writes plainly: \"we are working on a very aggressive timeline for this project as many of our competitors are already offering a similar feature.\" That single line frames the whole project as defensive — not a growth bet, but a catch-up move to avoid losing buyer demand to rivals. At the same time, opening AdWords to external inventory risks pulling spend away from Google's owned exchanges (AdX, AdSense), which is why the author flags concerns from those product teams and promises to \"work through the strategic questions\" before launch.\n\n## 3. Key Management Lessons\n\n### Cannibalize Yourself Before Competitors Do\n#### What it means\nIf rivals offer customers something you don't, your customers will leave — even if the missing feature competes with your own profitable products.\n#### Why it matters\nProtecting an existing revenue line by refusing to build a new one usually just delays the loss while handing the lead to someone else.\n#### MBA Perspective\nThis is Disruptive Innovation in practice. The buyer-side demand for cross-exchange access is the disruptive wedge. Google is choosing to compete with itself on the buy side rather than cede the buyer relationship.\n#### Real-world application\nA SaaS company whose customers want integrations with competitor tools should build them — even if it makes switching easier — because refusing only proves the customer's fear that they're locked in.\n\n### Name the Internal Conflict Out Loud\n#### What it means\nThe author directly acknowledges \"concerns about how this will affect other parts of our business, particularly AdX and AdSense.\"\n#### Why it matters\nCross-functional projects die quietly when leaders pretend there's no tension. Naming the conflict invites the affected teams into the design instead of letting them sabotage it later.\n#### MBA Perspective\nThis fits Platform Strategy thinking — Google runs both a buy-side (AdWords) and sell-side (AdX, AdSense) platform, and changes to one side reshape the economics of the other. Internal alignment is the prerequisite for any platform-level move.\n#### Real-world application\nWhen launching a feature that hurts another team's numbers, write the email that says so. Bring the affected PMs into the room before the roadmap is locked.\n\n### Speed With a Safety Valve\n#### What it means\nThe team is moving \"aggressively\" but explicitly will not launch \"just yet\" — they want the strategic questions resolved first.\n#### Why it matters\nUrgency without a pause point produces messes. A pre-announced gate lets the team build at full speed while preserving the option to adjust before going live.\n#### MBA Perspective\nThis is staged commitment under uncertainty — build the capability, hold the launch decision separately.\n#### Real-world application\nShip the code to staging on the aggressive timeline. Tie the production toggle to a specific sign-off from affected business owners.\n\n### Use Routine Updates to Manage Politics\n#### What it means\nThis is framed as \"the first of several updates\" sent \"throughout this year as we hit our major milestones.\"\n#### Why it matters\nWhen a project threatens other teams, silence breeds rumors. A predictable update cadence converts a political fight into a managed process.\n#### Real-world application\nFor any project that crosses org boundaries, commit to a written update on a fixed schedule. The format itself signals that nothing is being hidden.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nGoogle is protecting the buy side of its ads business. The named external inventory sources — Yahoo!, Microsoft (via AppNexus), AdMeld, PubMatic, Rubicon, adBrite — are precisely the alternatives an AdWords advertiser might use a rival tool to access. By bringing them inside AdWords, Google keeps the buyer's workflow, data, and dollars on its own platform.\n\n### Risk Analysis\nThe explicit risk is cannibalization of AdX and AdSense — if buyers can reach Yahoo or Microsoft inventory through AdWords, some spend that would have gone to Google-monetized inventory may shift away. The unstated risk is worse: if Google doesn't build this, advertisers adopt competing buy-side tools and Google loses the buyer relationship entirely.\n\n### Build vs Buy Analysis\nThe document describes building, but it also names AppNexus and several exchanges as integration partners. Google is choosing a hybrid: build the AdWords-side capability internally, plug into third-party supply via integrations. This is faster than acquiring each exchange and avoids the antitrust and integration overhead of buying competitors.\n\n### Market Dynamics\nThe email reveals an ad-tech industry where buyers expect one interface to reach all inventory. The presence of multiple named exchanges (AdMeld, PubMatic, Rubicon, adBrite) shows a fragmented sell side, which raises the value of whoever controls the unified buy-side tool.\n\n### Long-Term Strategic Implications\nIf AwBid succeeds, AdWords becomes the default buying interface for display ads across the open web, not just Google's network — strengthening Google's position as the buyer's tool of choice. If it fails or is delayed, advertisers build habits in rival demand-side platforms, and Google's buy-side dominance erodes.\n\n## 5. Hidden Insights\n- **Defensive urgency, not offensive ambition.** The \"aggressive timeline\" is justified entirely by what competitors already offer. This is a reaction, not a vision.\n- **The buyer relationship is the prize.** Google is willing to send AdWords dollars to Yahoo and Microsoft inventory rather than lose the advertiser to a rival buying tool. That trade-off only makes sense if the buy-side interface is more strategically valuable than any single inventory source.\n- **Internal politics are a real gating factor.** The promise to get \"everyone on board\" before launch hints that AdX and AdSense leaders have enough power to slow or shape the rollout.\n- **Integration choice tells a story.** Reaching Microsoft inventory \"via AppNexus\" shows Google is willing to route through a third party — and a future competitor — to get the feature live faster than building direct.",
+  "pullQuote": "If rivals are already selling what you fear to build, the only thing worse than disrupting your own business is letting them do it for you.",
+  "leadershipTraits": [
+    "moves fast under competitive pressure",
+    "names internal conflict openly",
+    "manages cross-team politics through transparency",
+    "willing to cannibalize own products"
+  ]
+}

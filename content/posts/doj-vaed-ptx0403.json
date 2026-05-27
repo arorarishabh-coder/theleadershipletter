@@ -1,0 +1,82 @@
+{
+  "slug": "doj-vaed-ptx0403",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "Measure The Market You Actually Compete In",
+  "documentTitle": "Email from Jonathan Bellack to Eisar Lipkovitz et al. re: DVAA Sellside Review: Jedi++ Strategy",
+  "dateAuthored": "2016-10-29",
+  "authorsName": [
+    "Jonathan Bellack"
+  ],
+  "authorsCompany": "Google LLC",
+  "recipientNames": [
+    "Eisar Lipkovitz",
+    "Kurt Spoerer",
+    "Mike Warriner",
+    "Aparna Pappu",
+    "Matthew Young-Lai",
+    "Sam Cox",
+    "Sagnik Nandy",
+    "Jim Giles",
+    "Tobias Maurer",
+    "Paul Muret",
+    "Ali Nasiri Amini",
+    "Bodhi Mukherjee",
+    "Guillaume-Henri Huon",
+    "Chris Dawson",
+    "Bryan Rowley",
+    "Chris LaSala",
+    "Alok Aggarwal",
+    "George Levitte",
+    "Payam Shodjai",
+    "Per Bjorke",
+    "Lauren Taralli",
+    "Woojin Kim",
+    "Nitish Korula",
+    "Glenn Berntson",
+    "Brad Bender",
+    "Shree Madhavapeddi",
+    "Bahman Rabii",
+    "Nirmal Jayaram",
+    "Vivek Rao",
+    "Michael Hopkins",
+    "Max Loubser",
+    "Sunil Kosalge",
+    "Gargi Sur",
+    "David Goodman"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "I think for the pricing & strategy we should try to separate the GDN part of AdX from the rest. Pubs see GDN as a kind of giant standing demand pool. It is valuable but you can't do deals with it or really game it much because no bid landscapes etc. GDN is half of AdX. The other half is DBM and other DSPs, networks, etc. This is the half that pubs feel they can influence and put \"in play\" -- mess with floors, offer private auctions, pitch agencies & DSPs, cut programmatic deals, etc. From Eisar's numbers that non-GDN AdX is around $700m, versus $2-$2.5B on all the other exchanges. In other words, ~75-80% of \"in play\" demand is on other exchanges who offer lax policies, full bid landscapes, lower revshares, run auctions we think are bad, participate in header bidding, etc. This gives pubs good reason to work with lots of exchanges. If you buy this logic, the track two projects we are talking about should be taken in this light - not the overall size of AdX including GDN, but how do we attract more of the \"in-play\" demand directly onto AdX, so the pubs need the other exchanges less, and a more basic EB can be acceptable.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0403-p1.png",
+      "caption": "Source document — Email from Jonathan Bellack to Eisar Lipkovitz et al. re: DVAA Sellside Review: Jedi++ Strategy · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0403 — DOJ public archive (page 1)",
+      "alt": "Email from Jonathan Bellack to Eisar Lipkovitz et al. re: DVAA Sellside Review: Jedi++ Strategy — page 1"
+    },
+    {
+      "url": "/screenshots/doj-vaed-ptx0403-p2.png",
+      "caption": "Source document — Email from Jonathan Bellack to Eisar Lipkovitz et al. re: DVAA Sellside Review: Jedi++ Strategy · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0403 — DOJ public archive (page 2)",
+      "alt": "Email from Jonathan Bellack to Eisar Lipkovitz et al. re: DVAA Sellside Review: Jedi++ Strategy — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/media/1369571/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0403 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Measure The Market You Actually Compete In",
+  "lessonBody": "## 1. Core Message\nBellack reframes how Google should think about AdX's market share. He argues that half of AdX's volume comes from GDN, which publishers see as a fixed demand pool they can't negotiate with or shop around. The other half — roughly $700m — is the part publishers actually treat as \"in play\" and shop across exchanges. Against that \"in-play\" benchmark, AdX is small: $700m versus $2–$2.5B on rival exchanges. The strategic implication: stop measuring total AdX size and start competing for in-play demand.\n\n## 2. What the Executive Is Really Thinking\nBellack is pushing back on a flawed internal scoreboard. If leadership keeps citing total AdX revenue, they will feel dominant and under-invest in fixing the parts publishers can actually choose to move away from. He's worried publishers have \"good reason to work with lots of exchanges\" because rivals offer \"lax policies, full bid landscapes, lower revshares\" and header bidding. The unstated tension: an upcoming pricing and product decision (he references \"track two projects\" and \"a more basic EB\") risks being calibrated to the wrong denominator. Reframe the denominator, and the product roadmap changes.\n\n## 3. Key Management Lessons\n\n### Pick the right denominator\n#### What it means\nMarket share only means something if you measure against the market customers can actually shift. GDN demand is locked in; counting it inflates AdX's apparent strength.\n#### Why it matters\nMisleading metrics lead to complacency. Bellack is essentially saying: on the contestable slice, we're the minority player, not the leader.\n#### MBA Perspective\nThis is a Resource-Based View move — separating captive resources from those exposed to competitive rivalry. Only the exposed slice tells you about your true competitive position.\n#### Real-world application\nA SaaS company with 70% \"market share\" might find that half is locked-in enterprise contracts. The renewable, competitive slice is where pricing and product battles are actually won or lost. Report both numbers internally.\n\n### Understand what customers can and cannot move\n#### What it means\nPublishers can't \"do deals\" with GDN or \"really game it much because no bid landscapes.\" They can mess with floors, run private auctions, and cut programmatic deals on everything else.\n#### Why it matters\nThe parts customers can influence are where they spend attention — and where competitors attack you.\n#### MBA Perspective\nSwitching Costs analysis. Where switching is impossible, you have a moat. Where it's easy, you have a fight. Treat them as different businesses.\n#### Real-world application\nIf a bank's checking accounts are sticky but its mortgages are shopped on rate comparison sites, the mortgage P&L needs a different strategy than checking. Don't average them.\n\n### Win the contested demand, not the captive demand\n#### What it means\nBellack reframes the \"track two projects\" goal: not grow AdX overall, but \"attract more of the 'in-play' demand directly onto AdX, so the pubs need the other exchanges less.\"\n#### Why it matters\nIf publishers depend less on rival exchanges, Google's product constraints (\"a more basic EB\") become tolerable. Reduce the customer's alternatives and you reduce the pressure to match every rival feature.\n#### MBA Perspective\nCompetitive Moats through demand consolidation. Pull contested demand onto your platform and rivals lose the liquidity that made them attractive in the first place.\n#### Real-world application\nA marketplace losing sellers to a competitor shouldn't just match features — it should pull unique buyers onto its side so sellers can't afford to leave.\n\n### Acknowledge where rivals are objectively better\n#### What it means\nBellack lists what other exchanges offer: \"lax policies, full bid landscapes, lower revshares,\" header bidding participation, auctions he concedes \"we think are bad\" but publishers like.\n#### Why it matters\nNaming the rival's advantages honestly is the first step to either matching or routing around them. Pretending they don't exist gets you outflanked.\n#### MBA Perspective\nPorter's Five Forces — buyer power. Publishers have real alternatives, and those alternatives offer concrete benefits. That buyer power is the constraint the strategy must address.\n#### Real-world application\nIn quarterly strategy reviews, force the team to list — in the rival's own marketing language — the three things customers genuinely prefer about the competitor.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nThe strategy being proposed: segment the market into captive (GDN) and contested (\"in-play\") demand, then concentrate offense on the contested half. Make AdX the destination for enough in-play demand that publishers' need for rival exchanges weakens.\n\n### Risk Analysis\nThe risk Bellack is trying to head off: leadership looks at total AdX size, concludes the business is healthy, and approves a \"basic EB\" product that can't compete on features publishers want. Meanwhile rivals keep peeling off contested demand through header bidding and better terms.\n\n### Build vs Buy Analysis\nThe document doesn't discuss acquisitions. It's about product and pricing choices for an existing asset. Forcing a build-vs-buy frame here would be artificial.\n\n### Market Dynamics\nThe ad exchange market in 2016 looks fragmented on the contested side: $2–$2.5B spread across multiple exchanges, with publishers actively playing them off each other. Header bidding is the mechanism enabling that competition. Google's captive GDN demand is a structural advantage but also a measurement trap.\n\n### Long-Term Strategic Implications\nIf the reframe is adopted, product investment shifts toward features that win contested demand. If ignored, Google may keep declaring victory on total share while losing the marginal battles that determine where publishers route inventory — and slowly the \"in-play\" pool grows as a share of the market.\n\n## 5. Hidden Insights\n- **The internal scoreboard is wrong.** Bellack wouldn't need to write this email if leadership were already measuring contested share. He's lobbying against an entrenched metric.\n- **Product concessions are on the table.** The phrase \"a more basic EB can be acceptable\" hints at a planned product simplification that only works if publishers have fewer alternatives. Strategy is being shaped to make a constrained product viable.\n- **Header bidding is a real threat.** It's listed matter-of-factly alongside rival advantages — a sign Google sees it as a structural feature of the contested market, not a passing tactic.\n- **GDN is treated as a strategic asset for leverage, not just revenue.** Its captive nature is what makes the rest of the strategy possible.",
+  "pullQuote": "If you measure the whole market instead of the slice customers can actually move, you'll misjudge both your power and your problem.",
+  "leadershipTraits": [
+    "reframes metrics",
+    "honest about competitors",
+    "thinks in segments",
+    "connects measurement to product decisions"
+  ]
+}

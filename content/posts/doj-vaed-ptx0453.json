@@ -1,0 +1,54 @@
+{
+  "slug": "doj-vaed-ptx0453",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "When a Big Customer Fires You, Sell Value Not Price",
+  "documentTitle": "Google/Hearst: Written Response to Concerns — Email from Jonathan Bellack to Philip Wiser et al. (January 25, 2017)",
+  "dateAuthored": "2017-01-20",
+  "authorsName": [
+    "Jonathan Bellack"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Philip Wiser",
+    "Troy Young",
+    "Michael Smith",
+    "Laurent Cordier",
+    "Bonita Stewart"
+  ],
+  "topics": [
+    "competition",
+    "partnerships",
+    "strategy",
+    "product"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "I am head of product management for DFP and the DoubleClick Ad Exchange. I have been working closely with your account team here at Google on matters related to your upcoming renewal that have led to Hearst Magazines deactivating AdX as a demand source. I really value our partnership, so I want to extend our regrets that the relationship between our companies has reached the point that you saw turning off the Ad Exchange as your next step. All of us here at Google are committed to helping turn things around and proving to you that the Ad Exchange can continue to help you meet your goals in 2017 and beyond. To help rebuild trust, we have provided detailed, confidential responses on each Hearst concern in the attached PDF document. In summary, the key points are: 1 - we are offering our engineering and analytic resources to participate in a transparent and fair test, because we believe that by completely turning off AdX, you are losing out on unique demand from our ad network (GDN) and higher yields from our DSP (DBM); 2 - we are offering to discuss your broader ad technology cost structure, because we believe that there may be other opportunities for Google to reduce costs, beyond DFP & AdX fees; 3 - we are offering price concessions which we feel offer fair value for money, because we believe that selecting the low-cost vendor in ad tech is not a recipe for sustainable long-term growth.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0453-p1.png",
+      "caption": "Source document — Google/Hearst: Written Response to Concerns — Email from Jonathan Bellack to Philip Wiser et al. (January 25, 2017) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0453 — DOJ public archive (page 1)",
+      "alt": "Google/Hearst: Written Response to Concerns — Email from Jonathan Bellack to Philip Wiser et al. (January 25, 2017) — page 1"
+    },
+    {
+      "url": "/screenshots/doj-vaed-ptx0453-p2.png",
+      "caption": "Source document — Google/Hearst: Written Response to Concerns — Email from Jonathan Bellack to Philip Wiser et al. (January 25, 2017) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0453 — DOJ public archive (page 2)",
+      "alt": "Google/Hearst: Written Response to Concerns — Email from Jonathan Bellack to Philip Wiser et al. (January 25, 2017) — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/media/1369576/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0453 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "When a Big Customer Fires You, Sell Value Not Price",
+  "lessonBody": "## 1. Core Message\nGoogle's head of product for DFP and AdX, Jonathan Bellack, wrote to Hearst Magazines after Hearst turned off AdX as a demand source ahead of a contract renewal. The email is a structured save attempt: offer a transparent test, open up broader cost discussions, and give price concessions — while arguing that picking the cheapest ad tech vendor is bad long-term strategy.\n\n## 2. What the Executive Is Really Thinking\nA major publisher just walked. Bellack needs to reopen the door without looking desperate. He frames three concessions but carefully reframes the debate away from price alone. The line — that selecting \"the low-cost vendor in ad tech is not a recipe for sustainable long-term growth\" — tells you what he fears most: that Hearst will benchmark Google purely on fees and that other publishers will copy the move. So he widens the conversation to unique demand (GDN), yield (DBM), and total cost structure, where Google's scale is hardest to match.\n\n## 3. Key Management Lessons\n\n### Don't negotiate on the axis you'll lose on\n#### What it means\nHearst was focused on AdX fees. Bellack refuses to fight only on price. He pulls in demand quality, yield, and \"broader ad technology cost structure.\"\n#### Why it matters\nIf you let the customer pick the scoreboard, you've already lost. Reframing the comparison is often more powerful than discounting.\n#### MBA Perspective\nThis is a Resource-Based View move. Google's unique demand sources (GDN, DBM) are assets competitors can't replicate. Bellack steers the discussion toward those assets.\n#### Real-world application\nWhen a customer threatens to leave for a cheaper tool, don't lead with a discount. Lead with the specific outcomes only you can deliver, and propose a measurable test.\n\n### Propose a test, not a promise\n#### What it means\nBellack offers \"engineering and analytic resources to participate in a transparent and fair test.\"\n#### Why it matters\nA skeptical customer won't believe claims. They might believe data they helped design. A joint test also buys time and re-engages the relationship.\n#### MBA Perspective\nThis reduces information asymmetry. The customer's perceived risk of staying drops when they control the measurement.\n#### Real-world application\nWhen renewal is shaky, propose a co-designed pilot with clear metrics rather than sending a deck of case studies.\n\n### Expand the surface area of the deal\n#### What it means\nBellack offers to look at costs \"beyond DFP & AdX fees.\" He's enlarging the pie under discussion.\n#### Why it matters\nA narrow fight over one fee is zero-sum. Bringing in adjacent costs creates room for trades that feel like wins on both sides.\n#### MBA Perspective\nClassic integrative negotiation. It also leverages Platform Strategy — Google has many products touching Hearst's stack, so concessions in one area can preserve margin in another.\n#### Real-world application\nIf a customer pushes back on one line item, audit the full relationship and offer bundled value where your marginal cost is low but their savings are visible.\n\n### Concede on price, but anchor on principle\n#### What it means\nGoogle offers price concessions, yet explicitly states cheap vendors aren't a path to growth. The discount comes with a worldview attached.\n#### Why it matters\nA discount without a story trains the customer to keep squeezing. A discount tied to a principle sets a floor.\n#### MBA Perspective\nThis protects pricing power — a core component of any Competitive Moat. Once a vendor is seen as price-flexible, the moat erodes across the customer base.\n#### Real-world application\nIf you must discount, attach it to a specific reason (volume, term length, strategic partnership) so it doesn't become the new baseline.\n\n### Treat a walkout as the start of negotiation, not the end\n#### What it means\nHearst already \"deactivated AdX.\" Bellack treats that not as a closed door but as a signal requiring a structured response.\n#### Why it matters\nMany vendors retreat or escalate when a customer walks. A calm, written, itemized reply keeps the door open.\n#### MBA Perspective\nHigh Switching Costs cut both ways. Bellack is betting Hearst's switch isn't fully irreversible, and he's lowering the cost of coming back.\n#### Real-world application\nKeep a \"win-back\" playbook ready: written response, named concessions, joint test, executive sponsor.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nGoogle is defending an integrated stack — publisher ad server (DFP), exchange (AdX), demand network (GDN), and DSP (DBM). The email subtly reminds Hearst that turning off AdX cuts them off from demand they can't easily replace.\n\n### Risk Analysis\nThe immediate risk is revenue loss from Hearst. The bigger risk is precedent — if a marquee publisher successfully drops AdX, others may try. Bellack's careful, written, itemized response is designed to make leaving feel costly and complicated.\n\n### Build vs Buy Analysis\nNot directly applicable. The relevant axis here is Use vs Replace: Hearst is choosing whether to keep using Google's exchange or route demand elsewhere. Bellack's argument is that the demand and yield Google provides can't be rebuilt by stitching together alternatives.\n\n### Market Dynamics\nThe email reveals a market where large publishers have real leverage — enough to switch off a Google product to force concessions. It also reveals Google competing on multiple layers (ad server, exchange, network, DSP), which gives it bundling power but also multiple points of customer friction.\n\n### Long-Term Strategic Implications\nIf Google wins Hearst back on value rather than price, it preserves both margin and its narrative across the publisher base. If it wins back only by cutting fees, every other publisher learns that turning off AdX is the way to negotiate.\n\n## 5. Hidden Insights\n- **Precedent risk is the real concern.** The careful, written, point-by-point format suggests this response may be read by more than just Hearst — internally, and possibly by other publishers Hearst talks to.\n- **Bundle dependency is the moat.** The email's quiet message: you didn't just turn off a fee, you turned off GDN demand and DBM yield. The stack is the lock-in.\n- **Price flexibility is being rationed.** Concessions are offered, but framed as \"fair value\" — not capitulation. Google is protecting its pricing reputation across the market.\n- **The product head is leading the save, not just sales.** That signals the issue is being treated as strategic, not just commercial.",
+  "pullQuote": "When a customer pulls the plug, you have one shot — show them what they're losing, not just what you'll discount.",
+  "leadershipTraits": [
+    "reframes the debate instead of accepting the customer's frame",
+    "stays calm under a walkout",
+    "thinks about precedent, not just the deal in front of him",
+    "leads with structure — test, cost review, concessions"
+  ]
+}

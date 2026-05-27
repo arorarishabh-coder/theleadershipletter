@@ -1,0 +1,48 @@
+{
+  "slug": "doj-vaed-ptx0036",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "Don't Let Partners Cannibalize Your Core Product",
+  "documentTitle": "Email from Neal Mohan to Jens Skakkebaek et al. re: DoubleClick API Integration Question (January 31, 2009)",
+  "dateAuthored": "2009-01-31",
+  "authorsName": [
+    "Neal Mohan"
+  ],
+  "authorsCompany": "Google LLC",
+  "recipientNames": [
+    "Jens Skakkebaek",
+    "Jonathan Bellack",
+    "Scott Spencer",
+    "Brad Bender"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "generally i am pretty open about working with outside vendors via the API as long as they are brought to us by a competitor. this however seems to be going directly against our dynamic allocation value prop with adx. ie, if DFP pubs want to do unsold yield management they should just use adx and not one of these guys.\n\n[Forwarded message from Amar Goel, PubMatic, January 31, 2009]: Neal, hi, how it's going? we were wondering if there might be some ways to integrate pubmatic into doubleclick via your APIs. We are seeing some publishers ask about how to work more tightly with doubleclick for their direct sold, and pubmatic for their unsold. In addition, people are looking for some consolidated data around reporting. Is there someone on your team we can chat with to learn more about your APIs?",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0036-p1.png",
+      "caption": "Source document — Email from Neal Mohan to Jens Skakkebaek et al. re: DoubleClick API Integration Question (January 31, 2009) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0036 — DOJ public archive",
+      "alt": "Email from Neal Mohan to Jens Skakkebaek et al. re: DoubleClick API Integration Question (January 31, 2009) — page 1"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/atr/media/1367516/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0036 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Don't Let Partners Cannibalize Your Core Product",
+  "lessonBody": "## 1. Core Message\nNeal Mohan, then running display ads at Google/DoubleClick, gets an inbound email from PubMatic asking to integrate via the DoubleClick (DFP) APIs to help publishers manage their unsold inventory. Mohan signals he is usually open to API partners — but not this one. PubMatic's pitch directly competes with AdX's \"dynamic allocation\" value proposition. His logic: if DFP publishers want unsold yield management, they should use AdX, not a third party.\n\n## 2. What the Executive Is Really Thinking\nMohan is drawing a clear line between two kinds of outside vendors:\n\n- Partners who extend the platform into areas Google doesn't sell against — welcome via API.\n- Partners who replace a Google product the publisher could otherwise buy — blocked.\n\nThe phrase \"as long as they are brought to us by a competitor\" suggests openness is a tool used selectively: it's fine when the alternative is losing the publisher entirely, but not when it cannibalizes AdX. PubMatic's request hits the exact use case (unsold inventory yield management) that AdX was being positioned to own through dynamic allocation. Letting them in would undermine the reason publishers should adopt AdX in the first place.\n\n## 3. Key Management Lessons\n\n### Define what your platform is open to — and what it isn't\n#### What it means\nA platform owner has to decide, case by case, which third parties get access. \"Open\" is not a binary; it's a policy with exceptions tied to your own product roadmap.\n#### Why it matters\nUncontrolled API access can let competitors ride on your distribution and steal the revenue you were planning to capture yourself.\n#### MBA Perspective\nThis is classic Platform Strategy: complementors are welcome until they become substitutes. The platform owner constantly redraws the line as it expands its first-party offering.\n#### Real-world application\nA SaaS founder launching a marketplace should publish clear partner rules: integrations welcome in categories X and Y; not in category Z where the company itself competes.\n\n### Protect your own value proposition first\n#### What it means\nMohan names a specific product positioning — AdX's \"dynamic allocation value prop\" — and uses it as the test. If a partnership weakens that pitch, it's a no.\n#### Why it matters\nEvery executive faces partner requests that sound friendly. Without a written value proposition to defend, you'll say yes to deals that quietly erode your core product.\n#### MBA Perspective\nThis fits Competitive Moats thinking: dynamic allocation was a differentiator AdX could offer that standalone exchanges couldn't. Letting PubMatic plug into DFP would neutralize that moat.\n#### Real-world application\nBefore signing any integration deal, ask: \"Does this make our flagship product more necessary, or less?\" If less, charge a high price or decline.\n\n### Use the API as a strategic lever, not a default\n#### What it means\nMohan treats API access as something to grant when it serves Google — particularly when a publisher would otherwise leave for a competitor — and withhold when it doesn't.\n#### Why it matters\nAPIs feel technical, but they are commercial decisions. Who gets in, on what terms, shapes which adjacent businesses can grow.\n#### MBA Perspective\nResource-Based View: the API is a controlled resource. Access policy is how the platform converts that resource into competitive advantage.\n#### Real-world application\nTier your API: open endpoints for safe complementors, gated endpoints for sensitive ones, and clear internal criteria for who gets each tier.\n\n### Listen to what inbound requests reveal about the market\n#### What it means\nPubMatic's email itself is intelligence: publishers are asking for tighter DFP integration plus unsold yield management plus consolidated reporting.\n#### Why it matters\nA competitor's pitch tells you what customers are asking them for — which is often what they aren't yet asking you for directly.\n#### MBA Perspective\nMarket Dynamics: inbound partnership requests are a leading indicator of unmet demand and emerging substitutes.\n#### Real-world application\nKeep a log of every partner integration request. Patterns in the log reveal product gaps before they show up in churn data.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nGoogle owned the publisher ad server (DFP) and was building the exchange (AdX). The strategy was to use DFP's installed base to push publishers toward AdX via dynamic allocation. Allowing PubMatic — a direct exchange/yield competitor — to plug into DFP would have given publishers a credible alternative to AdX inside the very tool Google controlled.\n\n### Risk Analysis\nThe risk Mohan is avoiding: DFP becomes neutral infrastructure that routes unsold inventory to whichever exchange the publisher prefers. That commoditizes AdX before it's even established. Saying no preserves the bundle.\n\n### Build vs Buy Analysis\nThe document doesn't discuss acquisition of PubMatic. What it does show is a clear \"build and protect\" stance: Google would rather build the yield management capability inside AdX than let a third party provide it through DFP. The implicit message to publishers — use AdX — only works if alternatives are inconvenient.\n\n### Market Dynamics\nIn early 2009, publishers wanted (a) tighter ad server integration, (b) better unsold inventory monetization, and (c) consolidated reporting. Multiple vendors were racing to be the answer. Whoever controlled the ad server could decide which of those vendors got a fair shot.\n\n### Long-Term Strategic Implications\nIf this gatekeeping works, AdX wins the unsold inventory layer by default, and competing exchanges struggle to reach DFP publishers on equal footing. If it fails — for example, if publishers revolt or regulators intervene — the same policy becomes evidence that the platform was used to favor a sister product. The 2023 DOJ ad tech case (the source of this exhibit) shows that downstream risk materialized.\n\n## 5. Hidden Insights\n- **The default is openness, the exception is competition.** Mohan's first sentence reveals the policy: open to outside vendors via API, except when they collide with a Google product. The exception, not the rule, is where the strategy lives.\n- **\"Brought to us by a competitor\" is telling.** It suggests API access was used to retain publishers who might otherwise defect — openness as a defensive tool, not an ideological commitment.\n- **The integration PubMatic asked for would have been valuable to publishers.** Tighter ad server linkage and consolidated reporting are real customer pain points. Saying no means accepting some publisher friction in exchange for protecting AdX's positioning.\n- **One-line decisions can echo for a decade.** A short internal email setting an access policy ends up as a trial exhibit fifteen years later. Written reasoning about why a partner is blocked travels far beyond its original audience.",
+  "pullQuote": "Open your platform to allies, but never to companies that compete with the product you most want to win.",
+  "leadershipTraits": [
+    "thinks in product boundaries",
+    "protects core value proposition",
+    "uses access as leverage",
+    "decides quickly with clear logic"
+  ]
+}

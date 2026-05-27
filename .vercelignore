@@ -1,0 +1,12 @@
+# Secrets — never upload
+.env
+.env.*
+
+# Build/dev artifacts (Vercel rebuilds from source)
+node_modules
+.next
+*.tsbuildinfo
+
+# Transient discovery dumps (NOTE: do NOT exclude public/screenshots — those are
+# the source-document images the site serves)
+content/discovered

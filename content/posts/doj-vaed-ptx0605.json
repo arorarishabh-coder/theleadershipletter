@@ -1,0 +1,63 @@
+{
+  "slug": "doj-vaed-ptx0605",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "Owning the Pipe Is Worth More Than Renting It",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — PTX0605: Email from Jonathan Bellack to Aparna Pappu et al. (May 10, 2018)",
+  "dateAuthored": "2018-05-10",
+  "authorsName": [
+    "Jonathan Bellack"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Aparna Pappu",
+    "Nirmal Jayaram",
+    "Carlos Kirjner",
+    "Ajay Kumar Bangla",
+    "Ali Nasiri Amini",
+    "Eisar Lipkovitz",
+    "Payam Shodjai",
+    "Vivek Rao",
+    "Ted Lazarus",
+    "Duke Dukellis",
+    "Suresh Kumar",
+    "Bahman Rabii",
+    "Gabe Kronstadt",
+    "Brad Bender"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product",
+    "finance"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Intuitively we know that moving $1 from DBM-3PE to DBM-AdX gets us a 20% revshare we didn't have before, so it should deliver a ton. The bigger question is how to do that, and whether we've tested any. Questions like: is there a defensible way to change DBM buying strategy to move more spend from 3PE to AdX? How much lift do publishers actually get today by calling DBM multiple times through different 3PE, relative to running all of DBM through AdX? Can we build features or set commercial terms that give pubs & buyers more incentive to run DBM through AdX instead of through 3PE? Should we change the DBM buying strategy entirely for emerging businesses like mApp, instead of recreating the Web's 3PE marketplace? We're just starting to pivot toward these questions on the sell side, there's a lot more to do.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0605-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — PTX0605: Email from Jonathan Bellack to Aparna Pappu et al. (May 10, 2018) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0605 — DOJ public archive (page 1)",
+      "alt": "United States v. Google LLC (Ad Tech) — PTX0605: Email from Jonathan Bellack to Aparna Pappu et al. (May 10, 2018) — page 1"
+    },
+    {
+      "url": "/screenshots/doj-vaed-ptx0605-p2.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — PTX0605: Email from Jonathan Bellack to Aparna Pappu et al. (May 10, 2018) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0605 — DOJ public archive (page 2)",
+      "alt": "United States v. Google LLC (Ad Tech) — PTX0605: Email from Jonathan Bellack to Aparna Pappu et al. (May 10, 2018) — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/atr/media/1368886/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0605 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Owning the Pipe Is Worth More Than Renting It",
+  "lessonBody": "## 1. Core Message\nJonathan Bellack is asking his team a simple question with big consequences: how do we push more of DBM's buying through Google's own ad exchange (AdX) instead of third-party exchanges (3PE)? He notes that moving $1 from a third-party exchange to AdX captures a 20% revenue share Google otherwise doesn't get. He then lists open questions about how to actually do that — through buying strategy, features, or commercial terms — and admits the team is only just starting to work on it.\n\n## 2. What the Executive Is Really Thinking\nBellack is thinking like an owner of infrastructure, not a participant in it. DBM (Google's buy-side tool) sends money to many exchanges. When it sends to a competitor's exchange, Google earns only the DBM fee. When it sends to AdX (Google's own exchange), Google earns the exchange fee too. The whole memo is about closing that gap. The honesty is notable: he doesn't claim Google already does this well. He asks whether there's a \"defensible\" way to change DBM's behavior, and whether publishers actually benefit from calling multiple 3PEs in the first place. He's also thinking ahead — mobile apps (\"mApp\") are an emerging surface where Google doesn't have to copy the messy web setup. Build it differently from day one.\n\n## 3. Key Management Lessons\n\n### Follow the take rate, not just the revenue\n#### What it means\nBellack frames the opportunity in revenue-share terms: a dollar moved to AdX earns Google an extra 20%. He's not chasing more ad spend — he's chasing more of the spend Google already touches.\n#### Why it matters\nGrowth often hides inside existing flows. Routing decisions, defaults, and integrations can be worth more than new customer acquisition.\n#### MBA Perspective\nThis is Vertical Integration thinking. Google owns the buyer (DBM) and an exchange (AdX). Each step of the stack you own adds a take rate. Owning two steps and routing between them is the economic prize.\n#### Real-world application\nA payments company should ask: when our checkout sends a transaction to an outside processor, what would it cost to route it internally? A SaaS company should ask: where in our workflow are we handing customers to a third-party tool we could own?\n\n### Ask whether the customer actually benefits from the status quo\n#### What it means\nBellack asks: \"How much lift do publishers actually get today by calling DBM multiple times through different 3PE, relative to running all of DBM through AdX?\" He's questioning whether the existing multi-exchange behavior is real value or just habit.\n#### Why it matters\nIf the current customer practice doesn't actually help them, you can change it without harming them — and capture the gains. If it does help them, you need a different plan.\n#### MBA Perspective\nThis is a Resource-Based View question dressed as a customer question: is the third-party exchange layer providing distinct value, or is it a substitutable middleman?\n#### Real-world application\nBefore changing defaults or integrations, measure honestly: do users get better outcomes through the outside option, or are they just following inertia? The answer determines whether your move is pro-customer or anti-customer.\n\n### Change incentives, don't just change code\n#### What it means\nBellack lists \"features or set commercial terms that give pubs & buyers more incentive to run DBM through AdX.\" He's open to both product and pricing levers.\n#### Why it matters\nYou can shift behavior with a product feature, a fee structure, or both. Pricing is often faster and cheaper than building.\n#### MBA Perspective\nSwitching Costs and Platform Strategy. If you can make your own pipe materially better or cheaper for both sides of the market, you create gravity that pulls volume in without forcing it.\n#### Real-world application\nIf you run a marketplace, look at every place users could leave for a competitor. Ask: what feature, rebate, or exclusive would make staying obviously the better choice?\n\n### Don't recreate a messy market in your next market\n#### What it means\nFor mobile apps (\"mApp\"), Bellack asks whether Google should \"change the DBM buying strategy entirely for emerging businesses... instead of recreating the Web's 3PE marketplace.\"\n#### Why it matters\nNew surfaces are a chance to fix structural problems from the start. Once habits and integrations form, they're very hard to undo.\n#### MBA Perspective\nFirst-Mover Advantage applied to platform architecture. The shape you set in a young market often becomes the shape of the mature market.\n#### Real-world application\nWhen entering a new geography, channel, or product line, don't port your old plumbing. Ask what you'd build if you were starting today.\n\n### Admit how early you are\n#### What it means\nBellack ends with: \"We're just starting to pivot toward these questions on the sell side, there's a lot more to do.\" He's not pretending the strategy is finished.\n#### Why it matters\nClear-eyed status reports beat polished ones. Teams can only fix what leaders are willing to name as unfinished.\n#### MBA Perspective\nNot a framework — just operating discipline. Pretending a strategy is mature when it isn't kills internal urgency.\n#### Real-world application\nIn your next strategy memo, separate \"what we believe\" from \"what we've tested.\" Force yourself to list the open questions, not just the conclusions.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nThe logic is to maximize Google's share of the wallet on flows it already participates in. Every dollar DBM spends elsewhere funds a competing exchange. Routing more of that spend internally raises Google's revenue per dollar and starves competing exchanges of volume.\n\n### Risk Analysis\nBellack flags the risk himself by asking for a \"defensible\" way to shift DBM behavior. The implicit risks: publisher and buyer backlash if yields drop, and external scrutiny if the routing looks like self-dealing. He's looking for a path that survives both customer and outside review.\n\n### Build vs Buy Analysis\nThis document is not about M&A. It's about utilization of assets Google already owns (DBM and AdX). The choice is between building features, setting commercial terms, or both — to lift internal routing share.\n\n### Market Dynamics\nThe document reveals an ad tech stack where the same dollar passes through multiple intermediaries, each taking a cut. Publishers call several exchanges hoping for higher prices. Google sits on both the buy side (DBM) and sell side (AdX) and is thinking about how to consolidate flow through its own exchange.\n\n### Long-Term Strategic Implications\nIf the strategy works, Google captures more take rate on existing volume and weakens rival exchanges' scale. If it fails — either because publishers see worse yields or because outside scrutiny intervenes — Google loses trust with the two-sided market it depends on. Bellack's word \"defensible\" suggests he already sees that second risk.\n\n## 5. Hidden Insights\n- **Awareness of dual-role tension.** By asking for a \"defensible\" approach, Bellack implicitly recognizes that owning both buyer and exchange creates conflict-of-interest risk. He wants the economic gain without the optics problem.\n- **Mobile is treated as a clean slate.** The mApp aside is a quiet but important signal: leadership sees emerging surfaces as a chance to design a different market structure, not just port the web's.\n- **Sell-side underinvestment.** \"We're just starting to pivot toward these questions on the sell side\" suggests the sell-side team has not historically optimized for routing share — meaning meaningful upside may be sitting untouched.\n- **Customer value is an open question, not an assumption.** The fact that Bellack has to ask how much lift publishers actually get from multiple exchanges suggests Google doesn't yet know — and the answer will shape what's possible.",
+  "pullQuote": "Every dollar that flows through someone else's exchange is a dollar where you don't set the toll — and Bellack's math shows just how big that toll can be.",
+  "leadershipTraits": [
+    "thinks in take rates",
+    "asks instead of asserts",
+    "designs for new surfaces differently",
+    "honest about what's unfinished"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "doj-dcd-upx0552",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "Don't Pay for Customers You Already Own",
+  "documentTitle": "Email from Joan Braddi to Sundar Pichai et al. RE: Apple Response to Extension Term Length",
+  "dateAuthored": "2007-06-07",
+  "authorsName": [
+    "Joan Braddi",
+    "Sundar Pichai",
+    "Sergey Brin",
+    "Jonathan Rosenberg"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Sundar Pichai",
+    "Sergey Brin",
+    "Jonathan Rosenberg",
+    "Joan Braddi",
+    "Omid Kordestani",
+    "Eric Schmidt",
+    "Jeff Shardell"
+  ],
+  "topics": [
+    "strategy",
+    "partnerships",
+    "competition",
+    "comms"
+  ],
+  "leaderSlugs": [
+    "eric-schmidt",
+    "sundar-pichai"
+  ],
+  "excerptForBlog": "We gave them a very generous offer without the ability to run numbers or ask how they plan to implement choice and us as the default. To Sundar's point, if they offer two types of browsers, one with Y and one with Google (even on the Mac side), we are just paying for loyal Google users which means that Apple added no value but insists on receiving 50% of the revenue. My opinion is to tell Steve our offer yesterday was very generous considering Apple has not discussed fully their plans nor how Google would be placed as default in these other applications to measure benefit to Google. I would hold firm. What Steve is asking is another 2.5 yrs for Mac and iPhone and 18 mos for Windows. I agree with Steve that fences need to be mended but it is Apple who needs to mend the fence. We have acted as partners in good faith and they have not. Good partners would have given us their plans and time to evaluate before setting a clock for our decision. I would let them try someone else for search if they don't like our last offer. Again, the Mac users are pretty loyal to Google. Again, these are negotiating tactics that Steve is famous for to get his terms. — Joan Braddi",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-dcd-upx0552-p1.png",
+      "caption": "Source document — Email from Joan Braddi to Sundar Pichai et al. RE: Apple Response to Extension Term Length · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX0552 — DOJ public archive (page 1)",
+      "alt": "Email from Joan Braddi to Sundar Pichai et al. RE: Apple Response to Extension Term Length — page 1"
+    },
+    {
+      "url": "/screenshots/doj-dcd-upx0552-p2.png",
+      "caption": "Source document — Email from Joan Braddi to Sundar Pichai et al. RE: Apple Response to Extension Term Length · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX0552 — DOJ public archive (page 2)",
+      "alt": "Email from Joan Braddi to Sundar Pichai et al. RE: Apple Response to Extension Term Length — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/d9/2023-10/417055.pdf",
+  "sourceCase": "United States v. Google LLC (Search)",
+  "sourceCitation": "1:20-cv-03010 (DCD), Trial Ex. UPX0552 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Don't Pay for Customers You Already Own",
+  "lessonBody": "## 1. Core Message\nJoan Braddi is pushing back against an Apple counter-offer in a search distribution deal. She argues Google's prior offer was already generous, Apple hasn't shared key information (their plans for offering choice, how Google would be set as default), and Steve Jobs is using pressure tactics to extract better terms. Her recommendation: hold firm, and let Apple try a competitor if they don't accept.\n\n## 2. What the Executive Is Really Thinking\nBraddi sees a power imbalance Apple is trying to mask. She believes Mac users will choose Google anyway — so paying Apple 50% of revenue for users Google would win on its own is paying for nothing. She writes that if Apple offers \"two types of browsers, one with Y and one with Google... we are just paying for loyal Google users which means that Apple added no value but insists on receiving 50% of the revenue.\" She is also flagging an information asymmetry: Apple set a deadline (\"setting a clock for our decision\") without giving Google the data to evaluate the deal. She reads this as Jobs' standard negotiating playbook and recommends Google call the bluff.\n\n## 3. Key Management Lessons\n\n### Know what your partner actually adds\n#### What it means\nBefore paying a partner, figure out what they bring that you couldn't get on your own. Braddi's view is that loyal Google users on Mac would pick Google anyway, so Apple's \"value-add\" in a choice-screen scenario is near zero.\n#### Why it matters\nDistribution deals often look like growth but are really tolls. If customers would have come to you anyway, the partner is extracting rent, not creating value.\n#### MBA Perspective\nThis is a Resource-Based View question: what unique resource does the counterparty contribute? If Apple's only contribution is access to users who already prefer Google, the bargaining position flips. Apple's leverage depends on the credible threat of switching to a competitor — without that, there's no economic basis for 50% revenue share.\n#### Real-world application\nWhen an app store, reseller, or platform asks for a cut, run the counterfactual: how many of these users would have found you directly? Pay for incremental users, not loyal ones.\n\n### Don't negotiate without the numbers\n#### What it means\nBraddi explicitly notes Google gave a generous offer \"without the ability to run numbers or ask how they plan to implement choice.\" She is saying: we negotiated blind.\n#### Why it matters\nDeadlines without data favor the side setting the deadline. If you can't model the deal, any concession is a guess.\n#### MBA Perspective\nClassic information asymmetry. The party with more information sets the price. Braddi's fix is to refuse to move further until Apple discloses implementation plans.\n#### Real-world application\nBefore agreeing to renewal terms, demand the operational details that drive value: placement, default status, user flow, measurement. \"We'll figure it out later\" is a transfer of value to the other side.\n\n### Recognize tactics for what they are\n#### What it means\nBraddi names what's happening: \"these are negotiating tactics that Steve is famous for to get his terms.\" Recognizing a tactic strips it of power.\n#### Why it matters\nUrgency, artificial deadlines, and emotional appeals (\"fences need to be mended\") are tools. If you treat them as facts, you concede. If you treat them as moves, you can respond strategically.\n#### MBA Perspective\nNegotiation theory: separate the person from the problem, and the tactic from the substance. Braddi accepts that fences need mending but reframes who needs to do the mending — \"it is Apple who needs to mend the fence.\"\n#### Real-world application\nWhen a counterparty creates urgency, ask: is the deadline real, or is it a tool? Test it by holding firm once.\n\n### Be willing to walk\n#### What it means\nBraddi writes: \"I would let them try someone else for search if they don't like our last offer.\" The willingness to walk is the negotiation.\n#### Why it matters\nIf the other side knows you can't walk, you have no leverage regardless of how strong your underlying position is.\n#### MBA Perspective\nBATNA — your Best Alternative To a Negotiated Agreement. Braddi believes Google's BATNA (lose the Apple default but keep loyal Mac users who choose Google anyway) is stronger than Apple's BATNA (try Yahoo or Microsoft and risk user backlash).\n#### Real-world application\nBefore any major negotiation, write down what you do if the deal dies. If that alternative is acceptable, you can hold firm. If it's not, fix that before you negotiate.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nGoogle's strategy rests on the belief that user preference, not distribution, is the real moat. If users actively choose Google, Apple is a channel, not a kingmaker. Braddi is pushing Google to negotiate from that strength rather than from fear of losing the slot.\n\n### Risk Analysis\nThe risk Braddi is willing to accept: short-term loss of default placement on Mac and iPhone. The risk she is trying to avoid: setting a precedent of overpaying for distribution Google doesn't need, and locking in long terms (2.5 years Mac/iPhone, 18 months Windows) based on incomplete information.\n\n### Build vs Buy Analysis\nThis is a buy-distribution decision. Braddi's argument is that Google is being asked to \"buy\" users it has already \"built\" through product loyalty. The build side — investing in product quality and brand — has already been paid for. Paying Apple again is double-counting.\n\n### Market Dynamics\nThe email reveals the early structure of the search distribution market: a few platform gatekeepers (Apple, Microsoft) selling access to a few search engines (Google, Yahoo). Revenue share at 50% suggests significant gatekeeper power. Braddi is probing whether that power is real or bluffed.\n\n### Long-Term Strategic Implications\nIf Google holds firm and Apple folds, Google sets a ceiling on what platform owners can extract. If Google caves, every future renewal — and every other platform deal — anchors to those terms. The 2.5-year and 18-month durations matter because they compound: bad terms locked in long become very expensive.\n\n## 5. Hidden Insights\n- **Confidence in product loyalty as a moat.** Braddi twice emphasizes \"the Mac users are pretty loyal to Google.\" That repetition signals Google internally believed brand preference, not default placement, was the real driver — at least in 2007.\n- **Awareness that defaults can be paid for twice.** The line about \"two types of browsers\" reveals worry that Apple could collect revenue share on users who would have typed google.com anyway.\n- **Internal alignment matters.** Braddi references \"Sundar's point\" and \"Steve [presumably internal] agrees\" — she's building a coalition before recommending a hard line to leadership.\n- **Deadlines as data.** The fact that Apple set a clock without sharing implementation plans is, for Braddi, evidence of bad-faith negotiation — and itself a reason to resist.\n- **Context unclear:** the document doesn't tell us what Google ultimately decided, or what Apple's specific implementation plans were. We only see Braddi's recommendation.",
+  "pullQuote": "If your partner brings no real users to the deal, they aren't a partner — they're a toll booth.",
+  "leadershipTraits": [
+    "holds firm under pressure",
+    "thinks in counterfactuals",
+    "reads tactics without taking them personally",
+    "demands data before concessions"
+  ]
+}

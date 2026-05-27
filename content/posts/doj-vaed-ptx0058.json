@@ -1,0 +1,52 @@
+{
+  "slug": "doj-vaed-ptx0058",
+  "publishedAt": "2026-05-26",
+  "isFeatured": false,
+  "title": "Buy the Competitor to Buy Yourself Time",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — PTX0058: Email from Neal Mohan to Jason Harinstein (October 11, 2010)",
+  "dateAuthored": "2010-10-11",
+  "authorsName": [
+    "Neal Mohan"
+  ],
+  "authorsCompany": "Google LLC",
+  "recipientNames": [
+    "Jason Harinstein",
+    "Jonathan Bellack",
+    "Scott Spencer"
+  ],
+  "topics": [
+    "acquisitions",
+    "strategy",
+    "product",
+    "competition"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "3) What do you guys think about acquiring one of them? Is that like giving up before trying? I am concerned that it will take a long time to sort out the org stuff internally. One way to make sure we dont get further behind in the market is picking up the one with the most traction and parking it somewhere.\n\nScott and I have not talked much about this yet. I have come around to believing we should go into due diligence and probably make a buy. It does not solve a ton of problems by itself, but as you say if we bought one and parked it, it would let us solve the problems from a position of strength (market share, knowledgeable team members). Kind of like how we had time to build XFP because DFP was doing so well. The biggest problem is having two inventory pools (AdX and YM-RTB system) which if we leave it up could be confusing to buyers and to publishers deciding which to use; or if we tried to combine them fast could yield a Falk-like situation (a mix of advantages and feature gaps, and some pubs upset about what they lose).\n\nlooks like there is going to be interest in YM. if we go down that path it will become my top priority like invite was. maybe the first thing we should do is have a prelim meeting (you and i probably) with their CEO.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0058-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — PTX0058: Email from Neal Mohan to Jason Harinstein (October 11, 2010) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0058 — DOJ public archive (page 1)",
+      "alt": "United States v. Google LLC (Ad Tech) — PTX0058: Email from Neal Mohan to Jason Harinstein (October 11, 2010) — page 1"
+    },
+    {
+      "url": "/screenshots/doj-vaed-ptx0058-p2.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — PTX0058: Email from Neal Mohan to Jason Harinstein (October 11, 2010) · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0058 — DOJ public archive (page 2)",
+      "alt": "United States v. Google LLC (Ad Tech) — PTX0058: Email from Neal Mohan to Jason Harinstein (October 11, 2010) — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/atr/media/1368381/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0058 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Buy the Competitor to Buy Yourself Time",
+  "lessonBody": "## 1. Core Message\nNeal Mohan is thinking out loud about whether Google should acquire a competitor in the real-time bidding space (the document mentions YM, widely understood as Yieldex/YM context unclear from this exhibit alone). He worries that internal reorganization will be slow, and that competitors will pull ahead while Google sorts itself out. His proposed answer: buy the strongest competitor, \"park it,\" and use the breathing room to solve Google's own problems from a stronger position.\n\n## 2. What the Executive Is Really Thinking\nMohan is balancing two clocks. The internal clock is slow — \"it will take a long time to sort out the org stuff internally.\" The external clock is fast — competitors are gaining traction in the market. An acquisition is a way to slow the external clock so the internal one can catch up. He is also flagging a real integration risk: running two inventory pools (AdX and a YM-RTB system) could confuse buyers and publishers, but rushing to merge them could create \"a Falk-like situation\" — a reference to a prior integration that left feature gaps and unhappy customers. He is honest that the deal \"does not solve a ton of problems by itself.\" The value is positional, not technical.\n\n## 3. Key Management Lessons\n\n### Acquisitions Can Buy Time, Not Just Technology\n#### What it means\nMohan is not arguing the target has irreplaceable tech. He is arguing that owning it removes a competitor while Google fixes its own org problems.\n#### Why it matters\nMost M&A pitches focus on product or talent synergies. But sometimes the real prize is simply removing pressure from the market so you can focus.\n#### MBA Perspective\nThis is Market Consolidation logic combined with Build vs Buy. The build path exists, but it's too slow given the competitive clock.\n#### Real-world application\nA startup losing developers to a faster-moving rival might acquire that rival not for the product, but to stop the talent and customer bleed while it rebuilds.\n\n### Name the Internal Bottleneck Honestly\n#### What it means\nMohan openly says the org issues will take long to resolve. He doesn't pretend Google can out-execute the problem.\n#### Why it matters\nLeaders who admit internal friction make better strategic choices. Leaders who deny it tend to launch doomed \"just ship faster\" pushes.\n#### MBA Perspective\nResource-Based View: your real constraints are internal capability and coordination, not market opportunity.\n#### Real-world application\nBefore committing to a competitive sprint, ask: can our org actually deliver in time? If not, change the playing field instead.\n\n### Beware the Two-SKU Trap\n#### What it means\nMohan flags that having two inventory pools could confuse buyers and publishers. Combining too fast could repeat the \"Falk-like situation\" — feature gaps and angry customers.\n#### Why it matters\nPost-merger integration is where most acquisition value dies. Both \"leave it alone\" and \"merge fast\" have real costs.\n#### MBA Perspective\nSwitching Costs cut both ways. Customers who switched to the acquired product have invested in it; rip away their features and they leave.\n#### Real-world application\nWhen acquiring an overlapping product, decide upfront: are we sunsetting it, running it parallel, or merging? Each path has a price. Picking none is the worst path.\n\n### Use Past Wins as Cover for Present Problems\n#### What it means\nMohan references how \"we had time to build XFP because DFP was doing so well.\" A strong existing product creates the runway to build its replacement.\n#### Why it matters\nMarket strength is not just revenue — it's optionality. A dominant product buys time to experiment with its successor.\n#### MBA Perspective\nThis is a Competitive Moat being used as a strategic asset, not just a cash machine.\n#### Real-world application\nDon't milk your cash cow only for profit. Use the breathing room it provides to build the thing that will replace it.\n\n### Personal Bandwidth Is a Strategic Signal\n#### What it means\nMohan says if the deal happens, \"it will become my top priority like invite was.\" He's signaling to Harinstein how much focus this will need.\n#### Why it matters\nDeals fail when nobody senior owns them daily. Naming the owner — and the priority level — up front is a precondition for success.\n#### MBA Perspective\nNot a framework, just operating discipline: scarce executive attention is the real budget.\n#### Real-world application\nWhen pitching a board on an acquisition, name who will drop what to integrate it. Vague ownership predicts failed integration.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nThe strategy is defensive consolidation. Google leads in display ad serving (DFP/AdX context) but is behind in a new format — real-time bidding. Instead of racing to catch up natively, Mohan proposes neutralizing the leading challenger by owning it.\n\n### Risk Analysis\nThree risks are visible: (1) falling further behind in RTB while internal reorg drags; (2) a competitor with momentum being bought by someone else — \"looks like there is going to be interest in YM\"; (3) botching integration the way \"Falk\" was botched, alienating publishers.\n\n### Build vs Buy Analysis\nBuild is the natural Google instinct but Mohan judges the org is not ready to build fast enough. Buy is faster, removes a competitor, and brings a \"knowledgeable team.\" The cost is integration complexity and the risk of two overlapping products.\n\n### Market Dynamics\nThe email reveals an ad tech market in flux. RTB is new, traction is concentrated in a few independents, and the major platforms have not yet locked it down. There is a narrow window where acquiring a leader meaningfully shapes the market structure.\n\n### Long-Term Strategic Implications\nIf it works: Google extends its display dominance into RTB and controls a larger share of inventory routing. If integration fails: publishers get confused or angry, switching costs erode, and Google pays for a product it cannot fully absorb.\n\n## 5. Hidden Insights\n- **Strategic urgency**: The phrase \"giving up before trying\" suggests this acquisition is a concession, not a celebration. Mohan is reluctant but pragmatic.\n- **Awareness of competitor auction dynamics**: \"looks like there is going to be interest in YM\" signals others are circling. Price and access will get worse if Google waits.\n- **Parking as a tactic**: \"parking it somewhere\" implies the target's independent operation is itself valuable — keep it in market, keep its momentum, but under Google's umbrella. This is a quiet form of competitive neutralization.\n- **Internal coordination as the real constraint**: The bottleneck isn't engineering or capital — it's org alignment. That is unusual to admit, and it shapes the entire logic of the email.\n- **Pattern recognition from prior deals**: References to XFP/DFP and \"Falk\" show Mohan is reasoning from Google's own integration history, not from a textbook.",
+  "pullQuote": "Sometimes you acquire a rival not to use what they built, but to stop the clock while you fix what you have.",
+  "leadershipTraits": [
+    "honest about internal limits",
+    "thinks in clocks and timing",
+    "learns from past integrations",
+    "signals priority clearly"
+  ]
+}
