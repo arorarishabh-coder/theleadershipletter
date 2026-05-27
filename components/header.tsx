@@ -26,6 +26,9 @@ export function Header() {
             <Link href="/search" className="hover:text-brick transition-colors">
               Search
             </Link>
+            <Link href="/signin" className="hover:text-brick transition-colors">
+              Sign in
+            </Link>
             <Link href="/subscribe" className="hover:text-brick transition-colors">
               Subscribe
             </Link>
