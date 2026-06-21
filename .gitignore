@@ -57,3 +57,11 @@ content/discovered/
 
 .vercel
 content/outbox
+
+# Local QA artifacts
+.qa-screenshots/
+
+# User scratch / bug-log screenshots (local only).
+# Anchored to repo root — an unanchored "Screenshots/" also matches
+# public/screenshots/ on case-insensitive (Windows/macOS) filesystems.
+/Screenshots/

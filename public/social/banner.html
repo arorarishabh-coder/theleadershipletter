@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>TLL banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,30..100;1,9..144,300..900,30..100&family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F4EFE6; }
+  .banner {
+    width: 1500px;
+    height: 500px;
+    background: #F4EFE6;
+    font-family: 'Fraunces', Georgia, serif;
+    color: #1A1A1F;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  /* The avatar circle sits at bottom-left of the banner area (Twitter overlays
+     a 200px avatar starting ~30px from the left at the bottom). Keep that zone
+     clear of text. */
+  .topbar {
+    border-bottom: 1px solid rgba(26,26,31,0.18);
+    padding: 22px 64px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: #5E5A52;
+  }
+  .topbar .brick { color: #8E2A1F; }
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 64px;
+    /* leave space for the avatar circle at bottom left */
+    padding-left: 320px;
+  }
+  .masthead {
+    font-size: 110px;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 30;
+  }
+  .masthead em {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 100;
+    font-weight: normal;
+  }
+  .tagline {
+    margin-top: 22px;
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-size: 34px;
+    color: #5E5A52;
+    line-height: 1.35;
+    font-variation-settings: "opsz" 22;
+  }
+  .footrule {
+    height: 1.5px;
+    background: #1A1A1F;
+    margin: 0 64px;
+  }
+  .foot {
+    padding: 20px 64px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: #5E5A52;
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="topbar">
+      <span>Daily edition · Free · No filler</span>
+      <span class="brick">Est. 2026 · theleadershipletter.com</span>
+    </div>
+    <div class="body">
+      <div class="masthead">The Leadership <em>Letter</em></div>
+      <div class="tagline">Real correspondence from the people running real companies — and what it reveals about leadership.</div>
+    </div>
+    <div class="footrule"></div>
+    <div class="foot">
+      <span>One letter</span>
+      <span>One lesson</span>
+      <span>Every weekday morning</span>
+    </div>
+  </div>
+</body>
+</html>

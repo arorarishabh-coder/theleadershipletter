@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>TLL avatar C — masthead block</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,30..100;1,9..144,300..900,30..100&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F4EFE6; }
+  .avatar {
+    width: 400px;
+    height: 400px;
+    background: #F4EFE6;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    font-family: 'Fraunces', Georgia, serif;
+    padding: 36px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .topbar {
+    position: absolute;
+    top: 22px;
+    left: 36px;
+    right: 36px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #5E5A52;
+  }
+  .topbar .brick { color: #8E2A1F; }
+  .stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 0.92;
+    color: #1A1A1F;
+  }
+  .word-the {
+    font-style: italic;
+    font-variation-settings: "opsz" 60, "wght" 400, "SOFT" 100;
+    font-size: 56px;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+    margin-left: 4px;
+  }
+  .word-leadership {
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 30;
+    font-size: 92px;
+    letter-spacing: -0.025em;
+  }
+  .word-letter {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 100;
+    font-size: 92px;
+    letter-spacing: -0.025em;
+  }
+  .footrule {
+    position: absolute;
+    bottom: 56px;
+    left: 36px;
+    right: 36px;
+    height: 1.5px;
+    background: #1A1A1F;
+  }
+  .foot {
+    position: absolute;
+    bottom: 30px;
+    left: 36px;
+    right: 36px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #5E5A52;
+  }
+</style>
+</head>
+<body>
+  <div class="avatar">
+    <div class="topbar">
+      <span>Daily edition</span>
+      <span class="brick">Est. 2026</span>
+    </div>
+    <div class="stack">
+      <span class="word-the">The</span>
+      <span class="word-leadership">Leadership</span>
+      <span class="word-letter">Letter</span>
+    </div>
+    <div class="footrule"></div>
+    <div class="foot">
+      <span>One letter</span>
+      <span>One lesson</span>
+    </div>
+  </div>
+</body>
+</html>
