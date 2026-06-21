@@ -82,7 +82,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 function AnalysisSection({ label, body, dropcap = false }: { label: string; body: string; dropcap?: boolean }) {
   return (
     <div className={dropcap ? undefined : "no-dropcap"}>
-      <Dateline strong>{label}</Dateline>
+      <p className="font-mono text-[12px] font-bold uppercase tracking-dateline text-ink">{label}</p>
       <div className="mt-4">
         <MarkdownLesson source={body} />
       </div>
