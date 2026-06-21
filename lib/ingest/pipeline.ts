@@ -233,10 +233,11 @@ Output the JSON only.`;
     maxTokens: 8192,
   });
   const lesson = safeJSON<LessonResult>(lessonRaw.text);
-  if (!lesson || !lesson.lessonBody) {
-    return { sourceId: source.id, ok: false, failureStage: "lesson", error: "Failed to parse lesson JSON" };
+  if (!lesson || !lesson.situation || !lesson.insight || !lesson.application) {
+    return { sourceId: source.id, ok: false, failureStage: "lesson", error: "Failed to parse lesson JSON (missing situation/insight/application)" };
   }
-  logStage(source.id, "lesson", `title="${lesson.lessonTitle}" (${lesson.lessonBody.length} chars)`);
+  const analysisChars = lesson.situation.length + lesson.insight.length + lesson.application.length;
+  logStage(source.id, "lesson", `title="${lesson.lessonTitle}" (${analysisChars} chars)`);
 
   // 5. Screenshot — render the actual source document (PDF page(s) or web page).
   const cleanTitle = enrich.documentTitleCleaned || source.documentTitle;
@@ -297,7 +298,9 @@ Output the JSON only.`;
     licensingPath: source.licensingPath,
     textSource,
     lessonTitle: lesson.lessonTitle,
-    lessonBody: lesson.lessonBody,
+    situation: lesson.situation,
+    insight: lesson.insight,
+    application: lesson.application,
     pullQuote: lesson.pullQuote,
     leadershipTraits: lesson.leadershipTraits,
   };

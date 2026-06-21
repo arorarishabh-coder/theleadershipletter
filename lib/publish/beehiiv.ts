@@ -73,7 +73,21 @@ export function buildPostHtml(post: Post, siteUrl = ""): string {
   const byline = `<p style="font-size:13px;color:#777">${esc(post.authorsName.join(" & "))} · ${esc(post.authorsCompany)}${post.recipientNames.length ? ` · to ${esc(post.recipientNames.join(", "))}` : ""} · ${esc(post.dateAuthored)}</p>`;
   const provenance = `<hr style="margin:28px 0;border:none;border-top:1px solid #ddd"/><p style="font-size:13px;color:#777"><strong>How this surfaced:</strong> ${esc(post.sourceCase)} · ${esc(post.sourceCitation)}${post.sourceUrl ? ` · <a href="${esc(post.sourceUrl)}">view original source</a>` : ""}</p>`;
 
-  return [byline, imgHtml, "<h3>The document</h3>", excerptHtml, "<hr style=\"margin:28px 0;border:none;border-top:1px solid #ddd\"/>", lessonToHtml(post.lessonBody), provenance].join("\n");
+  // Labeled section header for the email (mirrors the on-site analysis blocks).
+  const label = (text: string) =>
+    `<h3 style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8378;font-family:Arial,Helvetica,sans-serif;margin:28px 0 6px;">${text}</h3>`;
+
+  // Three lean sections replace the old dense body; fall back to legacy lessonBody
+  // for any post not yet migrated to the structured format.
+  const analysis = post.situation && post.insight && post.application
+    ? [
+        label("The situation"), lessonToHtml(post.situation),
+        label("The lesson"), lessonToHtml(post.insight),
+        label("Put it to work"), lessonToHtml(post.application),
+      ].join("\n")
+    : lessonToHtml(post.lessonBody ?? "");
+
+  return [byline, imgHtml, label("The document"), excerptHtml, analysis, provenance].join("\n");
 }
 
 function slugify(s: string): string {

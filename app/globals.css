@@ -53,6 +53,17 @@
     color: var(--color-ink);
   }
 
+  /* Suppress the drop cap in sections that opt out (analysis blocks after the
+     first — only "The situation" keeps the flourish). */
+  .no-dropcap .prose-archive > p:first-of-type::first-letter {
+    float: none;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-variation-settings: "opsz" 18;
+  }
+
   .prose-archive h2 {
     @apply font-display text-display-3 text-ink mt-14 mb-5 font-medium;
     font-variation-settings: "opsz" 60, "wght" 500;

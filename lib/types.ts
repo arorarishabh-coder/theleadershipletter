@@ -68,7 +68,19 @@ export interface Post {
 
   // From Analysis
   lessonTitle: string;
-  lessonBody: string;
+  // Lean, scannable analysis — three labeled sections that replace the old dense
+  // markdown body. Rendered under "The situation" / "The lesson" / "Put it to work".
+  // Optional only so legacy seed posts (lib/mock-data) still type-check; the
+  // content-QA gate requires all three on every generated post, and the renderer
+  // falls back to lessonBody when they're absent.
+  situation?: string; // what's happening, in plain English (2–3 sentences)
+  insight?: string; // the lesson — what the document reveals (1–2 short paragraphs)
+  application?: string; // how to apply it — a short, practical paragraph
+  /**
+   * @deprecated Legacy dense markdown analysis. Superseded by situation/insight/
+   * application. Kept for any not-yet-migrated post.
+   */
+  lessonBody?: string;
   pullQuote: string;
   leadershipTraits: string[];
 }

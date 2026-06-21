@@ -23,7 +23,8 @@
     "qa:paywall": "tsx scripts/qa-paywall.ts",
     "qa:content": "tsx scripts/qa-content.ts",
     "qa:runway": "tsx scripts/qa-runway.ts",
-    "qa:e2e": "tsx scripts/qa-e2e.ts"
+    "qa:e2e": "tsx scripts/qa-e2e.ts",
+    "regen:analysis": "tsx scripts/regen-analysis.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.98.0",

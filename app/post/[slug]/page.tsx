@@ -76,6 +76,20 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
+// One labeled analysis block ("The situation" / "The lesson" / "Put it to work").
+// Body is short prose that may carry light **bold**, so it reuses the markdown
+// renderer for consistent typography.
+function AnalysisSection({ label, body, dropcap = false }: { label: string; body: string; dropcap?: boolean }) {
+  return (
+    <div className={dropcap ? undefined : "no-dropcap"}>
+      <Dateline strong>{label}</Dateline>
+      <div className="mt-4">
+        <MarkdownLesson source={body} />
+      </div>
+    </div>
+  );
+}
+
 export default async function PostPage({
   params,
   searchParams,
@@ -211,7 +225,15 @@ export default async function PostPage({
       {access.hasAccess ? (
       <section>
         <div className="mx-auto max-w-2xl px-6 py-14 md:py-20">
-          <MarkdownLesson source={post.lessonBody} />
+          {post.situation && post.insight && post.application ? (
+            <div className="space-y-12">
+              <AnalysisSection label="The situation" body={post.situation} dropcap />
+              <AnalysisSection label="The lesson" body={post.insight} />
+              <AnalysisSection label="Put it to work" body={post.application} />
+            </div>
+          ) : (
+            <MarkdownLesson source={post.lessonBody ?? ""} />
+          )}
           <div className="mt-12 flex flex-wrap items-center gap-2 border-t border-rule pt-6">
             <span className="font-mono text-[11px] uppercase tracking-dateline text-ink-light mr-2">
               Traits in evidence

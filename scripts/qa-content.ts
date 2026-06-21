@@ -41,7 +41,8 @@ const VALID_SOURCE_TYPES = new Set([
 
 const REQUIRED_STRINGS = [
   "slug", "title", "publishedAt", "dateAuthored", "excerptForBlog",
-  "lessonTitle", "lessonBody", "pullQuote", "sourceUrl", "sourceType", "authorsCompany",
+  "lessonTitle", "situation", "insight", "application", "pullQuote",
+  "sourceUrl", "sourceType", "authorsCompany",
 ] as const;
 const REQUIRED_ARRAYS = ["authorsName", "topics", "leadershipTraits", "screenshots"] as const;
 

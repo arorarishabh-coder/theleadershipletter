@@ -71,7 +71,9 @@ export interface EnrichResult {
 export interface LessonResult {
   lessonTitle: string;
   pullQuote: string;
-  lessonBody: string;
+  situation: string;
+  insight: string;
+  application: string;
   leadershipTraits: string[];
   model: string;
   inputTokens?: number;
