@@ -103,6 +103,7 @@ async function main() {
   const slides = drafts.linkedinCarousel.slides;
   if (!slides.length) throw new Error("no carousel slides generated");
   console.log(`  ${slides.length} slides`);
+  console.log(`  LinkedIn doc title (${drafts.carouselTitle.length}/58): "${drafts.carouselTitle}"`);
 
   mkdirSync(join(process.cwd(), "carousels"), { recursive: true });
   const out = join(process.cwd(), "carousels", `${slug}.pdf`);

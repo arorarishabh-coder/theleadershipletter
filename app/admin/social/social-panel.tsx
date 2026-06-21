@@ -197,7 +197,16 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
             </div>
             {pkg.linkedinCarousel.slides.length > 0 && (
               <div className="mt-6">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3 border border-rule bg-parchment-light px-4 py-2">
+                  <span className="shrink-0 font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Doc title</span>
+                  <code className="min-w-0 flex-1 truncate font-serif text-[14px] text-ink">{pkg.carouselTitle}</code>
+                  <Count n={pkg.carouselTitle.length} limit={58} />
+                  <CopyButton text={pkg.carouselTitle} />
+                </div>
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-dateline text-ink-light">
+                  Use as the LinkedIn document title (≤58 chars). The hook goes in the post caption.
+                </p>
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Carousel ({pkg.linkedinCarousel.slides.length} slides)</span>
                   <CopyButton text={pkg.linkedinCarousel.slides.map((s, i) => `Slide ${i + 1}\n${s}`).join("\n\n")} label="Copy all slides" />
                 </div>

@@ -13,6 +13,7 @@ export interface SocialDrafts {
   twitterSingle: string;
   linkedinPost: string;
   linkedinCarousel: { slides: string[] };
+  carouselTitle: string; // <=58 chars — the LinkedIn document title
   hashtags: { twitter: string[]; linkedin: string[] };
 }
 
@@ -70,6 +71,7 @@ export async function generateSocialDrafts(post: Post): Promise<SocialPackage> {
     twitterSingle: drafts.twitterSingle,
     linkedinPost: drafts.linkedinPost,
     linkedinCarousel: drafts.linkedinCarousel ?? { slides: [] },
+    carouselTitle: (drafts.carouselTitle || post.title).trim(),
     hashtags: drafts.hashtags ?? { twitter: [], linkedin: [] },
     slug: post.slug,
     title: post.title,

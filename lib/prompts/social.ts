@@ -45,6 +45,7 @@ The post is accompanied by a SCREENSHOT of the real source document — assume t
 3. A LinkedIn POST: 1,000–1,800 characters, hook-led first line, generous line breaks, an "MBA-classroom" but human tone, ending with a CTA line (no URL).
 4. A LinkedIn CAROUSEL: 5–7 slides. Slide 1 = title/hook; middle slides = one idea each (a short bold line + 1–2 supporting lines); last slide = takeaway + CTA. Keep each slide tight enough to fit a square card. Write only the slide's own copy — do NOT prefix slides with "Slide 1", "TITLE", labels, or numbers.
 5. Hashtags: 3–5 for Twitter, 3–5 for LinkedIn (relevant, not spammy).
+6. A CAROUSEL TITLE: a punchy headline that labels the uploaded LinkedIn document. HARD LIMIT — 58 characters or fewer (count them). No quotes, no hashtags, no trailing period needed.
 
 For every CTA, the ask is: read one real corporate letter like this, with the lesson, every weekday — free. Write the CTA copy only; do NOT include a link.
 
@@ -55,6 +56,7 @@ Return ONLY JSON of this exact shape:
   "twitterSingle": "<one standalone tweet>",
   "linkedinPost": "<the LinkedIn post text, with \\n line breaks>",
   "linkedinCarousel": { "slides": ["<slide 1>", "<slide 2>", "..."] },
+  "carouselTitle": "<<= 58 char document title>",
   "hashtags": { "twitter": ["#..."], "linkedin": ["#..."] }
 }
 No prose outside the JSON.`;
