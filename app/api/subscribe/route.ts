@@ -6,7 +6,7 @@ import { buildWelcomeEmailHtml, buildWelcomeEmailText, WELCOME_SUBJECT, unsubscr
 // Newsletter signup — adds the email to the Resend audience the daily broadcast
 // sends to. Called by the NewsletterCTA form. After a successful first-time
 // signup, fires a one-shot welcome email so the new subscriber gets immediate
-// confirmation (the daily broadcast won't reach them until ~7 a.m. next).
+// confirmation (the daily broadcast won't reach them until the next morning, by 8 a.m. Central).
 
 export const dynamic = "force-dynamic";
 

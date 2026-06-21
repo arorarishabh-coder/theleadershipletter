@@ -48,7 +48,7 @@ export function buildWelcomeEmailHtml({ to, siteUrl = "" }: WelcomeEmail): strin
     </div>
 
     <h1 style="font-size:26px;line-height:1.2;margin:0 0 12px;font-weight:600;letter-spacing:-0.01em;">You're in.</h1>
-    <p style="font-size:17px;margin:0 0 18px;color:#1c1a17;">Thanks for subscribing. The next edition lands in your inbox at <strong>7&nbsp;a.m. Central</strong>, the next weekday morning.</p>
+    <p style="font-size:17px;margin:0 0 18px;color:#1c1a17;">Thanks for subscribing. The next edition lands in your inbox <strong>by 8&nbsp;a.m. Central</strong>, the next weekday morning.</p>
     <p style="font-size:15px;color:#5c574e;margin:0 0 24px;font-style:italic;">Holidays off. No more, no less. The pace is deliberate &mdash; the goal is to think about one document well, not to read ten of them poorly.</p>
 
     <div style="margin:28px 0;border-top:1px solid #ddd6c8;border-bottom:1px solid #ddd6c8;padding:20px 0;">
@@ -100,7 +100,7 @@ export function buildWelcomeEmailText({ to, siteUrl = "" }: WelcomeEmail): strin
   const unsubscribeUrl = unsubscribeUrlFor(to, siteUrl);
   return `You're in.
 
-Thanks for subscribing to The Leadership Letter. The next edition lands in your inbox at 7 a.m. Central, the next weekday morning.
+Thanks for subscribing to The Leadership Letter. The next edition lands in your inbox by 8 a.m. Central, the next weekday morning.
 
 Holidays off. The pace is deliberate — the goal is to think about one document well, not to read ten of them poorly.
 

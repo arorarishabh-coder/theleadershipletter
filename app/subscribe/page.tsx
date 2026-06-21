@@ -9,7 +9,7 @@ export const metadata = {
 const WHAT_YOU_GET = [
   {
     h: "One letter a day.",
-    p: "Sent at 7:00 a.m. Central. Five days a week. Holidays off. The pace is deliberate — the goal is to think about one document well, not to read ten of them poorly.",
+    p: "In your inbox by 8:00 a.m. Central, typically around 7. Five days a week. Holidays off. The pace is deliberate — the goal is to think about one document well, not to read ten of them poorly.",
   },
   {
     h: "Primary sources only.",
@@ -27,7 +27,7 @@ const WHAT_YOU_GET = [
 
 const STATS = [
   { k: "5", v: "letters per week" },
-  { k: "7 AM", v: "Central, weekdays" },
+  { k: "By 8 AM", v: "Central, weekdays" },
   { k: "1-click", v: "to unsubscribe" },
 ] as const;
 
