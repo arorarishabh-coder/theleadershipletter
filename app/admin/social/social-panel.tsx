@@ -112,40 +112,53 @@ export function SocialPanel({ posts, defaultSlug }: { posts: PostRef[]; defaultS
           {/* Image + links — the "everything you need to post" strip */}
           <section className="border border-ink bg-parchment-deep/40 p-5">
             <div className="font-mono text-[11px] uppercase tracking-dateline text-ink">Attach to every post</div>
-            <div className="mt-4 grid grid-cols-1 gap-5 md:grid-cols-[200px_1fr]">
+            <div className="mt-4 grid grid-cols-1 gap-5 md:grid-cols-[200px_minmax(0,1fr)]">
               <div>
                 {pkg.imageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={pkg.imageUrl} alt={pkg.imageAlt} className="w-full border border-rule" />
+                  <a href={pkg.imageUrl} target="_blank" rel="noopener noreferrer" className="block">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={pkg.imageUrl} alt={pkg.imageAlt} className="w-full border border-rule" />
+                  </a>
                 ) : (
                   <div className="border border-rule p-4 text-center font-mono text-[11px] text-ink-light">no image</div>
                 )}
               </div>
-              <div className="space-y-3">
+              <div className="min-w-0 space-y-3">
                 {pkg.imageUrl && (
                   <div className="flex items-center gap-3">
-                    <span className="w-[78px] font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Image</span>
-                    <code className="flex-1 truncate font-mono text-[12px] text-ink">{pkg.imageUrl}</code>
+                    <span className="w-[64px] shrink-0 font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Image</span>
+                    <code className="min-w-0 flex-1 truncate font-mono text-[12px] text-ink">{pkg.imageUrl}</code>
+                    <a
+                      href={pkg.imageUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 border border-ink px-3 py-1 font-mono text-[10px] uppercase tracking-dateline text-ink transition-colors hover:bg-ink hover:text-parchment"
+                    >
+                      Open
+                    </a>
                     <CopyButton text={pkg.imageUrl} label="Copy URL" />
                   </div>
                 )}
                 <div className="flex items-center gap-3">
-                  <span className="w-[78px] font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Alt text</span>
-                  <code className="flex-1 truncate font-serif text-[13px] text-ink-faded">{pkg.imageAlt}</code>
+                  <span className="w-[64px] shrink-0 font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Alt text</span>
+                  <code className="min-w-0 flex-1 truncate font-serif text-[13px] text-ink-faded">{pkg.imageAlt}</code>
                   <CopyButton text={pkg.imageAlt} />
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-[78px] font-mono text-[10px] uppercase tracking-dateline text-ink-faded">X link</span>
-                  <code className="flex-1 truncate font-mono text-[12px] text-ink">{pkg.links.twitter}</code>
+                  <span className="w-[64px] shrink-0 font-mono text-[10px] uppercase tracking-dateline text-ink-faded">X link</span>
+                  <code className="min-w-0 flex-1 truncate font-mono text-[12px] text-ink">{pkg.links.twitter}</code>
                   <CopyButton text={pkg.links.twitter} />
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-[78px] font-mono text-[10px] uppercase tracking-dateline text-ink-faded">LI link</span>
-                  <code className="flex-1 truncate font-mono text-[12px] text-ink">{pkg.links.linkedin}</code>
+                  <span className="w-[64px] shrink-0 font-mono text-[10px] uppercase tracking-dateline text-ink-faded">LI link</span>
+                  <code className="min-w-0 flex-1 truncate font-mono text-[12px] text-ink">{pkg.links.linkedin}</code>
                   <CopyButton text={pkg.links.linkedin} />
                 </div>
                 <p className="font-mono text-[10px] uppercase tracking-dateline text-ink-light">
                   Post times · X {pkg.postingTimes.twitter} · LinkedIn {pkg.postingTimes.linkedin}
+                </p>
+                <p className="border-t border-rule/60 pt-3 font-serif text-[13px] leading-relaxed text-ink-faded">
+                  <strong className="text-ink">How to post:</strong> click <em>Open</em> to view the document image, save it, and upload it natively to the post — don&rsquo;t paste the URL. The draft text refers to &ldquo;the email below.&rdquo; Use the article link as your source: append it on X; on LinkedIn put it in the <strong className="text-ink">first comment</strong> (links in the body cut reach).
                 </p>
               </div>
             </div>
