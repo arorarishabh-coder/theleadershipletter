@@ -65,3 +65,6 @@ content/outbox
 # Anchored to repo root — an unanchored "Screenshots/" also matches
 # public/screenshots/ on case-insensitive (Windows/macOS) filesystems.
 /Screenshots/
+
+# Generated LinkedIn carousel PDFs
+carousels/
