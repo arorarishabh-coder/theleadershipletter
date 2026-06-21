@@ -1,0 +1,56 @@
+{
+  "slug": "cl-cand-4-20-cv-05640-74-4",
+  "publishedAt": "2026-06-02",
+  "isFeatured": false,
+  "title": "How to Frame a Demand as a Favor to Customers",
+  "documentTitle": "Epic Games v. Apple — Tim Sweeney Letter on Consumer Choice and Competition",
+  "dateAuthored": "2020-06-30",
+  "authorsName": [
+    "Tim Sweeney"
+  ],
+  "authorsCompany": "Epic Games",
+  "recipientNames": [
+    "Tim Cook",
+    "Phil Schiller",
+    "Craig Federighi",
+    "Matt Fischer"
+  ],
+  "topics": [
+    "competition",
+    "app-stores",
+    "strategy",
+    "policy"
+  ],
+  "leaderSlugs": [
+    "phil-schiller",
+    "tim-cook"
+  ],
+  "excerptForBlog": "Because of restrictions imposed by Apple, Epic is unable to provide consumers with certain features in our iOS apps. We would like to offer consumers the following features: 1) Competing payment processing options other than Apple payments, without Apple's fees, in Fortnite and other Epic Games software distributed through the iOS App Store; 2) A competing Epic Games Store app available through the iOS App Store and through direct installation that has equal access to underlying operating system features for software installation and update as the iOS App Store itself has.\n\nIf Epic were allowed to provide these options to iOS device users, consumers would have an opportunity to pay less for digital products and developers would earn more from their sales. Epic is requesting that Apple agree in principle to permit Epic to roll out these options for the benefit of all iOS customers. We hope that Apple will also make these options equally available to all iOS developers in order to make software sales and distribution on the iOS platform as open and competitive as it is on personal computers.\n\nPlease confirm within two weeks if Apple agrees in principle to allow Epic to provide a competing app store and competing payment processing, in which case we will meet with your team to work out the details including Epic's firm commitment to utilize any such features diligently to protect device security, customer privacy, and a high-quality user experience.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-20-cv-05640-74-4-p1.png",
+      "caption": "Source document — Epic Games v. Apple — Tim Sweeney Letter on Consumer Choice and Competition · Epic Games, Inc. v. Apple Inc. · 4:20-cv-05640 (CAND), Doc. 74-4, filed 2020-09-15 (page 1)",
+      "alt": "Epic Games v. Apple — Tim Sweeney Letter on Consumer Choice and Competition — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-4-20-cv-05640-74-4-p2.png",
+      "caption": "Source document — Epic Games v. Apple — Tim Sweeney Letter on Consumer Choice and Competition · Epic Games, Inc. v. Apple Inc. · 4:20-cv-05640 (CAND), Doc. 74-4, filed 2020-09-15 (page 2)",
+      "alt": "Epic Games v. Apple — Tim Sweeney Letter on Consumer Choice and Competition — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/17442392/74/4/epic-games-inc-v-apple-inc/",
+  "sourceCase": "Epic Games, Inc. v. Apple Inc.",
+  "sourceCitation": "4:20-cv-05640 (CAND), Doc. 74-4, filed 2020-09-15",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "How to Frame a Demand as a Favor to Customers",
+  "lessonBody": "## 1. Core Message\nTim Sweeney writes to Apple asking for two specific things: the right to use payment processors other than Apple's inside Fortnite and other Epic apps, and the right to run a competing Epic Games Store on iOS with the same system-level access Apple's own App Store has. He frames both asks as benefits for consumers (lower prices) and developers (higher margins), and gives Apple a two-week deadline to agree in principle.\n\n## 2. What the Executive Is Really Thinking\nSweeney is not really asking. The letter is built to be read twice — once by Apple, once by a judge. Every sentence is structured to make Apple's likely refusal look anti-consumer and anti-competitive. He names specific features, attaches a clock (\"within two weeks\"), and preemptively neutralizes Apple's standard defenses by promising \"firm commitment to utilize any such features diligently to protect device security, customer privacy, and a high-quality user experience.\" That last line removes Apple's go-to justifications for the walled garden before Apple can use them.\n\n## 3. Key Management Lessons\n\n### Make Your Ask Specific Enough to Be Quoted\n#### What it means\nSweeney doesn't say \"open up the platform.\" He lists two concrete asks with numbered bullets: competing payments, and a competing store with equal OS access.\n#### Why it matters\nVague asks are easy to deflect. Specific asks force a specific yes or no — and a specific no is a usable piece of evidence later.\n#### MBA Perspective\nThis is negotiation discipline. A clear ask creates a clear BATNA (best alternative to a negotiated agreement). If Apple says no, Sweeney knows exactly what he's litigating over.\n#### Real-world application\nWhen asking a partner, investor, or boss for something controversial, write the ask in one sentence someone else could repeat without distortion. If you can't, you haven't decided what you want.\n\n### Pre-empt the Other Side's Defense\n#### What it means\nApple's public reason for App Store control is security, privacy, and user experience. Sweeney writes that Epic will protect exactly those three things.\n#### Why it matters\nIf you know the rebuttal coming, address it inside your own ask. It forces the other side to invent a new reason — which usually sounds weaker.\n#### MBA Perspective\nThis maps to Porter's Five Forces thinking around supplier power. Apple's leverage as platform gatekeeper depends partly on the legitimacy of its rules. Sweeney is attacking that legitimacy directly.\n#### Real-world application\nBefore a board meeting or customer pitch, write down the top three objections you'll hear. Build the answer into the proposal, not the Q&A.\n\n### Wrap Your Self-Interest in Customer Interest\n#### What it means\nEpic wants to keep more revenue. The letter frames this as: \"consumers would have an opportunity to pay less for digital products and developers would earn more from their sales.\"\n#### Why it matters\nA fight between two billion-dollar companies is uninteresting. A fight about whether consumers get cheaper prices is a story regulators, courts, and the press will engage with.\n#### MBA Perspective\nPlatform Strategy. Whoever controls the narrative about who the platform serves controls the political space around the platform. Sweeney is contesting Apple's claim to speak for the iOS user.\n#### Real-world application\nWhen you push back on a vendor's pricing or terms, anchor the argument in what your shared customers gain — not in what you save.\n\n### Use Deadlines to Force a Position\n#### What it means\nThe letter requests a yes \"within two weeks.\"\n#### Why it matters\nWithout a deadline, large companies can absorb a request indefinitely. With one, silence becomes an answer you can act on.\n#### MBA Perspective\nThis is classic asymmetric urgency. Sweeney has already decided what he'll do if Apple says no; the deadline just lets him start the clock on that plan with a clean paper trail.\n#### Real-world application\nIf a counterparty is much larger than you, attach a date to every meaningful request. No date, no leverage.\n\n## 4. Strategic Analysis (MBA Style)\n\n### Competitive Strategy\nEpic is challenging the bundle. Apple sells iOS, the App Store, and payment processing as one package. Sweeney is asking to unbundle two of those layers (distribution and payments) while keeping access to the third (the OS and its install hooks). That is the entire competitive game in one paragraph.\n\n### Risk Analysis\nSweeney is trying to avoid a future where every transaction Epic runs through mobile gets taxed by a platform owner. The letter signals he sees this as existential enough to confront directly rather than negotiate quietly.\n\n### Build vs Buy Analysis\nNot directly applicable. The relevant choice here is comply vs. confront. Epic chose confront, and the letter is the formal record of that choice.\n\n### Market Dynamics\nThe letter implicitly compares iOS to \"personal computers\" — a market where software sales are \"open and competitive.\" That comparison is the strategic core: Sweeney is arguing mobile should structurally look like PC, where Epic already runs its own store. He is trying to import a market structure that favors him.\n\n### Long-Term Strategic Implications\nIf Epic wins, every app developer gains the option to bypass Apple's fee — and Epic, as the company that forced the issue, gets first-mover credibility as the alternative store. If Epic loses, it has at minimum forced Apple's economics into public view. The letter is a low-cost option with asymmetric upside.\n\n## 5. Hidden Insights\n- **The letter is written for a third reader.** The tone is formal, the asks are numbered, the deadline is explicit. This is a document built to be filed as an exhibit — which it was, less than three months later.\n- **Equal access is the real prize.** The phrase \"equal access to underlying operating system features for software installation and update as the iOS App Store itself has\" is the most loaded clause. Payments are the headline; OS-level parity for a rival store is the structural change.\n- **Epic is offering to police itself.** By volunteering to protect security, privacy, and UX, Sweeney is conceding those are legitimate platform concerns — and arguing Epic can meet them. That framing keeps the fight about economics, not safety.\n- **No negotiation room is offered.** There is no middle option, no proposed fee split, no phased rollout. The binary structure suggests the goal was never a deal.",
+  "pullQuote": "When you can't beat a gatekeeper on their terms, reframe the fight as being about their customers, not you.",
+  "leadershipTraits": [
+    "picks fights deliberately",
+    "writes for the record",
+    "frames self-interest as public interest",
+    "moves with a deadline"
+  ]
+}
