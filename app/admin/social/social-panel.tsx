@@ -55,7 +55,7 @@ function Block({ label, text, limit }: { label: string; text: string; limit: num
   );
 }
 
-export function SocialPanel({ posts, defaultSlug }: { posts: PostRef[]; defaultSlug: string }) {
+export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[]; defaultSlug: string; todaySlug: string }) {
   const [slug, setSlug] = useState(defaultSlug);
   const [status, setStatus] = useState<"idle" | "loading" | "error" | "done">("idle");
   const [error, setError] = useState("");
@@ -89,6 +89,7 @@ export function SocialPanel({ posts, defaultSlug }: { posts: PostRef[]; defaultS
           >
             {posts.map((p) => (
               <option key={p.slug} value={p.slug}>
+                {p.slug === todaySlug ? "★ Emailed today — " : ""}
                 {p.publishedAt} · {p.title}
               </option>
             ))}

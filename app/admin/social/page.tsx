@@ -22,13 +22,19 @@ export default async function SocialPage() {
     throw e;
   }
 
-  const posts = getAllPosts()
-    .slice()
-    .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""))
-    .slice(0, 30)
-    .map((p) => ({ slug: p.slug, title: p.title, publishedAt: p.publishedAt }));
-
   const freeSlug = await getMostRecentBroadcastSlug();
+  const all = getAllPosts()
+    .slice()
+    .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
+
+  // Pin today's emailed edition to the top of the list (it's the one you'll most
+  // often post about, and its backdated document date buries it otherwise).
+  let list = all.slice(0, 30);
+  if (freeSlug) {
+    const today = all.find((p) => p.slug === freeSlug);
+    if (today) list = [today, ...list.filter((p) => p.slug !== freeSlug)];
+  }
+  const posts = list.map((p) => ({ slug: p.slug, title: p.title, publishedAt: p.publishedAt }));
   const defaultSlug = (freeSlug && posts.some((p) => p.slug === freeSlug) ? freeSlug : posts[0]?.slug) ?? "";
 
   return (
@@ -54,7 +60,7 @@ export default async function SocialPage() {
       </p>
 
       <div className="mt-8">
-        <SocialPanel posts={posts} defaultSlug={defaultSlug} />
+        <SocialPanel posts={posts} defaultSlug={defaultSlug} todaySlug={freeSlug ?? ""} />
       </div>
     </div>
   );
