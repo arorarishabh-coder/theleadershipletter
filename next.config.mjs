@@ -13,7 +13,11 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "connect-src 'self'",
   "frame-ancestors 'none'",
-  "form-action 'self'",
+  // Stripe Checkout (/api/stripe/checkout) and the billing portal
+  // (/api/stripe/portal) submit a same-origin form that 303-redirects to Stripe.
+  // CSP form-action validates the redirect target too, so Stripe's hosted
+  // domains must be allowed or the browser silently blocks the navigation.
+  "form-action 'self' https://checkout.stripe.com https://billing.stripe.com",
   "object-src 'none'",
   "upgrade-insecure-requests",
 ].join("; ");
