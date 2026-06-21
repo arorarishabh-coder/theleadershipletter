@@ -148,7 +148,7 @@ export default function SubscribePage() {
           className="mt-3 font-display text-display-2 leading-[1.02] tracking-[-0.015em] text-ink"
           style={{ fontVariationSettings: '"opsz" 96, "wght" 500, "SOFT" 30' }}
         >
-          Tomorrow morning, 7&nbsp;AM.
+          In your inbox tomorrow morning.
         </h2>
         <div className="mt-7 flex justify-center">
           <NewsletterCTA />
