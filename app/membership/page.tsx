@@ -253,19 +253,29 @@ function MembershipStatus({
 }) {
   if (state === "anonymous") {
     return (
-      <section className="mt-10 flex flex-col items-center justify-center gap-4 bg-parchment-deep/60 px-6 py-8 text-center sm:flex-row sm:gap-8">
-        <p
-          className="font-serif text-[1.0625rem] italic text-ink"
-          style={{ fontVariationSettings: '"opsz" 17' }}
+      <section className="mt-10 border-y border-ink bg-parchment-deep/60 px-6 py-10 text-center">
+        <Dateline strong>Free week</Dateline>
+        <h2
+          className="mt-3 font-display text-display-3 leading-tight text-ink"
+          style={{ fontVariationSettings: '"opsz" 60, "wght" 500, "SOFT" 30' }}
         >
-          Already a member? Sign in to keep reading.
+          Start your {TRIAL_DAYS}-day free week.
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl font-serif text-[1.0625rem] text-ink-faded" style={{ fontVariationSettings: '"opsz" 17' }}>
+          Read the entire archive for {TRIAL_DAYS} days — no card required. Sign in to begin; you can start your free week in one click.
         </p>
         <Link
           href="/signin?callbackUrl=/membership"
-          className="border-b border-ink pb-0.5 font-sans text-[12px] uppercase tracking-[0.18em] text-ink transition-colors hover:text-brick hover:border-brick"
+          className="mt-7 inline-block bg-ink px-6 py-3.5 font-sans text-[12px] uppercase tracking-[0.18em] text-parchment transition-colors hover:bg-brick"
         >
-          Sign in →
+          Sign in to start &rarr;
         </Link>
+        <p className="mt-4 font-mono text-[11px] uppercase tracking-dateline text-ink-faded">
+          Already a member?{" "}
+          <Link href="/signin?callbackUrl=/account" className="text-ink underline transition-colors hover:text-brick">
+            Sign in
+          </Link>
+        </p>
       </section>
     );
   }

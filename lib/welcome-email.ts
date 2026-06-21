@@ -28,6 +28,7 @@ export function unsubscribeUrlFor(email: string, siteUrl = ""): string {
 
 export function buildWelcomeEmailHtml({ to, siteUrl = "" }: WelcomeEmail): string {
   const homeUrl = siteUrl || "https://theleadershipletter.com";
+  const trialUrl = `${homeUrl}/membership?utm_source=welcome&utm_medium=email&utm_campaign=free_week`;
   const unsubscribeUrl = unsubscribeUrlFor(to, siteUrl);
 
   return `<!doctype html>
@@ -72,12 +73,15 @@ export function buildWelcomeEmailHtml({ to, siteUrl = "" }: WelcomeEmail): strin
       </table>
     </div>
 
-    <p style="font-size:15px;color:#1c1a17;margin:24px 0 8px;">While you wait, read the most recent edition:</p>
-    <div style="margin:16px 0 28px;">
-      <a href="${esc(homeUrl)}" style="display:inline-block;background:#1c1a17;color:#fbf8f1;padding:13px 28px;font-family:Arial,Helvetica,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.18em;text-decoration:none;border:1px solid #1c1a17;">
-        Read the latest letter &rarr;
+    <div style="margin:28px 0;padding:22px 24px;border:1px solid #1c1a17;background:#f4efe6;text-align:center;">
+      <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8378;font-family:Arial,Helvetica,sans-serif;">Members &middot; The full archive</div>
+      <div style="font-size:20px;font-weight:600;margin:8px 0 6px;letter-spacing:-0.01em;">Want more than one a day?</div>
+      <div style="font-size:14px;color:#5c574e;margin:0 auto 16px;max-width:420px;">Unlock the entire searchable archive — every past edition — with a <strong>free 7-day trial</strong>. No card required.</div>
+      <a href="${esc(trialUrl)}" style="display:inline-block;background:#1c1a17;color:#fbf8f1;padding:13px 28px;font-family:Arial,Helvetica,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.18em;text-decoration:none;border:1px solid #1c1a17;">
+        Start your free week &rarr;
       </a>
     </div>
+    <p style="font-size:14px;color:#5c574e;margin:0 0 28px;text-align:center;">Or just <a href="${esc(homeUrl)}" style="color:#b5482f;">read today&rsquo;s edition &rarr;</a></p>
 
     <p style="font-size:14px;color:#5c574e;margin:28px 0 0;font-style:italic;border-top:1px solid #ddd6c8;padding-top:18px;">A note on the product: no ads, no follow-up promotions, no "Pro" upsell. If the daily letter is enough for you, it's enough for us.</p>
 
@@ -92,6 +96,7 @@ export function buildWelcomeEmailHtml({ to, siteUrl = "" }: WelcomeEmail): strin
 
 export function buildWelcomeEmailText({ to, siteUrl = "" }: WelcomeEmail): string {
   const homeUrl = siteUrl || "https://theleadershipletter.com";
+  const trialUrl = `${homeUrl}/membership?utm_source=welcome&utm_medium=email&utm_campaign=free_week`;
   const unsubscribeUrl = unsubscribeUrlFor(to, siteUrl);
   return `You're in.
 
@@ -105,7 +110,10 @@ What each edition contains:
   Lesson   — one thing to notice, not a takeaway
   Context  — what was happening when the letter was written
 
-Read the most recent edition: ${homeUrl}
+Want more than one a day? Start a FREE 7-day trial of the full searchable archive — no card required:
+${trialUrl}
+
+Or just read today's edition: ${homeUrl}
 
 No ads, no follow-up promotions, no "Pro" upsell.
 

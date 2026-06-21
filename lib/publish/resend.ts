@@ -43,6 +43,20 @@ function esc(s: string): string {
 export function buildEmailDocument(post: Post, siteUrl = ""): string {
   const body = buildPostHtml(post, siteUrl);
   const postUrl = siteUrl ? `${siteUrl}/post/${post.slug}` : "";
+  // Free-week trial CTA — converts daily readers into archive trialists. Only
+  // rendered when SITE_URL is set (the link must be absolute). UTM-tagged so the
+  // newsletter→trial funnel is measurable.
+  const trialUrl = siteUrl
+    ? `${siteUrl}/membership?utm_source=newsletter&utm_medium=email&utm_campaign=free_week`
+    : "";
+  const trialCta = trialUrl
+    ? `<div style="margin:36px 0 8px;padding:22px 24px;border:1px solid #1c1a17;background:#f4efe6;text-align:center;">
+      <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8378;font-family:Arial,Helvetica,sans-serif;">Members &middot; The full archive</div>
+      <div style="font-size:20px;font-weight:600;margin:8px 0 6px;letter-spacing:-0.01em;">Read every letter, not just today&rsquo;s.</div>
+      <div style="font-size:14px;color:#5c574e;margin:0 auto 16px;max-width:420px;">Start a <strong>free 7-day trial</strong> of the full searchable archive — every past edition. No card required.</div>
+      <a href="${esc(trialUrl)}" style="display:inline-block;background:#1c1a17;color:#fbf8f1;padding:13px 28px;font-family:Arial,Helvetica,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.18em;text-decoration:none;border:1px solid #1c1a17;">Start your free week &rarr;</a>
+    </div>`
+    : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -59,6 +73,7 @@ export function buildEmailDocument(post: Post, siteUrl = ""): string {
     </div>
     <h1 style="font-size:24px;line-height:1.25;margin:0 0 16px;">${esc(post.title)}</h1>
     ${body}
+    ${trialCta}
     <div style="margin-top:32px;border-top:1px solid #ddd6c8;padding-top:16px;font-size:12px;color:#8a8378;font-family:Arial,Helvetica,sans-serif;text-align:center;">
       ${postUrl ? `<p style="margin:0 0 8px;"><a href="${esc(postUrl)}" style="color:#b5482f;">Read this on the web</a></p>` : ""}
       <p style="margin:0;">You're receiving this because you subscribed to The Leadership Letter daily edition.</p>
