@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { DocumentFrame } from "@/components/document-frame";
 import { ExcerptBlock } from "@/components/excerpt-block";
 import { MarkdownLesson } from "@/components/markdown-lesson";
+import { Paywall } from "@/components/paywall";
 import { ProvenanceFooter } from "@/components/provenance-footer";
 import { PullQuote } from "@/components/pull-quote";
 import { TopicPill } from "@/components/topic-pill";
@@ -13,15 +14,31 @@ import { ArticleCard } from "@/components/article-card";
 import { Dateline } from "@/components/dateline";
 import { JsonLd } from "@/components/json-ld";
 import { SITE } from "@/lib/site";
+import { auth } from "@/auth";
+import { db } from "@/lib/db";
+import { membershipStatus } from "@/lib/membership";
+import { decideAccess, parseSimulate } from "@/lib/post-access";
+import { getMostRecentBroadcastSlug } from "@/lib/publish/resend";
 import {
   formatDateline,
   formatLongDate,
-  getAllPosts,
   getLeaderBySlug,
   getPostBySlug,
   getPostsByLeader,
   getPostsByTopic,
 } from "@/lib/queries";
+
+// Per-user paywall gates the lesson body, so the page can't be statically
+// pre-rendered. The article shell (header, document frame, excerpt) is fast;
+// only the lesson body + related section flip per-visitor.
+export const dynamic = "force-dynamic";
+
+const ADMIN_EMAILS = new Set(
+  (process.env.ADMIN_EMAILS || "")
+    .split(",")
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean),
+);
 
 const SOURCE_TYPE_LABELS: Record<string, string> = {
   sec_edgar: "SEC EDGAR Filing",
@@ -31,12 +48,6 @@ const SOURCE_TYPE_LABELS: Record<string, string> = {
   self_published: "Self-Published",
   press_quoted: "Press-Quoted Memo",
 };
-
-export function generateStaticParams() {
-  // Pre-render ALL posts (generated + seed) so the file-based content is baked to
-  // static HTML at build time — no runtime filesystem dependency on serverless.
-  return getAllPosts().map((p) => ({ slug: p.slug }));
-}
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const post = getPostBySlug(params.slug);
@@ -65,9 +76,38 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function PostPage({ params }: { params: { slug: string } }) {
+export default async function PostPage({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { simulate?: string };
+}) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
+
+  // Membership lookup. Anonymous users never hit the DB. Admin's `simulate=…`
+  // overrides the real state for testing (see lib/post-access.ts).
+  const session = await auth();
+  const userEmail = session?.user?.email?.toLowerCase();
+  const user = userEmail
+    ? await db.user.findUnique({
+        where: { email: userEmail },
+        include: { subscription: true },
+      })
+    : null;
+  const membership = membershipStatus(user);
+  const isAdmin = Boolean(userEmail && ADMIN_EMAILS.has(userEmail));
+  // Resend tells us which post slug was actually emailed most recently.
+  // That single article is the free edition; everything else is gated.
+  const freeSlug = await getMostRecentBroadcastSlug();
+  const access = decideAccess({
+    postSlug: post.slug,
+    freeSlug,
+    membership,
+    isAdmin,
+    simulate: parseSimulate(searchParams.simulate),
+  });
 
   const primaryLeader = post.leaderSlugs[0] ? getLeaderBySlug(post.leaderSlugs[0]) : undefined;
   const relatedByLeader = primaryLeader ? getPostsByLeader(primaryLeader.slug, post.slug).slice(0, 3) : [];
@@ -167,7 +207,8 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* Lesson body */}
+      {/* Lesson body — gated for archive editions, free for today's letter */}
+      {access.hasAccess ? (
       <section>
         <div className="mx-auto max-w-2xl px-6 py-14 md:py-20">
           <MarkdownLesson source={post.lessonBody} />
@@ -186,14 +227,19 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
+      ) : (
+        <Paywall state={access.state} postSlug={post.slug} simulated={access.simulated} />
+      )}
 
       {/* Provenance */}
       <div className="mx-auto max-w-3xl px-6">
         <ProvenanceFooter post={post} />
       </div>
 
-      {/* Newsletter CTA */}
-      <NewsletterCTA variant="boxed" />
+      {/* Newsletter CTA — only shown to anonymous readers. Signed-in users
+          (members or not) are already in the audience, so suppressing it
+          removes a redundant ask and keeps the page calmer. */}
+      {!session && <NewsletterCTA variant="boxed" />}
 
       {/* Related */}
       <section className="mx-auto max-w-7xl px-6 pb-24">

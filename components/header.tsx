@@ -1,16 +1,20 @@
 import Link from "next/link";
+import { auth } from "@/auth";
 import { formatIssueDate } from "@/lib/queries";
 
 const NAV_ITEMS = [
   { href: "/", label: "Latest" },
   { href: "/browse", label: "Browse" },
   { href: "/topics", label: "Topics" },
+  { href: "/membership", label: "Members" },
   { href: "/about", label: "About" },
 ];
 
-export function Header() {
+export async function Header() {
   const issueDate = formatIssueDate();
   const issueNumber = 142; // mock — would compute from publication count
+  const session = await auth();
+  const signedIn = Boolean(session?.user?.email);
 
   return (
     <header className="border-b border-rule bg-parchment">
@@ -26,9 +30,15 @@ export function Header() {
             <Link href="/search" className="hover:text-brick transition-colors">
               Search
             </Link>
-            <Link href="/signin" className="hover:text-brick transition-colors">
-              Sign in
-            </Link>
+            {signedIn ? (
+              <Link href="/account" className="hover:text-brick transition-colors">
+                Account
+              </Link>
+            ) : (
+              <Link href="/signin" className="hover:text-brick transition-colors">
+                Sign in
+              </Link>
+            )}
             <Link href="/subscribe" className="hover:text-brick transition-colors">
               Subscribe
             </Link>

@@ -120,6 +120,68 @@ export function isPublished(post: Post, published: Set<string>): boolean {
   return published.has(`name:${post.slug.trim().toLowerCase()}`);
 }
 
+export interface BroadcastInfo {
+  id: string;
+  status: string; // "draft" | "queued" | "sending" | "sent" | ...
+  sentAt: string | null; // ISO when Resend actually delivered the broadcast
+  scheduledAt: string | null;
+  createdAt: string;
+}
+
+/**
+ * Slug of the broadcast with the most recent sent_at — i.e. the article that
+ * was actually emailed to the audience most recently. That's the one article
+ * non-subscribers (trial_expired, anonymous, etc.) are entitled to read,
+ * matching the brand promise "the daily letter is free."
+ */
+export async function getMostRecentBroadcastSlug(): Promise<string | null> {
+  const broadcasts = await listBroadcastsByName();
+  let best: { slug: string; sentAt: string } | null = null;
+  for (const [slug, info] of broadcasts) {
+    if (!info.sentAt) continue;
+    if (!best || info.sentAt > best.sentAt) best = { slug, sentAt: info.sentAt };
+  }
+  return best?.slug ?? null;
+}
+
+/**
+ * All broadcasts keyed by post slug (lowercased). Powers the admin dashboard
+ * — joins Resend's actual send timestamps back onto our content/posts/*.json
+ * corpus so "newsletters sent" reflects reality rather than a DB column nobody
+ * writes. Cached for 60s via the Next.js fetch revalidation tag.
+ */
+export async function listBroadcastsByName(): Promise<Map<string, BroadcastInfo>> {
+  const map = new Map<string, BroadcastInfo>();
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return map;
+  const res = await fetch(`${API}/broadcasts`, {
+    headers: { Authorization: `Bearer ${key}` },
+    next: { revalidate: 60 },
+  });
+  if (!res.ok) return map;
+  const json = (await res.json().catch(() => ({}))) as {
+    data?: Array<{
+      id: string;
+      name?: string;
+      status: string;
+      sent_at?: string | null;
+      scheduled_at?: string | null;
+      created_at?: string;
+    }>;
+  };
+  for (const b of json.data ?? []) {
+    if (!b.name) continue;
+    map.set(b.name.trim().toLowerCase(), {
+      id: b.id,
+      status: b.status,
+      sentAt: b.sent_at ?? null,
+      scheduledAt: b.scheduled_at ?? null,
+      createdAt: b.created_at ?? "",
+    });
+  }
+  return map;
+}
+
 /**
  * Create a broadcast for a post, and (when status="confirmed") send it. Never
  * throws — returns { ok, id, sent | error }.

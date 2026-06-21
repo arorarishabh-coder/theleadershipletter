@@ -45,28 +45,109 @@ export default async function AccountPage() {
         </div>
       </dl>
 
-      {/* Upgrade / manage — wired in Phase 2 (Stripe) */}
       {m.state === "subscribed" ? (
-        <p className="mt-8 font-serif text-[15px] italic text-ink-faded">
-          Thanks for subscribing. Billing management is coming shortly.
-        </p>
-      ) : (
         <div className="mt-8">
           <p className="font-serif text-[1.0625rem] leading-relaxed text-ink">
-            {m.state === "trial"
-              ? "You have full access to the archive during your free week."
-              : m.state === "trial_expired"
-                ? "Your free week has ended. Subscribe to keep reading the full archive."
-                : "Start your free week to read the full archive — no card required."}
+            Manage your card, switch between monthly and annual, view invoices, or cancel — all in the Stripe customer portal.
           </p>
-          <button
-            type="button"
-            disabled
-            className="mt-5 inline-flex cursor-not-allowed items-center gap-2 border border-ink/30 px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-ink-light"
-            title="Subscriptions go live in the next phase"
-          >
-            Subscribe — $3/mo · coming soon
-          </button>
+          <form action="/api/stripe/portal" method="POST" className="mt-5">
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 bg-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-parchment transition-colors hover:bg-brick"
+            >
+              Manage billing →
+            </button>
+          </form>
+        </div>
+      ) : m.state === "registered" ? (
+        <div className="mt-8">
+          <p className="font-serif text-[1.0625rem] leading-relaxed text-ink">
+            Start your free week to read the full archive — no card required.
+          </p>
+          <form action="/api/membership/start-trial" method="POST" className="mt-5">
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 bg-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-parchment transition-colors hover:bg-brick"
+            >
+              Start free week →
+            </button>
+          </form>
+          <p className="mt-6 font-mono text-[11px] uppercase tracking-dateline text-ink-light">
+            Or skip the trial and subscribe now
+          </p>
+          <div className="mt-3 flex flex-wrap gap-3">
+            <form action="/api/stripe/checkout" method="POST">
+              <input type="hidden" name="plan" value="monthly" />
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 border border-ink bg-parchment-light px-5 py-2.5 font-sans text-[11px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink hover:text-parchment"
+              >
+                $3/mo →
+              </button>
+            </form>
+            <form action="/api/stripe/checkout" method="POST">
+              <input type="hidden" name="plan" value="annual" />
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 border border-ink bg-parchment-light px-5 py-2.5 font-sans text-[11px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink hover:text-parchment"
+              >
+                $30/yr →
+              </button>
+            </form>
+          </div>
+        </div>
+      ) : m.state === "trial" ? (
+        <div className="mt-8">
+          <p className="font-serif text-[1.0625rem] leading-relaxed text-ink">
+            You have full access to the archive during your free week. Subscribe anytime to keep it after the week ends.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <form action="/api/stripe/checkout" method="POST">
+              <input type="hidden" name="plan" value="monthly" />
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 bg-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-parchment transition-colors hover:bg-brick"
+              >
+                Subscribe — $3/mo →
+              </button>
+            </form>
+            <form action="/api/stripe/checkout" method="POST">
+              <input type="hidden" name="plan" value="annual" />
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 border border-ink bg-parchment-light px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink hover:text-parchment"
+              >
+                Annual — $30/yr →
+              </button>
+            </form>
+          </div>
+        </div>
+      ) : (
+        // trial_expired
+        <div className="mt-8">
+          <p className="font-serif text-[1.0625rem] leading-relaxed text-ink">
+            Your free week has ended. Subscribe to keep reading the full archive.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <form action="/api/stripe/checkout" method="POST">
+              <input type="hidden" name="plan" value="monthly" />
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 bg-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-parchment transition-colors hover:bg-brick"
+              >
+                Subscribe — $3/mo →
+              </button>
+            </form>
+            <form action="/api/stripe/checkout" method="POST">
+              <input type="hidden" name="plan" value="annual" />
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 border border-ink bg-parchment-light px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink hover:text-parchment"
+              >
+                Annual — $30/yr →
+              </button>
+            </form>
+          </div>
         </div>
       )}
 

@@ -8,6 +8,16 @@ export const TRIAL_DAYS = 7;
 const TRIAL_MS = TRIAL_DAYS * 24 * 60 * 60 * 1000;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
+// Single source of truth for pricing. The Stripe-products script reads these
+// to create the Price objects; the membership page reads them to render cards.
+// Stripe expects amounts in the smallest currency unit (cents).
+export const PRICING = {
+  monthly: { amountCents: 300, currency: "usd", label: "$3", per: "month", interval: "month" as const },
+  annual: { amountCents: 3000, currency: "usd", label: "$30", per: "year", interval: "year" as const },
+} as const;
+
+export type PlanId = keyof typeof PRICING;
+
 export type UserWithSub = (User & { subscription: Subscription | null }) | null | undefined;
 
 export type MembershipState =
