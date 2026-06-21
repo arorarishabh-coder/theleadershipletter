@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getAllPosts } from "@/lib/queries";
 import { isPublished, listPublishedIdentities, publishToResend } from "@/lib/publish/resend";
+import { BUFFER_ALERT_THRESHOLD, sendBufferLowAlert } from "@/lib/publish/buffer-alert";
 
 // Daily newsletter cron. Vercel hits this once a day (see vercel.json). It finds
 // the oldest buffered post not yet sent and creates a Resend broadcast for it.
@@ -25,12 +26,29 @@ export async function GET(req: Request) {
   }
 
   const published = await listPublishedIdentities();
-  const next = getAllPosts()
+  const unsent = getAllPosts()
     .filter((p) => !isPublished(p, published))
-    .sort((a, b) => (a.publishedAt || "").localeCompare(b.publishedAt || ""))[0];
+    .sort((a, b) => (a.publishedAt || "").localeCompare(b.publishedAt || ""));
+  const next = unsent[0];
+
+  // Safety net: warn the admin before the buffer empties. The cron runs once a
+  // day, so this nags at most once per day until the queue is replenished.
+  // `unsent` still includes today's `next`, so the count reflects remaining runway.
+  let bufferAlertSent = false;
+  if (unsent.length < BUFFER_ALERT_THRESHOLD) {
+    bufferAlertSent = await sendBufferLowAlert(unsent.length).catch((err) => {
+      console.error("[cron] buffer alert failed", err);
+      return false;
+    });
+  }
 
   if (!next) {
-    return NextResponse.json({ ok: true, message: "Buffer exhausted — nothing new to send. Add posts and redeploy." });
+    return NextResponse.json({
+      ok: true,
+      message: "Buffer exhausted — nothing new to send. Run the content job and merge the PR.",
+      bufferRemaining: 0,
+      bufferAlertSent,
+    });
   }
 
   const status = process.env.CRON_AUTO_CONFIRM === "true" ? "confirmed" : "draft";
@@ -44,5 +62,7 @@ export async function GET(req: Request) {
     sent: result.sent ?? false,
     broadcastId: result.id,
     error: result.error,
+    bufferRemaining: unsent.length,
+    bufferAlertSent,
   });
 }

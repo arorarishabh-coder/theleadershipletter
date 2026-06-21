@@ -20,7 +20,9 @@
     "test-email": "tsx scripts/test-email.ts",
     "prune-covers": "tsx scripts/prune-covers.ts",
     "stripe:products": "tsx scripts/stripe-products.ts",
-    "qa:paywall": "tsx scripts/qa-paywall.ts"
+    "qa:paywall": "tsx scripts/qa-paywall.ts",
+    "qa:content": "tsx scripts/qa-content.ts",
+    "qa:runway": "tsx scripts/qa-runway.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.98.0",
