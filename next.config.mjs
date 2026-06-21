@@ -13,11 +13,13 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "connect-src 'self'",
   "frame-ancestors 'none'",
-  // Stripe Checkout (/api/stripe/checkout) and the billing portal
-  // (/api/stripe/portal) submit a same-origin form that 303-redirects to Stripe.
-  // CSP form-action validates the redirect target too, so Stripe's hosted
-  // domains must be allowed or the browser silently blocks the navigation.
-  "form-action 'self' https://checkout.stripe.com https://billing.stripe.com",
+  // form-action validates a form submission's redirect target, not just its
+  // action URL. These flows submit a same-origin form that 303-redirects to a
+  // third party, so each hosted domain must be allowed or the browser silently
+  // blocks the navigation: Stripe Checkout (/api/stripe/checkout), the Stripe
+  // billing portal (/api/stripe/portal), and Google OAuth ("Continue with
+  // Google" -> accounts.google.com).
+  "form-action 'self' https://checkout.stripe.com https://billing.stripe.com https://accounts.google.com",
   "object-src 'none'",
   "upgrade-insecure-requests",
 ].join("; ");

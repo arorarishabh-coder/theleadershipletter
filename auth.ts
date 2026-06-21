@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+import Google from "next-auth/providers/google";
 import Resend from "next-auth/providers/resend";
 import { track } from "@vercel/analytics/server";
 import { db } from "@/lib/db";
@@ -20,6 +21,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(db),
   trustHost: true,
   providers: [
+    // Google OAuth — one-tap sign-in, no email round-trip. The flow stays in the
+    // current browser context (no email-app hop), so it also works from an iOS
+    // "Add to Home Screen" web app where a magic link would land in the wrong
+    // browser. allowDangerousEmailAccountLinking is safe here because Google
+    // verifies email ownership: a reader who first used the magic link gets their
+    // Google login linked to the same account instead of an OAuthAccountNotLinked
+    // error.
+    Google({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
+    }),
     Resend({
       apiKey: process.env.RESEND_API_KEY,
       from: process.env.AUTH_EMAIL_FROM || "The Leadership Letter <login@theleadershipletter.com>",
@@ -60,5 +73,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/signin",
     verifyRequest: "/signin/check-email",
   },
-  session: { strategy: "database" },
+  // Long, sliding sessions so members rarely have to sign in again. Database
+  // strategy keeps the session row authoritative (revocable); updateAge means we
+  // only extend the expiry once a day rather than on every request.
+  session: {
+    strategy: "database",
+    maxAge: 90 * 24 * 60 * 60, // 90 days
+    updateAge: 24 * 60 * 60, // refresh expiry at most once per day
+  },
 });
