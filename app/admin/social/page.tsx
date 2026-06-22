@@ -49,9 +49,10 @@ export default async function SocialPage() {
             Social drafts
           </h1>
         </div>
-        <Link href="/admin" className="font-mono text-[11px] uppercase tracking-dateline text-ink hover:text-brick">
-          ← The desk
-        </Link>
+        <nav className="flex items-center gap-4 font-mono text-[11px] uppercase tracking-dateline">
+          <Link href="/admin/reply" className="text-brick hover:text-ink">Reply assistant →</Link>
+          <Link href="/admin" className="text-ink hover:text-brick">The desk</Link>
+        </nav>
       </header>
 
       <p className="mt-5 max-w-2xl font-serif text-[1.0625rem] leading-relaxed text-ink-faded">

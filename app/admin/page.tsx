@@ -49,12 +49,10 @@ export default async function AdminPage({
           >
             The desk
           </h1>
-          <Link
-            href="/admin/social"
-            className="mt-3 inline-block font-mono text-[11px] uppercase tracking-dateline text-brick transition-colors hover:text-ink"
-          >
-            Social drafts →
-          </Link>
+          <div className="mt-3 flex flex-wrap gap-4 font-mono text-[11px] uppercase tracking-dateline">
+            <Link href="/admin/social" className="text-brick transition-colors hover:text-ink">Social drafts →</Link>
+            <Link href="/admin/reply" className="text-brick transition-colors hover:text-ink">Reply assistant →</Link>
+          </div>
         </div>
         <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11px] uppercase tracking-dateline">
           {RANGES.map((r) => (
