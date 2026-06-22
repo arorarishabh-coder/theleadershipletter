@@ -49,15 +49,30 @@ export default async function SocialPage() {
             Social drafts
           </h1>
         </div>
-        <Link href="/admin" className="font-mono text-[11px] uppercase tracking-dateline text-ink hover:text-brick">
-          ← The desk
-        </Link>
+        <nav className="flex items-center gap-4 font-mono text-[11px] uppercase tracking-dateline">
+          <Link href="/admin/reply" className="text-brick hover:text-ink">Reply assistant →</Link>
+          <Link href="/admin" className="text-ink hover:text-brick">The desk</Link>
+        </nav>
       </header>
 
       <p className="mt-5 max-w-2xl font-serif text-[1.0625rem] leading-relaxed text-ink-faded">
         Paste-ready Twitter/X + LinkedIn drafts for any edition — generated on demand, with the
         document image, UTM links, hashtags, and posting times. Copy, review, and post manually.
       </p>
+
+      <details className="mt-6 border border-rule bg-parchment-light">
+        <summary className="cursor-pointer px-4 py-3 font-mono text-[11px] uppercase tracking-dateline text-ink">
+          ▾ Distribution playbook — how to actually get reach
+        </summary>
+        <div className="space-y-2.5 border-t border-rule px-5 py-4 font-serif text-[15px] leading-relaxed text-ink-faded">
+          <p><strong className="text-ink">Lead with the image.</strong> Post the single tweet + the document screenshot first — image posts get far more reach, and threads flop for accounts without followers. Save the thread for once you have a base.</p>
+          <p><strong className="text-ink">Post at peak — never late at night.</strong> X: Tue–Thu, 8–10&nbsp;AM ET. LinkedIn: Tue–Wed, ~8&nbsp;AM ET.</p>
+          <p><strong className="text-ink">Reply game (daily, 20–30 min) — the #1 cold-start lever.</strong> Comment with a sharp take + a relevant exhibit on big accounts to borrow their audience: <code className="text-ink">@TechEmails, @TrungTPhan, @SahilBloom, @lennysan, @JoeKwon, @business, @WSJ</code>, plus tech/antitrust news threads.</p>
+          <p><strong className="text-ink">Newsjack.</strong> When the company/topic is in the news, quote-tweet or reply with “here’s the actual email” + the screenshot.</p>
+          <p><strong className="text-ink">Seed early engagement.</strong> The first 30 minutes decide reach — have a few people like/reply right after you post.</p>
+          <p><strong className="text-ink">Be consistent.</strong> Daily posting + replies compound. Week 1 from zero is single-digit views — that’s normal, not a failure.</p>
+        </div>
+      </details>
 
       <div className="mt-8">
         <SocialPanel posts={posts} defaultSlug={defaultSlug} todaySlug={freeSlug ?? ""} />

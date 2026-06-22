@@ -168,17 +168,25 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
           {/* Twitter */}
           <section>
             <h2 className="font-display text-2xl text-ink" style={{ fontVariationSettings: '"opsz" 36, "wght" 500' }}>Twitter / X</h2>
-            <div className="mt-4 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Thread ({pkg.twitterThread.length} tweets)</span>
+            {/* Lead with the single tweet + image — best reach for a new account */}
+            <div className="mt-4">
+              <div className="font-mono text-[11px] uppercase tracking-dateline text-brick">★ Post this first — single tweet + the image</div>
+              <div className="mt-2">
+                <Block label="Standalone tweet" text={pkg.twitterSingle} limit={TWEET_LIMIT} />
+              </div>
+              <p className="mt-1.5 font-mono text-[10px] uppercase tracking-dateline text-ink-light">
+                Attach the document image. Highest reach for a cold account — threads need followers.
+              </p>
+            </div>
+            {/* Thread — secondary */}
+            <div className="mt-8 flex items-center justify-between">
+              <span className="font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Thread · {pkg.twitterThread.length} tweets (better once you have followers)</span>
               <CopyButton text={pkg.twitterThread.join("\n\n")} label="Copy thread" />
             </div>
             <div className="mt-3 space-y-3">
               {pkg.twitterThread.map((t, i) => (
                 <Block key={i} label={`Tweet ${i + 1}`} text={t} limit={TWEET_LIMIT} />
               ))}
-            </div>
-            <div className="mt-6">
-              <Block label="Standalone tweet (pair with image)" text={pkg.twitterSingle} limit={TWEET_LIMIT} />
             </div>
             {pkg.hashtags.twitter.length > 0 && (
               <div className="mt-3 flex items-center gap-3">
