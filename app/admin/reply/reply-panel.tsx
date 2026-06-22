@@ -9,6 +9,13 @@ interface ReplyOption {
   link: string | null;
 }
 
+interface ResolvedTweet {
+  text: string;
+  author: string;
+  handle: string;
+  url: string;
+}
+
 const TWEET_LIMIT = 280;
 
 function CopyButton({ text, label = "Copy" }: { text: string; label?: string }) {
@@ -33,11 +40,13 @@ export function ReplyPanel() {
   const [status, setStatus] = useState<"idle" | "loading" | "error" | "done">("idle");
   const [error, setError] = useState("");
   const [replies, setReplies] = useState<ReplyOption[]>([]);
+  const [resolved, setResolved] = useState<ResolvedTweet | null>(null);
 
   async function go() {
     if (tweet.trim().length < 5) return;
     setStatus("loading");
     setError("");
+    setResolved(null);
     try {
       const res = await fetch("/api/admin/reply-suggest", {
         method: "POST",
@@ -47,6 +56,7 @@ export function ReplyPanel() {
       const json = await res.json();
       if (!res.ok || !json.ok) throw new Error(json.error || `HTTP ${res.status}`);
       setReplies(json.replies as ReplyOption[]);
+      setResolved((json.resolved as ResolvedTweet | null) ?? null);
       setStatus("done");
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
@@ -58,12 +68,12 @@ export function ReplyPanel() {
     <div>
       <div className="space-y-4 border-y border-ink py-5">
         <label className="block">
-          <span className="font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Paste the tweet you want to reply to</span>
+          <span className="font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Paste the tweet link or its text</span>
           <textarea
             value={tweet}
             onChange={(e) => setTweet(e.target.value)}
             rows={4}
-            placeholder="Paste the tweet text here…"
+            placeholder="Paste an x.com/…/status/… link, or the tweet text here…"
             className="mt-1 block w-full border border-ink bg-parchment-light px-3 py-2.5 font-serif text-[15px] leading-relaxed text-ink focus:outline-none"
           />
         </label>
@@ -88,6 +98,15 @@ export function ReplyPanel() {
       </div>
 
       {status === "error" && <p className="mt-4 font-mono text-[12px] text-brick">Error: {error}</p>}
+
+      {resolved && status !== "loading" && (
+        <div className="mt-6 border-l-2 border-brick bg-parchment-light px-4 py-3">
+          <span className="font-mono text-[10px] uppercase tracking-dateline text-brick">
+            Replying to {resolved.author}{resolved.handle && resolved.handle !== resolved.author ? ` ${resolved.handle}` : ""}
+          </span>
+          <p className="mt-1 whitespace-pre-wrap font-serif text-[15px] leading-relaxed text-ink">{resolved.text}</p>
+        </div>
+      )}
 
       {replies.length > 0 && status !== "loading" && (
         <div className="mt-8 space-y-4">
