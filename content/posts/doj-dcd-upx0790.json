@@ -1,0 +1,58 @@
+{
+  "slug": "doj-dcd-upx0790",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Turn a Competitor's Weakness Into Your Positioning Strategy",
+  "documentTitle": "Email from Eddy Cue to Tim Cook: Competing on Privacy (January 10, 2013)",
+  "dateAuthored": "2013-01-10",
+  "authorsName": [
+    "Eddy Cue"
+  ],
+  "authorsCompany": "Apple",
+  "recipientNames": [
+    "Tim Cook",
+    "Phil Schiller"
+  ],
+  "topics": [
+    "strategy",
+    "competition",
+    "product",
+    "comms"
+  ],
+  "leaderSlugs": [
+    "phil-schiller",
+    "tim-cook",
+    "eddy-cue",
+    "eric-schmidt"
+  ],
+  "excerptForBlog": "Here is the latest slides we have on privacy. Still a lot more work to do but good start. We can share this with Al on Fri. If we do, I can have Eric Albert and Jane Horvath present it as they did the work. Let me know if you would like to do that.\n\nThe attached deck, titled \"Competing on Privacy\" (January 2013), was marked Privileged & Confidential and accompanied by a slide quoting Google CEO Eric Schmidt at the 2010 Washington Ideas Forum: \"Google's policy is to get right up to the creepy line but not cross it. I would argue that implanting things in your brain is beyond the creepy line. At least for the moment, until the technology gets better.\" The document also references Microsoft's approach to privacy defaults, noting that automatic privacy settings \"would make it tougher for Microsoft to profit from selling online ads\" — framing privacy as a competitive differentiator rather than merely a compliance concern.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-dcd-upx0790-p1.png",
+      "caption": "Source document — Email from Eddy Cue to Tim Cook: Competing on Privacy (January 10, 2013) · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX0790 — DOJ public archive (page 1)",
+      "alt": "Email from Eddy Cue to Tim Cook: Competing on Privacy (January 10, 2013) — page 1"
+    },
+    {
+      "url": "/screenshots/doj-dcd-upx0790-p2.png",
+      "caption": "Source document — Email from Eddy Cue to Tim Cook: Competing on Privacy (January 10, 2013) · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX0790 — DOJ public archive (page 2)",
+      "alt": "Email from Eddy Cue to Tim Cook: Competing on Privacy (January 10, 2013) — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/d9/2023-11/417532.pdf",
+  "sourceCase": "United States v. Google LLC (Search)",
+  "sourceCitation": "1:20-cv-03010 (DCD), Trial Ex. UPX0790 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Turn a Competitor's Weakness Into Your Positioning Strategy",
+  "situation": "In January 2013, Apple SVP Eddy Cue emailed Tim Cook with early slides for a deck called 'Competing on Privacy.' The deck wasn't a PR initiative — it was a competitive strategy document. Cue wanted to share it with an unnamed 'Al' that Friday, with the people who built it presenting directly. The document explicitly frames privacy as a market differentiator, not a compliance checkbox.",
+  "insight": "The deck opens with a quote from Google's CEO describing a deliberate strategy of pushing to 'the creepy line.' Apple didn't editorialize — it just put that quote on a slide and let it sit there. Then the document notes that Microsoft's automatic privacy defaults would 'make it tougher for Microsoft to profit from selling online ads.' The hidden move: Apple is mapping competitor business models as structural constraints. Google and Microsoft can't fully commit to user privacy without undermining their own revenue. Apple, funded by hardware margins, has no such constraint. This is classic **competitive moat logic** — your rival's strength in one area (ad revenue) creates a locked-in weakness in another (user trust). Apple is trying to codify that gap into a repeatable positioning strategy, not just a talking point.",
+  "application": "List your top two competitors. For each, write one sentence describing how their business model forces them to make a product decision users probably dislike. That friction point is a positioning opportunity you don't need to manufacture — it already exists. Build toward it deliberately.",
+  "pullQuote": "When a rival's business model forces them to behave in ways users dislike, that tension is your product opportunity.",
+  "leadershipTraits": [
+    "reads structural constraints, not just surface moves",
+    "treats privacy as a business lever, not a moral stance",
+    "delegates to builders — has the people who did the work present it",
+    "moves early on weak signals"
+  ]
+}
