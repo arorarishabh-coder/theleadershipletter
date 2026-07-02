@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Dateline } from "@/components/dateline";
 import { requireAdmin, AdminRedirect } from "@/lib/admin";
 import { getAllPosts } from "@/lib/queries";
-import { getMostRecentBroadcastSlug } from "@/lib/publish/resend";
+import { listBroadcastsByName } from "@/lib/publish/resend";
 import { SocialPanel } from "./social-panel";
 
 export const dynamic = "force-dynamic";
@@ -22,13 +22,43 @@ export default async function SocialPage() {
     throw e;
   }
 
-  const freeSlug = await getMostRecentBroadcastSlug();
+  // Join Resend's actual send timestamps onto our corpus. The posts' own
+  // `publishedAt` is a backdated *document* date (the whole buffer was ingested
+  // 2026-05-26), so it does NOT reflect when an edition was emailed — which made
+  // the letter sent *today* show a May date and buried the newest editions. We
+  // surface the real emailed date (Resend `sent_at`, → YYYY-MM-DD) instead, and
+  // only fall back to `publishedAt` for unsent buffer posts.
+  const broadcasts = await listBroadcastsByName();
+  const sentDate = (slug: string): string | null => {
+    const s = broadcasts.get(slug.toLowerCase())?.sentAt;
+    return s ? s.slice(0, 10) : null;
+  };
+  let freeSlug: string | null = null;
+  let freeSentAt = "";
+  for (const [slug, info] of broadcasts) {
+    if (info.sentAt && info.sentAt > freeSentAt) {
+      freeSentAt = info.sentAt;
+      freeSlug = slug;
+    }
+  }
+
+  // Display date = actual emailed date when we have it, else the document date.
+  // Sort sent editions newest-emailed first, then unsent buffer by document date.
   const all = getAllPosts()
     .slice()
-    .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
+    .map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      publishedAt: sentDate(p.slug) ?? p.publishedAt,
+      emailed: sentDate(p.slug) != null,
+    }))
+    .sort((a, b) => {
+      if (a.emailed !== b.emailed) return a.emailed ? -1 : 1;
+      return (b.publishedAt || "").localeCompare(a.publishedAt || "");
+    });
 
-  // Pin today's emailed edition to the top of the list (it's the one you'll most
-  // often post about, and its backdated document date buries it otherwise).
+  // Pin the most-recently-emailed edition to the very top (it's the one you'll
+  // most often post about).
   let list = all.slice(0, 30);
   if (freeSlug) {
     const today = all.find((p) => p.slug === freeSlug);
