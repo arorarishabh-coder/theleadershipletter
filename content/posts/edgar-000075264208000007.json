@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000075264208000007",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "When Your Market Shrinks, Wait — Then Reload",
+  "documentTitle": "UMH Properties, Inc. Annual Shareholder Letter 2007",
+  "dateAuthored": "2008-03-13",
+  "authorsName": [
+    "Eugene W. Landy"
+  ],
+  "authorsCompany": "UMH Properties, Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "board-governance"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "With the benefit of 40 years of experience, comes an understanding of the housing sector and its cycles. In the US market, there are a certain percentage of households that can afford conventional homeownership. Historically this has been approximately 60-65%. Those that cannot afford a conventional home are limited to the choice of renting an apartment or owning a manufactured home. Fueled by low interest rates and loose underwriting standards, homeownership soared to a record high of 70%. As the housing bubble continues its correction, we see that this rate of homeownership was, as we predicted, not sustainable.\n\nThe manufactured housing sector was clearly hurt during the conventional housing boom. Total manufactured home shipments fell to all time lows of under 7% of new housing starts from a historical average of 15%. Now that the conventional home lending environment has returned to more disciplined lending practices, we believe that the manufactured housing sector is poised for a substantial correction. As new borrowers consider their housing options, manufactured housing will once again be viewed as an attractive and affordable housing alternative.\n\nIt continues to be our goal to deliver to our shareholders a total return investment, secured by a safe and growing dividend, coupled with appreciation in the value of our underlying assets. We have achieved this goal over the past forty years and I remain confident of our prospects to continue to do so in the years ahead.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000075264208000007-web.png",
+      "caption": "Source document — UMH Properties, Inc. Annual Shareholder Letter 2007 · SEC EDGAR · EX-99.1 · UMH PROPERTIES, INC. · EX-99.1 · filed 2008-03-13 · Accession 0000752642-08-000007",
+      "alt": "UMH Properties, Inc. Annual Shareholder Letter 2007 (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/752642/000075264208000007/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "UMH PROPERTIES, INC. · EX-99.1 · filed 2008-03-13 · Accession 0000752642-08-000007",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "When Your Market Shrinks, Wait — Then Reload",
+  "situation": "In March 2008, Eugene Landy wrote UMH Properties' annual shareholder letter explaining why manufactured housing — a sector that had fallen to historic lows — was about to bounce back. He is writing to shareholders who watched their niche get crushed during the conventional housing boom. The stakes: should they hold the strategy or pivot?",
+  "insight": "Landy's core move is cycle-positioning. He uses a simple structural fact — that only 60–65% of households can historically afford conventional homeownership — as his anchor. When easy credit pushed that number to 70%, he called it unsustainable. His logic: the extra 5–7% of homeowners were always manufactured housing's natural customers. They didn't disappear; they were temporarily lured away by loose lending. When lending tightened, they'd come back. That's why he wasn't alarmed that manufactured home shipments fell to 'under 7% of new housing starts from a historical average of 15%.' He read that gap not as permanent loss, but as stored demand. This is classic mean-reversion thinking applied to a specific customer segment — and it only works if you know your market's structural floor well enough to trust it when sentiment is worst.",
+  "application": "Map your own market's 'structural floor' — the baseline demand that exists regardless of hype or credit conditions. If you know that number, you can tell the difference between a temporary dip and a real structural decline. When competitors exit during a downturn, ask: are customers actually gone, or just temporarily priced into something else? If it's the latter, the right move is to hold position and prepare to capture the rebound, not retreat.",
+  "pullQuote": "The best time to be bullish on a market is right after everyone else has abandoned it.",
+  "leadershipTraits": [
+    "reads long-cycle patterns",
+    "anchors to structural data over sentiment",
+    "holds conviction through sector downturns",
+    "honest about prior predictions"
+  ]
+}

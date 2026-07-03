@@ -1,0 +1,45 @@
+{
+  "slug": "edgar-000182810525000054",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Sell the asset, keep the distribution, triple your reach",
+  "documentTitle": "Hippo Holdings Inc. — Q2 2025 Letter to Shareholders",
+  "dateAuthored": "2025-08-06",
+  "authorsName": [
+    "Richard McCathron"
+  ],
+  "authorsCompany": "Hippo Holdings Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "partnerships",
+    "finance"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "The second quarter marked a pivotal milestone for Hippo, a proud moment that reflects the dedication, hard work, and steady progress we've made over the past several quarters. We unveiled our exciting long-term strategic plan at our Investor Day in New York City, and announced a new, transformative partnership that will accelerate this strategy.\n\nThe strategic plan is anchored in three powerful pillars: Strategic Diversification across personal and commercial lines; Unlocking Market Growth through our owned MGA and the Hippo Homeowners Insurance Program; and Optimized Risk Management leveraging our diverse portfolio across market cycles.\n\nThe strategic partnership with The Baldwin Group (NASDAQ: BWIN) is set to supercharge our momentum: Hippo's hybrid fronting carrier will extend capacity to a broader spectrum of Baldwin's MGA programs; we'll distribute our newly built homes product through Baldwin's Westwood Insurance Agency, tripling access to new home closings; and we closed a deal to transfer our homebuilder assets to The Baldwin Group for $100 million on July 1, 2025.\n\nWhile we grew revenue by more than 30% year over year, fixed expenses decreased by 16% over the same period. We achieved a consolidated net loss ratio of 47% in Q2, supported by favorable reserve developments across multiple lines of business.\n\nMost critically, Hippo posted positive net income from operating activities for the very first time. Our 2028 financial targets include gross written premium over $2 billion, adjusted net income over $125 million, and adjusted return on equity over 18%.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000182810525000054-web.png",
+      "caption": "Source document — Hippo Holdings Inc. — Q2 2025 Letter to Shareholders · SEC EDGAR · EX-99.1 · Hippo Holdings Inc. · EX-99.1 · filed 2025-08-06 · Accession 0001828105-25-000054",
+      "alt": "Hippo Holdings Inc. — Q2 2025 Letter to Shareholders (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1828105/000182810525000054/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Hippo Holdings Inc. · EX-99.1 · filed 2025-08-06 · Accession 0001828105-25-000054",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Sell the asset, keep the distribution, triple your reach",
+  "situation": "On August 6, 2025, Hippo Holdings CEO Richard McCathron wrote to shareholders after a quarter he called 'pivotal.' The company hit positive net income from operating activities for the first time — but the more revealing move was hiding inside a single deal with The Baldwin Group.",
+  "insight": "Hippo sold its homebuilder assets to Baldwin for $100 million on July 1, 2025. That looks like a divestiture. But read the full structure: in the same breath, Hippo agreed to distribute its newly built homes product *through* Baldwin's Westwood Insurance Agency, which the letter says will triple access to new home closings. Hippo gave up ownership of an asset and got a distribution network three times larger in return. This is classic platform strategy — shed the capital-heavy piece, plug into a broader channel, and grow volume without growing your own cost base. The financial proof is already visible: revenue up more than 30% year over year while fixed expenses *fell* 16%. That combination — more revenue, less overhead — is exactly what you'd expect when you stop owning infrastructure and start renting reach.",
+  "application": "Before you sell an asset, ask what the buyer has that you don't. If they have distribution, customers, or market access you lack, structure the deal to get some of it back — a channel agreement, a referral arrangement, a co-distribution clause. The $100 million matters less than the tripled reach Hippo negotiated alongside it. Map your buyers by what they own, not just what they'll pay.",
+  "pullQuote": "The smartest asset sale isn't an exit — it's a trade: cash plus a bigger channel.",
+  "leadershipTraits": [
+    "trades assets for leverage",
+    "links each deal to a growth metric",
+    "cuts fixed costs while growing revenue"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "edgar-000179278926000012",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Build the Hard Side First, Then the Obvious Side",
+  "documentTitle": "DoorDash Q4 2025 Shareholder Letter",
+  "dateAuthored": "2026-02-18",
+  "authorsName": [
+    "Tony Xu"
+  ],
+  "authorsCompany": "DoorDash",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "product",
+    "technology",
+    "ai",
+    "founding-moments"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "One of the earliest debates we had at DoorDash was whether we ought to first build the consumer app or the Dasher app, the product that Dashers use to make deliveries. It seemed so intuitive that we ought to first build the consumer app because isn't that what we are? Yet, as founders fulfilling deliveries everyday at that time, we knew that bringing you a burrito — on time, in the condition you'd want, every single time — was a lot harder than it sounds.\n\nSystems are orchestration of products whose job is to provide a complete and high quality experience for its customers. When done right, building cohesive systems allows us to build the best customer experience at the lowest cost. To build great systems, you have to operate at the lowest level of detail. This is why, since our founding, we've asked employees to WeDash, a tradition in which we fulfill deliveries ourselves to understand how our products interact and how our systems succeed or fail.\n\nWhile AI agents haven't yet achieved their full potential, it's clear that adding the reasoning power behind LLMs can produce more intelligent systems. But this will require careful investigation as LLMs require verifiable responses to produce great outcomes, and things can go haywire when they don't have the right context or aren't connected to the appropriate workflows. AVs by land and air will undoubtedly become a part of our systems, and we are pushing aggressively to make this happen — including DoorDash Dot, our purpose-built vehicle for delivery. Regardless of technology, AVs, AI agents, or chatbots alone cannot solve the entirety of a customer's problem. These products will become part of our systems at DoorDash.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000179278926000012-web.png",
+      "caption": "Source document — DoorDash Q4 2025 Shareholder Letter · SEC EDGAR · EX-99.2 · DoorDash, Inc. · EX-99.2 · filed 2026-02-18 · Accession 0001792789-26-000012",
+      "alt": "DoorDash Q4 2025 Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000012/",
+  "sourceCase": "SEC EDGAR · EX-99.2",
+  "sourceCitation": "DoorDash, Inc. · EX-99.2 · filed 2026-02-18 · Accession 0001792789-26-000012",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Build the Hard Side First, Then the Obvious Side",
+  "situation": "In his Q4 2025 shareholder letter, DoorDash CEO Tony Xu reflects on a founding-era debate: build the consumer app first, or the Dasher app first. He uses that origin story to frame how DoorDash now thinks about AI, autonomous vehicles, and its purpose-built delivery vehicle, DoorDash Dot.",
+  "insight": "The intuitive move was to build what the customer touches. Xu says the team instead focused on the harder, hidden problem — actually getting a burrito delivered hot and on time. That choice reveals how he thinks: the **bottleneck**, not the **interface**, determines the experience.\n\nHe extends the same logic to AI and AVs. LLMs and autonomous vehicles are powerful inputs, but he writes they \"cannot solve the entirety of a customer's problem\" on their own. They become components inside a system. The WeDash tradition — employees doing real deliveries — is the mechanism that keeps leaders \"at the lowest level of detail\" so they can see where the system actually breaks. The strategic frame is **systems thinking over feature thinking**: own the orchestration, and individual technologies become interchangeable parts you can swap as they mature.",
+  "application": "Map your product as a system, not a screen. List every step between a customer's request and a delivered outcome, and mark which step most often fails. Invest there first, even if it's invisible to users. Then build a habit — your version of WeDash — where leaders personally run the full workflow each month. You'll spot the seams before customers do, and you'll evaluate new tech (AI, automation, vendors) by whether it fixes a real seam, not by whether it's trendy.",
+  "pullQuote": "The product your customer sees is rarely the product that decides whether you win.",
+  "leadershipTraits": [
+    "works at low level of detail",
+    "prioritizes hard problems over visible ones",
+    "thinks in systems, not features",
+    "treats new tech as components, not solutions"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000182810524000025",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Shrink to Grow: How Hippo Traded Revenue for Resilience",
+  "documentTitle": "Hippo Holdings Inc. — Shareholder Letter Q1 2024",
+  "dateAuthored": "2024-05-02",
+  "authorsName": [
+    "Richard McCathron"
+  ],
+  "authorsCompany": "Hippo Holdings Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "finance",
+    "strategy",
+    "leadership-transitions"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Dear Shareholders, We started off the new year on the right foot, building on the momentum gained during a transformative 2023, and are on track to achieve the 2024 operational and financial goals we discussed last quarter. I am particularly excited to share that during Q1, we were able to continue reducing our CAT exposure and streamlining our operations without sacrificing overall growth. In fact, we accelerated top-line growth compared to last quarter.\n\nOur team's efforts to find the right policy for each customer, regardless of the carrier, have allowed us to maintain high retention rates during this effort and our success helped drive accelerating Total Generated Premium (\"TGP\") growth in Q1 relative to last quarter. Without the efforts to rebalance our geographic exposure, our top-line growth could have been even higher, but these efforts are already improving underwriting results and our bottom line.\n\nWe estimate that direct losses from a large Q1 hailstorm affecting Texas and Missouri will be approximately 43% lower than what we would have experienced if the exact same event had occurred in March 2023. Toward the end of last year, we took aggressive actions to lower cost and drive efficiencies into our operations, contributing to our progress in reducing our adjusted EBITDA loss during the quarter. The critical work that started in 2023 has continued into 2024, and our results from Q1 add to the growing evidence of our ability to efficiently grow our business while marching toward positive adjusted EBITDA.\n\nSincerely, Richard McCathron, President & CEO",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000182810524000025-web.png",
+      "caption": "Source document — Hippo Holdings Inc. — Shareholder Letter Q1 2024 · SEC EDGAR · EX-99.1 · Hippo Holdings Inc. · EX-99.1 · filed 2024-05-02 · Accession 0001828105-24-000025",
+      "alt": "Hippo Holdings Inc. — Shareholder Letter Q1 2024 (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1828105/000182810524000025/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Hippo Holdings Inc. · EX-99.1 · filed 2024-05-02 · Accession 0001828105-24-000025",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Shrink to Grow: How Hippo Traded Revenue for Resilience",
+  "situation": "On May 2, 2024, Hippo Holdings CEO Richard McCathron wrote to shareholders summarizing Q1 2024 results. The core tension: Hippo was actively pulling back from certain geographies to reduce catastrophic weather exposure, while still needing to show investors it could grow. The stakes were proving that a leaner, risk-managed version of the business could accelerate — not just survive.",
+  "insight": "The hidden move here is a deliberate portfolio trade-off. McCathron states plainly that 'without the efforts to rebalance our geographic exposure, our top-line growth could have been even higher.' He's voluntarily leaving revenue on the table. Why? The payoff shows up in one specific number: estimated direct losses from a major Q1 hailstorm in Texas and Missouri came in '43% lower than what we would have experienced if the exact same event had occurred in March 2023.' That's not a cost cut — that's a structural improvement to the business model. The framework here is **risk-adjusted returns**: growth that carries catastrophic downside isn't real growth. Hippo is repricing what 'growth' means internally, from raw premium volume to premium that doesn't blow up the balance sheet when weather hits.\n\nThe second move is sequencing. McCathron frames the 2023 cost actions and the 2024 geographic rebalancing as a single, continuing effort — not a one-time fix. He's signaling to shareholders that the operational discipline started last year is compounding forward, contributing to 'reducing our adjusted EBITDA loss during the quarter.'",
+  "application": "Audit your growth metrics this week. If your top-line number includes customers, contracts, or channels with significantly higher churn, support costs, or failure rates, strip them out and look at what's left. McCathron's 43% loss reduction came from removing the worst-risk geography — not from being better at everything. Find the equivalent in your business: the customer segment or product line that is inflating your headline number while quietly damaging your unit economics. Cut exposure there first, even if it costs you short-term growth.",
+  "pullQuote": "Deliberately slowing growth in the short term can be the fastest way to reach sustainable growth — if you're cutting the right risks, not the right customers.",
+  "leadershipTraits": [
+    "Willing to sacrifice headline growth for structural health",
+    "Sequences operational changes deliberately — not all at once",
+    "Uses specific metrics (43%) to make abstract risk reduction concrete",
+    "Frames setbacks as evidence of progress, not damage control"
+  ]
+}

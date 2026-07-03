@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000182810522000054",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Design Your Exposure Before the Disaster Hits",
+  "documentTitle": "Hippo Holdings Inc. Q3 2022 Letter to Shareholders",
+  "dateAuthored": "2022-11-10",
+  "authorsName": [
+    "Richard McCathron"
+  ],
+  "authorsCompany": "Hippo Holdings Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "finance",
+    "strategy",
+    "crisis-management",
+    "technology"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Hippo's business model is proving itself and our investments in technology are paying off. We've executed on improving our underwriting results while growing despite 2022's challenges of inflation shocks, supply chain dislocation and one of the worst hurricane losses in history. We remain confident that we are building a superior underwriting model and an industry leading technology stack.\n\nExcluding the impact of Hurricane Ian, our Gross Loss Ratio in Q3'22 was 58%, continuing a trend of strong improvements in underwriting results which have come despite challenging market conditions where inflationary pressures have dampened results across the industry. Our industry leading technology platform leverages rapid data integration to quickly re-underwrite and re-price our book to incorporate inflationary trends into our pricing.\n\nI want to note that the net losses to Hippo at a consolidated level from this event were only $4.7 million. Our small net loss in Florida from Hurricane Ian was not a simple stroke of luck; we made strategic decisions that limited our exposure in the state.\n\nHippo's third quarter Adjusted EBITDA loss was $54.8 million, including $4.7 million of losses related to Hurricane Ian. We beat that expectation, despite one of the worst industry loss events in history, because revenue growth and underlying Gross Loss Ratio improvement are accelerating and the expense reduction actions we've taken are beginning to have their intended effect.\n\nIn the toughest of times, we can do what many others in the industry have not: execute on fundamental improvement while gaining market share. Our focus is now to achieve positive Adjusted EBITDA, a goal we aim to reach by late 2024, while adding to the products and services we offer to American homeowners.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000182810522000054-web.png",
+      "caption": "Source document — Hippo Holdings Inc. Q3 2022 Letter to Shareholders · SEC EDGAR · EX-99.1 · Hippo Holdings Inc. · EX-99.1 · filed 2022-11-10 · Accession 0001828105-22-000054",
+      "alt": "Hippo Holdings Inc. Q3 2022 Letter to Shareholders (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1828105/000182810522000054/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Hippo Holdings Inc. · EX-99.1 · filed 2022-11-10 · Accession 0001828105-22-000054",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Design Your Exposure Before the Disaster Hits",
+  "situation": "In November 2022, Hippo Holdings CEO Richard McCathron wrote a shareholder letter explaining Q3 results. The quarter included Hurricane Ian — described in the letter as 'one of the worst industry loss events in history.' At stake: whether Hippo's tech-driven underwriting model was actually working, or just a story.",
+  "insight": "The sharpest line in the letter is easy to miss: 'Our small net loss in Florida from Hurricane Ian was not a simple stroke of luck; we made strategic decisions that limited our exposure in the state.' McCathron is telling shareholders that the $4.7 million net loss — tiny for a catastrophic storm — was engineered in advance, not stumbled into. That is deliberate portfolio construction. Before a hurricane exists, you decide how much of your book sits in high-risk geographies. The storm only reveals the quality of that earlier decision.\n\nThe second hidden move is in how Hippo uses technology. McCathron writes that their platform 'quickly re-underwrite[s] and re-price[s] our book to incorporate inflationary trends into pricing.' Most insurers re-price slowly, at renewal cycles. A platform that reprices continuously turns a reactive industry into a proactive one — a real competitive moat when inflation is moving faster than annual policy terms.",
+  "application": "Map your exposure before the crisis. Whether you run an insurance book, a customer portfolio, or a supplier list — identify your highest-concentration risks now, while conditions are calm. Decide what your maximum acceptable loss is in a worst-case scenario, then work backward to set limits. Do not wait for the storm to find out you were overexposed.",
+  "pullQuote": "The best risk management happens months before the storm, not during it.",
+  "leadershipTraits": [
+    "proactive risk design",
+    "converts tech into underwriting discipline",
+    "honest about what the numbers include and exclude"
+  ]
+}

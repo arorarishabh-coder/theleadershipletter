@@ -1,0 +1,47 @@
+{
+  "slug": "edgar-000095013408015558",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Walk Away Early: When a Bad Deal Protects Your Moat",
+  "documentTitle": "Washington Banking Company Shareholder Letter — Q2 2008",
+  "dateAuthored": "2008-08-21",
+  "authorsName": [
+    "Michal D. Cann",
+    "John L. (Jack) Wagner"
+  ],
+  "authorsCompany": "WASHINGTON BANKING CO",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "leadership-transitions",
+    "finance",
+    "crisis-management"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "When I joined the bank 16 years ago, we were a six-branch operation with $70 million in assets. Today, we are approaching the $1 billion milestone and have grown to serve Northwestern Washington with 19 branches. It has been a very rewarding career.\n\nWhile many banks in the region and in the nation have been reporting lower profits or even losses, we remain a solidly profitable independent banking company. Second quarter 2008 highlights include: steady earnings at $2.4 million, or $0.25 per diluted share; total loans increased 8% over the prior year to $813 million; return on average assets was 1.09% and return on equity was 12.74%; book value per share grew 11% to $8.17; and Total Risk-Based Capital to Risk-Weighted Assets was 12.79%, well above the regulatory well-capitalized minimum.\n\nWhen we first announced the proposed merger with Frontier Financial Corporation, nearly a year ago, we were in a very different market. Although the shareholders approved the merger earlier this year, we chose to terminate it at the end of May. Frontier's inability to obtain the required regulatory approval was a primary factor in the board's decision. During this long process, the bank was fortunate to maintain the strong loyalty of many employees and customers. We believe we have a good foundation to begin to re-establish our company's strong position.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000095013408015558-web.png",
+      "caption": "Source document — Washington Banking Company Shareholder Letter — Q2 2008 · SEC EDGAR · EX-99.1 · WASHINGTON BANKING CO · EX-99.1 · filed 2008-08-21 · Accession 0000950134-08-015558",
+      "alt": "Washington Banking Company Shareholder Letter — Q2 2008 (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1058690/000095013408015558/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "WASHINGTON BANKING CO · EX-99.1 · filed 2008-08-21 · Accession 0000950134-08-015558",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Walk Away Early: When a Bad Deal Protects Your Moat",
+  "situation": "In August 2008, Washington Banking Company co-signed a shareholder letter disclosing two things at once: the bank was performing well — 1.09% return on assets, 12.74% return on equity — while most regional peers were reporting losses. At the same time, it quietly confirmed it had just walked away from a year-long merger with Frontier Financial Corporation, citing Frontier's failure to secure regulatory approval.",
+  "insight": "The hidden move here is capital preservation through exit timing. The letter notes they entered the Frontier deal 'nearly a year ago' in 'a very different market.' By the time they terminated in late May 2008, the environment had deteriorated sharply. The board used regulatory failure as a clean, factual reason to exit — but the underlying logic is simpler: completing a distressed merger in a deteriorating credit environment would have diluted the very capital ratios they're now proudly citing (12.79% Total Risk-Based Capital). The two paragraphs are not separate stories. They're the same story: we kept our balance sheet clean, and here is the proof.\n\nThis is a classic **competitive moat defense** move. Washington Banking's position — profitable, well-capitalized, independent — was the asset. The merger, once the market shifted, became a threat to that asset, not an enhancement of it. The brief line about retaining 'strong loyalty of many employees and customers' signals they also understood the internal cost of the prolonged uncertainty and were reassuring stakeholders that the foundation held.",
+  "application": "Before signing or extending any partnership, acquisition, or major contract, write down the two or three conditions that would make this deal actively harmful — not just disappointing — to your core business. Review that list quarterly. If conditions change and the deal now threatens your best metrics rather than improving them, use the clearest legitimate off-ramp available. Cutting fast and clean is a decision, not a failure.",
+  "pullQuote": "Knowing when to kill a deal is as valuable as knowing when to sign one.",
+  "leadershipTraits": [
+    "cuts losses with clear criteria",
+    "protects core strengths under pressure",
+    "honest about deal failure without dramatizing it",
+    "communicates bad news alongside strong evidence of health"
+  ]
+}

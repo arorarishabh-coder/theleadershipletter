@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000182810525000035",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "How to Shrink a Portfolio Before You Grow It",
+  "documentTitle": "Hippo Holdings Inc. Q1 2025 Letter to Shareholders",
+  "dateAuthored": "2025-05-07",
+  "authorsName": [
+    "Richard McCathron"
+  ],
+  "authorsCompany": "Hippo Holdings Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "finance",
+    "strategy",
+    "crisis-management"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "During Q1, we delivered on two of our most important objectives as a company. We proactively supported our customers in the aftermath of the Los Angeles wildfires, as we do in all catastrophic events, and further advanced the key drivers of long-term value in our business.\n\nOur Hippo Homeowners Insurance Program (HHIP) saw a 35% year-over-year increase in gross written premium from our homebuilder partners. New homes are built to modern codes, making them more resilient and better equipped to withstand catastrophic events, which is why this channel has had such compelling underwriting results. These homes, which have accounted for most of the new business we have been writing in California over the past few years, were not impacted by the fires.\n\nWe continued to reduce HHIP written premium for existing homes in cat prone areas vs. prior year to help reduce weather-related volatility in the portfolio, and I'm happy to report that these efforts are now largely complete. With greater confidence in our geographic footprint, rate adequacy, and improved deductible structure, we are now preparing to expand new business in this program.\n\nWritten premium outside of HHIP increased by 21% year-over-year. We believe so strongly in the value of this platform that we decided to raise additional risk-based capital to further support its growth and signed an agreement to raise a $50 million surplus note in April, pending regulatory approval.\n\nWe're now guiding to finish 2025 at an annual run-rate of more than $500 million in revenue and generating net profit.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000182810525000035-web.png",
+      "caption": "Source document — Hippo Holdings Inc. Q1 2025 Letter to Shareholders · SEC EDGAR · EX-99.1 · Hippo Holdings Inc. · EX-99.1 · filed 2025-05-07 · Accession 0001828105-25-000035",
+      "alt": "Hippo Holdings Inc. Q1 2025 Letter to Shareholders (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1828105/000182810525000035/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Hippo Holdings Inc. · EX-99.1 · filed 2025-05-07 · Accession 0001828105-25-000035",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "How to Shrink a Portfolio Before You Grow It",
+  "situation": "On May 7, 2025, Hippo Holdings CEO Richard McCathron published a Q1 shareholder letter filed with the SEC. Hippo is a home insurance company. The letter arrives right after the Los Angeles wildfires — a direct test of whether the company's recent underwriting changes held up under pressure.",
+  "insight": "The hidden move here is sequencing. McCathron didn't just survive the wildfires — he used the letter to show that deliberate contraction made survival possible. The letter notes that Hippo had been 'reducing HHIP written premium for existing homes in cat prone areas vs. prior year' and that 'these efforts are now largely complete.' In other words, Hippo spent the past few years shrinking the riskiest part of its book. The wildfires proved it worked. Now, with the cleanup done, McCathron signals expansion: 'we are now preparing to expand new business in this program.'\n\nThe deeper logic is portfolio construction before growth — a disciplined application of risk-adjusted positioning. Hippo simultaneously leaned into a safer segment: new homes built to modern codes, sold through homebuilder partners, which saw 35% premium growth year-over-year. This is classic two-track strategy: reduce exposure in one lane while building momentum in another. The $50 million surplus note raised in April signals that the growth phase is now funded and imminent.",
+  "application": "Before you raise capital or push for growth, audit which parts of your business are dragging on your results. Cut or shrink those first. Get that work 'largely complete.' Then raise money and expand — when you can point to a cleaner, better-understood foundation. Investors and partners will fund growth far more readily when you've already done the hard work of de-risking.",
+  "pullQuote": "The best time to expand is right after you've finished cutting — not before.",
+  "leadershipTraits": [
+    "sequences contraction before expansion",
+    "lets results speak instead of projecting optimism",
+    "moves deliberately under pressure",
+    "honest about work still in progress"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "edgar-000119312516670074",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "How Square Turned a Payment Tool Into a Business Platform",
+  "documentTitle": "Square, Inc. Q2 2016 Shareholder Letter",
+  "dateAuthored": "2016-08-03",
+  "authorsName": [
+    "Jack Dorsey",
+    "Sarah Friar"
+  ],
+  "authorsCompany": "Square, Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "finance",
+    "product",
+    "strategy"
+  ],
+  "leaderSlugs": [
+    "jack-dorsey"
+  ],
+  "excerptForBlog": "To Our Shareholders: We are pleased with our second quarter results, which highlight strong growth at scale and a significant profitability milestone. Gross Payment Volume (GPV) for the second quarter was $12.5 billion, up 42% year over year. New-seller growth made up the majority of our GPV increase, while positive dollar-based retention from existing sellers also had a meaningful impact. Total net revenue was $439 million, up 41% year over year. Adjusted Revenue was $171 million, up 54% year over year, and exceeded the high end of our guidance. Net loss was $27 million, and we achieved positive Adjusted EBITDA of $13 million, which also exceeded the high end of our guidance. This represents an Adjusted EBITDA margin of 7%, an improvement of 7 points year over year and 14 points sequentially. This Adjusted EBITDA improvement reflects our increased scale and operating leverage, positive dollar-based retention from existing sellers, and our ability to drive new product adoption. We are excited about our results and how well positioned we are for the future. We started Square with the mission to enable sellers to accept payments anywhere and never miss a sale. Our focus on technology and design allows us to create products and services that are accessible, intuitive, and easy to use. This has enabled us to build a cohesive commerce ecosystem that extends into point-of-sale software, business loans, employee management, and much more. In addition, we are using data science and risk systems to service sellers of all sizes, significantly expanding our addressable market.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000119312516670074-web.png",
+      "caption": "Source document — Square, Inc. Q2 2016 Shareholder Letter · SEC EDGAR · EX-99.1 · Square, Inc. · EX-99.1 · filed 2016-08-03 · Accession 0001193125-16-670074",
+      "alt": "Square, Inc. Q2 2016 Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1512673/000119312516670074/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Square, Inc. · EX-99.1 · filed 2016-08-03 · Accession 0001193125-16-670074",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "How Square Turned a Payment Tool Into a Business Platform",
+  "situation": "On August 3, 2016, Square co-founders Jack Dorsey and CFO Sarah Friar published their Q2 shareholder letter to SEC filing. GPV hit $12.5 billion (up 42% year over year) and Adjusted EBITDA turned positive at $13 million — a 14-point sequential improvement. The letter is a public signal about where Square is headed strategically, not just a report on where it has been.",
+  "insight": "The headline numbers are fine, but the strategic reveal is buried in one phrase: 'positive dollar-based retention from existing sellers.' That means Square's existing customers are spending more over time — a classic expansion-revenue pattern that reduces pressure to constantly acquire new customers. The letter names exactly why: sellers keep adopting new products. Loans, payroll, point-of-sale software — each one deepens the relationship and raises switching costs. This is **platform strategy with compounding lock-in**. Square started with a simple card reader, then built adjacent tools that make leaving expensive. The letter also flags data science and risk systems as the engine for serving 'sellers of all sizes' — expanding the addressable market without changing the core product. The Adjusted EBITDA margin jumping 14 points in a single quarter shows the operating leverage that follows once the platform reaches critical mass.",
+  "application": "Map your own product against this logic: list every tool your customer uses *after* buying your core product. If that list is short, you are vulnerable. Pick one adjacent problem your best customers face, build or buy a lightweight solution, and track whether adoption of that second product correlates with higher retention and revenue. Dollar-based retention above 100% is the number to chase — it means your existing base grows revenue even without a single new customer.",
+  "pullQuote": "The real moat isn't the hardware — it's every product a seller adopts after the first swipe.",
+  "leadershipTraits": [
+    "frames growth in terms of ecosystem, not just product",
+    "uses financial metrics to signal strategic direction",
+    "expands market by building data capability, not just distribution"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "edgar-000119312523269372",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Cap the Company Before You Cap the Customer",
+  "documentTitle": "Block, Inc. Q3 2023 Shareholder Letter",
+  "dateAuthored": "2023-11-02",
+  "authorsName": [
+    "Jack Dorsey"
+  ],
+  "authorsCompany": "Block, Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "leadership-transitions",
+    "product",
+    "ai"
+  ],
+  "leaderSlugs": [
+    "jack-dorsey"
+  ],
+  "excerptForBlog": "We've been quiet lately because we've been focused. When we went public almost 8 years ago, we stated this in our S-1: 'As a public company our decisions will continue to reflect what we've done as a private one—we put our customers first. That means constantly asking the question: how can the financial system better serve people? We'll measure ourselves by our commitment to take the long view and focus on building a company that creates value over decades and not just a few fiscal quarters out.'\n\nWe believe we will reach Rule of 40 in 2026, with an initial composition of at least mid-teens gross profit growth and a mid-20% Adjusted Operating Income margin. Today, we're instituting an initial authorization to repurchase $1 billion in shares, which will offset a portion of dilution from share based compensation.\n\nWe are going to create an absolute cap on the number of people we have at the company, held firm at 12,000 people until we feel the growth of the business has meaningfully outpaced the growth of the company. We know the inverse is true today.\n\nMy focus going forward is threefold: our Square business, our ecosystem of ecosystems model, and our costs. Cash App sits at the intersection of three traditionally-distinct use cases: financial services, community based transactions and commerce. We have clarified a focused strategy on earning the primary banking relationship of our existing customer base in the US.\n\nFor Square, we reset our prioritization to focus on four things: a rock solid and flexible multi-vertical platform, providing a 'local' experience to sellers of all sizes, growing with AI, and banking on Square. If we help a seller grow, we grow.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000119312523269372-web.png",
+      "caption": "Source document — Block, Inc. Q3 2023 Shareholder Letter · SEC EDGAR · EX-99.1 · Block, Inc. · EX-99.1 · filed 2023-11-02 · Accession 0001193125-23-269372",
+      "alt": "Block, Inc. Q3 2023 Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1512673/000119312523269372/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Block, Inc. · EX-99.1 · filed 2023-11-02 · Accession 0001193125-23-269372",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Cap the Company Before You Cap the Customer",
+  "situation": "Jack Dorsey's Q3 2023 shareholder letter to Block investors. After years of sprawling expansion across Square, Cash App, and other bets, he commits publicly to a Rule of 40 target by 2026, a $1B buyback, and a hard headcount cap of 12,000. The stakes: convincing the market Block can be disciplined without losing its long-view identity.",
+  "insight": "The most revealing line is the admission that company growth has outpaced business growth. That is a CEO publicly diagnosing organizational bloat and naming the cure as a **fixed cap**, not a vague 'efficiency push.' A target you can count is harder to fudge than a cultural ask.\n\nNotice the sequencing. He pairs the cap with a concrete financial frame (Rule of 40, mid-teens gross profit growth, mid-20% margin) and re-narrows focus to three things: Square, the 'ecosystem of ecosystems,' and costs. Inside each unit, he narrows again — Cash App chases the **primary banking relationship**; Square picks four priorities. This is **forcing function** management: you control the inputs (headcount, priority count) so the outputs (margin, focus) have nowhere to hide.",
+  "application": "Pick one resource you keep quietly expanding — headcount, tools, projects, meetings — and set a hard numeric cap this quarter. Tie it to a business metric that must grow faster than the cap before you lift it. Then cut your priority list to no more than four items per team, written down, so trade-offs become visible instead of political.",
+  "pullQuote": "When the company is growing faster than the business, the fix is a hard ceiling, not a pep talk.",
+  "leadershipTraits": [
+    "admits when the org has drifted",
+    "prefers hard numbers to soft intentions",
+    "narrows focus under pressure",
+    "communicates constraints publicly"
+  ]
+}

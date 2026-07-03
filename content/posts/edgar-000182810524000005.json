@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000182810524000005",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Shrink the Risk Before You Chase the Growth",
+  "documentTitle": "Hippo Holdings Inc. Letter to Shareholders Q4 2023",
+  "dateAuthored": "2024-03-06",
+  "authorsName": [
+    "Richard McCathron"
+  ],
+  "authorsCompany": "Hippo Holdings Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "leadership-transitions"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "In two short years, we have nearly doubled our total generated premium from $606 million to $1.1 billion and more than doubled our revenue from $91 million to $210 million, all while lowering fixed expenses from $140 million to $138 million and improving the gross loss ratio on our Hippo Home Insurance Program by approximately 40 percentage points.\n\nIn the second half of 2023, we launched an aggressive program to raise deductibles for wind and hail in certain geographies and began non-renewing policies in higher-cat areas where we had excess concentration. If we experience the exact same hailstorms this coming year, with the same level of severity, the program of deductible changes and selective non-renewals in CAT concentrated areas that is currently in progress would reduce Hippo's direct losses by approximately 55%. Moreover, because the changes that began last October take a full year to work their way through policy renewal dates, the benefits in 2025 would be even greater: an almost 80% reduction in direct losses if the hailstorms from second quarter of 2023 were to reoccur.\n\nThese initiatives, when combined with the actions we took in the second half of 2023 to streamline our operations and reduce our fixed expenses, give us greater confidence that we are on track to achieve our profitability goals ahead of schedule, with a mix that is shifting toward businesses with lower volatility and higher predictability. As we enter 2024, we believe we are incredibly well-positioned to compete for business in our core markets and in our core customer segments. It is time for Hippo to go back on offense.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000182810524000005-web.png",
+      "caption": "Source document — Hippo Holdings Inc. Letter to Shareholders Q4 2023 · SEC EDGAR · EX-99.1 · Hippo Holdings Inc. · EX-99.1 · filed 2024-03-06 · Accession 0001828105-24-000005",
+      "alt": "Hippo Holdings Inc. Letter to Shareholders Q4 2023 (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1828105/000182810524000005/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Hippo Holdings Inc. · EX-99.1 · filed 2024-03-06 · Accession 0001828105-24-000005",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Shrink the Risk Before You Chase the Growth",
+  "situation": "Hippo CEO Richard McCathron's Q4 2023 shareholder letter, filed March 2024. After heavy hailstorm losses, he tells investors that Hippo spent the second half of 2023 cutting risk in the most exposed places, and is now ready to grow again.",
+  "insight": "The hidden move here is **re-underwriting**, not cost-cutting. McCathron isn't shrinking Hippo. He's reshaping which customers it keeps. By raising wind and hail deductibles and non-renewing policies in catastrophe-prone areas, he claims the same 2023 hailstorms would cause about 55% less direct loss this year, and nearly 80% less by 2025 once renewals cycle through.\n\nThat is the real strategic insight: in insurance, the customer mix IS the product. Top-line growth (premium doubling from $606M to $1.1B) means little if the wrong policies sit underneath it. Notice the order of operations — fix the loss ratio and the concentration risk first, then announce 'it is time for Hippo to go back on offense.' Growth without that cleanup would just compound the next bad quarter.",
+  "application": "Before pushing for more revenue, audit where your existing revenue is actually losing you money or capacity. Which customers, geographies, or SKUs blow up your unit economics? Raise their price, change the terms, or walk away. Then go hunt for new business. Defense first creates the room to play offense without flinching at the next shock.",
+  "pullQuote": "Before going on offense, fix the math on the losses you can actually control.",
+  "leadershipTraits": [
+    "sequences defense before offense",
+    "willing to fire unprofitable customers",
+    "thinks in cohorts and renewals, not just totals",
+    "quantifies the fix before claiming the win"
+  ]
+}

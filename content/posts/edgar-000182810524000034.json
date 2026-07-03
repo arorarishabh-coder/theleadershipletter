@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000182810524000034",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Fix the risk profile first, then grow",
+  "documentTitle": "Hippo Holdings Inc. Letter to Shareholders Q2 2024",
+  "dateAuthored": "2024-08-08",
+  "authorsName": [
+    "Richard McCathron"
+  ],
+  "authorsCompany": "Hippo Holdings Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "technology"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "We have added to the momentum we created over the past year and delivered an improved second quarter of 2024. Our plan to reduce the volatility in our homeowners program passed its first meaningful test, as we delivered a substantial year over year reduction in catastrophic losses despite the broader industry suffering another quarter of elevated severe weather. Beyond this, we continued to leverage our proprietary technology to further improve the efficiency of our operations, resulting in increased customer lifetime value and lower customer acquisition cost.\n\nThe second quarter presented the best opportunity yet for Hippo to showcase the benefits from the work we have been doing to reduce our business's exposure to wind and hail events. Compared to the second quarter of last year and excluding the positive benefits from favorable reserve development, we improved our PCS CAT weather loss ratio by 83 percentage points and reduced our weather-related loss dollars by 73%.\n\nIn the second quarter, we realized a 60% year over year increase in agent productivity, a 17% year over year increase in our lead conversion rate, and a 23% year over year increase in our cross-sell rate, allowing us to grow our top line while driving additional operating leverage.\n\nOur business now has inherently less exposure to wind and hail, is growing more quickly because we are better meeting our customers' needs, and is operating in a more efficient and cost-effective manner. We remain confident that we can achieve our long-stated goal of positive adjusted EBITDA by the end of this year.\n\n— Richard McCathron, President & CEO",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000182810524000034-web.png",
+      "caption": "Source document — Hippo Holdings Inc. Letter to Shareholders Q2 2024 · SEC EDGAR · EX-99.1 · Hippo Holdings Inc. · EX-99.1 · filed 2024-08-08 · Accession 0001828105-24-000034",
+      "alt": "Hippo Holdings Inc. Letter to Shareholders Q2 2024 (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1828105/000182810524000034/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Hippo Holdings Inc. · EX-99.1 · filed 2024-08-08 · Accession 0001828105-24-000034",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Fix the risk profile first, then grow",
+  "situation": "On August 8, 2024, Hippo Holdings CEO Richard McCathron sent shareholders a Q2 update. Hippo sells homeowners insurance, a business brutalized by severe weather losses. The letter reports that a deliberate strategy to cut exposure to wind and hail events is now showing measurable results — at exactly the moment the broader industry took heavy hits.",
+  "insight": "McCathron's hidden move is sequencing. He didn't try to grow revenue and fix risk at the same time. First, he reduced the volatility — cutting weather-related losses 73% year over year even as 'the broader industry suffered another quarter of elevated severe weather.' Only after that foundation was in place did growth metrics follow: agent productivity up 60%, lead conversion up 17%, cross-sell up 23%. This is classic risk-before-scale thinking. A leaky bucket doesn't benefit from more water. By shrinking wind and hail exposure first, every new dollar of premium is now worth more because it isn't being eroded by catastrophic losses. The letter also signals a cost-structure play: the same technology that reduced risk is also lowering customer acquisition costs and raising lifetime value — compressing the unit economics from both ends simultaneously.",
+  "application": "Before you push for growth, audit where your business is structurally leaking — a customer segment with terrible retention, a product line with unpredictable costs, a channel with poor conversion. Fix or cut that first. Then run the growth play. When the market has a bad quarter and you don't, your numbers do the selling for you.",
+  "pullQuote": "The best time to prove your risk controls work is when the whole industry is bleeding — and you're not.",
+  "leadershipTraits": [
+    "sequences decisions deliberately",
+    "uses adverse industry conditions as proof points",
+    "ties operational metrics to unit economics",
+    "sets a clear, time-bound public target"
+  ]
+}
