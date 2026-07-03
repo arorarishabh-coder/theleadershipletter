@@ -127,3 +127,67 @@ async function fetchWithRetry(url: string, attempt = 0): Promise<Response> {
   }
   return res;
 }
+
+// ── Search Alerts ──────────────────────────────────────────────────────────
+// A saved RECAP full-text query that CourtListener re-runs on a schedule and
+// POSTs new hits to the account's configured webhook — turning discovery from a
+// static per-docket sweep into live, company-wide monitoring of ANY new PACER
+// filing matching an exec-email fingerprint. Requires COURTLISTENER_API_TOKEN.
+
+/** Alert cadence: rt=real-time (paid), dy=daily, wly=weekly, mly=monthly. */
+export type AlertRate = "rt" | "dy" | "wly" | "mly";
+
+export interface SearchAlert {
+  id: number;
+  name: string;
+  query: string; // the stored search querystring, e.g. `q=...&type=r`
+  rate: string;
+}
+
+function hasToken(): boolean {
+  return !!(process.env.COURTLISTENER_API_TOKEN || process.env.COURTLISTENER_TOKEN);
+}
+
+/** List the account's existing search alerts (paginates). */
+export async function listSearchAlerts(): Promise<SearchAlert[]> {
+  if (!hasToken()) throw new Error("COURTLISTENER_API_TOKEN required to manage alerts.");
+  const out: SearchAlert[] = [];
+  let url: string | null = `${API_BASE}/alerts/`;
+  let pages = 0;
+  while (url && pages < 10) {
+    const res: Response = await fetchWithRetry(url);
+    if (!res.ok) throw new Error(`CourtListener alerts ${res.status} ${res.statusText}`);
+    const json = (await res.json()) as { results?: SearchAlert[]; next?: string | null };
+    for (const a of json.results ?? []) out.push(a);
+    url = json.next ?? null;
+    pages += 1;
+    if (url) await sleep(400);
+  }
+  return out;
+}
+
+/**
+ * Create a RECAP search alert. `query` is the search querystring (no leading `?`),
+ * e.g. `q="From:" ("@google.com")&type=r`. Idempotent by name: if an alert with
+ * the same name exists it is returned unchanged.
+ */
+export async function createSearchAlert(input: {
+  name: string;
+  query: string;
+  rate?: AlertRate;
+}): Promise<{ alert: SearchAlert; created: boolean }> {
+  if (!hasToken()) throw new Error("COURTLISTENER_API_TOKEN required to manage alerts.");
+  const existing = await listSearchAlerts();
+  const match = existing.find((a) => a.name === input.name);
+  if (match) return { alert: match, created: false };
+
+  const res = await fetch(`${API_BASE}/alerts/`, {
+    method: "POST",
+    headers: { ...authHeaders(), "Content-Type": "application/json" },
+    body: JSON.stringify({ name: input.name, query: input.query, rate: input.rate ?? "dy" }),
+  });
+  if (!res.ok) {
+    throw new Error(`CourtListener create alert ${res.status}: ${await res.text().catch(() => "")}`);
+  }
+  return { alert: (await res.json()) as SearchAlert, created: true };
+}
