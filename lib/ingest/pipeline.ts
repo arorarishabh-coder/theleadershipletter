@@ -1,6 +1,7 @@
 import { claude, MODELS } from "@/lib/anthropic";
 import { EDITORIAL_SYSTEM_PROMPT } from "@/lib/prompts/system";
 import { LESSON_PROMPT } from "@/lib/prompts/lesson";
+import { ARTIFACT_PROMPT } from "@/lib/prompts/artifact";
 import { RELEVANCE_PROMPT } from "@/lib/prompts/relevance";
 import { representativeExcerpt, fetchDocument, meaningfulTextLength } from "./fetch";
 import { transcribePdf } from "./ocr";
@@ -8,6 +9,7 @@ import { captureSourceScreenshots } from "./screenshot";
 import { savePost, listSavedPosts } from "./save";
 import { PERSONS } from "@/lib/taxonomy";
 import type {
+  ArtifactResult,
   EnrichResult,
   LessonResult,
   PipelineOptions,
@@ -159,25 +161,41 @@ export async function processDocument(
     rel.lessonClarity >= minLessonClarity &&
     rel.candidateLesson.trim().length > 0;
 
+  // Notable Artifact lane: a doc that isn't lesson-worthy but IS historically
+  // notable (recognizable leaders / pivotal moment) still earns a lighter post —
+  // unless the caller opts out. Only for the "thin, no lesson" rejections; never
+  // rescues procedural/boilerplate/off-theme/non-correspondence material.
+  const ARTIFACT_REJECTS = new Set(["no_transferable_lesson", "too_thin"]);
+  const isArtifact =
+    !passes &&
+    opts.artifactLane !== false &&
+    !!rel.notableArtifact &&
+    rel.isInternalCorrespondence &&
+    rel.onTheme &&
+    rel.rejectCategory !== null &&
+    ARTIFACT_REJECTS.has(rel.rejectCategory);
+
+  const verdict = passes ? "PASS" : isArtifact ? "ARTIFACT" : "REJECT";
   logStage(
     source.id,
     "relevance",
-    `${passes ? "PASS" : "REJECT"} themeFit=${rel.themeFitScore} lessonClarity=${rel.lessonClarity} signal=${rel.leadershipSignal}` +
+    `${verdict} themeFit=${rel.themeFitScore} lessonClarity=${rel.lessonClarity} signal=${rel.leadershipSignal}` +
       (passes ? ` :: ${rel.candidateLesson}` : ` [${rel.rejectCategory ?? "below_bar"}] ${rel.reason}`),
   );
 
   if (opts.gateOnly) {
+    const ok = passes || isArtifact;
     return {
       sourceId: source.id,
-      ok: passes,
-      postSlug: passes ? source.id : undefined,
-      failureStage: passes ? undefined : "relevance",
+      ok,
+      postSlug: ok ? source.id : undefined,
+      failureStage: ok ? undefined : "relevance",
       rejectCategory: rel.rejectCategory,
-      error: passes ? undefined : `[${rel.rejectCategory ?? "below_bar"}] themeFit=${rel.themeFitScore} lessonClarity=${rel.lessonClarity}: ${rel.reason}`,
+      error: ok ? undefined : `[${rel.rejectCategory ?? "below_bar"}] themeFit=${rel.themeFitScore} lessonClarity=${rel.lessonClarity}: ${rel.reason}`,
     };
   }
 
-  if (!passes) {
+  if (!passes && !isArtifact) {
     return {
       sourceId: source.id,
       ok: false,
@@ -235,30 +253,61 @@ Output the JSON only.`;
   }
   logStage(source.id, "enrich", `excerpt=${enrich.excerptWordCount}w, topics=${enrich.topics.join(",")}`);
 
-  // 4. Lesson generation (use Opus for high-signal pieces)
-  const useOpus = (rel.leadershipSignal ?? 0) >= 8;
-  const lessonModel = useOpus ? MODELS.featured : MODELS.lesson;
-  logStage(source.id, "lesson", `calling ${useOpus ? "Opus" : "Sonnet"}`);
-  const lessonPrompt = LESSON_PROMPT(
-    enrich.documentTitleCleaned || source.documentTitle,
-    enrich.dateAuthored || source.dateAuthored,
-    enrich.authors.join(" & ") || source.knownAuthors.join(" & "),
-    source.knownCompany,
-    enrich.excerptForBlog,
-    `${source.sourceCase} · ${source.sourceCitation}`,
-  );
-  const lessonRaw = await callClaude({
-    model: lessonModel,
-    system: EDITORIAL_SYSTEM_PROMPT,
-    prompt: lessonPrompt,
-    maxTokens: 8192,
-  });
-  const lesson = safeJSON<LessonResult>(lessonRaw.text);
-  if (!lesson || !lesson.situation || !lesson.insight || !lesson.application) {
-    return { sourceId: source.id, ok: false, failureStage: "lesson", error: "Failed to parse lesson JSON (missing situation/insight/application)" };
+  // 4. Analysis — the standard three-part LESSON, or (Notable Artifact lane) a
+  // lighter "why this matters" note. Unified into a common set of post fields.
+  const analysisTitle = enrich.documentTitleCleaned || source.documentTitle;
+  const analysisDate = enrich.dateAuthored || source.dateAuthored;
+  const analysisAuthors = enrich.authors.join(" & ") || source.knownAuthors.join(" & ");
+  const provenance = `${source.sourceCase} · ${source.sourceCitation}`;
+
+  let postKind: "lesson" | "artifact" = "lesson";
+  let title: string;
+  let pullQuote: string;
+  let traits: string[];
+  let situation: string | undefined;
+  let insight: string | undefined;
+  let application: string | undefined;
+  let artifactNote: string | undefined;
+
+  if (isArtifact) {
+    logStage(source.id, "artifact", "calling Sonnet (notable-artifact lane)");
+    const artifactRaw = await callClaude({
+      model: MODELS.lesson,
+      prompt: ARTIFACT_PROMPT(analysisTitle, analysisDate, analysisAuthors, source.knownCompany, enrich.excerptForBlog, provenance),
+      maxTokens: 1500,
+    });
+    const art = safeJSON<ArtifactResult>(artifactRaw.text);
+    if (!art || !art.title || !art.artifactNote) {
+      return { sourceId: source.id, ok: false, failureStage: "lesson", error: "Failed to parse artifact JSON (missing title/artifactNote)" };
+    }
+    postKind = "artifact";
+    title = art.title;
+    pullQuote = art.pullQuote;
+    traits = art.significance?.length ? art.significance : ["notable artifact"];
+    artifactNote = art.artifactNote;
+    logStage(source.id, "artifact", `title="${art.title}" (${art.artifactNote.length} chars)`);
+  } else {
+    const useOpus = (rel.leadershipSignal ?? 0) >= 8;
+    const lessonModel = useOpus ? MODELS.featured : MODELS.lesson;
+    logStage(source.id, "lesson", `calling ${useOpus ? "Opus" : "Sonnet"}`);
+    const lessonRaw = await callClaude({
+      model: lessonModel,
+      system: EDITORIAL_SYSTEM_PROMPT,
+      prompt: LESSON_PROMPT(analysisTitle, analysisDate, analysisAuthors, source.knownCompany, enrich.excerptForBlog, provenance),
+      maxTokens: 8192,
+    });
+    const lesson = safeJSON<LessonResult>(lessonRaw.text);
+    if (!lesson || !lesson.situation || !lesson.insight || !lesson.application) {
+      return { sourceId: source.id, ok: false, failureStage: "lesson", error: "Failed to parse lesson JSON (missing situation/insight/application)" };
+    }
+    title = lesson.lessonTitle;
+    pullQuote = lesson.pullQuote;
+    traits = lesson.leadershipTraits;
+    situation = lesson.situation;
+    insight = lesson.insight;
+    application = lesson.application;
+    logStage(source.id, "lesson", `title="${lesson.lessonTitle}" (${lesson.situation.length + lesson.insight.length + lesson.application.length} chars)`);
   }
-  const analysisChars = lesson.situation.length + lesson.insight.length + lesson.application.length;
-  logStage(source.id, "lesson", `title="${lesson.lessonTitle}" (${analysisChars} chars)`);
 
   // 5. Screenshot — render the actual source document (PDF page(s) or web page).
   const cleanTitle = enrich.documentTitleCleaned || source.documentTitle;
@@ -307,7 +356,7 @@ Output the JSON only.`;
     slug: source.id,
     publishedAt: new Date().toISOString().slice(0, 10),
     isFeatured: false,
-    title: lesson.lessonTitle,
+    title,
     documentTitle: enrich.documentTitleCleaned || source.documentTitle,
     dateAuthored: enrich.dateAuthored || source.dateAuthored,
     authorsName: enrich.authors.length ? enrich.authors : source.knownAuthors,
@@ -325,12 +374,14 @@ Output the JSON only.`;
     sourceCitation: source.sourceCitation,
     licensingPath: source.licensingPath,
     textSource,
-    lessonTitle: lesson.lessonTitle,
-    situation: lesson.situation,
-    insight: lesson.insight,
-    application: lesson.application,
-    pullQuote: lesson.pullQuote,
-    leadershipTraits: lesson.leadershipTraits,
+    postKind,
+    artifactNote,
+    lessonTitle: title,
+    situation,
+    insight,
+    application,
+    pullQuote,
+    leadershipTraits: traits,
   };
 
   const outputPath = await savePost(post);

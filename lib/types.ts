@@ -77,6 +77,13 @@ export interface Post {
   newsletterSentAt?: string;
 
   // From Analysis
+  // "artifact" = the Notable Artifact lane: a historically iconic exchange that
+  // doesn't yield a transferable lesson but is worth publishing for the moment it
+  // captures. Renders a short "Why this matters" note instead of situation/
+  // insight/application. Undefined/"lesson" = the standard lesson-driven post.
+  postKind?: "lesson" | "artifact";
+  /** For postKind==="artifact": 2-4 sentences on why this exchange is notable. */
+  artifactNote?: string;
   lessonTitle: string;
   // Lean, scannable analysis — three labeled sections that replace the old dense
   // markdown body. Rendered under "The situation" / "The lesson" / "Put it to work".

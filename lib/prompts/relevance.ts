@@ -39,6 +39,9 @@ ${sourceContext}
 # Document text (representative window — may begin at the letter body, past any cover/TOC front-matter)
 ${documentText.slice(0, 6000)}
 
+# Notable-artifact flag (separate from passing)
+Set "notableArtifact": true when — EVEN IF it yields no transferable lesson — this is a historically NOTABLE exchange worth publishing for the moment it captures: it features widely recognizable leaders (e.g. Elon Musk, Sam Altman, Mark Zuckerberg, Jensen Huang, Jeff Bezos, Steve Jobs, Bill Gates, Satya Nadella, Tim Cook, Dario Amodei), OR it captures a pivotal moment (a company's founding, a landmark deal or rivalry, a famous decision). A routine email between unknown staff, pure logistics, procedure, or boilerplate is NOT notable — set false. This flag is independent of the pass/reject decision.
+
 # Output — JSON only, this exact shape:
 {
   "isInternalCorrespondence": <true|false — true for internal correspondence (A) OR a substantive leadership/shareholder letter (B); false only for non-correspondence like charts, forms, or pure boilerplate>,
@@ -48,6 +51,7 @@ ${documentText.slice(0, 6000)}
   "leadershipSignal": <integer 0-10: how much genuine leadership signal is present>,
   "candidateLesson": "<the single transferable lesson in ONE sentence, or empty string if none>",
   "rejectCategory": "<one of the categories above, or null if it passes>",
+  "notableArtifact": <true|false — see the notable-artifact rule above>,
   "topics": ["competition" | "product" | "acquisitions" | "app-stores" | "ai" | "strategy" | "partnerships" | "crisis-management" | "fundraising" | "comms" | "technology" | "board-governance" | "leadership-transitions" | "recruiting" | "founding-moments" | "finance" | "policy"],
   "estimatedAuthors": ["<names>"],
   "estimatedDate": "<YYYY-MM-DD or 'unknown'>",
