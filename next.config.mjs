@@ -50,10 +50,15 @@ const nextConfig = {
   // follow runtime fs reads of computed paths). In Next 14.2 this lives under
   // `experimental`.
   experimental: {
+    // puppeteer-core + the bundled Chromium binary must NOT be webpack-bundled —
+    // leave them external so the serverless PDF route (/api/admin/social-pdf) can
+    // load the real binary at runtime.
+    serverComponentsExternalPackages: ["@sparticuz/chromium", "puppeteer-core"],
     outputFileTracingIncludes: {
       "/": ["./content/posts/**"],
       "/search": ["./content/posts/**"],
       "/api/cron/daily": ["./content/posts/**"],
+      "/api/admin/social-pdf": ["./content/posts/**"],
       "/post/[slug]/opengraph-image": ["./content/posts/**"],
     },
   },
