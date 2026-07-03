@@ -14,27 +14,18 @@
  */
 
 import "dotenv/config";
-import { mkdirSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import type { Post } from "@/lib/types";
 import { getPostBySlug, getAllPosts } from "@/lib/queries";
 import { getMostRecentBroadcastSlug } from "@/lib/publish/resend";
 import { generateSocialDrafts } from "@/lib/social/draft";
 import { buildCarouselHtml } from "@/lib/social/carousel-pdf";
+import { renderCardImageDataUri } from "@/lib/social/card-image";
 import { renderHtmlToPdf } from "@/lib/pdf/launch";
 
 function arg(name: string): string | undefined {
   const a = process.argv.find((x) => x.startsWith(`--${name}=`));
   return a ? a.split("=").slice(1).join("=") : undefined;
-}
-
-/** Read the source-document screenshot from disk as a base64 data URI, if present. */
-function localDocImage(post: Post): string | null {
-  const shot = post.screenshots?.[0];
-  if (!shot || shot.url.includes("_pending")) return null;
-  const localPath = join(process.cwd(), "public", shot.url.replace(/^\//, ""));
-  if (!existsSync(localPath)) return null;
-  return `data:image/png;base64,${readFileSync(localPath).toString("base64")}`;
 }
 
 async function main() {
@@ -48,8 +39,10 @@ async function main() {
   const slides = drafts.linkedinCarousel.slides;
   if (!slides.length) throw new Error("no carousel slides generated");
 
-  const img = localDocImage(post);
-  console.log(`  ${slides.length + (img ? 1 : 0)} slides${img ? " (incl. embedded document image)" : " (no local image found)"}`);
+  // Document slide = the ITE-style transcribed card (our reproduction), not the
+  // raw source screenshot.
+  const img = await renderCardImageDataUri(post);
+  console.log(`  ${slides.length + (img ? 1 : 0)} slides${img ? " (incl. transcribed card image)" : " (card render failed — text only)"}`);
   console.log(`  LinkedIn doc title (${drafts.carouselTitle.length}/58): "${drafts.carouselTitle}"`);
 
   const html = buildCarouselHtml(post, slides, img);
