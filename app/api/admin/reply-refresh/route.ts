@@ -12,11 +12,17 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
-  try {
-    await requireAdmin();
-  } catch (e) {
-    if (e instanceof AdminRedirect) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-    throw e;
+  // Admin session, OR a matching ?secret= (the shared admin-probe secret) so the
+  // refresh can be triggered/verified against prod without a browser session.
+  const secret = new URL(req.url).searchParams.get("secret");
+  const probe = process.env.CHROMIUM_PROBE_SECRET;
+  if (!(probe && secret === probe)) {
+    try {
+      await requireAdmin();
+    } catch (e) {
+      if (e instanceof AdminRedirect) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+      throw e;
+    }
   }
 
   const tier = Math.max(1, Number(new URL(req.url).searchParams.get("tier")) || 1);
