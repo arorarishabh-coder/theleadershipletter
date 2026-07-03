@@ -106,7 +106,7 @@ export async function processDocument(
       };
     }
     logStage(source.id, "ocr", `low text yield (${bodyChars} body chars) — transcribing PDF via Claude`);
-    const ocr = await transcribePdf(source.fetchUrl ?? source.url);
+    const ocr = await transcribePdf(source.fetchUrl ?? source.url, { pageRange: source.pdfPageRange });
     const ocrBody = ocr.text ? meaningfulTextLength(ocr.text) : 0;
     if (!ocr.ok || ocrBody < MIN_BODY_CHARS) {
       return {
@@ -256,10 +256,15 @@ Output the JSON only.`;
   // 5. Screenshot — render the actual source document (PDF page(s) or web page).
   const cleanTitle = enrich.documentTitleCleaned || source.documentTitle;
   logStage(source.id, "screenshot", "capturing source document");
-  let screenshots = await captureSourceScreenshots(source.fetchUrl ?? source.url, source.id, {
-    documentTitle: cleanTitle,
-    sourceCitation: `${source.sourceCase} · ${source.sourceCitation}`,
-  });
+  let screenshots = await captureSourceScreenshots(
+    source.fetchUrl ?? source.url,
+    source.id,
+    {
+      documentTitle: cleanTitle,
+      sourceCitation: `${source.sourceCase} · ${source.sourceCitation}`,
+    },
+    source.pdfPageRange,
+  );
   if (screenshots.length === 0) {
     // Capture failed — publish anyway with a placeholder (enhancement, not blocker).
     logStage(source.id, "screenshot", "capture failed — using placeholder");

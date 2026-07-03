@@ -30,8 +30,9 @@ import { discoverFromWatchlist, type DiscoveredDocument } from "@/lib/ingest/dis
 import { discoverFromIndex } from "@/lib/ingest/exhibit-index";
 import { discoverFromDoj } from "@/lib/ingest/doj-exhibits";
 import { discoverFromEdgar, discoverFromEdgarMarquee } from "@/lib/ingest/edgar";
-import { WATCHED_CASES } from "@/lib/ingest/watchlist";
+import { WATCHED_CASES, getWatchedCase } from "@/lib/ingest/watchlist";
 import { runPipeline } from "@/lib/ingest/pipeline";
+import type { SourceDocument } from "@/lib/ingest/types";
 
 interface Args {
   caseIds?: string[];
@@ -53,6 +54,9 @@ interface Args {
   minThemeFit?: number;
   minLessonClarity?: number;
   json: boolean;
+  exhibitUrl?: string;
+  pages?: [number, number];
+  id?: string;
 }
 
 function parseArgs(): Args {
@@ -66,6 +70,14 @@ function parseArgs(): Args {
     const v = val(k);
     return v != null ? parseInt(v, 10) : undefined;
   };
+  const pagesRaw = val("pages");
+  const pages = ((): [number, number] | undefined => {
+    if (!pagesRaw) return undefined;
+    const m = pagesRaw.match(/^(\d+)-(\d+)$/);
+    if (m) return [parseInt(m[1], 10), parseInt(m[2], 10)];
+    const single = parseInt(pagesRaw, 10);
+    return Number.isFinite(single) ? [single, single] : undefined;
+  })();
   return {
     caseIds: caseRaw ? caseRaw.split(",").map((s) => s.trim()).filter(Boolean) : undefined,
     query: val("query"),
@@ -86,7 +98,69 @@ function parseArgs(): Args {
     minThemeFit: num("min-theme-fit"),
     minLessonClarity: num("min-lesson-clarity"),
     json: a.includes("--json"),
+    exhibitUrl: val("exhibit-url"),
+    pages,
+    id: val("id"),
   };
+}
+
+/**
+ * Ingest ONE specific exhibit PDF at an explicit page range — the way to pull a
+ * single email out of a large multi-exhibit compilation (e.g. the 346-page
+ * archive.org Anthropic-v-DoD exhibit). Metadata is seeded from the named
+ * watched case; the pipeline's page-range support (screenshot + OCR) does the rest.
+ *
+ *   npm run discover -- --case=anthropic-v-dod \
+ *     --exhibit-url="https://archive.org/download/.../Anthropic Vs Pentagon Emails.pdf" \
+ *     --pages=244-245 --ingest
+ */
+async function runFromExhibit(args: Args) {
+  const c = args.caseIds?.[0] ? getWatchedCase(args.caseIds[0]) : undefined;
+  if (!c) {
+    console.error("--exhibit-url requires --case=<watched case id> for metadata.");
+    process.exit(1);
+  }
+  if (!args.pages) {
+    console.error("--exhibit-url requires --pages=A-B (the page range of the target email).");
+    process.exit(1);
+  }
+  const [start, end] = args.pages;
+  const id = args.id ?? `${c.id}-p${start}${end !== start ? `-${end}` : ""}`;
+  const source: SourceDocument = {
+    id,
+    url: args.exhibitUrl!,
+    fetchUrl: args.exhibitUrl!,
+    documentTitle: `${c.caseName} — exhibit pp. ${start}-${end}`,
+    knownAuthors: [],
+    knownLeaderSlugs: c.knownLeaderSlugs,
+    knownCompany: c.knownCompany,
+    recipientNames: [],
+    dateAuthored: "",
+    sourceType: "court_exhibit",
+    sourceCase: c.caseName,
+    sourceCitation: `${c.docketNumber} (${(c.court ?? "").toUpperCase()}) — trial exhibit, pp. ${start}-${end} · public archive`,
+    licensingPath: "public_domain",
+    hintedTopics: c.hintedTopics,
+    pdfPageRange: [start, end],
+  };
+
+  console.log(`\n=== The Leadership Letter · Single-Exhibit Ingest ===`);
+  console.log(`  ${c.caseName}\n  ${id} · pp. ${start}-${end}\n  ${args.exhibitUrl}`);
+  if (args.ingest && !process.env.ANTHROPIC_API_KEY) {
+    console.error("\n--ingest requires ANTHROPIC_API_KEY. Use --ingest-dry to fetch+extract without Claude.\n");
+    process.exit(1);
+  }
+  const results = await runPipeline({
+    sources: [source],
+    dryRun: args.ingestDry,
+    gateOnly: args.screen,
+    minThemeFit: args.minThemeFit,
+    minLessonClarity: args.minLessonClarity,
+    forceRefresh: args.force,
+  });
+  const r = results[0];
+  console.log(`\nResult: ${r?.ok ? `OK → ${r.outputPath ?? r.postSlug}` : `FAILED (${r?.failureStage}): ${r?.error}`}`);
+  process.exit(r?.ok ? 0 : 2);
 }
 
 function pad(s: string, n: number): string {
@@ -235,6 +309,12 @@ async function runFromDoj(args: Args) {
 
 async function main() {
   const args = parseArgs();
+
+  // ---- Single-exhibit ingest: one PDF at an explicit page range (compilation slice). ----
+  if (args.exhibitUrl) {
+    await runFromExhibit(args);
+    return;
+  }
 
   // ---- Index-driven discovery: parse the trial exhibit list, select instructive
   // internal correspondence by description, best-effort resolve to fetchable docs. ----
