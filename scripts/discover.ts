@@ -14,6 +14,10 @@
  *   npm run discover -- --query='"From:" "Instagram"'   # custom full-text query
  *   npm run discover -- --case=ftc-v-meta --ingest-dry  # discover → pipeline dry-run (fetch+extract, no Claude)
  *   npm run discover -- --case=ftc-v-meta --ingest      # discover → full pipeline (needs ANTHROPIC_API_KEY)
+ *   npm run discover -- --from-edgar --marquee --ingest --force  # regenerate even posts that already exist
+ *
+ * By default ingest SKIPS any candidate whose post already exists on disk (slug ===
+ * source.id), so re-runs only add net-new content. Pass --force to regenerate.
  *
  * COURTLISTENER_API_TOKEN (optional) raises the rate limit. ANTHROPIC_API_KEY is
  * only required for --ingest.
@@ -40,6 +44,7 @@ interface Args {
   ingest: boolean;
   ingestDry: boolean;
   screen: boolean;
+  force: boolean;
   fromIndex: boolean;
   fromDoj: boolean;
   fromEdgar: boolean;
@@ -72,6 +77,7 @@ function parseArgs(): Args {
     ingest: a.includes("--ingest"),
     ingestDry: a.includes("--ingest-dry"),
     screen: a.includes("--screen"),
+    force: a.includes("--force"),
     fromIndex: a.includes("--from-index"),
     fromDoj: a.includes("--from-doj"),
     fromEdgar: a.includes("--from-edgar"),
@@ -134,6 +140,7 @@ async function runFromIndex(args: Args) {
       gateOnly: args.screen,
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
+      forceRefresh: args.force,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);
@@ -171,6 +178,7 @@ async function runFromEdgar(args: Args) {
       gateOnly: args.screen,
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
+      forceRefresh: args.force,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);
@@ -218,6 +226,7 @@ async function runFromDoj(args: Args) {
       gateOnly: args.screen,
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
+      forceRefresh: args.force,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);
@@ -312,6 +321,7 @@ async function main() {
       gateOnly: true,
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
+      forceRefresh: args.force,
     });
     const passed = results.filter((r) => r.ok);
     console.log(`\n=== Screen result: ${passed.length}/${results.length} passed the gate ===`);
@@ -339,6 +349,7 @@ async function main() {
       dryRun: args.ingestDry,
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
+      forceRefresh: args.force,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);

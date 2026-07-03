@@ -90,6 +90,9 @@ export interface PipelineResult {
   error?: string;
   /** When rejected at the relevance gate, the category + the lesson the gate looked for. */
   rejectCategory?: RejectCategory | null;
+  /** Set when the document was skipped without processing — currently only
+   *  "exists" (a post with this slug is already on disk; dedup guard). */
+  skipped?: "exists";
 }
 
 export interface PipelineOptions {

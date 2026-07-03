@@ -46,6 +46,11 @@ export const COMPANIES: Company[] = [
   { slug: "anthropic", name: "Anthropic", aliases: ["anthropic"] },
   { slug: "berkshire-hathaway", name: "Berkshire Hathaway", aliases: ["berkshire"] },
   { slug: "mozilla", name: "Mozilla", aliases: ["mozilla", "firefox"] },
+  // Added 2026-06-25 alongside the new EDGAR marquee letter-writers.
+  { slug: "block", name: "Block (Square)", aliases: ["block", "square"] },
+  { slug: "doordash", name: "DoorDash", aliases: ["doordash"] },
+  { slug: "roku", name: "Roku", aliases: ["roku"] },
+  { slug: "pinterest", name: "Pinterest", aliases: ["pinterest"] },
 ];
 
 export const PERSONS: Person[] = [

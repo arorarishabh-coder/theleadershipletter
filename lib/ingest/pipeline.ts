@@ -5,7 +5,7 @@ import { RELEVANCE_PROMPT } from "@/lib/prompts/relevance";
 import { representativeExcerpt, fetchDocument, meaningfulTextLength } from "./fetch";
 import { transcribePdf } from "./ocr";
 import { captureSourceScreenshots } from "./screenshot";
-import { savePost } from "./save";
+import { savePost, listSavedPosts } from "./save";
 import { PERSONS } from "@/lib/taxonomy";
 import type {
   EnrichResult,
@@ -59,6 +59,20 @@ export async function processDocument(
   source: SourceDocument,
   opts: PipelineOptions = {},
 ): Promise<PipelineResult> {
+  // 0. Dedup guard. Discovery has no idea what's already published, and post slugs
+  // are deterministic (post.slug === source.id). Without this, a re-run silently
+  // re-fetches + regenerates an existing post — burning Claude budget AND
+  // overwriting it with a fresh lesson + today's date (which also breaks the
+  // broadcast dedup keyed on slug). Skip anything already on disk unless forced.
+  // (--dry-run is pure inspection and makes no Claude calls, so let it through.)
+  if (!opts.forceRefresh && !opts.dryRun) {
+    const existing = await listSavedPosts();
+    if (existing.includes(`${source.id}.json`)) {
+      logStage(source.id, "skip", "post already exists — skipping (use --force to regenerate)");
+      return { sourceId: source.id, ok: true, postSlug: source.id, skipped: "exists" };
+    }
+  }
+
   // 1. Fetch
   const rangeNote = source.pdfPageRange ? ` (pp. ${source.pdfPageRange[0]}-${source.pdfPageRange[1]})` : "";
   logStage(source.id, "fetch", `${source.url}${rangeNote}`);
@@ -355,9 +369,11 @@ export async function runPipeline(opts: PipelineOptions = {}): Promise<PipelineR
   }
 
   const ok = results.filter((r) => r.ok).length;
+  const skipped = results.filter((r) => r.skipped === "exists").length;
   const fail = results.length - ok;
   console.log(`\n=== Complete ===`);
-  console.log(`Succeeded: ${ok}`);
+  console.log(`Succeeded: ${ok - skipped} (new)`);
+  console.log(`Skipped:   ${skipped} (already exist — use --force to regenerate)`);
   console.log(`Failed:    ${fail}`);
   if (fail > 0) {
     console.log(`\nFailures:`);

@@ -12,6 +12,8 @@
  * SEC fair-access: declare a contact User-Agent; stay under 10 req/s.
  */
 
+import { promises as fs } from "node:fs";
+import path from "node:path";
 import type { DiscoveredDocument } from "./discovery";
 
 const EFTS = "https://efts.sec.gov/LATEST/search-index";
@@ -37,7 +39,49 @@ const MARQUEE_WRITERS: Array<{ name: string; cik: string; leaderSlugs: string[] 
   { name: "Coinbase", cik: "0001679788", leaderSlugs: [] },
   { name: "JPMorgan Chase", cik: "0000019617", leaderSlugs: [] },
   { name: "Berkshire Hathaway", cik: "0001067983", leaderSlugs: [] },
+  // Added 2026-06-25 — each verified via EDGAR full-text to actually file
+  // shareholder/founder LETTERS as 8-K EX-99.1 (letter-opening phrase hit counts
+  // in parens). leaderSlugs left empty until each CEO is added to lib/taxonomy
+  // PERSONS (else the post is browse-orphaned — see the taxonomy gotcha).
+  { name: "Pinterest", cik: "0001506293", leaderSlugs: [] }, // 47
+  { name: "Block", cik: "0001512673", leaderSlugs: [] }, // 42 — Square/Block letters
+  { name: "DoorDash", cik: "0001792789", leaderSlugs: [] }, // 30
+  { name: "Snap", cik: "0001564408", leaderSlugs: [] }, // 8
+  { name: "Palantir", cik: "0001321655", leaderSlugs: [] }, // 7 — Karp quarterly letters
+  { name: "Roku", cik: "0001428439", leaderSlugs: [] }, // 6
 ];
+
+// Self-expanding registry: scripts/scout.ts proposes + validates new letter-writers
+// and appends them here as JSON, so the marquee set grows over time WITHOUT editing
+// source. Merged with the static list (dedup by CIK) at discovery time.
+export interface MarqueeWriter {
+  name: string;
+  cik: string;
+  leaderSlugs: string[];
+}
+const DISCOVERED_WRITERS_PATH = path.join(process.cwd(), "content", "discovered", "marquee-writers.json");
+
+const normCik = (cik: string) => String(cik).replace(/^0+/, "");
+
+/** Static marquee writers ∪ scout-discovered writers (deduped by CIK). */
+export async function loadMarqueeWriters(): Promise<MarqueeWriter[]> {
+  const merged: MarqueeWriter[] = [...MARQUEE_WRITERS];
+  const seen = new Set(merged.map((w) => normCik(w.cik)));
+  try {
+    const raw = await fs.readFile(DISCOVERED_WRITERS_PATH, "utf8");
+    const discovered = JSON.parse(raw) as Array<Partial<MarqueeWriter>>;
+    for (const w of discovered) {
+      if (!w.cik || !w.name) continue;
+      const k = normCik(w.cik);
+      if (seen.has(k)) continue;
+      seen.add(k);
+      merged.push({ name: w.name, cik: w.cik, leaderSlugs: w.leaderSlugs ?? [] });
+    }
+  } catch {
+    // No registry yet — static list only.
+  }
+  return merged;
+}
 
 export interface EdgarHit {
   accession: string; // e.g. 0001077183-21-000106
@@ -214,7 +258,8 @@ export async function discoverFromEdgarMarquee(
   const documents: DiscoveredDocument[] = [];
   let totalHits = 0;
 
-  for (const w of MARQUEE_WRITERS) {
+  const writers = await loadMarqueeWriters();
+  for (const w of writers) {
     if (documents.length >= limit) break;
     const collected: EdgarHit[] = [];
     const seenInCo = new Set<string>();
