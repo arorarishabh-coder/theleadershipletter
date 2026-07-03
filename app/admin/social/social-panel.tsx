@@ -62,6 +62,38 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
   const [pkg, setPkg] = useState<SocialPackage | null>(null);
   const [pdfStatus, setPdfStatus] = useState<"idle" | "loading" | "error">("idle");
   const [pdfError, setPdfError] = useState("");
+  const [cardStatus, setCardStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [cardError, setCardError] = useState("");
+
+  // Download the ITE-style transcribed card (PNG) for the selected post — a
+  // clean sender-labeled reproduction to attach to a LinkedIn/Twitter post.
+  async function downloadCard() {
+    setCardStatus("loading");
+    setCardError("");
+    try {
+      const res = await fetch(`/api/admin/social-card?slug=${encodeURIComponent(slug)}`);
+      if (!res.ok) {
+        let msg = `HTTP ${res.status}`;
+        try {
+          msg = (await res.json()).error || msg;
+        } catch {}
+        throw new Error(msg);
+      }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${slug}-card.png`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      setCardStatus("idle");
+    } catch (e) {
+      setCardError(e instanceof Error ? e.message : String(e));
+      setCardStatus("error");
+    }
+  }
 
   async function generate() {
     setStatus("loading");
@@ -141,8 +173,18 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
         >
           {status === "loading" ? "Generating…" : status === "done" ? "Regenerate" : "Generate drafts"}
         </button>
+        <button
+          type="button"
+          onClick={downloadCard}
+          disabled={cardStatus === "loading"}
+          title="Render the correspondence as a clean, sender-labeled ITE-style card (PNG) to attach to a post"
+          className="border border-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink hover:text-parchment disabled:opacity-60"
+        >
+          {cardStatus === "loading" ? "Rendering…" : "⬇ Card image"}
+        </button>
       </div>
 
+      {cardStatus === "error" && <p className="mt-3 font-mono text-[12px] text-brick">Card error: {cardError}</p>}
       {status === "error" && <p className="mt-4 font-mono text-[12px] text-brick">Error: {error}</p>}
       {status === "idle" && <p className="mt-6 font-serif italic text-ink-faded">Pick a post and generate copy-ready Twitter + LinkedIn drafts.</p>}
 

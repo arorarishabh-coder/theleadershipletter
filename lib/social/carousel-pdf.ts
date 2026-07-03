@@ -90,6 +90,88 @@ export function documentCaption(post: Post): string {
   return [post.authorsName.join(" & "), post.authorsCompany, post.sourceCase].filter(Boolean).join(" · ");
 }
 
+// ── ITE-style transcribed card ───────────────────────────────────────────────
+// A clean, brand-styled reproduction of the correspondence — sender-labeled
+// message bubbles for chat threads, or a From/To/Subject header + body for an
+// email. Reads far better on LinkedIn/Twitter than a raw document screenshot,
+// and it's our own transcription (within the fair-use cap), not the source image.
+
+// Deterministic accent per distinct sender (ITE alternates two colors).
+const SENDER_COLORS = ["#2f5db5", "#b5482f", "#1c7a52", "#7a4fb5"]; // blue, brick, green, violet
+
+function senderColorMap(senders: string[]): Map<string, string> {
+  const map = new Map<string, string>();
+  let i = 0;
+  for (const s of senders) {
+    const key = s.trim().toLowerCase();
+    if (!map.has(key)) map.set(key, SENDER_COLORS[i++ % SENDER_COLORS.length]);
+  }
+  return map;
+}
+
+/**
+ * Build a standalone ITE-style card (width 1080, natural height — render with a
+ * full-page screenshot). Uses the post's messageThread when present (chat), else
+ * falls back to an email header + excerpt body.
+ */
+export function buildMessageCardHtml(post: Post): string {
+  const isThread = !!post.messageThread?.length;
+  const turns = isThread
+    ? post.messageThread!.map((t) => ({ sender: t.sender, text: t.text }))
+    : [{ sender: post.authorsName.join(" & ") || post.authorsCompany || "—", text: post.excerptForBlog }];
+  const colors = senderColorMap(turns.map((t) => t.sender));
+
+  const turnsHtml = turns
+    .map((t) => {
+      const color = colors.get(t.sender.trim().toLowerCase()) || "#1c1a17";
+      const body = esc(t.text).replace(/\n+/g, "<br/>");
+      // Chat threads get a colored sender label per turn (the ITE look). A single
+      // email needs no label — the From/To/Subject header already names the sender.
+      const label = isThread ? `<div class="sender" style="color:${color}">${esc(t.sender)}</div>` : "";
+      return `<div class="turn">${label}<div class="text">${body}</div></div>`;
+    })
+    .join("");
+
+  // Email header block (skipped for chat threads).
+  const emailHead = isThread
+    ? `<div class="meta">${esc([post.authorsCompany, post.dateAuthored].filter(Boolean).join(" · "))}</div>`
+    : `<div class="emailhead">
+        <div><span class="hk">From:</span> ${esc(post.authorsName.join(", ") || post.authorsCompany)}</div>
+        ${post.recipientNames?.length ? `<div><span class="hk">To:</span> ${esc(post.recipientNames.join(", "))}</div>` : ""}
+        ${post.dateAuthored ? `<div><span class="hk">Sent:</span> ${esc(post.dateAuthored)}</div>` : ""}
+        <div><span class="hk">Subject:</span> ${esc(post.documentTitle)}</div>
+      </div>`;
+
+  const citation = esc([post.sourceCase, post.sourceCitation].filter(Boolean).join(" · "));
+
+  return `<!doctype html><html><head><meta charset="utf-8"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:opsz@6..72&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#e7e0d2; }
+  .card { width:1080px; background:#f4efe6; color:#1c1a17; padding:70px 76px; }
+  .masthead { display:flex; align-items:center; gap:18px; }
+  .kicker { font-family:"JetBrains Mono",monospace; font-size:20px; letter-spacing:0.22em; text-transform:uppercase; color:#8a8378; }
+  .rule { flex:1; height:2px; background:#b5482f; opacity:0.5; }
+  .emailhead { margin-top:30px; font-family:"JetBrains Mono",monospace; font-size:24px; line-height:1.7; color:#3a352e; border-left:4px solid #b5482f; padding-left:22px; }
+  .emailhead .hk { color:#8a8378; }
+  .meta { margin-top:26px; font-family:"JetBrains Mono",monospace; font-size:20px; letter-spacing:0.06em; text-transform:uppercase; color:#8a8378; }
+  .turns { margin-top:34px; }
+  .turn { margin-bottom:30px; }
+  .sender { font-family:"JetBrains Mono",monospace; font-weight:600; font-size:23px; letter-spacing:0.02em; margin-bottom:8px; }
+  .text { font-family:"Newsreader",Georgia,serif; font-size:34px; line-height:1.42; color:#22201c; }
+  .foot { margin-top:44px; padding-top:22px; border-top:1px solid #d6cdbb; display:flex; justify-content:space-between; gap:24px; font-family:"JetBrains Mono",monospace; font-size:17px; letter-spacing:0.06em; text-transform:uppercase; color:#8a8378; }
+  .foot span:last-child { color:#b5482f; white-space:nowrap; }
+</style></head>
+<body><div class="card">
+  <div class="masthead"><span class="kicker">The Leadership Letter</span><span class="rule"></span></div>
+  ${emailHead}
+  <div class="turns">${turnsHtml}</div>
+  <div class="foot"><span>${citation}</span><span>theleadershipletter.com</span></div>
+</div></body></html>`;
+}
+
 /**
  * Build the full carousel HTML. Slide order: hook (slides[0]) → [real document
  * screenshot, if imageDataUri given] → remaining text slides.

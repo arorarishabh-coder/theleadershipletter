@@ -62,3 +62,18 @@ export async function renderHtmlToPdf(
     await browser.close();
   }
 }
+
+/** Render an HTML string to a full-page PNG at a fixed width (height = content). */
+export async function renderHtmlToPng(html: string, width = 1080): Promise<Uint8Array<ArrayBuffer>> {
+  const browser = await launchBrowser();
+  try {
+    const page = await browser.newPage();
+    await page.setViewport({ width, height: 800, deviceScaleFactor: 2 });
+    await page.setContent(html, { waitUntil: "networkidle0" });
+    await page.evaluate(() => (document as unknown as { fonts?: { ready?: Promise<unknown> } }).fonts?.ready);
+    const shot = await page.screenshot({ type: "png", fullPage: true });
+    return new Uint8Array(shot);
+  } finally {
+    await browser.close();
+  }
+}
