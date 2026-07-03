@@ -24,6 +24,7 @@
     "qa:paywall": "tsx scripts/qa-paywall.ts",
     "qa:content": "tsx scripts/qa-content.ts",
     "qa:runway": "tsx scripts/qa-runway.ts",
+    "qa:schedule": "tsx scripts/qa-schedule.ts",
     "qa:e2e": "tsx scripts/qa-e2e.ts",
     "regen:analysis": "tsx scripts/regen-analysis.ts"
   },
