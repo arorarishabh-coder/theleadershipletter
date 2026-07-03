@@ -51,6 +51,9 @@ export const COMPANIES: Company[] = [
   { slug: "doordash", name: "DoorDash", aliases: ["doordash"] },
   { slug: "roku", name: "Roku", aliases: ["roku"] },
   { slug: "pinterest", name: "Pinterest", aliases: ["pinterest"] },
+  // Added 2026-07-02 — de-orphan the EDGAR shareholder-letter batch's facets.
+  { slug: "hippo", name: "Hippo Holdings", aliases: ["hippo"] },
+  { slug: "dsp-group", name: "DSP Group", aliases: ["dsp group"] },
 ];
 
 export const PERSONS: Person[] = [
