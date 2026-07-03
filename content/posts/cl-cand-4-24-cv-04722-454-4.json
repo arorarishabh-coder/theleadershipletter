@@ -1,0 +1,70 @@
+{
+  "slug": "cl-cand-4-24-cv-04722-454-4",
+  "publishedAt": "2026-07-03",
+  "isFeatured": false,
+  "title": "Zuckerberg Tells Musk Meta Backed His OpenAI Lawsuit",
+  "documentTitle": "Musk v. Altman (OpenAI) — Exhibit 3",
+  "dateAuthored": "2024-12-13",
+  "authorsName": [
+    "Mark Zuckerberg",
+    "Elon Musk"
+  ],
+  "authorsCompany": "Meta, Tesla/X",
+  "recipientNames": [
+    "Elon Musk",
+    "Mark Zuckerberg"
+  ],
+  "topics": [
+    "strategy",
+    "comms",
+    "ai",
+    "competition",
+    "policy"
+  ],
+  "leaderSlugs": [
+    "elon-musk",
+    "mark-zuckerberg"
+  ],
+  "excerptForBlog": "MZ (4:09 PM): Quick heads up that Meta sent a letter to the California AG supporting your lawsuit against OpenAI. Someone (not us) leaked the letter and it will be public in the next hour. Wanted to make sure you heard this from me.\n\nEM (4:20 PM): Ok\n\nMZ (6:24 PM): I have an idea to run by you. Not urgent, but let me know if there's a good time to call in the next few days.",
+  "messageThread": [
+    {
+      "sender": "Mark Zuckerberg",
+      "text": "Quick heads up that Meta sent a letter to the California AG supporting your lawsuit against OpenAI. Someone (not us) leaked the letter and it will be public in the next hour. Wanted to make sure you heard this from me."
+    },
+    {
+      "sender": "Elon Musk",
+      "text": "Ok"
+    },
+    {
+      "sender": "Mark Zuckerberg",
+      "text": "I have an idea to run by you. Not urgent, but let me know if there's a good time to call in the next few days."
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-454-4-p1.png",
+      "caption": "Source document — Musk v. Altman (OpenAI) — Exhibit 3 · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 454-4, filed 2026-03-27 (page 1)",
+      "alt": "Musk v. Altman (OpenAI) — Exhibit 3 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-454-4-p2.png",
+      "caption": "Source document — Musk v. Altman (OpenAI) — Exhibit 3 · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 454-4, filed 2026-03-27 (page 2)",
+      "alt": "Musk v. Altman (OpenAI) — Exhibit 3 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/69013420/454/4/musk-v-altman/",
+  "sourceCase": "Musk v. Altman (OpenAI)",
+  "sourceCitation": "4:24-cv-04722 (CAND), Doc. 454-4, filed 2026-03-27",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "postKind": "artifact",
+  "artifactNote": "On December 13, 2024, Mark Zuckerberg messaged Elon Musk to flag that Meta had filed a letter with the California Attorney General supporting Musk's lawsuit against OpenAI — and that a leaked copy would become public within the hour. The exchange, later entered into evidence in Musk v. Altman (4:24-cv-04722, N.D. Cal.) as Exhibit 3 to a filing in March 2026, surfaces at a moment when two of the most powerful figures in AI were navigating overlapping competitive and legal interests vis-à-vis OpenAI. Zuckerberg's closing message — flagging an idea he wanted to discuss by phone — hints at further coordination, the substance of which is not captured here.",
+  "lessonTitle": "Zuckerberg Tells Musk Meta Backed His OpenAI Lawsuit",
+  "pullQuote": "A brief December 2024 exchange reveals that Meta quietly aligned itself with Musk's legal challenge to OpenAI's nonprofit conversion, and that Zuckerberg moved immediately to manage the relationship directly.",
+  "leadershipTraits": [
+    "OpenAI restructuring dispute",
+    "AI industry rivalries",
+    "Musk v. Altman litigation"
+  ]
+}

@@ -37,10 +37,14 @@ export async function launchBrowser(): Promise<Browser> {
   }
 
   const chromium = (await import("@sparticuz/chromium")).default;
+  // Use @sparticuz's own args/viewport/headless mode — its binary is the
+  // headless-shell build, so it must launch with chromium.headless (not a bare
+  // `true`) or Chromium exits before a page can be opened.
   return puppeteer.launch({
     args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath(),
-    headless: true,
+    headless: chromium.headless,
   });
 }
 
