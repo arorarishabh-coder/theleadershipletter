@@ -1,0 +1,60 @@
+{
+  "slug": "anthropic-v-dod-p29-30",
+  "publishedAt": "2026-07-03",
+  "isFeatured": false,
+  "title": "How to Walk Away Without Burning the Bridge",
+  "documentTitle": "Anthropic PBC v. U.S. Department of War — Exhibit Pages 29-30",
+  "dateAuthored": "2026-02-26",
+  "authorsName": [
+    "Dario Amodei",
+    "Emil Michael"
+  ],
+  "authorsCompany": "Anthropic",
+  "recipientNames": [
+    "Emil Michael",
+    "Dario Amodei",
+    "sheck@anthropic.com",
+    "Gavin I. Kliger"
+  ],
+  "topics": [
+    "strategy",
+    "comms",
+    "partnerships",
+    "policy",
+    "crisis-management",
+    "ai"
+  ],
+  "leaderSlugs": [
+    "dario-amodei"
+  ],
+  "excerptForBlog": "From: Dario Amodei, Anthropic — February 26, 2026:\n\n\"Emil, Thanks for your message. I appreciate your efforts. Unfortunately, our read of your proposed language is that it appears to completely remove our redlines; the autonomy provision is fully undercut by your addition of 'as appropriate', and the surveillance provision is fully undercut by 'and all other applicable laws'. This simply amounts to a blanket posture of 'anything lawful,' and the statement from the Pentagon's spokesman confirms that this is the intent. I unfortunately don't see a way forward given these categorical statements. We remain deeply committed to supporting the Department's mission and U.S. national security, as confirmed by our longstanding track record, and our ongoing and intensive work with the Department. I hope that you will reconsider the terms we have offered, but should the Department decide to offboard us, please know that we stand ready to do whatever we can to ensure full operational continuity for the Department and our troops who depend on our technology. Given the volume of leaks and media requests we are receiving, we will be issuing a public statement, but, as ever, hope it is still possible to reach agreement.\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/anthropic-v-dod-p29-30-p1.png",
+      "caption": "Source document — Anthropic PBC v. U.S. Department of War — Exhibit Pages 29-30 · Anthropic PBC v. U.S. Department of War · 3:26-cv-01996 (CAND) — trial exhibit, pp. 29-30 · public archive (page 1)",
+      "alt": "Anthropic PBC v. U.S. Department of War — Exhibit Pages 29-30 — page 1"
+    },
+    {
+      "url": "/screenshots/anthropic-v-dod-p29-30-p2.png",
+      "caption": "Source document — Anthropic PBC v. U.S. Department of War — Exhibit Pages 29-30 · Anthropic PBC v. U.S. Department of War · 3:26-cv-01996 (CAND) — trial exhibit, pp. 29-30 · public archive (page 2)",
+      "alt": "Anthropic PBC v. U.S. Department of War — Exhibit Pages 29-30 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://archive.org/download/anthropic-vs-pentagon-emails/Anthropic%20Vs%20Pentagon%20Emails.pdf",
+  "sourceCase": "Anthropic PBC v. U.S. Department of War",
+  "sourceCitation": "3:26-cv-01996 (CAND) — trial exhibit, pp. 29-30 · public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "How to Walk Away Without Burning the Bridge",
+  "situation": "On February 26, 2026, Anthropic CEO Dario Amodei replied to Emil Michael during a contract standoff with the U.S. Department of War. The Pentagon had proposed language Amodei says guts Anthropic's two hard limits — on autonomy and surveillance — by adding qualifiers like 'as appropriate' and 'and all other applicable laws.' The email signals Anthropic is willing to lose the contract rather than accept it.",
+  "insight": "Amodei does something precise: he identifies the exact words that neutralize his redlines and calls the resulting posture what it is — 'anything lawful.' He doesn't argue values; he shows the mechanics of how a qualifier can erase a clause. That is the real skill on display — reading contract language for what it does, not what it says.\n\nThe deeper move is managing a **BATNA** in public. He refuses the terms, offers 'full operational continuity' if offboarded, flags an incoming public statement because of leaks, and still says agreement is possible. He is separating three things most people fuse: the deal, the relationship, and the narrative. Walking from the deal, protecting the relationship, and getting ahead of the story — all in one short note.",
+  "application": "When someone edits your non-negotiables, don't debate intent. Quote the exact inserted phrase and show how it swallows the clause. Then give the other side a clean choice: original terms, or a graceful exit where you help with transition. If the situation is leaking, say you'll go public — but frame the public statement as a fact, not a threat, and leave the door open in the same sentence.",
+  "pullQuote": "When the other side rewrites your redlines into meaningless words, name the trick precisely — then keep the door open.",
+  "leadershipTraits": [
+    "reads contract language precisely",
+    "willing to lose the deal",
+    "separates deal from relationship",
+    "gets ahead of the narrative"
+  ]
+}
