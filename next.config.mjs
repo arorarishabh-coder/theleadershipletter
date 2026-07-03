@@ -58,7 +58,14 @@ const nextConfig = {
       "/": ["./content/posts/**"],
       "/search": ["./content/posts/**"],
       "/api/cron/daily": ["./content/posts/**"],
-      "/api/admin/social-pdf": ["./content/posts/**"],
+      // The two routes that launch headless Chromium need the @sparticuz binary
+      // AND its shared-library packs (bin/*.br — chromium, al2/al2023 libs
+      // containing libnss3.so, fonts, swiftshader) traced into the function.
+      // Next's file tracer can't follow @sparticuz's computed runtime extract
+      // path, so without this the function ships the JS but not the binary and
+      // Chromium dies at launch with "libnss3.so: cannot open shared object file".
+      "/api/admin/social-pdf": ["./content/posts/**", "./node_modules/@sparticuz/chromium/bin/**"],
+      "/api/admin/social-card": ["./node_modules/@sparticuz/chromium/bin/**"],
       "/post/[slug]/opengraph-image": ["./content/posts/**"],
     },
   },
