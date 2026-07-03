@@ -27,8 +27,8 @@ export async function POST(req: Request) {
 
   const tier = Math.max(1, Number(new URL(req.url).searchParams.get("tier")) || 1);
   try {
-    const { generatedAt, data } = await refreshTierDigest(tier);
-    return NextResponse.json({ ok: true, generatedAt, feeds: data.feeds });
+    const { generatedAt, data, saved, tweets } = await refreshTierDigest(tier);
+    return NextResponse.json({ ok: true, generatedAt, feeds: data.feeds, saved, tweets });
   } catch (e) {
     return NextResponse.json({ ok: false, error: e instanceof Error ? e.message : String(e) }, { status: 502 });
   }

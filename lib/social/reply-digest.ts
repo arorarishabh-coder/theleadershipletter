@@ -83,11 +83,14 @@ export async function saveTierDigest(tier: number, data: ReplyDigestData): Promi
   }
 }
 
-/** Build + store in one call (used by the cron and the manual refresh). */
-export async function refreshTierDigest(tier = 1): Promise<{ generatedAt: string; data: ReplyDigestData }> {
+/** Build + store in one call (used by the local CLI and the manual refresh).
+ *  Skips saving an EMPTY snapshot (all handles rate-limited / no tweets) so a
+ *  blocked run — e.g. from a datacenter IP — can never clobber a good digest. */
+export async function refreshTierDigest(tier = 1): Promise<{ generatedAt: string; data: ReplyDigestData; saved: boolean; tweets: number }> {
   const data = await buildTierDigest(tier);
-  await saveTierDigest(tier, data);
-  return { generatedAt: new Date().toISOString(), data };
+  const tweets = data.feeds.reduce((n, f) => n + f.tweets.length, 0);
+  if (tweets > 0) await saveTierDigest(tier, data);
+  return { generatedAt: new Date().toISOString(), data, saved: tweets > 0, tweets };
 }
 
 /** Load the latest stored snapshot for a tier, or null if none yet. */

@@ -65,6 +65,7 @@ export function ReplyFeed() {
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState("");
+  const [refreshNote, setRefreshNote] = useState("");
 
   const loadStored = useCallback(async () => {
     setStatus("loading");
@@ -86,13 +87,20 @@ export function ReplyFeed() {
   async function refreshNow() {
     setRefreshing(true);
     setError("");
+    setRefreshNote("");
     try {
       const res = await fetch("/api/admin/reply-refresh?tier=1", { method: "POST" });
       const json = await res.json();
       if (!res.ok || !json.ok) throw new Error(json.error || `HTTP ${res.status}`);
-      setFeeds(json.feeds as Feed[]);
-      setGeneratedAt(json.generatedAt ?? null);
-      setStatus("ready");
+      if (json.saved && (json.tweets ?? 0) > 0) {
+        setFeeds(json.feeds as Feed[]);
+        setGeneratedAt(json.generatedAt ?? null);
+        setStatus("ready");
+      } else {
+        // The server (Vercel) can't read X — datacenter IPs are blocked. Keep the
+        // stored digest on screen and tell the user to run the local job.
+        setRefreshNote("Couldn't read X from the server (datacenter IPs are blocked). Run `npm run reply-digest` on your machine to refresh — it writes here.");
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     } finally {
@@ -121,21 +129,22 @@ export function ReplyFeed() {
         </div>
       </div>
       <p className="mt-2 font-serif text-[13px] italic leading-relaxed text-ink-light">
-        Refreshed automatically each morning: recent tweets from your Tier 1 targets, each with ready-to-post replies (matched to a real exhibit when one fits). Copy, tweak, post.
+        Recent tweets from your Tier 1 targets, each with ready-to-post replies (matched to a real exhibit when one fits). Copy, tweak, post. Refreshed by <code className="not-italic">npm run reply-digest</code> on your machine (X blocks the server from reading tweets).
       </p>
 
       {status === "error" && <p className="mt-4 font-mono text-[12px] text-brick">Error: {error}</p>}
+      {refreshNote && <p className="mt-4 border-l-2 border-brick bg-parchment-light px-4 py-2 font-serif text-[13px] leading-relaxed text-ink-faded">{refreshNote}</p>}
       {status === "loading" && <p className="mt-6 font-serif italic text-ink-faded">Loading today&rsquo;s digest…</p>}
 
       {status === "ready" && !generatedAt && (
         <p className="mt-6 font-serif italic text-ink-faded">
-          No digest yet — click <strong className="not-italic text-ink">Refresh now</strong> to pull the first batch (or wait for tomorrow&rsquo;s morning run).
+          No digest yet — run <code className="not-italic text-ink">npm run reply-digest</code> on your machine to pull the first batch.
         </p>
       )}
 
       {status === "ready" && generatedAt && !hasAny && (
         <p className="mt-6 font-serif italic text-ink-faded">
-          The last run couldn&rsquo;t read any tweets (X rate limit). Try <strong className="not-italic text-ink">Refresh now</strong> in a minute.
+          The last run couldn&rsquo;t read any tweets. Re-run <code className="not-italic text-ink">npm run reply-digest</code> locally (wait a bit if X rate-limited you).
         </p>
       )}
 
