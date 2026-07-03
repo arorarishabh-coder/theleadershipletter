@@ -1,0 +1,47 @@
+{
+  "slug": "edgar-000119312516755336",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Win Bigger Customers Without Cutting Your Price",
+  "documentTitle": "Square, Inc. Q3 2016 Shareholder Letter",
+  "dateAuthored": "2016-11-01",
+  "authorsName": [
+    "Square Investor Relations Team"
+  ],
+  "authorsCompany": "Square, Inc.",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "finance",
+    "product",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "We are pleased with our performance in the third quarter, demonstrated by continued revenue growth at scale and ongoing improvements in operating efficiency. Gross Payment Volume (GPV) for the third quarter was $13.2 billion, up 39% year over year. Total net revenue was $439 million, up 32% year over year. Adjusted Revenue was $178 million, up 51% year over year. Net loss was $32 million, an improvement of $22 million on a year-over-year basis, and we achieved positive Adjusted EBITDA of $12 million.\n\nGPV from larger sellers grew 55% year over year; larger sellers continue to come to Square for best-in-class services. We continue to grow GPV from larger sellers and maintain overall transaction revenue margin for several reasons. First, as demonstrated by positive dollar-based retention across our entire seller base, many sellers grow when they join Square. Second, larger sellers switch to Square for the benefits of our entire ecosystem, including fully-featured point of sale software and capabilities such as APIs, mobility of hardware, and customer service. We believe leading with our unique capabilities and brand—not price—is what drives larger sellers to select Square.\n\nWe celebrated a Square Capital milestone in September, surpassing $1 billion in total originations since launch in 2014. For the third quarter, we processed over 35,000 business loans totaling $208 million, an increase of approximately 70% year over year, while maintaining low loss rates at approximately 4%.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000119312516755336-web.png",
+      "caption": "Source document — Square, Inc. Q3 2016 Shareholder Letter · SEC EDGAR · EX-99.1 · Square, Inc. · EX-99.1 · filed 2016-11-01 · Accession 0001193125-16-755336",
+      "alt": "Square, Inc. Q3 2016 Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1512673/000119312516755336/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "Square, Inc. · EX-99.1 · filed 2016-11-01 · Accession 0001193125-16-755336",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Win Bigger Customers Without Cutting Your Price",
+  "situation": "Square's Q3 2016 shareholder letter, filed with the SEC on November 1, 2016, reports results to public investors one year after the company's IPO. GPV hit $13.2 billion, up 39% year over year, but the more important story is who is driving that volume — larger sellers, growing at 55% year over year, faster than the overall business.",
+  "insight": "Square explicitly says it is 'leading with our unique capabilities and brand — not price' to win larger sellers. That is a deliberate choice, and it has a concrete payoff: the letter notes 'positive dollar-based retention across our entire seller base,' meaning sellers spend more over time, not less. This is the classic moat move — build switching costs through an ecosystem (point-of-sale software, APIs, hardware mobility, customer service) so buyers have strong reasons to stay that have nothing to do with your rate card. The Square Capital data reinforces the same logic: $208 million in business loans in a single quarter, up 70% year over year, at roughly 4% loss rates. Lending to your own transaction customers is lower-risk because you already see their cash flows. Each new product deepens the relationship and raises the cost of leaving.\n\nThe hidden strategy here is **platform lock-in through data and bundling**. Square is not selling a payment terminal. It is selling a financial operating system for small businesses, where every added service makes the others more valuable — and makes a competitor's pitch harder.",
+  "application": "Audit your own pricing conversations. If you are winning deals primarily on price, you are building a fragile business — the next competitor just has to go lower. Map every feature or service you offer that saves a customer time, reduces their risk, or connects to something else they already use. Lead your sales pitch with those. Price becomes less important when switching away means losing a system, not just a vendor.",
+  "pullQuote": "The strongest growth signal in this letter isn't revenue — it's that larger sellers are choosing Square on product merit, not discounts.",
+  "leadershipTraits": [
+    "prices on value, not volume",
+    "builds compounding product ecosystems",
+    "uses internal data as a competitive asset",
+    "tracks retention as a growth signal"
+  ]
+}

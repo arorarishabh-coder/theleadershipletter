@@ -1,0 +1,47 @@
+{
+  "slug": "edgar-000162828025004877",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Spend Big Only After You See Product-Market Fit",
+  "documentTitle": "DoorDash 2024 Shareholder Letter",
+  "dateAuthored": "2025-02-11",
+  "authorsName": [
+    "Tony Xu"
+  ],
+  "authorsCompany": "DoorDash",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "founding-moments",
+    "product"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "January is always a special time for me, in part because it's the beginning of a new year, but also because I completed DoorDash's first delivery over 12 years ago. While it was hard to articulate our company mission back then (we were a classroom project called PaloAltoDelivery.com, a domain that we acquired quickly for less than $10), it was easy to see the smile on the consumer's face after receiving his order of chicken pad thai and spring rolls. I had no idea in 2013 whether it'd be a good idea to turn our project into a company, but I had a feeling that building a company whose success would depend on growing the GDP within cities would be a worthwhile pursuit.\n\n2024 was another record year for DoorDash. Our approach has relied on four key pillars: 1/ a consistent focus on improving the inputs to our product, 2/ keeping a high bar when we evaluate projects before injecting large amounts of capital, 3/ improving our unit economics as we improve the core product experience, and 4/ a continuous effort in getting more efficient. Compared to 2019, our business in 2024 is more than 9x bigger in GOV, 12x bigger in revenue, and is generating almost $2.4B more in Free Cash Flow. Notably, our profitability grew even as we invested significantly more capital — almost 11x more in research and development compared to 2019. The improvement to profitability was organic and came from our focus on improving unit economics, staying disciplined on headcount growth, and only investing significant capital after we see signs of product market fit.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000162828025004877-web.png",
+      "caption": "Source document — DoorDash 2024 Shareholder Letter · SEC EDGAR · EX-99.2 · DoorDash, Inc. · EX-99.2 · filed 2025-02-11 · Accession 0001628280-25-004877",
+      "alt": "DoorDash 2024 Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1792789/000162828025004877/",
+  "sourceCase": "SEC EDGAR · EX-99.2",
+  "sourceCitation": "DoorDash, Inc. · EX-99.2 · filed 2025-02-11 · Accession 0001628280-25-004877",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Spend Big Only After You See Product-Market Fit",
+  "situation": "Tony Xu's 2024 annual letter to DoorDash shareholders, filed February 11, 2025. He's marking a 12-year milestone and explaining how the company kept growing while becoming more profitable. The stakes: convincing investors that DoorDash's discipline, not market luck, drove the results.",
+  "insight": "Xu names four pillars, but one carries the real weight: \"keeping a high bar when we evaluate projects before injecting large amounts of capital\" and \"only investing significant capital after we see signs of product market fit.\" That's a sequencing rule. Test small, then fund big. The numbers he cites support it — R&D up almost 11x versus 2019, yet profitability still grew, with roughly $2.4B more in free cash flow. The hidden move is treating capital allocation as a gate, not a gas pedal. Most companies scale spend on conviction; Xu scales it on evidence. He also pairs this with what he calls \"improving the inputs to our product\" and headcount discipline — meaning the operating system rewards better unit economics before it rewards new bets.",
+  "application": "Before greenlighting your next big investment — a new market, product line, or hire wave — write down the specific signal that would prove product-market fit at small scale. Fund the experiment cheaply. Only release the full budget when that signal actually appears. This converts \"we believe in it\" into \"we've seen it work,\" and keeps your burn tied to learning, not hope.",
+  "pullQuote": "Profit and growth aren't opposites when capital follows evidence, not enthusiasm.",
+  "leadershipTraits": [
+    "sequences spend behind evidence",
+    "patient with capital",
+    "focuses on inputs, not just outputs",
+    "disciplined on headcount"
+  ]
+}

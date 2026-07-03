@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000162828024005043",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "After Land Grab, Switch To Operating Discipline",
+  "documentTitle": "DoorDash 2023 Annual Shareholder Letter",
+  "dateAuthored": "2024-02-15",
+  "authorsName": [
+    "DoorDash Leadership"
+  ],
+  "authorsCompany": "DoorDash",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "policy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Our mission is to grow and empower local economies and our primary financial goal is to maximize long-term free cash flow per share. In 2023, we helped generate nearly $50 billion in sales for hundreds of thousands of local merchants, provided opportunities for over 7 million Dashers to earn over $15 billion, and allowed tens of millions of consumers to save hundreds of millions of hours. After a rapid expansion in the surface area of our business from 2020 through 2022, 2023 was, in many ways, a year of organizing our efforts and focusing on the key inputs that help us build scale efficiently. We improved unit economics in all major areas of our business, significantly reducing our GAAP Net Loss and more than tripling our Adjusted EBITDA. The improvements to our product helped drive double-digit year-over-year growth in Monthly Active Users and growth in average order frequency through the vast majority of 2023. If we are to become a foundational element of local commerce in the digital era, we must execute at a high level to improve the efficiency and effectiveness of our existing services, but also innovate to build entirely new products, services, and processes. These are distinct skills and our hope is that 2024 will be an excellent year for our development of both.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000162828024005043-web.png",
+      "caption": "Source document — DoorDash 2023 Annual Shareholder Letter · SEC EDGAR · EX-99.2 · DoorDash, Inc. · EX-99.2 · filed 2024-02-15 · Accession 0001628280-24-005043",
+      "alt": "DoorDash 2023 Annual Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1792789/000162828024005043/",
+  "sourceCase": "SEC EDGAR · EX-99.2",
+  "sourceCitation": "DoorDash, Inc. · EX-99.2 · filed 2024-02-15 · Accession 0001628280-24-005043",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "After Land Grab, Switch To Operating Discipline",
+  "situation": "DoorDash leadership's 2023 annual letter to shareholders, filed February 2024. After three years of rapid expansion from 2020 through 2022, the company is telling investors how it spent 2023 — and what to expect next. The stakes: convincing shareholders that slower-looking growth is actually a healthier business.",
+  "insight": "Read the sequence carefully. From 2020–2022 DoorDash expanded what it calls the **surface area** of the business — new categories, geographies, services. 2023 was \"a year of organizing our efforts.\" The result: **GAAP net loss significantly reduced, Adjusted EBITDA more than tripled**, while users and order frequency still grew double digits. That's the hidden move. Leadership is signaling to the market that expansion and efficiency are sequenced, not simultaneous. You buy the surface area first, then go back and make each square foot of it profitable.\n\nThe closing line is the real tell: efficiency and innovation are \"distinct skills\" and 2024 needs both. That's an admission that an operating muscle and an inventing muscle don't naturally coexist — and management knows running both at once is the harder game.",
+  "application": "Name the phase you're in this quarter. If you just expanded — new product lines, new markets, new headcount — resist adding more. Pick the existing surface area and drive unit economics inside it before the next land grab. And if you're asking your team to do both at once, staff them as two distinct groups with different metrics. Don't expect the people who shipped the expansion to also be the ones who tighten it.",
+  "pullQuote": "Growth and efficiency aren't opposites — they're phases. Knowing which phase you're in is the job.",
+  "leadershipTraits": [
+    "sequences growth and efficiency deliberately",
+    "speaks plainly to investors about trade-offs",
+    "self-aware about organizational limits",
+    "anchors on long-term cash flow per share"
+  ]
+}

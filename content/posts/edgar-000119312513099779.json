@@ -1,0 +1,46 @@
+{
+  "slug": "edgar-000119312513099779",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "When a 10% Shareholder Wants to Run Your Company",
+  "documentTitle": "DSP Group Shareholder Letter Regarding Potential Proxy Contest",
+  "dateAuthored": "2013-03-11",
+  "authorsName": [
+    "DSP Group Board of Directors"
+  ],
+  "authorsCompany": "DSP Group Inc",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "board-governance",
+    "strategy",
+    "crisis-management"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Despite this progress, Starboard Value, a New York-based investment advisor which owns approximately 10% of the company's shares, has threatened the company with a proxy fight for control of the board unless its demands are met. While DSP Group's board and management are doing everything possible to avoid a costly and distracting proxy contest, the board does not believe that Starboard's demands are in the best interests of the company or its shareholders, customers, or employees.\n\nEven though Starboard already has two nominees on your board, Starboard is demanding extra seats on the board, significant representation on all board committees, an effective majority on the compensation committee, which would include half Starboard nominees and a Starboard chairman, as well as the formation of a new strategic committee, which would also include half Starboard nominees and a Starboard chairman.\n\nStarboard has also called upon the company to cease work on the development of new products and to focus all of our resources on our legacy technology. We believe this demand shows a lack of understanding of the technology landscape, where companies must innovate or perish. The corporate graveyard is littered with tech companies that failed to improve and develop new products.\n\nStarboard is also demanding that DSP Group put itself up for a quick sale, with a focus on short-term returns and undermining shareholder value that would be generated and realized in the mid-term by executing on the existing growth initiatives.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000119312513099779-web.png",
+      "caption": "Source document — DSP Group Shareholder Letter Regarding Potential Proxy Contest · SEC EDGAR · EX-99.1 · DSP GROUP INC /DE/ · EX-99.1 · filed 2013-03-11 · Accession 0001193125-13-099779",
+      "alt": "DSP Group Shareholder Letter Regarding Potential Proxy Contest (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/915778/000119312513099779/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "DSP GROUP INC /DE/ · EX-99.1 · filed 2013-03-11 · Accession 0001193125-13-099779",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "When a 10% Shareholder Wants to Run Your Company",
+  "situation": "In March 2013, DSP Group's board wrote directly to all shareholders warning them about Starboard Value, an activist investor holding roughly 10% of shares. Starboard already had two board seats but was pushing for more — plus majority influence over key committees and a forced sale. The board went public to fight back before a formal proxy contest began.",
+  "insight": "The hidden move here isn't the proxy threat — it's the committee strategy. Starboard wasn't just asking for more seats. It wanted 'an effective majority on the compensation committee' and 'a Starboard chairman' on both existing and new committees. That's structural control without a majority of the full board. Whoever controls compensation sets executive pay and incentives. Whoever chairs a new 'strategic committee' shapes what gets built and what gets sold. The board recognized this: granting those demands would hand Starboard de facto operating authority while leaving the optics of shared governance intact. Separately, Starboard's demand to 'cease work on new products and focus on legacy technology' plus a 'quick sale' reveals a pure harvest strategy — extract near-term value, exit. The board's counter-argument is a classic innovate-or-die position: tech companies that stop building don't survive long enough to be worth selling at a premium.",
+  "application": "If an investor, partner, or co-founder ever asks for committee chairs or veto rights over specific functions, treat that as a request for operational control — regardless of their ownership percentage. Before any negotiation, map which decisions each committee actually makes, and decide in advance which ones you are and aren't willing to share. Governance details are strategy.",
+  "pullQuote": "Control of the boardroom is control of strategy — and some investors know exactly how to take it one committee at a time.",
+  "leadershipTraits": [
+    "reads structural power moves, not just headline demands",
+    "willing to go public before a fight formally starts",
+    "frames long-term value against short-term pressure",
+    "defends innovation as competitive necessity"
+  ]
+}

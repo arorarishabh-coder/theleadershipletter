@@ -1,0 +1,48 @@
+{
+  "slug": "edgar-000110465906024060",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "When Your Models Fail, Own It Fast",
+  "documentTitle": "White Mountains Insurance Group 2005 Annual Shareholder Letter",
+  "dateAuthored": "2006-04-10",
+  "authorsName": [
+    "Steven E. Fass",
+    "David T. Foy"
+  ],
+  "authorsCompany": "White Mountains Insurance Group Ltd",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "crisis-management",
+    "leadership-transitions",
+    "finance",
+    "strategy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "This is certainly not the letter I envisioned as my first as White Mountains' new CEO. As a result of the financial impact of hurricanes Katrina, Rita, and Wilma on our insurance operations, and the related decline in the value of our investment in Montpelier Re, our financial results for 2005 were very disappointing. Fully converted tangible book value per share, including dividends, grew by an anemic 2%, obviously well below our targets. All-in, Katrina, Rita, and Wilma, as well as the lesser known but still significant European storm Erwin, cost the Company $310 million after-tax in 2005.\n\nThe obvious question is—how did this happen? In short, we failed to fully assess the models' deficiencies, we were not sufficiently skeptical about their output, and we failed to identify important correlations in our underwriting activities. This will not happen again! Fortunately, through a combination of our natural tendency towards conservatism and our effective risk mitigation strategies, we avoided overexposing our capital. We were able to limit White Mountains Re's net after-tax financial loss from hurricanes Katrina, Rita, and Wilma to approximately 11% of its capital.\n\nYour Company is in great shape and we intend to make the most of these opportunities. Our balance sheet is strong, our businesses are performing well, and the Company is positioned to fully participate in an attractive underwriting environment. Most importantly, you have a team of professionals that are always looking for new ways to grow economic value while adhering to our operating principles.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000110465906024060-web.png",
+      "caption": "Source document — White Mountains Insurance Group 2005 Annual Shareholder Letter · SEC EDGAR · EX-99.1 · WHITE MOUNTAINS INSURANCE GROUP LTD · EX-99.1 · filed 2006-04-10 · Accession 0001104659-06-024060",
+      "alt": "White Mountains Insurance Group 2005 Annual Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/776867/000110465906024060/",
+  "sourceCase": "SEC EDGAR · EX-99.1",
+  "sourceCitation": "WHITE MOUNTAINS INSURANCE GROUP LTD · EX-99.1 · filed 2006-04-10 · Accession 0001104659-06-024060",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "When Your Models Fail, Own It Fast",
+  "situation": "Steve Fass writes his first shareholder letter as CEO of White Mountains in April 2006, after Katrina, Rita, Wilma, and the European storm Erwin cost the company $310 million after-tax. Tangible book value per share grew just 2%. He has to explain to owners how a reinsurance business built on modeling natural catastrophes got blindsided by them.",
+  "insight": "Fass does something unusual for a debut CEO letter: he diagnoses the failure in one sentence. They trusted the models too much, were not skeptical enough of the outputs, and missed correlations across their book. That last word — **correlations** — is the real admission. The models priced individual risks; they did not catch how those risks moved together when a mega-storm hit.\n\nNotice the structure. He names the loss, names the cause, then immediately points to what worked: conservatism and risk mitigation kept the net hit to about 11% of White Mountains Re's capital. The message to shareholders is that the framework broke, but the guardrails held. Bad year, intact company, attractive market ahead. That is how you keep credibility when the headline number is ugly.",
+  "application": "When something blows up in your business, write the post-mortem the way Fass did: one sentence on the loss, one sentence on the specific analytical mistake, one sentence on what limited the damage. Resist the urge to explain the weather. Owners and teams want to know you understand the mechanism of failure and that a guardrail exists. If you cannot name the mechanism, you are not ready to say it will not happen again.",
+  "pullQuote": "Risk models are tools, not oracles — and the leaders who survive bad years are the ones who say so out loud.",
+  "leadershipTraits": [
+    "honest about being wrong",
+    "diagnoses root cause specifically",
+    "separates model failure from capital discipline",
+    "calm under a bad headline"
+  ]
+}

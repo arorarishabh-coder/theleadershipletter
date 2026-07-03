@@ -1,0 +1,45 @@
+{
+  "slug": "edgar-000156459019003687",
+  "publishedAt": "2026-06-25",
+  "isFeatured": false,
+  "title": "Build the Audience First, Then Sell the Audience",
+  "documentTitle": "Roku Q4 2018 Shareholder Letter",
+  "dateAuthored": "2019-02-21",
+  "authorsName": [
+    "Roku Management"
+  ],
+  "authorsCompany": "Roku",
+  "recipientNames": [
+    "Shareholders"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "product"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "2018 was an excellent year for Roku, with record results and solid progress towards our long-term vision of powering every TV in the world. As more than 3 million U.S. households cut the cord, Roku added nearly 8 million active accounts in 2018, increasing our total active accounts to more than 27 million at year end. We estimate that nearly 1 in 5 U.S. TV households now use the Roku platform to stream at least a portion of their TV viewing. While our growth has been impressive, we believe we are still only beginning to capitalize on the large opportunity streaming presents. We expect to reach $1 billion in revenue in 2019, by focusing on these key areas: increasing monetization per user and scaling the number of households using the Roku platform.\n\nWe believe that in the medium-term the most significant factor driving Roku's financial performance will be increasing monetization of our growing installed base. In the TV streaming world, viewer share is well ahead of TV ad budget share, but the rapid growth of our Platform revenue suggests advertisers are starting to respond. This anticipated spending pattern shift, combined with substantial growth in our ad inventory and audience reach, should drive sustained, rapid advertising growth.\n\nOver the long-term, we believe active account growth will be the biggest driver of our P&L. We more than doubled our active account base between 2016 and 2018, and quadrupled the size of our Platform revenue from just over $100 million in 2016 to over $400 million in 2018. In the U.S. alone, our active account base would make the Roku platform equivalent to the No. 2 traditional pay TV/cable company.",
+  "screenshots": [
+    {
+      "url": "/screenshots/edgar-000156459019003687-web.png",
+      "caption": "Source document — Roku Q4 2018 Shareholder Letter · SEC EDGAR · 8-K · ROKU, INC · 8-K · filed 2019-02-21 · Accession 0001564590-19-003687",
+      "alt": "Roku Q4 2018 Shareholder Letter (source page)"
+    }
+  ],
+  "sourceType": "sec_edgar",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1428439/000156459019003687/",
+  "sourceCase": "SEC EDGAR · 8-K",
+  "sourceCitation": "ROKU, INC · 8-K · filed 2019-02-21 · Accession 0001564590-19-003687",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "lessonTitle": "Build the Audience First, Then Sell the Audience",
+  "situation": "In February 2019, Roku's management sent shareholders a letter reviewing 2019 results and laying out what drives the business going forward. The core tension: Roku had grown fast — 27 million active accounts, nearly 1-in-5 U.S. TV households — but monetization still lagged audience size. The letter is a public argument for why that gap is actually an asset, not a problem.",
+  "insight": "Roku is running a classic two-stage platform play. Stage one: capture installed base at scale. Stage two: monetize it. The letter makes this sequence explicit — 'active account growth will be the biggest driver of our P&L' over the long term, while 'increasing monetization per user' is the medium-term lever. That ordering is deliberate. Roku is telling investors: don't judge us yet on revenue per user, judge us on reach. The proof point they offer is a gap: 'viewer share is well ahead of TV ad budget share.' To most people, that sounds like a problem. Roku frames it as latent upside — advertisers haven't caught up yet, but they will. Platform revenue growing from $100 million in 2016 to over $400 million in 2018 is their evidence the shift is already starting. This is the network effects logic applied to advertising: more viewers attract more ad dollars, which fund more content, which attract more viewers.",
+  "application": "If you run a platform or marketplace, map your two-stage sequence explicitly. Write down what metric you're optimizing in stage one (users, installs, listings) and what monetization lever gets unlocked once you hit scale. Then tell that story to your investors and team — not as an excuse for low revenue today, but as a testable prediction with a specific trigger you'll point to when the shift begins.",
+  "pullQuote": "The platform that wins the eyeballs first will collect the ad dollars second — Roku is betting the sequence matters.",
+  "leadershipTraits": [
+    "frames a gap as an asset",
+    "sequences priorities explicitly",
+    "uses data to set expectations, not just celebrate results"
+  ]
+}
