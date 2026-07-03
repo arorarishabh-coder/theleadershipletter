@@ -10,13 +10,21 @@
  */
 import "dotenv/config";
 import { buildFingerprints, registerAlerts } from "@/lib/ingest/alerts";
-import { listSearchAlerts, type AlertRate } from "@/lib/ingest/courtlistener";
+import { listSearchAlerts, deleteSearchAlert, type AlertRate } from "@/lib/ingest/courtlistener";
 
 async function main() {
   const argv = process.argv.slice(2);
   const dryRun = argv.includes("--dry-run");
   const list = argv.includes("--list");
   const rate = (argv.find((a) => a.startsWith("--rate="))?.split("=")[1] as AlertRate) || "dly";
+  const only = argv.find((a) => a.startsWith("--only="))?.split("=")[1];
+  const del = argv.find((a) => a.startsWith("--delete="))?.split("=")[1];
+
+  if (del) {
+    await deleteSearchAlert(parseInt(del, 10));
+    console.log(`Deleted alert ${del}.`);
+    return;
+  }
 
   if (list) {
     const alerts = await listSearchAlerts();
@@ -38,8 +46,8 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`\n=== Registering alerts (rate=${rate}) ===`);
-  const out = await registerAlerts(rate);
+  console.log(`\n=== Registering alerts (rate=${rate}${only ? `, only="${only}"` : ""}) ===`);
+  const out = await registerAlerts(rate, { only });
   for (const r of out) {
     if (!r.ok) console.log(`  ✗ FAILED    ${r.name} — ${r.error}`);
     else console.log(`  ${r.created ? "＋ created" : "· exists "}  [${r.id}] ${r.name}`);
