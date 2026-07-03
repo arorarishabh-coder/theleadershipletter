@@ -251,3 +251,17 @@ model Subscription {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+// ---------- Reply game ----------
+// A pre-computed daily snapshot of the reply targets' recent tweets, each with
+// AI-drafted replies. Generated once a day by the cron (reads X's rate-limited
+// timeline endpoint from Vercel's IP), so the admin page shows ready-to-post
+// replies instantly instead of live-fetching. Only the latest per tier is used.
+model ReplyDigest {
+  id          String   @id @default(cuid())
+  tier        Int      @default(1)
+  data        Json     // { feeds: [{ handle, name, fit, error?, tweets: [{ id, text, url, createdAt, favs, replies: [...] }] }] }
+  generatedAt DateTime @default(now())
+
+  @@index([tier, generatedAt])
+}
