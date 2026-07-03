@@ -233,6 +233,50 @@ export const WATCHED_CASES: WatchedCase[] = [
     internalSignals: { domains: ["visa.com"], people: [] },
     note: "Debit-network monopolization (trial pending). DOJ 'Plaintiff Exhibits' page not yet populated; monitored via RECAP.",
   },
+  // ── Added 2026-07-02. Anthropic sued the DoD ("Department of War") over its
+  // "supply-chain risk" designation; the Amodei↔Emil Michael guardrail
+  // negotiation emails were filed as exhibits (346-page compilation, also mirrored
+  // at archive.org/details/anthropic-vs-pentagon-emails). This is the case ITE
+  // pulled the "Dario Amodei emails the Pentagon" post from — a live, fast-moving
+  // docket that is exactly our sourcing model.
+  {
+    id: "anthropic-v-dod",
+    caseName: "Anthropic PBC v. U.S. Department of War",
+    system: "recap",
+    court: "cand", // N.D. California
+    docketNumber: "3:26-cv-01996",
+    knownCompany: "Anthropic",
+    knownLeaderSlugs: ["dario-amodei"],
+    hintedTopics: ["strategy", "comms", "partnerships", "leadership-transitions"],
+    internalSignals: {
+      domains: ["anthropic.com"],
+      people: ["Amodei", "Emil Michael", "Krieger", "Hegseth"],
+    },
+    exhibitArchiveUrls: [
+      "https://archive.org/details/anthropic-vs-pentagon-emails",
+    ],
+    note: "AI-use guardrails (autonomous weapons + domestic surveillance) negotiation; Amodei↔Emil Michael emails. Exhibit compilation also on archive.org (346pp). The source of ITE's Feb 2026 Pentagon post.",
+  },
+  // ── Added 2026-07-02. The youth social-media-harms MDL: the source of ITE's
+  // "Mark Zuckerberg's WhatsApp messages" post (Oct 2021 teen-safety exchange).
+  // Federal + RECAP-discoverable, so no coverage gap — we just hadn't added it.
+  // Parallel state-AG suits (MA, NM, 40-state coalition) carry overlapping
+  // exhibits but live in state courts (off-RECAP).
+  {
+    id: "social-media-adolescent-addiction",
+    caseName: "In re: Social Media Adolescent Addiction/Personal Injury Products Liability Litigation",
+    system: "recap",
+    court: "cand", // N.D. California
+    docketNumber: "4:22-md-03047",
+    knownCompany: "Meta Platforms, Inc.",
+    knownLeaderSlugs: ["mark-zuckerberg"],
+    hintedTopics: ["crisis-management", "product", "comms", "strategy"],
+    internalSignals: {
+      domains: ["fb.com", "facebook.com", "meta.com", "instagram.com"],
+      people: ["Zuckerberg", "Bejar", "Mosseri", "Clegg", "Cox"],
+    },
+    note: "Teen-safety internal messages (Zuckerberg WhatsApp/email, Bejar warnings) unsealed in the MDL; also Meta, TikTok, Snap, Google defendants. Trial materials + unsealed exhibits.",
+  },
   {
     // Kept to make the RECAP coverage gap explicit. Delaware Chancery is a STATE
     // court — not in PACER/RECAP — so discovery will (correctly) return nothing.

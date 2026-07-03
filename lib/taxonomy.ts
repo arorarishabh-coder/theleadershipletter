@@ -57,6 +57,7 @@ export const COMPANIES: Company[] = [
 ];
 
 export const PERSONS: Person[] = [
+  { slug: "dario-amodei", name: "Dario Amodei", companies: ["Anthropic"], era: "2021–present", bio: "Co-founder and CEO of Anthropic. His correspondence with the U.S. Department of War over AI-use guardrails — barring fully autonomous weapons and domestic surveillance — surfaced as exhibits in Anthropic PBC v. U.S. Department of War, a rare public record of a frontier-AI CEO negotiating red lines with the government." },
   { slug: "elon-musk", name: "Elon Musk", companies: ["Tesla", "SpaceX", "X", "OpenAI"], era: "1999–present", bio: "CEO of Tesla and SpaceX and owner of X (formerly Twitter). Co-founded OpenAI in 2015 and later broke with and sued it — correspondence from that fight is among the richest primary-source records of how he negotiates and wields leverage." },
   { slug: "mark-zuckerberg", name: "Mark Zuckerberg", companies: ["Meta (Facebook)"], era: "2004–present", bio: "Founder and CEO of Facebook/Meta. His internal correspondence, surfaced through the FTC antitrust case, the House Antitrust report, and the Six4Three cache, is one of the most complete records of any modern executive's strategic thinking." },
   { slug: "phil-schiller", name: "Phil Schiller", companies: ["Apple"], era: "1987–present", bio: "Long-time Apple executive and former marketing chief, now an Apple Fellow overseeing the App Store. His emails feature heavily in Epic v. Apple, revealing how Apple reasoned about App Store rules and economics." },
