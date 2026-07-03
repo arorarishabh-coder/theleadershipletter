@@ -156,6 +156,83 @@ export const WATCHED_CASES: WatchedCase[] = [
     },
     note: "Kalanick-era internal emails; trade-secret exhibits.",
   },
+  // ── Added 2026-06-25 to broaden RECAP discovery beyond the tapped-out original
+  // set. Docket numbers + CourtListener court ids verified against public record.
+  // NOTE: Visa & Live Nation have not gone to trial yet, so DOJ exhibit archives
+  // aren't populated — they're monitored via RECAP for now (no exhibitArchiveUrls
+  // until a trial-exhibit table exists in the format doj-exhibits.ts parses).
+  {
+    id: "ftc-v-amazon-ecommerce",
+    caseName: "FTC v. Amazon.com, Inc.",
+    system: "recap",
+    court: "wawd", // W.D. Washington
+    docketNumber: "2:23-cv-01495",
+    knownCompany: "Amazon.com, Inc.",
+    knownLeaderSlugs: ["andy-jassy", "jeff-bezos"],
+    hintedTopics: ["competition", "strategy", "finance"],
+    internalSignals: {
+      domains: ["amazon.com"],
+      people: ["Jassy", "Bezos", "Wilke", "Herrington"],
+    },
+    note: "Monopoly-maintenance; 'Project Nessie' pricing-algorithm emails; Jassy/Bezos correspondence.",
+  },
+  {
+    id: "ftc-v-kroger-albertsons",
+    caseName: "FTC v. The Kroger Co. & Albertsons Companies, Inc.",
+    system: "recap",
+    court: "ord", // D. Oregon
+    docketNumber: "3:24-cv-00347",
+    knownCompany: "The Kroger Co.",
+    knownLeaderSlugs: [],
+    hintedTopics: ["acquisitions", "competition", "strategy"],
+    internalSignals: {
+      domains: ["kroger.com", "albertsons.com"],
+      people: ["McMullen", "Sankaran"],
+    },
+    note: "Blocked $24.6B grocery merger; internal pricing/divestiture emails surfaced at the PI hearing.",
+  },
+  {
+    id: "epic-v-google-play",
+    caseName: "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+    system: "recap",
+    court: "cand", // N.D. California
+    docketNumber: "3:21-md-02981",
+    knownCompany: "Google LLC",
+    knownLeaderSlugs: ["sundar-pichai"],
+    hintedTopics: ["app-stores", "competition", "strategy", "partnerships"],
+    internalSignals: {
+      domains: ["google.com"],
+      people: ["Pichai", "Kochikar", "Rosenberg", "Samat"],
+    },
+    note: "Play Store monopoly jury trial (Epic win, 2023); 'Project Hug' developer-deal emails; 300+ admitted exhibits.",
+  },
+  {
+    id: "us-v-live-nation",
+    caseName: "United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C.",
+    system: "recap",
+    court: "nysd", // S.D.N.Y.
+    docketNumber: "1:24-cv-03973",
+    knownCompany: "Live Nation Entertainment, Inc.",
+    knownLeaderSlugs: [],
+    hintedTopics: ["competition", "strategy", "comms"],
+    internalSignals: {
+      domains: ["livenation.com", "ticketmaster.com"],
+      people: ["Rapino", "Berchtold"],
+    },
+    note: "Live-events monopolization (trial pending). Monitored via RECAP; add DOJ exhibit page once trial materials post.",
+  },
+  {
+    id: "us-v-visa",
+    caseName: "United States v. Visa Inc.",
+    system: "recap",
+    court: "nysd", // S.D.N.Y.
+    docketNumber: "1:24-cv-07214",
+    knownCompany: "Visa Inc.",
+    knownLeaderSlugs: [],
+    hintedTopics: ["competition", "strategy", "partnerships", "finance"],
+    internalSignals: { domains: ["visa.com"], people: [] },
+    note: "Debit-network monopolization (trial pending). DOJ 'Plaintiff Exhibits' page not yet populated; monitored via RECAP.",
+  },
   {
     // Kept to make the RECAP coverage gap explicit. Delaware Chancery is a STATE
     // court — not in PACER/RECAP — so discovery will (correctly) return nothing.

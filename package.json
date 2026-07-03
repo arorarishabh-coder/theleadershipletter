@@ -15,6 +15,7 @@
     "ingest": "tsx scripts/ingest.ts",
     "ingest:dry": "tsx scripts/ingest.ts --dry-run",
     "discover": "tsx scripts/discover.ts",
+    "scout": "tsx scripts/scout.ts",
     "screenshots": "tsx scripts/screenshots.ts",
     "publish": "tsx scripts/publish.ts",
     "test-email": "tsx scripts/test-email.ts",
