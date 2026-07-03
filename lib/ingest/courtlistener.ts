@@ -134,8 +134,8 @@ async function fetchWithRetry(url: string, attempt = 0): Promise<Response> {
 // static per-docket sweep into live, company-wide monitoring of ANY new PACER
 // filing matching an exec-email fingerprint. Requires COURTLISTENER_API_TOKEN.
 
-/** Alert cadence: rt=real-time (paid), dy=daily, wly=weekly, mly=monthly. */
-export type AlertRate = "rt" | "dy" | "wly" | "mly";
+/** Alert cadence (CourtListener codes): rt=real-time (paid), dly=daily, wly=weekly, mly=monthly. */
+export type AlertRate = "rt" | "dly" | "wly" | "mly";
 
 export interface SearchAlert {
   id: number;
@@ -175,16 +175,20 @@ export async function createSearchAlert(input: {
   name: string;
   query: string;
   rate?: AlertRate;
+  /** Pre-fetched alert list to dedup against (avoids re-listing per call in a batch). */
+  existing?: SearchAlert[];
 }): Promise<{ alert: SearchAlert; created: boolean }> {
   if (!hasToken()) throw new Error("COURTLISTENER_API_TOKEN required to manage alerts.");
-  const existing = await listSearchAlerts();
+  const existing = input.existing ?? (await listSearchAlerts());
   const match = existing.find((a) => a.name === input.name);
   if (match) return { alert: match, created: false };
 
   const res = await fetch(`${API_BASE}/alerts/`, {
     method: "POST",
     headers: { ...authHeaders(), "Content-Type": "application/json" },
-    body: JSON.stringify({ name: input.name, query: input.query, rate: input.rate ?? "dy" }),
+    // alert_type "r" = notify on new cases AND filings (documents), which is what
+    // our exec-email fingerprints target; "d" would be dockets only.
+    body: JSON.stringify({ name: input.name, query: input.query, rate: input.rate ?? "dly", alert_type: "r" }),
   });
   if (!res.ok) {
     throw new Error(`CourtListener create alert ${res.status}: ${await res.text().catch(() => "")}`);
