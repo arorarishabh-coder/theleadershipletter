@@ -1,0 +1,73 @@
+{
+  "slug": "cl-cand-4-24-cv-04722-379-75",
+  "publishedAt": "2026-07-03",
+  "isFeatured": false,
+  "title": "How to Handle a Powerful Critic You Still Need",
+  "documentTitle": "Musk v. Altman (OpenAI) — Dkt. 351-39",
+  "dateAuthored": "2023-02-18",
+  "authorsName": [
+    "Sam Altman",
+    "Elon Musk"
+  ],
+  "authorsCompany": "OpenAI",
+  "recipientNames": [
+    "Elon Musk",
+    "Sam Altman"
+  ],
+  "topics": [
+    "ai",
+    "board-governance",
+    "strategy",
+    "comms",
+    "founding-moments"
+  ],
+  "leaderSlugs": [
+    "elon-musk",
+    "sam-altman"
+  ],
+  "excerptForBlog": "SA (11:39 AM): i remember seeing you in a tv interview a long time ago (maybe 60 minutes?) where you being attacked by some guys, and you said they were heroes of yours and it was really tough. well, you're my hero and that's what it feels like when you attack openai. totally get we have some screwed some stuff up, but we have worked incredibly hard to do the right thing, and i think we have ensured that neither google nor anyone else is on a path to have unilateral control over AGI, which i believe we both think is critical. i am tremendously thankful for everything you've done to help—i dont think openai would have happened without you—and it really fucking hurts when you publicly attack openai.\n\nEM (12:07 PM): I hear you and it is certainly not my intention to be hurtful, for which I apologize, but the fate of civilization is at stake.\n\nSA (1:10 PM): i agree with that, and i would really love to hear the things you think we should be doing differently/better. it's also not clear to me how the attacks on twitter help the fate of civilization, but that's less important to me that getting to the right substance. also, i checked with our team on recruiting from tesla. we really are doing very little relative to the size of the company, but i will make sure we don't hurt tesla, i obviously think it's a super important company.",
+  "messageThread": [
+    {
+      "sender": "Sam Altman",
+      "text": "i remember seeing you in a tv interview a long time ago (maybe 60 minutes?) where you being attacked by some guys, and you said they were heroes of yours and it was really tough. well, you're my hero and that's what it feels like when you attack openai. totally get we have some screwed some stuff up, but we have worked incredibly hard to do the right thing, and i think we have ensured that neither google nor anyone else is on a path to have unilateral control over AGI, which i believe we both think is critical. i am tremendously thankful for everything you've done to help—i dont think openai would have happened without you—and it really fucking hurts when you publicly attack openai."
+    },
+    {
+      "sender": "Elon Musk",
+      "text": "I hear you and it is certainly not my intention to be hurtful, for which I apologize, but the fate of civilization is at stake."
+    },
+    {
+      "sender": "Sam Altman",
+      "text": "i agree with that, and i would really love to hear the things you think we should be doing differently/better. it's also not clear to me how the attacks on twitter help the fate of civilization, but that's less important to me that getting to the right substance. also, i checked with our team on recruiting from tesla. we really are doing very little relative to the size of the company, but i will make sure we don't hurt tesla, i obviously think it's a super important company."
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-379-75-p1.png",
+      "caption": "Source document — Musk v. Altman (OpenAI) — Dkt. 351-39 · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 379-75, filed 2026-01-06 (page 1)",
+      "alt": "Musk v. Altman (OpenAI) — Dkt. 351-39 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-379-75-p2.png",
+      "caption": "Source document — Musk v. Altman (OpenAI) — Dkt. 351-39 · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 379-75, filed 2026-01-06 (page 2)",
+      "alt": "Musk v. Altman (OpenAI) — Dkt. 351-39 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/69013420/379/75/musk-v-altman/",
+  "sourceCase": "Musk v. Altman (OpenAI)",
+  "sourceCitation": "4:24-cv-04722 (CAND), Doc. 379-75, filed 2026-01-06",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "postKind": "lesson",
+  "lessonTitle": "How to Handle a Powerful Critic You Still Need",
+  "situation": "Three text messages between Sam Altman and Elon Musk on February 18, 2023. Musk has been publicly attacking OpenAI on Twitter. Altman writes to say it hurts, calls Musk 'my hero,' and thanks him for making OpenAI possible. Musk apologizes for tone but not substance: 'the fate of civilization is at stake.' Altman then flips the exchange — asks Musk for specifics on what OpenAI should do better, and separately volunteers to limit recruiting from Tesla.",
+  "insight": "Altman is doing three things at once in a very short exchange. First, he **lowers the emotional temperature** by acknowledging past debt ('i dont think openai would have happened without you') before pushing back. Second, he **separates the channel from the content** — he questions whether Twitter attacks 'help the fate of civilization' but immediately says substance matters more, denying Musk a fight while inviting engagement. Third, he **offers an unrelated concession** on Tesla recruiting, a low-cost gesture that signals goodwill on something Musk cares about personally.\n\nThe deeper move is refusing to be cornered. Musk frames the stakes as civilizational; Altman agrees with the frame, then asks Musk to put concrete suggestions on the table. That shifts the burden. Vague public criticism is cheap. Specific private advice is a commitment.",
+  "application": "When a high-status critic attacks you publicly, resist the urge to defend point-by-point. Acknowledge what you owe them, agree with their stated concern at the highest level, then ask for specifics in private. Pair it with one small unrelated concession that costs you little but signals respect. You've now moved the conversation off the public stage and made the critic either help you or go quiet.",
+  "pullQuote": "When a former ally attacks you in public, don't defend — pivot to asking what they'd do instead.",
+  "leadershipTraits": [
+    "absorbs criticism without escalating",
+    "separates tone from substance",
+    "trades small concessions for goodwill",
+    "reframes attacks as requests for advice"
+  ]
+}
