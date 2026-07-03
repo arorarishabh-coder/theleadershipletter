@@ -13,7 +13,7 @@ async function main() {
   const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: ["--no-sandbox"] });
   const page = await browser.newPage();
   await page.setViewport({ width: 700, height: 760, deviceScaleFactor: 2 });
-  await page.setContent(html, { waitUntil: "networkidle0" });
+  await page.setContent(html, { waitUntil: "load" });
   await page.screenshot({ path: ".qa-screenshots/mem-signin-email.png", fullPage: true });
   await browser.close();
   console.log("wrote .qa-screenshots/mem-signin-email.png");

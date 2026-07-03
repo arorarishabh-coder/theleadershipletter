@@ -37,14 +37,14 @@ export async function launchBrowser(): Promise<Browser> {
   }
 
   const chromium = (await import("@sparticuz/chromium")).default;
-  // Use @sparticuz's own args/viewport/headless mode — its binary is the
-  // headless-shell build, so it must launch with chromium.headless (not a bare
-  // `true`) or Chromium exits before a page can be opened.
+  // @sparticuz/chromium ships the headless-SHELL build, so puppeteer must launch
+  // with headless: "shell" (v149 dropped the old chromium.headless/defaultViewport
+  // getters). Its args already carry --headless='shell' + sandbox/gpu flags, and
+  // executablePath() extracts the al2023 lib pack (libnss3.so etc.).
   return puppeteer.launch({
     args: chromium.args,
-    defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath(),
-    headless: chromium.headless,
+    headless: "shell",
   });
 }
 
@@ -58,7 +58,7 @@ export async function renderHtmlToPdf(
   const browser = await launchBrowser();
   try {
     const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: "networkidle0" });
+    await page.setContent(html, { waitUntil: "load" });
     await page.evaluate(() => (document as unknown as { fonts?: { ready?: Promise<unknown> } }).fonts?.ready);
     const bytes = await page.pdf({ width: size.width, height: size.height, printBackground: true });
     return new Uint8Array(bytes); // copy into a plain ArrayBuffer for BodyInit/BlobPart
@@ -73,7 +73,7 @@ export async function renderHtmlToPng(html: string, width = 1080): Promise<Uint8
   try {
     const page = await browser.newPage();
     await page.setViewport({ width, height: 800, deviceScaleFactor: 2 });
-    await page.setContent(html, { waitUntil: "networkidle0" });
+    await page.setContent(html, { waitUntil: "load" });
     await page.evaluate(() => (document as unknown as { fonts?: { ready?: Promise<unknown> } }).fonts?.ready);
     const shot = await page.screenshot({ type: "png", fullPage: true });
     return new Uint8Array(shot);
