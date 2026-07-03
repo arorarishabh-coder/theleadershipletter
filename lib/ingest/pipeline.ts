@@ -199,8 +199,15 @@ export async function processDocument(
   "excerptForBlog": "<the actual excerpt text, ≤300 words>",
   "documentTitleCleaned": "<clean title>",
   "fairUseCompliant": true,
-  "excerptWordCount": <number>
+  "excerptWordCount": <number>,
+  "docKind": "<'email' | 'letter' | 'thread'>",
+  "messageThread": [{ "sender": "<name or masked handle>", "text": "<message text>" }]
 }
+
+docKind + messageThread:
+- Set "docKind" to "thread" when the document is a CHAT/MESSAGE exchange (WhatsApp, SMS/iMessage, Slack, Signal) — alternating sender turns, chat handles like "…@s.whatsapp.net", often no From/To/Subject headers. Otherwise "email" for an email, or "letter" for a shareholder/leadership letter.
+- ONLY when docKind==="thread", populate "messageThread" as the excerpt broken into ordered turns: each { sender, text } is one message. Use the sender's name if shown, else the masked handle exactly as it appears (e.g. "[redacted]@s.whatsapp.net"); represent redacted content as "[redacted]". The turns together must stay within the same ≤300-word / ≤10% cap as excerptForBlog (they are the SAME content, just structured). "excerptForBlog" should still contain the flat text.
+- For "email" or "letter", omit "messageThread" (empty array) — do NOT invent turns.
 
 Known metadata: ${JSON.stringify({
     title: source.documentTitle,
@@ -309,6 +316,8 @@ Output the JSON only.`;
     topics: (enrich.topics.length ? enrich.topics : rel.topics) as PostTopic[],
     leaderSlugs,
     excerptForBlog: enrich.excerptForBlog,
+    messageThread:
+      enrich.docKind === "thread" && enrich.messageThread?.length ? enrich.messageThread : undefined,
     screenshots,
     sourceType: source.sourceType,
     sourceUrl: source.url,

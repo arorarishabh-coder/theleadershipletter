@@ -66,6 +66,10 @@ export interface EnrichResult {
   documentTitleCleaned: string;
   fairUseCompliant: boolean;
   excerptWordCount: number;
+  /** "thread" when the document is a chat/message exchange (WhatsApp/SMS/Slack). */
+  docKind?: "email" | "letter" | "thread";
+  /** For docKind==="thread": the excerpt as ordered sender-labeled turns. */
+  messageThread?: { sender: string; text: string }[];
 }
 
 export interface LessonResult {

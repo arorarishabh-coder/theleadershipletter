@@ -35,6 +35,12 @@ export interface PostScreenshot {
   alt: string;
 }
 
+/** One turn in a chat/message-thread exhibit (WhatsApp/SMS/Slack). */
+export interface MessageTurn {
+  sender: string; // display name or masked handle as shown, e.g. "Mark Zuckerberg" / "[redacted]@s.whatsapp.net"
+  text: string;
+}
+
 export interface Post {
   slug: string;
   publishedAt: string;
@@ -50,6 +56,10 @@ export interface Post {
   topics: PostTopic[];
   leaderSlugs: string[];
   excerptForBlog: string;
+  // When the source is a chat/message thread (WhatsApp, SMS/iMessage, Slack),
+  // the excerpt is ALSO captured as ordered turns so we can render it as a clean
+  // sender-labeled card (see lib/social/carousel-pdf.ts) instead of a screenshot.
+  messageThread?: MessageTurn[];
   screenshots: PostScreenshot[];
   sourceType: SourceType;
   sourceUrl: string;

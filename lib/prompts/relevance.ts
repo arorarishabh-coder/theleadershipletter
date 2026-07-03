@@ -16,7 +16,7 @@ Real internal corporate correspondence — executive emails, board memos, strate
 Decide whether THIS document should enter the pipeline. Be strict. Most documents should be rejected. Volume is not the goal — a sharp, transferable business lesson is.
 
 Two kinds of document qualify, and BOTH are equally welcome:
-  (A) Internal correspondence — executive emails, board memos, strategy notes (often from court exhibits).
+  (A) Internal correspondence — executive emails, board memos, strategy notes, AND chat/message threads (WhatsApp, SMS/iMessage, Slack, Signal), often from court exhibits. A message thread is JUST AS VALID as an email: do NOT reject it for lacking From/To/Subject headers, for using chat handles like "…@s.whatsapp.net", or for having redaction bars — those are normal for exhibit chat logs. What matters is that a business leader is reasoning or deciding in it.
   (B) Substantive leadership letters — a CEO/Chair letter to shareholders, employees, or the public (the Bezos/Buffett/Dimon annual-letter genre). PUBLIC distribution does NOT disqualify it; what matters is whether it contains real reasoning. A substantive shareholder letter that explains a strategic choice, a capital-allocation call, a candid admission, or how the leader reads their market IS in scope — do not reject it merely for being public or "a press release."
 
 A document PASSES only if ALL of these hold:
