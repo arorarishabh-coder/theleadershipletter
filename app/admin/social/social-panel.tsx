@@ -60,6 +60,8 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
   const [status, setStatus] = useState<"idle" | "loading" | "error" | "done">("idle");
   const [error, setError] = useState("");
   const [pkg, setPkg] = useState<SocialPackage | null>(null);
+  const [pdfStatus, setPdfStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [pdfError, setPdfError] = useState("");
 
   async function generate() {
     setStatus("loading");
@@ -73,6 +75,42 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
       setStatus("error");
+    }
+  }
+
+  // Render the branded LinkedIn "document" (carousel) PDF from the drafts we
+  // already generated and download it — upload via LinkedIn "Start a post →
+  // Add a document".
+  async function downloadPdf() {
+    if (!pkg) return;
+    setPdfStatus("loading");
+    setPdfError("");
+    try {
+      const res = await fetch("/api/admin/social-pdf", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug, slides: pkg.linkedinCarousel.slides, imageUrl: pkg.imageUrl }),
+      });
+      if (!res.ok) {
+        let msg = `HTTP ${res.status}`;
+        try {
+          msg = (await res.json()).error || msg;
+        } catch {}
+        throw new Error(msg);
+      }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${slug}.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      setPdfStatus("idle");
+    } catch (e) {
+      setPdfError(e instanceof Error ? e.message : String(e));
+      setPdfStatus("error");
     }
   }
 
@@ -205,7 +243,24 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
             </div>
             {pkg.linkedinCarousel.slides.length > 0 && (
               <div className="mt-6">
-                <div className="flex items-center gap-3 border border-rule bg-parchment-light px-4 py-2">
+                {/* One-click branded PDF — the "post as a document" flow */}
+                <div className="flex flex-wrap items-center gap-3 border border-ink bg-parchment-deep/40 px-4 py-3">
+                  <button
+                    type="button"
+                    onClick={downloadPdf}
+                    disabled={pdfStatus === "loading"}
+                    className="bg-ink px-5 py-2.5 font-sans text-[12px] uppercase tracking-[0.18em] text-parchment transition-colors hover:bg-brick disabled:opacity-60"
+                  >
+                    {pdfStatus === "loading" ? "Building PDF…" : "⬇ Download LinkedIn PDF"}
+                  </button>
+                  <p className="min-w-0 flex-1 font-serif text-[13px] leading-relaxed text-ink-faded">
+                    Branded {pkg.linkedinCarousel.slides.length + (pkg.imageUrl ? 1 : 0)}-page document (1080×1350). Post it via
+                    LinkedIn <strong className="text-ink">Start a post → Add a document</strong> — it renders as a swipeable
+                    carousel in-feed.
+                  </p>
+                </div>
+                {pdfStatus === "error" && <p className="mt-2 font-mono text-[12px] text-brick">PDF error: {pdfError}</p>}
+                <div className="mt-4 flex items-center gap-3 border border-rule bg-parchment-light px-4 py-2">
                   <span className="shrink-0 font-mono text-[10px] uppercase tracking-dateline text-ink-faded">Doc title</span>
                   <code className="min-w-0 flex-1 truncate font-serif text-[14px] text-ink">{pkg.carouselTitle}</code>
                   <Count n={pkg.carouselTitle.length} limit={58} />
