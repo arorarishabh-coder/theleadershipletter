@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Dateline } from "@/components/dateline";
 import { requireAdmin, AdminRedirect } from "@/lib/admin";
 import { ReplyPanel } from "./reply-panel";
+import { ReplyTargets } from "./reply-targets";
 
 export const dynamic = "force-dynamic";
 
@@ -46,6 +47,8 @@ export default async function ReplyPage() {
       <div className="mt-8">
         <ReplyPanel />
       </div>
+
+      <ReplyTargets />
     </div>
   );
 }
