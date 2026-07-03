@@ -85,6 +85,9 @@ const EMAIL_HEADER = /\b(from|to|subject|sent|cc|bcc)\s*:/i;
 const EMAIL_THREAD =
   /(-{2,}\s*original message|on .{0,80}\bwrote:|begin forwarded message|^\s*(re|fwd):\s)/im;
 const SENT_FROM_DEVICE = /sent from my (iphone|ipad|blackberry|mobile|phone)/i;
+// Chat/message-thread exhibits — WhatsApp/SMS/iMessage/Slack/Signal transcripts.
+const MESSAGE_THREAD =
+  /(@s\.whatsapp\.net|\bwhatsapp\b|\bimessage\b|\bsms\b|text message|\bslack\b|\bsignal\b|group chat|chat (thread|log|transcript)|\[redacted\]@)/i;
 
 // ---- Noise types that dominated the unfiltered top-6 (push these DOWN) ----
 const PRESS_RELEASE =
@@ -112,6 +115,9 @@ function scoreSignal(r: RecapDocResult, c: WatchedCase): number {
   else if (EMAIL_HEADER.test(snip)) s += 2;
   if (EMAIL_THREAD.test(snip)) s += 3; // reply/forward chain
   if (SENT_FROM_DEVICE.test(snip)) s += 2;
+  // Chat/message-thread exhibits (WhatsApp/SMS/iMessage/Slack) — just as valid as
+  // email, but lack From/Subject headers, so reward their own fingerprints.
+  if (MESSAGE_THREAD.test(snip) || MESSAGE_THREAD.test(desc)) s += 4;
   if (domains.some((d) => snip.toLowerCase().includes(`@${d.toLowerCase()}`))) s += 4; // internal domain
   if (people.some((p) => new RegExp(`\\b${p}\\b`, "i").test(snip))) s += 1;
   if (/e-?mail/i.test(short)) s += 1;
