@@ -16,7 +16,7 @@ async function main() {
   const argv = process.argv.slice(2);
   const dryRun = argv.includes("--dry-run");
   const list = argv.includes("--list");
-  const rate = (argv.find((a) => a.startsWith("--rate="))?.split("=")[1] as AlertRate) || "dy";
+  const rate = (argv.find((a) => a.startsWith("--rate="))?.split("=")[1] as AlertRate) || "dly";
 
   if (list) {
     const alerts = await listSearchAlerts();
@@ -40,8 +40,15 @@ async function main() {
 
   console.log(`\n=== Registering alerts (rate=${rate}) ===`);
   const out = await registerAlerts(rate);
-  for (const r of out) console.log(`  ${r.created ? "＋ created" : "· exists "}  [${r.id}] ${r.name}`);
-  console.log(`\nDone: ${out.filter((r) => r.created).length} created, ${out.filter((r) => !r.created).length} already existed.`);
+  for (const r of out) {
+    if (!r.ok) console.log(`  ✗ FAILED    ${r.name} — ${r.error}`);
+    else console.log(`  ${r.created ? "＋ created" : "· exists "}  [${r.id}] ${r.name}`);
+  }
+  const created = out.filter((r) => r.ok && r.created).length;
+  const existed = out.filter((r) => r.ok && !r.created).length;
+  const failed = out.filter((r) => !r.ok);
+  console.log(`\nDone: ${created} created, ${existed} already existed, ${failed.length} failed.`);
+  if (failed.length) console.log(`Failed alerts are usually "too broad" — CourtListener caps alert volume; narrow the fingerprint or scope it to specific dockets.`);
 }
 
 main().catch((e) => {

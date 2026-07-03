@@ -17,7 +17,7 @@
  */
 
 import type { AlertRate } from "./courtlistener";
-import { createSearchAlert, storageUrl, siteUrl } from "./courtlistener";
+import { createSearchAlert, listSearchAlerts, storageUrl, siteUrl } from "./courtlistener";
 import { WATCHED_CASES } from "./watchlist";
 import type { SourceDocument } from "./types";
 
@@ -47,27 +47,37 @@ export function buildFingerprints(): Fingerprint[] {
   }
 
   const fingerprints: Fingerprint[] = [];
-  for (const [company, { domains, people }] of byCompany) {
-    const terms = [
-      ...[...domains].map((d) => `"@${d}"`),
-      ...[...people].map((p) => `"${p}"`),
-    ];
-    if (!terms.length) continue;
-    const q = `"From:" (${terms.join(" OR ")})`;
+  for (const [company, { domains }] of byCompany) {
+    // Use email DOMAINS only (precise, low-volume) and require BOTH the From and
+    // Subject headers — this targets actual email exhibits, not any filing that
+    // merely says "from". Bare surnames (Cox, Page, Bond…) are far too common for
+    // a global RECAP alert and blow past CourtListener's per-alert volume cap;
+    // they stay in discovery's scoreSignal, which is docket-scoped.
+    const domTerms = [...domains].map((d) => `"@${d}"`);
+    if (!domTerms.length) continue;
+    const q = `"From:" "Subject:" (${domTerms.join(" OR ")})`;
     const query = new URLSearchParams({ q, type: "r", order_by: "score desc" }).toString();
     fingerprints.push({ name: `TLL · ${company}`, companies: [company], query });
   }
   return fingerprints;
 }
 
-/** Register (idempotently) all company fingerprints as CourtListener alerts. */
-export async function registerAlerts(rate: AlertRate = "dy"): Promise<
-  Array<{ name: string; created: boolean; id: number }>
+/** Register (idempotently) all company fingerprints as CourtListener alerts.
+ *  Per-alert failures (e.g. a still-too-broad query CourtListener rejects) are
+ *  captured, not thrown, so one company can't abort the batch. */
+export async function registerAlerts(rate: AlertRate = "dly"): Promise<
+  Array<{ name: string; created: boolean; id: number; ok: boolean; error?: string }>
 > {
-  const out: Array<{ name: string; created: boolean; id: number }> = [];
+  const out: Array<{ name: string; created: boolean; id: number; ok: boolean; error?: string }> = [];
+  const existing = await listSearchAlerts(); // fetch once, dedup against it
   for (const fp of buildFingerprints()) {
-    const { alert, created } = await createSearchAlert({ name: fp.name, query: fp.query, rate });
-    out.push({ name: fp.name, created, id: alert.id });
+    try {
+      const { alert, created } = await createSearchAlert({ name: fp.name, query: fp.query, rate, existing });
+      if (created) existing.push(alert);
+      out.push({ name: fp.name, created, id: alert.id, ok: true });
+    } catch (e) {
+      out.push({ name: fp.name, created: false, id: 0, ok: false, error: e instanceof Error ? e.message : String(e) });
+    }
   }
   return out;
 }
