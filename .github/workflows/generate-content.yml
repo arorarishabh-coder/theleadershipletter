@@ -62,11 +62,19 @@ jobs:
           CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
         run: |
           set +e  # a weak source must not abort the run; the QA gate is the arbiter
+          echo "== RECAP watchlist sweep =="
+          npm run discover -- --ingest --limit=4
           echo "== EDGAR marquee =="
           npm run discover -- --from-edgar --marquee --ingest --limit="${{ github.event.inputs.edgar_limit || '10' }}"
           echo "== DOJ exhibits =="
           npm run discover -- --from-doj --ingest --limit="${{ github.event.inputs.doj_limit || '6' }}"
           set -e
+
+      - name: Sync RECAP search alerts
+        if: ${{ env.COURTLISTENER_API_TOKEN != '' }}
+        env:
+          COURTLISTENER_API_TOKEN: ${{ secrets.COURTLISTENER_API_TOKEN }}
+        run: npm run -s alerts || true
 
       - name: Detect new posts
         id: detect
