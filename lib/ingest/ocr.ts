@@ -15,11 +15,18 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { claude, MODELS } from "@/lib/anthropic";
 import { TRANSCRIPTION_INSTRUCTION, TRANSCRIPTION_SYSTEM } from "@/lib/prompts/transcribe";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const dynImport: (m: string) => Promise<any> = (m) => import(/* webpackIgnore: true */ m);
+
 const USER_AGENT =
   "CorporateLettersResearchBot/0.1 (+research@corporateletters.example.com) editorial-ocr";
 
 // Anthropic accepts PDFs up to ~32MB / 100 pages per request. Stay comfortably under.
 const MAX_PDF_BYTES = 28 * 1024 * 1024;
+// When a pageRange is given we rasterize just those pages and send them as
+// images (bypasses the whole-PDF size/page caps). Cap the image count for cost.
+const MAX_RANGE_PAGES = 12;
+const RANGE_RENDER_SCALE = 2.0;
 
 export interface OcrResult {
   ok: boolean;
@@ -58,27 +65,90 @@ async function fetchPdfBase64(
   return { base64: Buffer.from(buf).toString("base64"), bytes };
 }
 
+/** Fetch a PDF's raw bytes with no size cap (used for local page-range rasterization). */
+async function fetchPdfBytes(url: string): Promise<Uint8Array | { error: string }> {
+  try {
+    const r = await fetch(url, {
+      headers: { "User-Agent": USER_AGENT, Accept: "application/pdf,*/*" },
+      redirect: "follow",
+    });
+    if (!r.ok) return { error: `HTTP ${r.status}` };
+    return new Uint8Array(await r.arrayBuffer());
+  } catch (e) {
+    return { error: `fetch failed: ${e instanceof Error ? e.message : String(e)}` };
+  }
+}
+
+/**
+ * Rasterize a 1-indexed inclusive page range to base64 PNGs via MuPDF. Lets us
+ * OCR one email inside a huge multi-exhibit compilation without shipping (or
+ * hitting the size cap on) the whole PDF.
+ */
+async function renderRangeToPngs(
+  bytes: Uint8Array,
+  pageRange: [number, number],
+): Promise<{ pngs: string[]; totalPages: number }> {
+  const mupdf = await dynImport("mupdf");
+  const doc = mupdf.Document.openDocument(bytes, "application/pdf");
+  const totalPages: number = doc.countPages();
+  const start = Math.max(1, pageRange[0]);
+  const end = Math.min(totalPages, pageRange[1]);
+  const pngs: string[] = [];
+  for (let i = start; i <= end && pngs.length < MAX_RANGE_PAGES; i++) {
+    const page = doc.loadPage(i - 1);
+    const pix = page.toPixmap(mupdf.Matrix.scale(RANGE_RENDER_SCALE, RANGE_RENDER_SCALE), mupdf.ColorSpace.DeviceRGB, false);
+    pngs.push(Buffer.from(pix.asPNG()).toString("base64"));
+    pix.destroy?.();
+    page.destroy?.();
+  }
+  return { pngs, totalPages };
+}
+
 /**
  * Transcribe a (likely scanned) PDF to verbatim plain text via a Claude vision model.
  * Returns the transcription text plus token usage. Does not throw — failures come
  * back as { ok: false, error }.
+ *
+ * With `pageRange` (1-indexed, inclusive) it rasterizes only those pages and sends
+ * them as images — the way to transcribe a single email inside a 300+ page exhibit
+ * compilation without tripping the whole-PDF size/page caps.
  */
 export async function transcribePdf(
   url: string,
-  opts: { model?: string } = {},
+  opts: { model?: string; pageRange?: [number, number] } = {},
 ): Promise<OcrResult> {
-  const fetched = await fetchPdfBase64(url);
-  if ("error" in fetched) return { ok: false, error: fetched.error };
-
   const model = opts.model ?? MODELS.enrich; // Sonnet: strong vision, reasonable cost
 
-  const content: Anthropic.ContentBlockParam[] = [
-    {
-      type: "document",
-      source: { type: "base64", media_type: "application/pdf", data: fetched.base64 },
-    },
-    { type: "text", text: TRANSCRIPTION_INSTRUCTION },
-  ];
+  let content: Anthropic.ContentBlockParam[];
+  let bytesForResult: number | undefined;
+
+  if (opts.pageRange) {
+    const raw = await fetchPdfBytes(url);
+    if ("error" in raw) return { ok: false, error: raw.error };
+    bytesForResult = raw.byteLength;
+    const { pngs } = await renderRangeToPngs(raw, opts.pageRange);
+    if (pngs.length === 0) return { ok: false, error: "no pages rendered for range" };
+    content = [
+      ...pngs.map(
+        (b64): Anthropic.ContentBlockParam => ({
+          type: "image",
+          source: { type: "base64", media_type: "image/png", data: b64 },
+        }),
+      ),
+      { type: "text", text: TRANSCRIPTION_INSTRUCTION },
+    ];
+  } else {
+    const fetched = await fetchPdfBase64(url);
+    if ("error" in fetched) return { ok: false, error: fetched.error };
+    bytesForResult = fetched.bytes;
+    content = [
+      {
+        type: "document",
+        source: { type: "base64", media_type: "application/pdf", data: fetched.base64 },
+      },
+      { type: "text", text: TRANSCRIPTION_INSTRUCTION },
+    ];
+  }
 
   try {
     const res = await claude.messages.create({
@@ -93,7 +163,7 @@ export async function transcribePdf(
       ok: text.length > 0,
       text,
       model,
-      bytes: fetched.bytes,
+      bytes: bytesForResult,
       inputTokens: res.usage.input_tokens,
       outputTokens: res.usage.output_tokens,
     };

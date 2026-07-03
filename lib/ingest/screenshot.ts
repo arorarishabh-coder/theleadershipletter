@@ -118,14 +118,24 @@ async function ensureDir() {
  * kept content pages re-indexed sequentially as {id}-p1.png, {id}-p2.png …
  * Returns the displayed page numbers (empty if nothing readable was found).
  */
-async function renderPdf(data: Uint8Array, id: string, maxPages = MAX_PAGES): Promise<number[]> {
+async function renderPdf(
+  data: Uint8Array,
+  id: string,
+  maxPages = MAX_PAGES,
+  pageRange?: [number, number],
+): Promise<number[]> {
   const mupdf = await getMupdf();
   const doc = mupdf.Document.openDocument(data, "application/pdf");
   await ensureDir();
-  const scanLimit = Math.min(doc.countPages(), SCAN_PAGES);
+  const total = doc.countPages();
+  // Default: scan the first SCAN_PAGES leading pages (cover/divider pruning).
+  // With an explicit pageRange (1-indexed, inclusive) — e.g. one email inside a
+  // 346-page exhibit compilation — scan only that window instead of pages 0–5.
+  const startIdx = pageRange ? Math.max(0, pageRange[0] - 1) : 0;
+  const endExclusive = pageRange ? Math.min(total, pageRange[1]) : Math.min(total, SCAN_PAGES);
   const kept: Buffer[] = [];
   let skipped = 0;
-  for (let i = 0; i < scanLimit && kept.length < maxPages; i++) {
+  for (let i = startIdx; i < endExclusive && kept.length < maxPages; i++) {
     const page = doc.loadPage(i);
     const pixmap = page.toPixmap(
       mupdf.Matrix.scale(RENDER_SCALE, RENDER_SCALE),
@@ -147,7 +157,7 @@ async function renderPdf(data: Uint8Array, id: string, maxPages = MAX_PAGES): Pr
     await fs.promises.writeFile(path.join(OUT_DIR, `${id}-p${k + 1}.png`), kept[k]);
     pages.push(k + 1);
   }
-  if (process.env.SHOT_DEBUG) console.error(`[renderPdf ${id}] scanned=${scanLimit} kept=${pages.length} skipped=${skipped}`);
+  if (process.env.SHOT_DEBUG) console.error(`[renderPdf ${id}] scanned=${startIdx + 1}..${endExclusive} kept=${pages.length} skipped=${skipped}`);
   return pages;
 }
 
@@ -203,11 +213,12 @@ export async function captureSourceScreenshots(
   url: string,
   id: string,
   meta: CaptureMeta,
+  pageRange?: [number, number],
 ): Promise<PostScreenshot[]> {
   try {
     const data = await fetchBytes(url);
     if (isPdf(data)) {
-      const pages = await renderPdf(data, id);
+      const pages = await renderPdf(data, id, MAX_PAGES, pageRange);
       if (pages.length === 0) return [];
       return pages.map((p) => ({
         url: `/screenshots/${id}-p${p}.png`,
