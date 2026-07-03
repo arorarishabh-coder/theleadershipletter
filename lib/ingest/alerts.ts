@@ -65,12 +65,16 @@ export function buildFingerprints(): Fingerprint[] {
 /** Register (idempotently) all company fingerprints as CourtListener alerts.
  *  Per-alert failures (e.g. a still-too-broad query CourtListener rejects) are
  *  captured, not thrown, so one company can't abort the batch. */
-export async function registerAlerts(rate: AlertRate = "dly"): Promise<
-  Array<{ name: string; created: boolean; id: number; ok: boolean; error?: string }>
-> {
+export async function registerAlerts(
+  rate: AlertRate = "dly",
+  opts: { only?: string } = {},
+): Promise<Array<{ name: string; created: boolean; id: number; ok: boolean; error?: string }>> {
   const out: Array<{ name: string; created: boolean; id: number; ok: boolean; error?: string }> = [];
   const existing = await listSearchAlerts(); // fetch once, dedup against it
-  for (const fp of buildFingerprints()) {
+  const fingerprints = opts.only
+    ? buildFingerprints().filter((fp) => fp.name.toLowerCase().includes(opts.only!.toLowerCase()))
+    : buildFingerprints();
+  for (const fp of fingerprints) {
     try {
       const { alert, created } = await createSearchAlert({ name: fp.name, query: fp.query, rate, existing });
       if (created) existing.push(alert);

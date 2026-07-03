@@ -166,6 +166,14 @@ export async function listSearchAlerts(): Promise<SearchAlert[]> {
   return out;
 }
 
+/** Delete a search alert by id. Returns true on success. */
+export async function deleteSearchAlert(id: number): Promise<boolean> {
+  if (!hasToken()) throw new Error("COURTLISTENER_API_TOKEN required to manage alerts.");
+  const res = await fetch(`${API_BASE}/alerts/${id}/`, { method: "DELETE", headers: authHeaders() });
+  if (!res.ok && res.status !== 204) throw new Error(`CourtListener delete alert ${res.status}`);
+  return true;
+}
+
 /**
  * Create a RECAP search alert. `query` is the search querystring (no leading `?`),
  * e.g. `q="From:" ("@google.com")&type=r`. Idempotent by name: if an alert with
