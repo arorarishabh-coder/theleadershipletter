@@ -39,11 +39,14 @@ const VALID_SOURCE_TYPES = new Set([
   "sec_edgar", "court_exhibit", "congress", "foreign_gov", "self_published", "press_quoted",
 ]);
 
+// Common to every post. The analysis fields differ by lane (see below).
 const REQUIRED_STRINGS = [
   "slug", "title", "publishedAt", "dateAuthored", "excerptForBlog",
-  "lessonTitle", "situation", "insight", "application", "pullQuote",
-  "sourceUrl", "sourceType", "authorsCompany",
+  "lessonTitle", "pullQuote", "sourceUrl", "sourceType", "authorsCompany",
 ] as const;
+// Standard lesson posts require the three-part analysis; Notable Artifact posts
+// require the "why this matters" note instead.
+const LESSON_ANALYSIS_FIELDS = ["situation", "insight", "application"] as const;
 const REQUIRED_ARRAYS = ["authorsName", "topics", "leadershipTraits", "screenshots"] as const;
 
 interface PostReport {
@@ -121,6 +124,18 @@ function checkPost(file: string): PostReport {
   for (const k of REQUIRED_ARRAYS) {
     const v = rec[k];
     if (!Array.isArray(v) || v.length === 0) r.errors.push(`missing/empty array: ${k}`);
+  }
+
+  // Lane-specific analysis: artifact posts need artifactNote; lesson posts need
+  // the three-part situation/insight/application.
+  if (post.postKind === "artifact") {
+    if (typeof post.artifactNote !== "string" || post.artifactNote.trim() === "")
+      r.errors.push(`artifact post missing/empty field: artifactNote`);
+  } else {
+    for (const k of LESSON_ANALYSIS_FIELDS) {
+      const v = rec[k];
+      if (typeof v !== "string" || v.trim() === "") r.errors.push(`missing/empty field: ${k}`);
+    }
   }
 
   if (post.slug && post.slug !== r.slug) r.errors.push(`slug "${post.slug}" != filename "${r.slug}"`);

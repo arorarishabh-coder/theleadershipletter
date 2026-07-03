@@ -225,7 +225,14 @@ export default async function PostPage({
       {access.hasAccess ? (
       <section>
         <div className="mx-auto max-w-2xl px-6 py-14 md:py-20">
-          {post.situation && post.insight && post.application ? (
+          {post.postKind === "artifact" && post.artifactNote ? (
+            <div className="space-y-6">
+              <span className="inline-block border border-brick px-2.5 py-1 font-mono text-[10px] uppercase tracking-dateline text-brick">
+                Notable artifact
+              </span>
+              <AnalysisSection label="Why this matters" body={post.artifactNote} dropcap />
+            </div>
+          ) : post.situation && post.insight && post.application ? (
             <div className="space-y-12">
               <AnalysisSection label="The situation" body={post.situation} dropcap />
               <AnalysisSection label="The lesson" body={post.insight} />

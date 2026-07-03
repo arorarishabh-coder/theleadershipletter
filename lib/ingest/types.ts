@@ -55,6 +55,18 @@ export interface RelevanceResult {
   estimatedDate: string;
   estimatedCompany: string;
   reason: string;
+  /** True when — even without a transferable lesson — the exchange is historically
+   *  notable (recognizable leaders and/or a pivotal moment). Routes an otherwise-
+   *  rejected "no_transferable_lesson"/"too_thin" doc to the Notable Artifact lane. */
+  notableArtifact?: boolean;
+}
+
+/** Output of the lighter Notable-Artifact analysis (in place of a full lesson). */
+export interface ArtifactResult {
+  title: string;
+  pullQuote: string;
+  artifactNote: string;
+  significance: string[]; // 2-3 short tags, e.g. "OpenAI founding", "AI history"
 }
 
 export interface EnrichResult {
@@ -113,4 +125,6 @@ export interface PipelineOptions {
   /** Relevance-gate thresholds (0-10). Default 6 each. Raise for a stricter feed. */
   minThemeFit?: number;
   minLessonClarity?: number;
+  /** Set false to disable the Notable Artifact lane (publish lesson posts only). */
+  artifactLane?: boolean;
 }
