@@ -2,13 +2,16 @@ import { NextResponse } from "next/server";
 import { requireAdmin, AdminRedirect } from "@/lib/admin";
 import { getPostBySlug } from "@/lib/queries";
 import { buildCarouselHtml } from "@/lib/social/carousel-pdf";
+import { generateSocialDrafts } from "@/lib/social/draft";
 import { renderHtmlToPdf } from "@/lib/pdf/launch";
 
-// POST /api/admin/social-pdf   { slug, slides, imageUrl? }
+// POST /api/admin/social-pdf   { slug, slides?, imageUrl? }
 // Admin-only. Renders the branded LinkedIn "document" (carousel) PDF for a post
-// from ALREADY-generated drafts (no Claude call here), and streams it back as a
-// download. The client passes the slides it already generated + the source-
-// document image URL so the PDF matches exactly what the panel previews.
+// and streams it back as a download. If the client passes the slides it already
+// generated (the "Generate drafts" flow), we render those verbatim with no Claude
+// call so the PDF matches the panel preview. If slides are omitted (the one-click
+// top-bar button), we generate the carousel drafts on the fly so the PDF works
+// without a prior "Generate drafts" step.
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -44,13 +47,27 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "invalid JSON body" }, { status: 400 });
   }
 
-  const { slug, slides, imageUrl } = body;
+  const { slug } = body;
   if (!slug) return NextResponse.json({ error: "missing slug" }, { status: 400 });
-  if (!Array.isArray(slides) || slides.length === 0) {
-    return NextResponse.json({ error: "missing slides — generate drafts first" }, { status: 400 });
-  }
   const post = getPostBySlug(slug);
   if (!post) return NextResponse.json({ error: "post not found" }, { status: 404 });
+
+  // Use client-supplied slides when present (fast, matches the panel preview);
+  // otherwise generate the carousel drafts on the fly (one-click top-bar button).
+  let slides = body.slides;
+  let imageUrl = body.imageUrl;
+  if (!Array.isArray(slides) || slides.length === 0) {
+    try {
+      const pkg = await generateSocialDrafts(post);
+      slides = pkg.linkedinCarousel.slides;
+      imageUrl = imageUrl ?? pkg.imageUrl;
+    } catch (e) {
+      return NextResponse.json({ error: `could not generate drafts: ${e instanceof Error ? e.message : String(e)}` }, { status: 502 });
+    }
+  }
+  if (!Array.isArray(slides) || slides.length === 0) {
+    return NextResponse.json({ error: "no carousel slides available for this post" }, { status: 502 });
+  }
 
   try {
     const imageDataUri = await toDataUri(imageUrl, new URL(req.url).origin);

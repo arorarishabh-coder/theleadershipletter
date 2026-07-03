@@ -114,14 +114,20 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
   // already generated and download it — upload via LinkedIn "Start a post →
   // Add a document".
   async function downloadPdf() {
-    if (!pkg) return;
     setPdfStatus("loading");
     setPdfError("");
     try {
+      // If drafts are already generated, send them so the PDF matches the preview
+      // exactly (no extra Claude call). Otherwise send just the slug and let the
+      // route generate the carousel on the fly — so the top-bar button works
+      // without a prior "Generate drafts" click.
+      const payload = pkg
+        ? { slug, slides: pkg.linkedinCarousel.slides, imageUrl: pkg.imageUrl }
+        : { slug };
       const res = await fetch("/api/admin/social-pdf", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, slides: pkg.linkedinCarousel.slides, imageUrl: pkg.imageUrl }),
+        body: JSON.stringify(payload),
       });
       if (!res.ok) {
         let msg = `HTTP ${res.status}`;
@@ -182,9 +188,19 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
         >
           {cardStatus === "loading" ? "Rendering…" : "⬇ Card image"}
         </button>
+        <button
+          type="button"
+          onClick={downloadPdf}
+          disabled={pdfStatus === "loading"}
+          title="Branded LinkedIn document (carousel) PDF. Generates the drafts on the fly if you haven't already — post it via LinkedIn Start a post → Add a document."
+          className="border border-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink hover:text-parchment disabled:opacity-60"
+        >
+          {pdfStatus === "loading" ? "Building PDF…" : "⬇ LinkedIn PDF"}
+        </button>
       </div>
 
       {cardStatus === "error" && <p className="mt-3 font-mono text-[12px] text-brick">Card error: {cardError}</p>}
+      {pdfStatus === "error" && <p className="mt-3 font-mono text-[12px] text-brick">PDF error: {pdfError}</p>}
       {status === "error" && <p className="mt-4 font-mono text-[12px] text-brick">Error: {error}</p>}
       {status === "idle" && <p className="mt-6 font-serif italic text-ink-faded">Pick a post and generate copy-ready Twitter + LinkedIn drafts.</p>}
 
