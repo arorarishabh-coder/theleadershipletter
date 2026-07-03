@@ -16,6 +16,7 @@
     "ingest:dry": "tsx scripts/ingest.ts --dry-run",
     "discover": "tsx scripts/discover.ts",
     "alerts": "tsx scripts/alerts.ts",
+    "ite-signal": "tsx scripts/ite-signal.ts",
     "scout": "tsx scripts/scout.ts",
     "screenshots": "tsx scripts/screenshots.ts",
     "publish": "tsx scripts/publish.ts",

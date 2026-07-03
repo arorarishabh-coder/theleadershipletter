@@ -68,6 +68,8 @@ jobs:
           npm run discover -- --from-edgar --marquee --ingest --limit="${{ github.event.inputs.edgar_limit || '10' }}"
           echo "== DOJ exhibits =="
           npm run discover -- --from-doj --ingest --limit="${{ github.event.inputs.doj_limit || '6' }}"
+          echo "== ITE-as-signal (lead only; fetches primary court docs ourselves) =="
+          npm run ite-signal -- --ingest --limit=12
           set -e
 
       - name: Sync RECAP search alerts
