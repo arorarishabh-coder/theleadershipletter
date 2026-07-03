@@ -15,6 +15,7 @@
  *   npm run discover -- --case=ftc-v-meta --ingest-dry  # discover → pipeline dry-run (fetch+extract, no Claude)
  *   npm run discover -- --case=ftc-v-meta --ingest      # discover → full pipeline (needs ANTHROPIC_API_KEY)
  *   npm run discover -- --from-edgar --marquee --ingest --force  # regenerate even posts that already exist
+ *   npm run discover -- --ingest --no-artifacts  # lesson posts only; skip the Notable Artifact lane
  *
  * By default ingest SKIPS any candidate whose post already exists on disk (slug ===
  * source.id), so re-runs only add net-new content. Pass --force to regenerate.
@@ -57,6 +58,7 @@ interface Args {
   exhibitUrl?: string;
   pages?: [number, number];
   id?: string;
+  noArtifacts: boolean;
 }
 
 function parseArgs(): Args {
@@ -101,6 +103,7 @@ function parseArgs(): Args {
     exhibitUrl: val("exhibit-url"),
     pages,
     id: val("id"),
+    noArtifacts: a.includes("--no-artifacts"),
   };
 }
 
@@ -157,6 +160,7 @@ async function runFromExhibit(args: Args) {
     minThemeFit: args.minThemeFit,
     minLessonClarity: args.minLessonClarity,
     forceRefresh: args.force,
+    artifactLane: !args.noArtifacts,
   });
   const r = results[0];
   console.log(`\nResult: ${r?.ok ? `OK → ${r.outputPath ?? r.postSlug}` : `FAILED (${r?.failureStage}): ${r?.error}`}`);
@@ -215,6 +219,7 @@ async function runFromIndex(args: Args) {
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
       forceRefresh: args.force,
+      artifactLane: !args.noArtifacts,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);
@@ -253,6 +258,7 @@ async function runFromEdgar(args: Args) {
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
       forceRefresh: args.force,
+      artifactLane: !args.noArtifacts,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);
@@ -301,6 +307,7 @@ async function runFromDoj(args: Args) {
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
       forceRefresh: args.force,
+      artifactLane: !args.noArtifacts,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);
@@ -402,6 +409,7 @@ async function main() {
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
       forceRefresh: args.force,
+      artifactLane: !args.noArtifacts,
     });
     const passed = results.filter((r) => r.ok);
     console.log(`\n=== Screen result: ${passed.length}/${results.length} passed the gate ===`);
@@ -430,6 +438,7 @@ async function main() {
       minThemeFit: args.minThemeFit,
       minLessonClarity: args.minLessonClarity,
       forceRefresh: args.force,
+      artifactLane: !args.noArtifacts,
     });
     const failed = results.filter((r) => !r.ok).length;
     process.exit(failed === 0 ? 0 : 2);
