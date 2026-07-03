@@ -8,8 +8,44 @@
 // hard, and only fetch on an explicit click. Returns [] (never throws) on any
 // failure so one throttled handle can't break the batch.
 
+import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+// On-disk cache so repeated LOCAL runs don't re-hit X's aggressive rate limit —
+// each handle is fetched at most once per ~20h; extra runs reuse the cache. Only
+// active off-Vercel (the CLI); the serverless runtime has no writable cwd and
+// doesn't fetch anyway.
+const CACHE_DIR = join(process.cwd(), ".cache", "timeline");
+const CACHE_TTL_MS = 20 * 60 * 60 * 1000;
+const useDiskCache = !process.env.VERCEL;
+
+function cachePath(handle: string): string {
+  return join(CACHE_DIR, `${handle.toLowerCase()}.json`);
+}
+function readCache(handle: string): HandleFeed | null {
+  if (!useDiskCache) return null;
+  try {
+    const p = cachePath(handle);
+    if (!existsSync(p)) return null;
+    if (Date.now() - statSync(p).mtimeMs > CACHE_TTL_MS) return null;
+    const j = JSON.parse(readFileSync(p, "utf8")) as HandleFeed;
+    return j && Array.isArray(j.tweets) && j.tweets.length ? j : null;
+  } catch {
+    return null;
+  }
+}
+function writeCache(feed: HandleFeed): void {
+  if (!useDiskCache || !feed.tweets.length) return; // only cache successful reads
+  try {
+    mkdirSync(CACHE_DIR, { recursive: true });
+    writeFileSync(cachePath(feed.handle), JSON.stringify(feed));
+  } catch {
+    /* cache is best-effort */
+  }
+}
 
 export interface TimelineTweet {
   id: string;
@@ -53,6 +89,8 @@ function collectTweets(node: unknown, out: Map<string, RawTweet>, depth = 0): vo
 /** Fetch a handle's recent ORIGINAL tweets (no retweets/replies), newest first. */
 export async function fetchRecentTweets(handle: string, limit = 3): Promise<HandleFeed> {
   const clean = handle.replace(/^@/, "").trim();
+  const cached = readCache(clean);
+  if (cached) return { ...cached, tweets: cached.tweets.slice(0, limit) };
   try {
     const res = await fetch(`https://syndication.twitter.com/srv/timeline-profile/screen-name/${encodeURIComponent(clean)}`, {
       headers: { "User-Agent": USER_AGENT, Accept: "text/html" },
@@ -89,7 +127,9 @@ export async function fetchRecentTweets(handle: string, limit = 3): Promise<Hand
       .slice(0, limit);
 
     if (!tweets.length) return { handle: clean, tweets: [], error: "empty" };
-    return { handle: clean, tweets };
+    const feed: HandleFeed = { handle: clean, tweets };
+    writeCache(feed);
+    return feed;
   } catch {
     return { handle: clean, tweets: [], error: "unavailable" };
   }

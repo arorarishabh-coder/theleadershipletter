@@ -68,3 +68,6 @@ content/outbox
 
 # Generated LinkedIn carousel PDFs
 carousels/
+
+# Local timeline fetch cache (reply digest)
+.cache/

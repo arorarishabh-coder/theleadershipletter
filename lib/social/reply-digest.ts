@@ -47,7 +47,7 @@ export async function buildTierDigest(tier = 1): Promise<ReplyDigestData> {
       error: feed.error,
       tweets: feed.tweets.map((tw) => ({ ...tw, replies: [] as ReplyOption[] })),
     });
-    await new Promise((r) => setTimeout(r, 300)); // polite gap between handles
+    await new Promise((r) => setTimeout(r, 1500)); // polite gap — the endpoint throttles fast
   }
 
   // Phase 2: draft replies for ALL tweets in parallel (Claude, no rate-limit
