@@ -1,11 +1,15 @@
 import { NextResponse } from "next/server";
 import { getAllPosts } from "@/lib/queries";
-import { isPublished, listPublishedIdentities, publishToResend } from "@/lib/publish/resend";
+import { isPublished, listBroadcastsByName, listPublishedIdentities, publishToResend } from "@/lib/publish/resend";
 import { BUFFER_ALERT_THRESHOLD, sendBufferLowAlert } from "@/lib/publish/buffer-alert";
+import { selectNextForVariety, sourceGroupKey } from "@/lib/publish/schedule";
 
-// Daily newsletter cron. Vercel hits this once a day (see vercel.json). It finds
-// the oldest buffered post not yet sent and creates a Resend broadcast for it.
-// State lives in Resend (no DB): we list existing broadcasts and skip those.
+// Daily newsletter cron. Vercel hits this once a day (see vercel.json). It picks
+// the next buffered post not yet sent and creates a Resend broadcast for it.
+// To keep editions varied (not e.g. weeks of the same company's exhibits in a
+// row), it sends the oldest post from the publisher emailed *least recently*,
+// rather than strictly oldest-overall. State lives in Resend (no DB): we list
+// existing broadcasts and skip those.
 //
 // Safety: defaults to a Resend DRAFT for human review (a daily email is
 // irreversible). Set CRON_AUTO_CONFIRM=true to send automatically.
@@ -26,10 +30,23 @@ export async function GET(req: Request) {
   }
 
   const published = await listPublishedIdentities();
-  const unsent = getAllPosts()
-    .filter((p) => !isPublished(p, published))
-    .sort((a, b) => (a.publishedAt || "").localeCompare(b.publishedAt || ""));
-  const next = unsent[0];
+  const allPosts = getAllPosts();
+  const unsent = allPosts.filter((p) => !isPublished(p, published));
+
+  // Most-recent emailed date per publisher group, joined from Resend's actual
+  // sent_at back onto our corpus — drives the round-robin so we don't send the
+  // same publisher two days running while other publishers wait.
+  const broadcasts = await listBroadcastsByName();
+  const bySlug = new Map(allPosts.map((p) => [p.slug.toLowerCase(), p]));
+  const lastSentByGroup = new Map<string, string>();
+  for (const [slug, info] of broadcasts) {
+    if (!info.sentAt) continue;
+    const post = bySlug.get(slug);
+    if (!post) continue;
+    const g = sourceGroupKey(post);
+    if (info.sentAt > (lastSentByGroup.get(g) ?? "")) lastSentByGroup.set(g, info.sentAt);
+  }
+  const next = selectNextForVariety(unsent, lastSentByGroup);
 
   // Safety net: warn the admin before the buffer empties. The cron runs once a
   // day, so this nags at most once per day until the queue is replenished.
