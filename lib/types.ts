@@ -60,6 +60,10 @@ export interface Post {
   // the excerpt is ALSO captured as ordered turns so we can render it as a clean
   // sender-labeled card (see lib/social/carousel-pdf.ts) instead of a screenshot.
   messageThread?: MessageTurn[];
+  // The email's real Subject: line (verbatim from the document), when it is an
+  // email with one. Used as the card's "Subject:" — falls back to documentTitle
+  // (the exhibit/letter label) when absent (threads, letters, no visible subject).
+  emailSubject?: string;
   screenshots: PostScreenshot[];
   // Hosted path (e.g. "/cards/{slug}.png") to the recreated ITE-style card — our
   // own clean reproduction of the correspondence (buildMessageCardHtml). Generated

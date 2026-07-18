@@ -81,6 +81,8 @@ export interface EnrichResult {
   topics: PostTopic[];
   excerptForBlog: string;
   documentTitleCleaned: string;
+  /** The email's real "Subject:" line, verbatim; "" for threads/letters/no-subject. */
+  emailSubject?: string;
   fairUseCompliant: boolean;
   excerptWordCount: number;
   /** "thread" when the document is a chat/message exchange (WhatsApp/SMS/Slack). */

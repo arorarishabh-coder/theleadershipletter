@@ -139,7 +139,7 @@ export function buildMessageCardHtml(post: Post): string {
         <div><span class="hk">From:</span> ${esc(post.authorsName.join(", ") || post.authorsCompany)}</div>
         ${post.recipientNames?.length ? `<div><span class="hk">To:</span> ${esc(post.recipientNames.join(", "))}</div>` : ""}
         ${post.dateAuthored ? `<div><span class="hk">Sent:</span> ${esc(post.dateAuthored)}</div>` : ""}
-        <div><span class="hk">Subject:</span> ${esc(post.documentTitle)}</div>
+        <div><span class="hk">Subject:</span> ${esc(post.emailSubject || post.documentTitle)}</div>
       </div>`;
 
   const citation = esc([post.sourceCase, post.sourceCitation].filter(Boolean).join(" · "));

@@ -218,11 +218,16 @@ export async function processDocument(
   "topics": ["topic1","topic2"],
   "excerptForBlog": "<the actual excerpt text, ≤300 words>",
   "documentTitleCleaned": "<clean title>",
+  "emailSubject": "<the email's real Subject: line, verbatim, or empty string>",
   "fairUseCompliant": true,
   "excerptWordCount": <number>,
   "docKind": "<'email' | 'letter' | 'thread'>",
   "messageThread": [{ "sender": "<name or masked handle>", "text": "<message text>" }]
 }
+
+emailSubject:
+- Set to the ACTUAL "Subject:" line of the email exactly as written (e.g. "Re: Atlas offering $0.015 for HP"), when the document is an email that has one. Take the innermost/most-specific subject if a thread quotes several.
+- Leave "" (empty) when the document is a chat thread, a letter, or has no visible subject line. NEVER put the exhibit label, case name, or a paraphrase here — only a real subject line copied from the document, or "".
 
 docKind + messageThread:
 - Set "docKind" to "thread" when the document is a CHAT/MESSAGE exchange (WhatsApp, SMS/iMessage, Slack, Signal) — alternating sender turns, chat handles like "…@s.whatsapp.net", often no From/To/Subject headers. Otherwise "email" for an email, or "letter" for a shareholder/leadership letter.
@@ -391,6 +396,7 @@ Output the JSON only.`;
     isFeatured: false,
     title,
     documentTitle: enrich.documentTitleCleaned || source.documentTitle,
+    emailSubject: enrich.emailSubject?.trim() || undefined,
     dateAuthored: enrich.dateAuthored || source.dateAuthored,
     authorsName: enrich.authors.length ? enrich.authors : source.knownAuthors,
     authorsCompany,
