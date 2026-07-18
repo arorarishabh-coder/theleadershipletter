@@ -8,11 +8,44 @@
 // hard, and only fetch on an explicit click. Returns [] (never throws) on any
 // failure so one throttled handle can't break the batch.
 
+import { execFile } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { promisify } from "node:util";
+
+const execFileP = promisify(execFile);
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+// X's syndication endpoint fingerprints the HTTP client: Node's built-in fetch
+// (undici) is flagged as a bot and gets a blanket 429, while a real browser and
+// plain `curl` are served normally. So off-Vercel we shell out to curl (ships
+// with Windows 10+ and every mac/linux) to look like a browser. On Vercel — a
+// datacenter IP that's blocked anyway, and where curl may be absent — we fall
+// back to fetch; that run is expected to fail and is skipped without clobbering
+// the stored digest (see refreshTierDigest). A sentinel appended via curl's -w
+// lets us read the HTTP status without a temp file.
+const STATUS_MARKER = "\n__HTTP_STATUS__:";
+
+async function browserGet(url: string): Promise<{ status: number; body: string }> {
+  if (!process.env.VERCEL) {
+    try {
+      const { stdout } = await execFileP(
+        "curl",
+        ["-s", "-A", USER_AGENT, "--max-time", "25", "-w", `${STATUS_MARKER}%{http_code}`, url],
+        { maxBuffer: 24 * 1024 * 1024 },
+      );
+      const i = stdout.lastIndexOf(STATUS_MARKER);
+      if (i === -1) return { status: 0, body: stdout };
+      return { status: Number(stdout.slice(i + STATUS_MARKER.length)) || 0, body: stdout.slice(0, i) };
+    } catch {
+      return { status: 0, body: "" }; // curl missing / timed out → treat as unavailable
+    }
+  }
+  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "text/html" } });
+  return { status: res.status, body: res.ok ? await res.text() : "" };
+}
 
 // On-disk cache so repeated LOCAL runs don't re-hit X's aggressive rate limit —
 // each handle is fetched at most once per ~20h; extra runs reuse the cache. Only
@@ -92,14 +125,11 @@ export async function fetchRecentTweets(handle: string, limit = 3): Promise<Hand
   const cached = readCache(clean);
   if (cached) return { ...cached, tweets: cached.tweets.slice(0, limit) };
   try {
-    const res = await fetch(`https://syndication.twitter.com/srv/timeline-profile/screen-name/${encodeURIComponent(clean)}`, {
-      headers: { "User-Agent": USER_AGENT, Accept: "text/html" },
-      // Cache per handle so reloads / repeated clicks don't re-hit the rate limit.
-      next: { revalidate: 600 },
-    });
-    if (res.status === 429) return { handle: clean, tweets: [], error: "rate_limited" };
-    if (!res.ok) return { handle: clean, tweets: [], error: "unavailable" };
-    const html = await res.text();
+    const { status, body: html } = await browserGet(
+      `https://syndication.twitter.com/srv/timeline-profile/screen-name/${encodeURIComponent(clean)}`,
+    );
+    if (status === 429) return { handle: clean, tweets: [], error: "rate_limited" };
+    if (status < 200 || status >= 300 || !html) return { handle: clean, tweets: [], error: "unavailable" };
     const m = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
     if (!m) return { handle: clean, tweets: [], error: "unavailable" };
 
