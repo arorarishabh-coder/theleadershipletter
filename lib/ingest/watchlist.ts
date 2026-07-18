@@ -277,6 +277,54 @@ export const WATCHED_CASES: WatchedCase[] = [
     },
     note: "Teen-safety internal messages (Zuckerberg WhatsApp/email, Bejar warnings) unsealed in the MDL; also Meta, TikTok, Snap, Google defendants. Trial materials + unsealed exhibits.",
   },
+  // ── Added 2026-07-18 to widen the marquee net (recognizable-company federal
+  // dockets with internal-email exhibits). Docket numbers + CourtListener court
+  // ids verified against the public record before adding.
+  {
+    id: "in-re-tesla-securities",
+    caseName: "In re Tesla, Inc. Securities Litigation",
+    system: "recap",
+    court: "cand", // N.D. California
+    docketNumber: "3:18-cv-04865",
+    knownCompany: "Tesla, Inc.",
+    knownLeaderSlugs: ["elon-musk"],
+    hintedTopics: ["comms", "board-governance", "crisis-management", "finance"],
+    internalSignals: {
+      domains: ["tesla.com"],
+      people: ["Musk", "Ahuja", "Denholm", "Teller", "Viecha", "Gracias"],
+    },
+    note: "Musk's 2018 'funding secured' tweets; went to a 2023 jury trial → internal Tesla/Musk comms admitted as exhibits.",
+  },
+  {
+    id: "us-v-apple",
+    caseName: "United States v. Apple Inc. (Smartphone Antitrust)",
+    system: "recap",
+    court: "njd", // D. New Jersey
+    docketNumber: "2:24-cv-04055",
+    knownCompany: "Apple Inc.",
+    knownLeaderSlugs: ["tim-cook"],
+    hintedTopics: ["competition", "strategy", "product", "app-stores"],
+    internalSignals: {
+      domains: ["apple.com"],
+      people: ["Cook", "Federighi", "Schiller", "Joswiak", "Maestri", "Ternus"],
+    },
+    note: "DOJ smartphone-monopoly suit (filed 2024, MTD denied 2025). Discovery early — monitored for internal Apple exec-strategy exhibits as they're filed.",
+  },
+  {
+    id: "sec-v-coinbase",
+    caseName: "SEC v. Coinbase, Inc.",
+    system: "recap",
+    court: "nysd", // S.D.N.Y.
+    docketNumber: "1:23-cv-04738",
+    knownCompany: "Coinbase, Inc.",
+    knownLeaderSlugs: [], // brian-armstrong not yet in PERSONS; add if a post surfaces
+    hintedTopics: ["policy", "strategy", "finance", "comms"],
+    internalSignals: {
+      domains: ["coinbase.com"],
+      people: ["Armstrong", "Grewal", "Choi", "Haas"],
+    },
+    note: "SEC token-as-security suit (Armstrong/Grewal). Legal-argument-heavy; monitored for internal exec-strategy exhibits.",
+  },
   {
     // Kept to make the RECAP coverage gap explicit. Delaware Chancery is a STATE
     // court — not in PACER/RECAP — so discovery will (correctly) return nothing.
@@ -320,6 +368,9 @@ export const MARQUEE_CASE_IDS = new Set<string>([
   "epic-v-google-play",
   "anthropic-v-dod",
   "social-media-adolescent-addiction",
+  "in-re-tesla-securities",
+  "us-v-apple",
+  "sec-v-coinbase",
 ]);
 
 export function isMarqueeCase(id: string): boolean {
