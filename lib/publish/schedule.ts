@@ -15,15 +15,19 @@ import { COMPANIES, companyMatches } from "@/lib/taxonomy";
 export const NEWSLETTER_MIN_SIGNAL = Number(process.env.NEWSLETTER_MIN_SIGNAL ?? 7);
 
 /**
- * Whether the daily cron may auto-email this post. Two independent gates:
- *   1. Quarantine — firehose-discovered EDGAR letters (blind full-text sweep of
+ * Whether the daily cron may auto-email this post. Three independent gates:
+ *   1. Lesson-only — Notable Artifacts carry a factual "why this matters" note,
+ *      NOT a leadership lesson, so the email's analysis section would be empty.
+ *      They belong on the blog + social; never the daily lesson newsletter.
+ *   2. Quarantine — firehose-discovered EDGAR letters (blind full-text sweep of
  *      every 8-K filer) are held for human review; they reach the blog but are NOT
  *      auto-emailed until an editor sets reviewStatus:"approved".
- *   2. Signal floor — recorded leadershipSignal ≥ minSignal. Undefined signal is
+ *   3. Signal floor — recorded leadershipSignal ≥ minSignal. Undefined signal is
  *      grandfathered (see NEWSLETTER_MIN_SIGNAL).
  * Deterministic and side-effect free so it can be unit-simulated.
  */
 export function isSendEligible(post: Post, minSignal: number = NEWSLETTER_MIN_SIGNAL): boolean {
+  if (post.postKind === "artifact") return false;
   if (post.reviewStatus === "quarantined") return false;
   if (post.leadershipSignal !== undefined && post.leadershipSignal < minSignal) return false;
   return true;

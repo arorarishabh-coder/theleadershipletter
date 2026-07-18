@@ -77,15 +77,19 @@ export function buildPostHtml(post: Post, siteUrl = ""): string {
   const label = (text: string) =>
     `<h3 style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8378;font-family:Arial,Helvetica,sans-serif;margin:28px 0 6px;">${text}</h3>`;
 
-  // Three lean sections replace the old dense body; fall back to legacy lessonBody
-  // for any post not yet migrated to the structured format.
+  // Three lean sections replace the old dense body. A Notable Artifact has no
+  // lesson (no situation/insight/application) — render its factual "why this
+  // matters" note instead so the email is never analysis-less. Otherwise fall back
+  // to the legacy lessonBody for any post not yet migrated to the structured format.
   const analysis = post.situation && post.insight && post.application
     ? [
         label("The situation"), lessonToHtml(post.situation),
         label("The lesson"), lessonToHtml(post.insight),
         label("Put it to work"), lessonToHtml(post.application),
       ].join("\n")
-    : lessonToHtml(post.lessonBody ?? "");
+    : post.postKind === "artifact" && post.artifactNote
+      ? [label("Why this matters"), lessonToHtml(post.artifactNote)].join("\n")
+      : lessonToHtml(post.lessonBody ?? "");
 
   return [byline, imgHtml, label("The document"), excerptHtml, analysis, provenance].join("\n");
 }
