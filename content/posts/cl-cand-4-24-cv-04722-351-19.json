@@ -1,0 +1,62 @@
+{
+  "slug": "cl-cand-4-24-cv-04722-351-19",
+  "publishedAt": "2026-07-18",
+  "isFeatured": false,
+  "title": "Musk and Brockman Debate OpenAI's Future While Musk Gifts Founders Model 3s",
+  "documentTitle": "Musk v. Altman (OpenAI) — Exhibit 16",
+  "dateAuthored": "2017-07-21",
+  "authorsName": [
+    "Elon Musk",
+    "Greg Brockman",
+    "Ilya Sutskever",
+    "Jared Birchall"
+  ],
+  "authorsCompany": "OpenAI",
+  "recipientNames": [
+    "Elon Musk",
+    "Ilya Sutskever",
+    "Greg Brockman",
+    "John Schulman",
+    "Wojciech Zaremba"
+  ],
+  "topics": [
+    "strategy",
+    "ai",
+    "policy",
+    "founding-moments",
+    "board-governance"
+  ],
+  "leaderSlugs": [
+    "elon-musk",
+    "greg-brockman"
+  ],
+  "excerptForBlog": "Greg Brockman: \"100% agreed. We think the path must be: 1. AI research non-profit (through end of 2017) 2. AI research + hardware for-profit (starting 2018) 3. Government project (when: ??) Government project is helpful for financial resources, but crucial for security — don't know how to defend against Putin or North Korea otherwise. When ready, we must proactively form the project around us, rather than being slurped in against our will.\"\n\nElon Musk (responding to a NYT article on China's 2030 AI ambitions): \"They will do whatever it takes to obtain what we develop. Maybe another reason to change course.\"\n\nElon Musk (separately, to the founding team): \"By the way, in appreciation for what you've done to get OpenAI to where it is today, I would like to give you each a Founder Series Model 3. These are the earliest cars produced and are not available to the public. If there are a few others at OpenAI who you think also really deserve one (maybe Wojciech?), I am happy to do the same for them.\"\n\nIlya Sutskever: \"Wow, thank you! This is a very kind gesture that we greatly appreciate. Yes, Wojciech definitely deserves it as much as we do, as does John Schulman.\"\n\nElon Musk: \"Consider it done! Jared, please facilitate. Let's try to slot these four cars into next month's production.\"\n\nJared Birchall: \"Will do. Guys — I'll reach out separately with details.\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-351-19-p1.png",
+      "caption": "Source document — Musk v. Altman (OpenAI) — Exhibit 16 · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 351-19, filed 2025-11-07 (page 1)",
+      "alt": "Musk v. Altman (OpenAI) — Exhibit 16 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-351-19-p2.png",
+      "caption": "Source document — Musk v. Altman (OpenAI) — Exhibit 16 · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 351-19, filed 2025-11-07 (page 2)",
+      "alt": "Musk v. Altman (OpenAI) — Exhibit 16 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/69013420/351/19/musk-v-altman/",
+  "sourceCase": "Musk v. Altman (OpenAI)",
+  "sourceCitation": "4:24-cv-04722 (CAND), Doc. 351-19, filed 2025-11-07",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 4,
+  "postKind": "artifact",
+  "artifactNote": "Dated July 21, 2017, this exchange is part of the evidentiary record in Musk v. Altman (4:24-cv-04722), filed in the Northern District of California. It shows Greg Brockman laying out a three-stage structural vision for OpenAI — nonprofit, then for-profit, then eventual government project — citing national-security concerns about Russia and North Korea, roughly six months before Musk's departure from the OpenAI board in early 2018. In the same thread, Musk gifts founding-team members Ilya Sutskever, Brockman, Wojciech Zaremba, and John Schulman early Founder Series Model 3s, with Jared Birchall, Musk's personal money manager, tasked to coordinate delivery. The document surfaces in litigation in which Musk alleges OpenAI deviated from its founding nonprofit mission — making this record of the founders openly discussing a for-profit pivot and a government-project endpoint, at this early date, directly relevant to that legal dispute.",
+  "lessonTitle": "Musk and Brockman Debate OpenAI's Future While Musk Gifts Founders Model 3s",
+  "pullQuote": "A single email thread from mid-2017 captures OpenAI at the exact moment its founders were already sketching a path from nonprofit to for-profit to government project — while Musk was simultaneously cementing personal loyalty with early Tesla hardware.",
+  "leadershipTraits": [
+    "OpenAI founding",
+    "Musk v. Altman litigation",
+    "AI governance history"
+  ]
+}
