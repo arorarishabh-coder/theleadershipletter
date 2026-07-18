@@ -31,7 +31,7 @@ import { discoverFromWatchlist, type DiscoveredDocument } from "@/lib/ingest/dis
 import { discoverFromIndex } from "@/lib/ingest/exhibit-index";
 import { discoverFromDoj } from "@/lib/ingest/doj-exhibits";
 import { discoverFromEdgar, discoverFromEdgarMarquee } from "@/lib/ingest/edgar";
-import { WATCHED_CASES, getWatchedCase } from "@/lib/ingest/watchlist";
+import { WATCHED_CASES, marqueeRecapCases, getWatchedCase } from "@/lib/ingest/watchlist";
 import { runPipeline } from "@/lib/ingest/pipeline";
 import type { SourceDocument } from "@/lib/ingest/types";
 
@@ -174,7 +174,7 @@ function pad(s: string, n: number): string {
 async function runFromIndex(args: Args) {
   const cases = args.caseIds?.length
     ? WATCHED_CASES.filter((c) => args.caseIds!.includes(c.id))
-    : WATCHED_CASES.filter((c) => c.system === "recap");
+    : marqueeRecapCases(); // default sweep = marquee-only (CHARTER inclusion spec)
 
   console.log("\n=== The Leadership Letter · Index-Driven Discovery ===");
   const allResolved: DiscoveredDocument[] = [];

@@ -14,7 +14,7 @@
  */
 
 import { searchRecapDocuments, siteUrl, storageUrl, type RecapDocResult } from "./courtlistener";
-import { WATCHED_CASES, type WatchedCase } from "./watchlist";
+import { WATCHED_CASES, marqueeRecapCases, type WatchedCase } from "./watchlist";
 import type { SourceDocument } from "./types";
 
 /** Fallback query when a case has no internalSignals configured. */
@@ -185,9 +185,11 @@ export async function discoverFromWatchlist(opts: DiscoverOptions = {}): Promise
   const minPages = opts.minPages ?? 1;
   const maxPages = opts.maxPages ?? 30;
 
+  // Default sweep is pinned to marquee cases (CHARTER "Article Inclusion Spec");
+  // an explicit caseIds list overrides and can pull any watched case on demand.
   const cases = opts.caseIds?.length
     ? WATCHED_CASES.filter((c) => opts.caseIds!.includes(c.id))
-    : WATCHED_CASES;
+    : marqueeRecapCases();
 
   const report: DiscoverReport = { documents: [], perCase: [], skipped: [] };
 

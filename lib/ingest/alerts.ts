@@ -18,7 +18,7 @@
 
 import type { AlertRate } from "./courtlistener";
 import { createSearchAlert, listSearchAlerts, storageUrl, siteUrl } from "./courtlistener";
-import { WATCHED_CASES } from "./watchlist";
+import { WATCHED_CASES, isMarqueeCase } from "./watchlist";
 import type { SourceDocument } from "./types";
 
 export interface Fingerprint {
@@ -38,7 +38,9 @@ export interface Fingerprint {
 export function buildFingerprints(): Fingerprint[] {
   const byCompany = new Map<string, { domains: Set<string>; people: Set<string> }>();
   for (const c of WATCHED_CASES) {
-    if (c.system !== "recap" || !c.internalSignals) continue;
+    // Marquee-only: alert fingerprints track founder-recognizable companies (CHARTER
+    // "Article Inclusion Spec"), so live RECAP alerts stay high-signal too.
+    if (c.system !== "recap" || !c.internalSignals || !isMarqueeCase(c.id)) continue;
     const key = c.knownCompany;
     if (!byCompany.has(key)) byCompany.set(key, { domains: new Set(), people: new Set() });
     const bucket = byCompany.get(key)!;

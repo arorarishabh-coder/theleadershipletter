@@ -63,4 +63,12 @@ Rules:
 - Set rejectCategory to null ONLY when the document genuinely passes all three PASS conditions.
 - A real email with no generalizable point is "no_transferable_lesson", not a pass.
 - leadershipSignal 8+ marks a featured-quality piece.
+- RECOGNIZABILITY raises leadershipSignal. Household-name leaders/companies for a
+  founder audience (Musk, Altman, Zuckerberg, Bezos, Jobs, Gates, Cook, Nadella,
+  Pichai, Huang, Amodei, Buffett, Dimon, Hastings, and the like; Meta/Apple/Google/
+  Microsoft/OpenAI/Amazon/Nvidia/Netflix) both transfer further AND reach further, so
+  score their genuine reasoning higher. An obscure small-cap author scores LOWER even
+  when the letter is competent — that gap is intentional: it routes marquee material to
+  the newsletter/social and keeps merely-fine small-cap letters blog-only (see
+  CHARTER.md "Article Inclusion Spec" for how leadershipSignal drives routing).
 - Output the JSON only, no other text.`;

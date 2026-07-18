@@ -28,6 +28,83 @@ Surface real internal corporate correspondence — executive emails, board memos
 - Every post includes a "How this surfaced" footer: which case, which hearing, which leak, which letter, what date.
 - Sources we cannot link to publicly do not get published. No "I heard from a friend at Meta" sourcing — ever.
 
+## What We Publish — Article Inclusion Spec
+
+The operative definition of what enters the pipeline. The relevance gate
+(`lib/prompts/relevance.ts`) is the machine enforcement of this section.
+
+### The single test (north star)
+> A document earns a post only if a founder or operator finishes it knowing
+> something **true and transferable** about how a real business leader thinks,
+> decides, competes, or communicates under pressure.
+
+A real internal email is *necessary but not sufficient* — a lawyer's scheduling
+letter is genuine correspondence and teaches nothing. The document is the
+**exhibit**; the lesson is the **product**.
+
+### What qualifies — four archetypes
+1. **Executive decision emails** — a leader reasoning through a real call (e.g. the
+   Zuckerberg "we should buy Instagram" email; Cue→Cook "Competing on Privacy").
+2. **Founder / exec chat threads** — WhatsApp / SMS / iMessage / Slack / Signal.
+   Just as valid as email: no From/To/Subject headers required; chat handles and
+   redaction bars are normal for exhibit logs (e.g. the Musk↔Altman texts).
+3. **Strategy / board memos & decks** — how a leader frames a bet or a rivalry.
+4. **Substantive shareholder / CEO letters** — Bezos / Buffett / Dimon / Hastings
+   genre. Public distribution does NOT disqualify; genuine reasoning is what counts.
+
+### What we reject (hard exclusions)
+- **Procedural / legal** — motions, discovery disputes, scheduling, declarations,
+  lawyer-to-lawyer letters.
+- **Logistics / scheduling** — calendar confirmations, "got it, thanks," rubber-stamp
+  approvals with no reasoning.
+- **Content-free boilerplate** — earnings tables, dividend notices, safe-harbor
+  language, mission/values fluff. (A shareholder letter with real reasoning is NOT
+  boilerplate — see archetype 4.)
+- **Non-correspondence** — cover sheets, charts, financial statements, exhibit dividers.
+- **Off-theme** — HR/benefits admin, pure engineering minutiae, personal/lifestyle,
+  partisan politics.
+- **No transferable lesson** — real correspondence that generalizes to nothing.
+- **RED sources** — per the Source Tiers table below.
+
+### Two publishing lanes
+1. **Lesson post** (default) — clears the bar → gets an AI leadership lesson. Fuels
+   the newsletter.
+2. **Notable Artifact** — an iconic exchange with no clean transferable lesson but
+   real historical significance (recognizable leader OR pivotal moment). Gets a
+   factual "why this matters," **never an invented lesson**. This is the lane that
+   earns reach on social (raw artifact > guru-lesson).
+
+### CourtListener selection — marquee-only
+CourtListener/RECAP is a firehose of entire federal dockets. We do not ingest cases;
+we ingest **the right exhibits from the right cases**:
+- **Case scope:** the DEFAULT discovery sweep and alert fingerprints are pinned to
+  **marquee cases** (`MARQUEE_CASE_IDS` in `lib/ingest/watchlist.ts`) — recognizable-
+  company antitrust/securities dockets (Meta, Apple, Google, Microsoft, OpenAI,
+  Amazon, Uber, Anthropic). Emerging cases stay on the watchlist and remain pullable
+  on demand via `--case=<id>`; they are just kept out of the auto-firehose.
+- **Exhibit filter:** trial / deposition / summary-judgment exhibits (PX####/DX####
+  emails, chat logs) — skip the docket's procedural filings.
+- **Author filter:** authored/driven by a business leader, not counsel running case
+  mechanics.
+
+### Signal routing
+The gate scores `leadershipSignal` (0-10). Recognizable leaders/companies score higher
+(they transfer and reach further). Routing:
+
+| Signal | Blog | Newsletter | Social |
+|---|---|---|---|
+| **8-10** — featured, named exec, sharp lesson | ✅ | ✅ | ✅ push |
+| **7** — solid, transferable | ✅ | ✅ | optional |
+| **6** — competent but marginal (e.g. obscure small-cap letter) | ✅ | ❌ | ❌ |
+| **< 6** — thin | ❌ hold | ❌ | ❌ |
+
+Newsletter auto-send is gated at `NEWSLETTER_MIN_SIGNAL` (default **7**,
+`lib/publish/schedule.ts`). Independently, **firehose-discovered** letters (the EDGAR
+blind full-text sweep of *every* 8-K filer) are **quarantined** from auto-send —
+visible on the blog, held from the daily email until an editor approves — so obscure
+filers never reach the audience unreviewed. Legacy/court-exhibit posts generated before
+signal-persistence are grandfathered past the floor.
+
 ## Source Tiers
 
 | Tier | Examples | Treatment |

@@ -294,3 +294,39 @@ export const WATCHED_CASES: WatchedCase[] = [
 export function getWatchedCase(id: string): WatchedCase | undefined {
   return WATCHED_CASES.find((c) => c.id === id);
 }
+
+/**
+ * MARQUEE cases — dockets whose exhibits feature founder-recognizable companies
+ * and leaders (the ITE-grade set: Meta, Apple, Google, Microsoft, OpenAI/Musk/
+ * Altman, Amazon, Uber, Anthropic). Per CHARTER.md "Article Inclusion Spec", the
+ * DEFAULT CourtListener discovery sweep — and the alert fingerprints — are pinned
+ * to these, so the daily firehose stays high-signal for a founder audience.
+ *
+ * "Emerging" cases (grocery / ticketing / payments-network antitrust with no
+ * founder-famous execs, trials mostly still pending — Kroger-Albertsons, Live
+ * Nation, Visa) stay ON the watchlist and remain pullable on demand via
+ * `--case=<id>`; they are simply kept OUT of the auto-firehose. Nothing is lost —
+ * this is a default-scope narrowing, not a deletion.
+ */
+export const MARQUEE_CASE_IDS = new Set<string>([
+  "ftc-v-meta",
+  "epic-v-apple",
+  "us-v-google-search",
+  "us-v-google-adtech",
+  "ftc-v-microsoft-activision",
+  "musk-v-altman",
+  "waymo-v-uber",
+  "ftc-v-amazon-ecommerce",
+  "epic-v-google-play",
+  "anthropic-v-dod",
+  "social-media-adolescent-addiction",
+]);
+
+export function isMarqueeCase(id: string): boolean {
+  return MARQUEE_CASE_IDS.has(id);
+}
+
+/** Recap cases in the default (marquee-only) discovery scope. */
+export function marqueeRecapCases(): WatchedCase[] {
+  return WATCHED_CASES.filter((c) => c.system === "recap" && MARQUEE_CASE_IDS.has(c.id));
+}
