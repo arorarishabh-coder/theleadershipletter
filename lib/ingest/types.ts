@@ -14,6 +14,11 @@ export interface SourceDocument {
   sourceCase: string;
   sourceCitation: string;
   licensingPath: LicensingPath;
+  // Discovery provenance. "firehose" = EDGAR blind full-text sweep (any 8-K filer);
+  // "marquee" = scoped to known great letter-writers; undefined = curated (court
+  // exhibits, watchlist, etc.). Threaded onto Post.discoveryLane; the pipeline
+  // quarantines firehose posts from the auto-send queue.
+  discoveryLane?: "firehose" | "marquee" | "curated";
   // Hints — pipeline will verify/refine but these speed triage
   hintedTopics?: PostTopic[];
   // Optional CSS selector or text marker for the relevant excerpt within the page

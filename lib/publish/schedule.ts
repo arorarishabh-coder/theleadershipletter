@@ -2,6 +2,34 @@ import type { Post } from "@/lib/types";
 import { COMPANIES, companyMatches } from "@/lib/taxonomy";
 
 /**
+ * Newsletter quality floor (0-10). A post is only auto-emailed when its recorded
+ * relevance-gate leadershipSignal clears this bar. The blog admits at themeFit/
+ * lessonClarity ≥ 6; the newsletter is the premium surface, so it holds a higher
+ * signal floor — this is what keeps merely-fine letters (e.g. an obscure small-cap
+ * bank's shareholder note) off the daily email while they still live on the blog.
+ *
+ * Grandfathering: posts with NO recorded leadershipSignal (legacy seed content and
+ * court exhibits generated before signal-persistence landed) pass the floor — the
+ * gate only bites content generated afterward. Override with NEWSLETTER_MIN_SIGNAL.
+ */
+export const NEWSLETTER_MIN_SIGNAL = Number(process.env.NEWSLETTER_MIN_SIGNAL ?? 7);
+
+/**
+ * Whether the daily cron may auto-email this post. Two independent gates:
+ *   1. Quarantine — firehose-discovered EDGAR letters (blind full-text sweep of
+ *      every 8-K filer) are held for human review; they reach the blog but are NOT
+ *      auto-emailed until an editor sets reviewStatus:"approved".
+ *   2. Signal floor — recorded leadershipSignal ≥ minSignal. Undefined signal is
+ *      grandfathered (see NEWSLETTER_MIN_SIGNAL).
+ * Deterministic and side-effect free so it can be unit-simulated.
+ */
+export function isSendEligible(post: Post, minSignal: number = NEWSLETTER_MIN_SIGNAL): boolean {
+  if (post.reviewStatus === "quarantined") return false;
+  if (post.leadershipSignal !== undefined && post.leadershipSignal < minSignal) return false;
+  return true;
+}
+
+/**
  * Canonical grouping key for send-variety. Maps a post to the *publisher* it
  * should count against when we interleave the newsletter:
  *   1. a taxonomy company slug when authorsCompany maps to one (collapses

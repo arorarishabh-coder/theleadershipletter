@@ -239,6 +239,9 @@ export async function discoverFromEdgar(
       seen.add(key);
       const doc = toDiscovered(h);
       doc.fetchUrl = await resolveFetchUrl(h);
+      // Blind full-text sweep of every 8-K filer — high yield of obscure small-caps.
+      // Tagged so the pipeline quarantines these from the auto-send queue (review-only).
+      doc.discoveryLane = "firehose";
       documents.push(doc);
       if (documents.length >= limit) break;
     }
@@ -285,6 +288,7 @@ export async function discoverFromEdgarMarquee(
       doc.fetchUrl = await resolveFetchUrl(h);
       doc.knownCompany = w.name; // clean name (gate's estimatedCompany still refines)
       doc.knownLeaderSlugs = w.leaderSlugs;
+      doc.discoveryLane = "marquee"; // scoped to known great writers — trusted for auto-send
       documents.push(doc);
       if (documents.length >= limit) break;
     }

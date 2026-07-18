@@ -351,7 +351,16 @@ Output the JSON only.`;
   const estCo = (rel.estimatedCompany || "").trim();
   const authorsCompany = estCo && !/^unknown$/i.test(estCo) && estCo.length <= 40 ? estCo : source.knownCompany;
 
-  // 6. Save as Post JSON
+  // 6. Save as Post JSON.
+  // Firehose-discovered letters (EDGAR blind full-text sweep of every 8-K filer) are
+  // quarantined from the daily auto-send: they still publish to the blog, but an editor
+  // must set reviewStatus:"approved" before they reach the newsletter — this is what
+  // stops obscure small-cap filers from going out to the audience unreviewed.
+  const discoveryLane = source.discoveryLane;
+  const reviewStatus = discoveryLane === "firehose" ? "quarantined" : undefined;
+  if (reviewStatus === "quarantined") {
+    logStage(source.id, "quarantine", `firehose lane — held from auto-send (signal=${rel.leadershipSignal}); review to approve`);
+  }
   const post: Post = {
     slug: source.id,
     publishedAt: new Date().toISOString().slice(0, 10),
@@ -374,6 +383,9 @@ Output the JSON only.`;
     sourceCitation: source.sourceCitation,
     licensingPath: source.licensingPath,
     textSource,
+    leadershipSignal: rel.leadershipSignal,
+    discoveryLane,
+    reviewStatus,
     postKind,
     artifactNote,
     lessonTitle: title,

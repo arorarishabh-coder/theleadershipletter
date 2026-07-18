@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getAllPosts } from "@/lib/queries";
 import { isPublished, listBroadcastsByName, listPublishedIdentities, publishToResend } from "@/lib/publish/resend";
 import { BUFFER_ALERT_THRESHOLD, sendBufferLowAlert } from "@/lib/publish/buffer-alert";
-import { selectNextForVariety, sourceGroupKey } from "@/lib/publish/schedule";
+import { isSendEligible, selectNextForVariety, sourceGroupKey } from "@/lib/publish/schedule";
 
 // Daily newsletter cron. Vercel hits this once a day (see vercel.json). It picks
 // the next buffered post not yet sent and creates a Resend broadcast for it.
@@ -31,7 +31,12 @@ export async function GET(req: Request) {
 
   const published = await listPublishedIdentities();
   const allPosts = getAllPosts();
-  const unsent = allPosts.filter((p) => !isPublished(p, published));
+  const notYetSent = allPosts.filter((p) => !isPublished(p, published));
+  // Eligibility gate: drop quarantined firehose letters and anything below the
+  // newsletter signal floor BEFORE variety selection, so obscure/low-signal posts
+  // never win a slot. They stay on the blog; they just don't auto-email.
+  const unsent = notYetSent.filter((p) => isSendEligible(p));
+  const heldBack = notYetSent.length - unsent.length;
 
   // Most-recent emailed date per publisher group, joined from Resend's actual
   // sent_at back onto our corpus — drives the round-robin so we don't send the
@@ -64,6 +69,7 @@ export async function GET(req: Request) {
       ok: true,
       message: "Buffer exhausted — nothing new to send. Run the content job and merge the PR.",
       bufferRemaining: 0,
+      heldBack,
       bufferAlertSent,
     });
   }
@@ -80,6 +86,7 @@ export async function GET(req: Request) {
     broadcastId: result.id,
     error: result.error,
     bufferRemaining: unsent.length,
+    heldBack,
     bufferAlertSent,
   });
 }

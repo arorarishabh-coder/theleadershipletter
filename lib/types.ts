@@ -70,6 +70,20 @@ export interface Post {
   // was a scanned image and the text is a Claude transcription of the public-record
   // PDF (may contain transcription errors; flag for editorial review).
   textSource?: "extracted" | "ocr_transcribed";
+  // Relevance-gate leadership signal (0-10) recorded at generation time. Drives the
+  // newsletter quality floor (see lib/publish/schedule.ts). Absent on legacy/seed
+  // posts generated before signal-persistence — those are grandfathered past the floor.
+  leadershipSignal?: number;
+  // How this post was discovered. "firehose" = EDGAR blind full-text sweep of every
+  // 8-K filer (any company matching a letter-opening phrase, incl. obscure small-caps);
+  // "marquee" = scoped to known great letter-writers; "curated"/undefined = court
+  // exhibits, watchlist, or seed content we chose deliberately.
+  discoveryLane?: "firehose" | "marquee" | "curated";
+  // Newsletter send gate. "quarantined" = generated and visible on the blog but held
+  // back from the daily email pending human review (firehose-discovered letters default
+  // here so obscure filers don't auto-send). Set "approved" (or clear it) to release
+  // into the send queue. Quarantine governs ONLY the auto-send, not blog visibility.
+  reviewStatus?: "quarantined" | "approved";
   // Newsletter publishing state. beehiivPostId is legacy (Beehiiv); resendBroadcastId
   // is the current delivery path (Resend Broadcasts). newsletterSentAt = last send.
   beehiivPostId?: string;
