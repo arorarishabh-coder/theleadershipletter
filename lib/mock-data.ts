@@ -78,6 +78,7 @@ export const topics: Topic[] = [
 export const posts: Post[] = [
   {
     slug: "bezos-1997-long-term",
+    cardImage: "/cards/bezos-1997-long-term.png",
     publishedAt: "2026-05-25",
     isFeatured: true,
     title: "Bezos Built Amazon by Refusing to Define Success in Quarters",
@@ -108,6 +109,7 @@ export const posts: Post[] = [
   },
   {
     slug: "zuckerberg-instagram-2012",
+    cardImage: "/cards/zuckerberg-instagram-2012.png",
     publishedAt: "2026-05-24",
     isFeatured: false,
     title: "\"It is better to buy than compete.\" The 60-Word Email That Cost Meta Billions in Discovery",
@@ -138,6 +140,7 @@ export const posts: Post[] = [
   },
   {
     slug: "nadella-activision-memo-2023",
+    cardImage: "/cards/nadella-activision-memo-2023.png",
     publishedAt: "2026-05-23",
     isFeatured: false,
     title: "Nadella's Activision Memo Was Written for an Audience of One: the Press",
@@ -168,6 +171,7 @@ export const posts: Post[] = [
   },
   {
     slug: "hastings-qwikster-apology-2011",
+    cardImage: "/cards/hastings-qwikster-apology-2011.png",
     publishedAt: "2026-05-22",
     isFeatured: false,
     title: "The Hastings Apology Is the Cleanest Public Wound-Closing in Modern CEO Communication",
@@ -198,6 +202,7 @@ export const posts: Post[] = [
   },
   {
     slug: "buffett-2008-letter",
+    cardImage: "/cards/buffett-2008-letter.png",
     publishedAt: "2026-05-21",
     isFeatured: false,
     title: "Buffett's 2008 Letter Spends Three Pages Telling Shareholders What He Got Wrong",
@@ -228,6 +233,7 @@ export const posts: Post[] = [
   },
   {
     slug: "kalanick-miami-2013",
+    cardImage: "/cards/kalanick-miami-2013.png",
     publishedAt: "2026-05-20",
     isFeatured: false,
     title: "The Kalanick Miami Memo Is What Happens When a Leader Writes Like the Email Is Private",

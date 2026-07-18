@@ -16,3 +16,13 @@ export async function renderCardImageDataUri(post: Post): Promise<string | null>
     return null;
   }
 }
+
+/**
+ * Render the card to raw PNG bytes (for saving to a hosted file, e.g. public/cards).
+ * Unlike the data-URI variant, this throws on failure so callers can log/skip — the
+ * newsletter uses a HOSTED card URL (email clients strip data: URIs), so the bytes
+ * must be written to disk at ingest/backfill time, not embedded.
+ */
+export async function renderCardPng(post: Post): Promise<Uint8Array> {
+  return renderHtmlToPng(buildMessageCardHtml(post));
+}

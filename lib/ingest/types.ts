@@ -138,4 +138,8 @@ export interface PipelineOptions {
   /** Set false to disable the content dedup guard (catches the same email filed
    *  under multiple exhibit numbers). Default on. forceRefresh also bypasses it. */
   contentDedup?: boolean;
+  /** Set false to skip rendering the recreated card image (public/cards/{slug}.png)
+   *  during ingest — e.g. in an environment without a working headless browser.
+   *  Default on; failures are already non-fatal (newsletter falls back to screenshot). */
+  cards?: boolean;
 }

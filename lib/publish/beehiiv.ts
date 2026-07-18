@@ -59,11 +59,16 @@ export function lessonToHtml(md: string): string {
 
 /** Assemble the full newsletter HTML body for a post. */
 export function buildPostHtml(post: Post, siteUrl = ""): string {
+  // Prefer the recreated ITE-style card (our clean reproduction — masthead +
+  // From/To/Subject header + body, self-captioned) over the raw source screenshot.
+  // Both are HOSTED URLs so email clients render them (data: URIs get stripped).
   const shot = post.screenshots?.[0];
   const imgHtml =
-    shot && !shot.url.includes("_pending") && siteUrl
-      ? `<figure style="margin:24px 0"><img src="${siteUrl}${shot.url}" alt="${esc(shot.alt)}" style="width:100%;height:auto;border:1px solid #ddd"/><figcaption style="font-size:12px;color:#777;margin-top:6px">${esc(shot.caption)}</figcaption></figure>`
-      : "";
+    post.cardImage && siteUrl
+      ? `<figure style="margin:24px 0"><img src="${siteUrl}${post.cardImage}" alt="${esc(post.documentTitle || post.title)}" style="width:100%;height:auto;border:1px solid #ddd"/></figure>`
+      : shot && !shot.url.includes("_pending") && siteUrl
+        ? `<figure style="margin:24px 0"><img src="${siteUrl}${shot.url}" alt="${esc(shot.alt)}" style="width:100%;height:auto;border:1px solid #ddd"/><figcaption style="font-size:12px;color:#777;margin-top:6px">${esc(shot.caption)}</figcaption></figure>`
+        : "";
   const excerptParas = post.excerptForBlog
     .split(/\n+/)
     .filter(Boolean)

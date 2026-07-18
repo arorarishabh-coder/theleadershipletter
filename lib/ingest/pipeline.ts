@@ -6,8 +6,9 @@ import { RELEVANCE_PROMPT } from "@/lib/prompts/relevance";
 import { representativeExcerpt, fetchDocument, meaningfulTextLength } from "./fetch";
 import { transcribePdf } from "./ocr";
 import { captureSourceScreenshots } from "./screenshot";
-import { savePost, listSavedPosts, loadAllSavedPosts } from "./save";
+import { savePost, listSavedPosts, loadAllSavedPosts, saveCardImage } from "./save";
 import { findContentDuplicate } from "./dedup";
+import { renderCardPng } from "@/lib/social/card-image";
 import { PERSONS } from "@/lib/taxonomy";
 import type {
   ArtifactResult,
@@ -418,6 +419,20 @@ Output the JSON only.`;
     pullQuote,
     leadershipTraits: traits,
   };
+
+  // Best-effort: render the recreated ITE-style card and host it under public/cards,
+  // so the newsletter uses our clean reproduction instead of the raw source scan.
+  // Never blocks ingest — on any failure cardImage stays unset and the newsletter
+  // falls back to the screenshot. (Skipped in gateOnly/dryRun, which never reach here.)
+  if (opts.cards !== false) {
+    try {
+      const png = await renderCardPng(post);
+      post.cardImage = await saveCardImage(source.id, png);
+      logStage(source.id, "card", `rendered card image (${png.length} bytes)`);
+    } catch (e) {
+      logStage(source.id, "card", `card render failed (${e instanceof Error ? e.message : String(e)}) — newsletter will fall back to screenshot`);
+    }
+  }
 
   const outputPath = await savePost(post);
   logStage(source.id, "save", outputPath);

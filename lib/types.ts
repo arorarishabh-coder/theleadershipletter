@@ -61,6 +61,12 @@ export interface Post {
   // sender-labeled card (see lib/social/carousel-pdf.ts) instead of a screenshot.
   messageThread?: MessageTurn[];
   screenshots: PostScreenshot[];
+  // Hosted path (e.g. "/cards/{slug}.png") to the recreated ITE-style card — our
+  // own clean reproduction of the correspondence (buildMessageCardHtml). Generated
+  // at ingest/backfill time and committed under public/cards. The newsletter uses
+  // this in place of the raw source screenshot; absent → newsletter falls back to
+  // the screenshot.
+  cardImage?: string;
   sourceType: SourceType;
   sourceUrl: string;
   sourceCase: string;

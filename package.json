@@ -23,6 +23,7 @@
     "ite-signal": "tsx scripts/ite-signal.ts",
     "scout": "tsx scripts/scout.ts",
     "screenshots": "tsx scripts/screenshots.ts",
+    "cards": "tsx scripts/cards.ts",
     "publish": "tsx scripts/publish.ts",
     "test-email": "tsx scripts/test-email.ts",
     "prune-covers": "tsx scripts/prune-covers.ts",

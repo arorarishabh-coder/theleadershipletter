@@ -20,6 +20,15 @@ export async function listSavedPosts(): Promise<string[]> {
   }
 }
 
+const CARDS_DIR = path.join(process.cwd(), "public", "cards");
+
+/** Write a recreated card PNG to public/cards/{slug}.png and return its hosted path. */
+export async function saveCardImage(slug: string, png: Uint8Array): Promise<string> {
+  await fs.mkdir(CARDS_DIR, { recursive: true });
+  await fs.writeFile(path.join(CARDS_DIR, `${slug}.png`), png);
+  return `/cards/${slug}.png`;
+}
+
 export async function loadAllSavedPosts(): Promise<Post[]> {
   const files = await listSavedPosts();
   const posts: Post[] = [];
