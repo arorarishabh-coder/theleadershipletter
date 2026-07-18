@@ -111,9 +111,12 @@ export interface PipelineResult {
   error?: string;
   /** When rejected at the relevance gate, the category + the lesson the gate looked for. */
   rejectCategory?: RejectCategory | null;
-  /** Set when the document was skipped without processing — currently only
-   *  "exists" (a post with this slug is already on disk; dedup guard). */
-  skipped?: "exists";
+  /** Set when the document was skipped — "exists" (a post with this slug is already
+   *  on disk; slug dedup guard) or "duplicate" (content matches another post filed
+   *  under a different exhibit number; content dedup guard, see duplicateOf). */
+  skipped?: "exists" | "duplicate";
+  /** When skipped:"duplicate", the slug of the already-published post it duplicates. */
+  duplicateOf?: string;
 }
 
 export interface PipelineOptions {
@@ -132,4 +135,7 @@ export interface PipelineOptions {
   minLessonClarity?: number;
   /** Set false to disable the Notable Artifact lane (publish lesson posts only). */
   artifactLane?: boolean;
+  /** Set false to disable the content dedup guard (catches the same email filed
+   *  under multiple exhibit numbers). Default on. forceRefresh also bypasses it. */
+  contentDedup?: boolean;
 }

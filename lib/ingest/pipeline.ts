@@ -6,7 +6,8 @@ import { RELEVANCE_PROMPT } from "@/lib/prompts/relevance";
 import { representativeExcerpt, fetchDocument, meaningfulTextLength } from "./fetch";
 import { transcribePdf } from "./ocr";
 import { captureSourceScreenshots } from "./screenshot";
-import { savePost, listSavedPosts } from "./save";
+import { savePost, listSavedPosts, loadAllSavedPosts } from "./save";
+import { findContentDuplicate } from "./dedup";
 import { PERSONS } from "@/lib/taxonomy";
 import type {
   ArtifactResult,
@@ -253,6 +254,28 @@ Output the JSON only.`;
   }
   logStage(source.id, "enrich", `excerpt=${enrich.excerptWordCount}w, topics=${enrich.topics.join(",")}`);
 
+  // 3b. Content dedup. The same email is often filed under multiple exhibit numbers
+  // (e.g. docket 1014-2 AND 1247-1) → distinct slugs the step-0 slug guard misses.
+  // Now that enrich has given us date + participants + excerpt, check whether this
+  // document is already published under another slug BEFORE we pay for the lesson.
+  if (!opts.forceRefresh && opts.contentDedup !== false) {
+    const existingPosts = await loadAllSavedPosts();
+    const dup = findContentDuplicate(
+      {
+        slug: source.id,
+        dateAuthored: enrich.dateAuthored || source.dateAuthored,
+        authorsName: enrich.authors.length ? enrich.authors : source.knownAuthors,
+        recipientNames: enrich.recipients.length ? enrich.recipients : source.recipientNames,
+        excerptForBlog: enrich.excerptForBlog,
+      },
+      existingPosts,
+    );
+    if (dup) {
+      logStage(source.id, "dedup", `content duplicate of ${dup.slug} (${dup.reason}) — skipping before lesson`);
+      return { sourceId: source.id, ok: true, postSlug: source.id, skipped: "duplicate", duplicateOf: dup.slug };
+    }
+  }
+
   // 4. Analysis — the standard three-part LESSON, or (Notable Artifact lane) a
   // lighter "why this matters" note. Unified into a common set of post fields.
   const analysisTitle = enrich.documentTitleCleaned || source.documentTitle;
@@ -447,10 +470,17 @@ export async function runPipeline(opts: PipelineOptions = {}): Promise<PipelineR
 
   const ok = results.filter((r) => r.ok).length;
   const skipped = results.filter((r) => r.skipped === "exists").length;
+  const deduped = results.filter((r) => r.skipped === "duplicate").length;
   const fail = results.length - ok;
   console.log(`\n=== Complete ===`);
-  console.log(`Succeeded: ${ok - skipped} (new)`);
+  console.log(`Succeeded: ${ok - skipped - deduped} (new)`);
   console.log(`Skipped:   ${skipped} (already exist — use --force to regenerate)`);
+  if (deduped > 0) {
+    console.log(`Deduped:   ${deduped} (same document, different exhibit number)`);
+    results.filter((r) => r.skipped === "duplicate").forEach((r) => {
+      console.log(`  ${r.sourceId} → duplicate of ${r.duplicateOf}`);
+    });
+  }
   console.log(`Failed:    ${fail}`);
   if (fail > 0) {
     console.log(`\nFailures:`);
