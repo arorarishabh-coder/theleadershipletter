@@ -1,0 +1,63 @@
+{
+  "slug": "cl-vaed-1-23-cv-00108-1014-8",
+  "publishedAt": "2026-07-18",
+  "isFeatured": false,
+  "title": "When Sales Can't Answer The Question, You Have A Strategy Problem",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — Exhibit PTX0249",
+  "dateAuthored": "2015-09-29",
+  "authorsName": [
+    "Julie Sterling Osterling",
+    "Jonathan Bellack",
+    "Heidi O'brien",
+    "Chris Jansen",
+    "Brian Tomasette",
+    "Jason Sigalos"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "David Goodman",
+    "Drew Bradstock",
+    "Jonathan Bellack",
+    "Bryan Rowley",
+    "Damian De Virgilio"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "The sales team needs to better understand our stance (and have a company approved message) on why we do not currently offer dynamic integration with other SSPs (ie Rubicon). The sales team also needs to understand if we do plan on allowing this integration (or build our own type of header-bidding) since there are rumors flying around that we are building both. I polled a few senior vertical leads, revenue account managers and SPLs and no one had a great answer to the question — 'we are only doing header-bidding to max yield across multiple demand partners, we would not do this if DFP had this capability — why don't you?' I believe we should arm the sales team with a 4 part response: 1. Empathy — explain that we understand that the quickly changing market dynamics are challenging them. 2. Capabilities — What we have (and are planning to) build to protect their data/users and help to drive max revenue. 3. Why no dynamic calls today — tech issues? policy issues? product prioritization issue? 4. Things to consider when choosing to adopt header bidding — latency, data leakage, complexity. Meanwhile, Jonathan Bellack noted: 'The smoking gun we have been looking for is a before/after comparison that proves that header bidding is causing AdX revenue to grow slower or shrink.' He also raised pointed questions for publishers: how much latency does header bidding add? How are publishers controlling for the fact that a header bidding company doesn't have to pay what they report per query?",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1014-8-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PTX0249 · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1014-8, filed 2024-07-26 (page 1)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PTX0249 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1014-8-p2.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PTX0249 · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1014-8, filed 2024-07-26 (page 2)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PTX0249 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/66753787/1014/8/united-states-v-google-llc/",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Doc. 1014-8, filed 2024-07-26",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "When Sales Can't Answer The Question, You Have A Strategy Problem",
+  "situation": "In September 2015, a Google ad tech team is scrambling to arm salespeople with a story about header bidding — a technique publishers were adopting to get better prices by asking multiple ad exchanges to compete, bypassing Google's DFP. Julie Osterling polled senior sales leaders and found 'no one had a great answer' to the obvious publisher question: why doesn't DFP just do this? Jonathan Bellack, separately, asked for a 'smoking gun' showing header bidding was actually hurting AdX revenue.",
+  "insight": "Two very different instincts show up in the same thread. Osterling is building a **talk track** — empathy, capabilities, reasons for the gap, doubts to plant about latency and data leakage. That's a holding action. It buys time while product decides whether to allow dynamic SSP calls or build its own version.\n\nBellack is looking for **proof the threat is real**. He wants a before/after on AdX revenue, and he questions whether header bidding partners even pay what they report. The tell is that Google hasn't decided yet whether header bidding is a fire or a nuisance. Meanwhile the sales team is exposed in the field with rumors flying and no company line. That gap — between a market moving fast and an internal answer that doesn't exist — is where incumbents lose ground.",
+  "application": "When customers start asking your reps a question you can't answer, treat it as a leading indicator, not a messaging problem. This week: list the top three questions your sales or support team is fielding without a crisp answer. For each, decide within two weeks whether it's a talk-track fix, a product gap to close, or a real strategic threat that needs data. Don't let 'we're working on messaging' substitute for a decision.",
+  "pullQuote": "If your own sales team can't explain why you don't do the thing customers want, the market has already made the decision for you.",
+  "leadershipTraits": [
+    "spots internal misalignment fast",
+    "asks for evidence before acting",
+    "willing to arm the field with a partial answer",
+    "distinguishes messaging problems from strategy problems"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "cl-vaed-1-23-cv-00108-1014-3",
+  "publishedAt": "2026-07-18",
+  "isFeatured": false,
+  "title": "Keep New Businesses Focused, Not Merged",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — Exhibit PTX0055",
+  "dateAuthored": "2010-08-20",
+  "authorsName": [
+    "Neal Mohan",
+    "Eric Rosenblum"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Eric Rosenblum",
+    "Neal Mohan",
+    "Matthew Vokoun"
+  ],
+  "topics": [
+    "strategy",
+    "product",
+    "competition",
+    "partnerships"
+  ],
+  "leaderSlugs": [
+    "neal-mohan"
+  ],
+  "excerptForBlog": "i actually view this project as even more critical in the near term than the GDN reserve one so lets make sure we get the recommendation right. combining the teams does not seem like the right call at this point. also you guys should do this in the context of the latest display OCQ where the way we think about the pub side (and describe it is a bit different). essentially i want two products on the sell-side: DFP and AS (notice no AdX). they are BOTH front-doors that backfill into AdX. DFP is for pubs 1-1000 or so. AS is for everyone else. we should decide org in the context of that product strategy. [...] i have particular concerns around unifying pub monetization and diluting the focus from the adx team since it is such a new business.",
+  "messageThread": [
+    {
+      "sender": "Neal Mohan",
+      "text": "i actually view this project as even more critical in the near term than the GDN reserve one so lets make sure we get the recommendation right. combining the teams does not seem like the right call at this point. also you guys should do this in the context of the latest display OCQ where the way we think about the pub side (and describe it is a bit different). essentially i want two products on the sell-side: DFP and AS (notice no AdX). they are BOTH front-doors that backfill into AdX. DFP is for pubs 1-1000 or so. AS is for everyone else. we should decide org in the context of that product strategy."
+    },
+    {
+      "sender": "Neal Mohan",
+      "text": "i have particular concerns around unifying pub monetization and diluting the focus from the adx team since it is such a new business."
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1014-3-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PTX0055 · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1014-3, filed 2024-07-26 (page 1)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PTX0055 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1014-3-p2.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PTX0055 · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1014-3, filed 2024-07-26 (page 2)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PTX0055 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/66753787/1014/3/united-states-v-google-llc/",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Doc. 1014-3, filed 2024-07-26",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Keep New Businesses Focused, Not Merged",
+  "situation": "In August 2010, Neal Mohan writes to Eric Rosenblum about how to organize Google's publisher-side ad products. Someone had proposed combining teams. Mohan pushes back and lays out a clean product map: DFP for the top ~1,000 publishers, AdSense for everyone else, with both funneling into AdX on the back end. He calls the decision 'even more critical in the near term' than another project on the table.",
+  "insight": "Mohan is doing two things at once. First, he refuses to let org design run ahead of product strategy — 'we should decide org in the context of that product strategy.' Structure follows the product, not the other way around. Second, he protects AdX from being absorbed into a bigger, older team. His stated worry is 'diluting the focus from the adx team since it is such a new business.' That is the classic **incubation problem**: young businesses lose when they get merged into mature ones, because attention, headcount, and roadmap always drift toward the larger P&L. Note also the framing — DFP and AS are 'front-doors' that 'backfill into AdX.' He is thinking in funnels, not products in isolation: who enters where, and where the value ultimately lands.",
+  "application": "Before you reorganize, write down the product architecture in one paragraph — who your customers are, which product serves which segment, and how they connect. Then draw the org to match. If you have a new business unit inside a bigger one, ask honestly: does it have its own team, its own metrics, and enough shelter to grow? If not, merging it into the mothership will quietly kill it.",
+  "pullQuote": "When a young business is fighting to establish itself, the worst thing you can do is bury it inside a bigger org chart.",
+  "leadershipTraits": [
+    "thinks in product architecture",
+    "protects fragile new bets",
+    "sequences priorities explicitly",
+    "structure follows strategy"
+  ]
+}

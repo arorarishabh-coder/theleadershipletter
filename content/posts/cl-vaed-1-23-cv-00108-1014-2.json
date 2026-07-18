@@ -1,0 +1,88 @@
+{
+  "slug": "cl-vaed-1-23-cv-00108-1014-2",
+  "publishedAt": "2026-07-18",
+  "isFeatured": false,
+  "title": "Don't Compete on Price When You Own the Platform",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — Exhibit PTX0039: Internal Email Thread on Atlas Pricing Competition",
+  "dateAuthored": "2009-02-13",
+  "authorsName": [
+    "Neal Mohan",
+    "David Rosenblatt",
+    "Marc Schraer",
+    "Sean Downey",
+    "Andrew Rutledge",
+    "Ruth Kirschner"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "David Rosenblatt",
+    "Neal Mohan",
+    "Marc Schraer",
+    "Sean Downey",
+    "Andrew Rutledge",
+    "Ruth Kirschner"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "partnerships",
+    "finance"
+  ],
+  "leaderSlugs": [
+    "neal-mohan"
+  ],
+  "excerptForBlog": "Neal Mohan to David Rosenblatt: \"we have to build this into the display update and also make it really clear to patrick that the strategic battleground in display is publisher platform (ie, inventory). looking at dclk as a separate business and comparing cprd is silly. we should really get this through to patrick.\"\n\nMarc Schraer (original trigger email): Atlas is offering HP a $0.015 CPM to stay with them for ad serving. Neeraj from GroupM \"senses a new level of desperation by Atlas in their desire to win business.\" Two takeaways: \"we'll need to eventually give GroupM or some other agency a response on $0.015 for HP and $0.015 looks to be the new game-changing rate we'll face for all big accounts.\"\n\nSean Downey flagged broader renewal pressure: OMD in negotiations at $0.045 baseline CPM; Havas asking for $0.025; WPP at $0.06 with a $0.04 flip incentive.\n\nRuth Kirschner: \"while price compression is something we will have to fight this year, the HP deal is not going to be the reason for moving below our current .025cpm floor... HP is annoyingly telling each shop in the pitch that they need to meet a .015cent adserving rate... below our floor rates. if we can market global capabilities effectively we should be able to maintain price premium.\"",
+  "messageThread": [
+    {
+      "sender": "Marc Schraer",
+      "text": "Atlas is offering HP a $0.015 CPM to stay with them for ad serving. Neeraj from GroupM senses a new level of desperation by Atlas in their desire to win business. Two takeaways: we'll need to eventually give GroupM or some other agency a response on $0.015 for HP and $0.015 looks to be the new game-changing rate we'll face for all big accounts."
+    },
+    {
+      "sender": "David Rosenblatt",
+      "text": "we need to get a sense of how low we have to go to retain the business and then wrap it into a much larger WPP deal."
+    },
+    {
+      "sender": "Sean Downey",
+      "text": "HP's volume is relatively small; 6B run rate for 2008. Our rate card for this volume is $0.053. Points of concern: OMD in renewal negotiations today ($0.045 baseline CPM); Havas in renewal negotiations today ($0.039 baseline CPM and asking for $0.025); WPP sniffing around ($0.06 with a $0.04 flip incentive)."
+    },
+    {
+      "sender": "Neal Mohan",
+      "text": "we have to build this into the display update and also make it really clear to patrick that the strategic battleground in display is publisher platform (ie, inventory). looking at dclk as a separate business and comparing cprd is silly."
+    },
+    {
+      "sender": "Ruth Kirschner",
+      "text": "while price compression is something we will have to fight this year, the HP deal is not going to be the reason for moving below our current .025cpm floor. if we can market global capabilities effectively we should be able to maintain price premium."
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1014-2-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PTX0039: Internal Email Thread on Atlas Pricing Competition · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1014-2, filed 2024-07-26 (page 1)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PTX0039: Internal Email Thread on Atlas Pricing Competition — page 1"
+    },
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1014-2-p2.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PTX0039: Internal Email Thread on Atlas Pricing Competition · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1014-2, filed 2024-07-26 (page 2)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PTX0039: Internal Email Thread on Atlas Pricing Competition — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/66753787/1014/2/united-states-v-google-llc/",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Doc. 1014-2, filed 2024-07-26",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Don't Compete on Price When You Own the Platform",
+  "situation": "In February 2009, Google ad-serving rival Atlas offered Hewlett-Packard $0.015 CPM — well below Google's $0.025 floor — to keep HP's ad-serving business. Agencies (GroupM, OMD, Havas, WPP) started using that rate as leverage in their own renewals. Internally, Neal Mohan, David Rosenblatt, and the DoubleClick sales team debated whether to hold price or fold.",
+  "insight": "Two moves stand out. First, Ruth Kirschner refuses to reset the floor for one deal: HP is 'annoyingly telling each shop' about the $0.015 rate, but she reads Atlas's pricing as desperation, not the new normal, and bets on 'global capabilities' as the reason to hold premium. Second, Neal Mohan reframes the whole fight for Patrick: comparing DoubleClick as a standalone business on CPM per impression is 'silly' because 'the strategic battleground in display is publisher platform (ie, inventory).' Translation: ad-serving fees are the visible price, but the real prize is controlling publisher inventory. Losing a few basis points on CPM is fine if it buys platform position. This is classic **loss-leader logic inside a platform strategy** — you don't defend the toll booth, you defend the road.",
+  "application": "When a competitor undercuts you, ask two questions before matching: Is their price a signal of strength or of desperation? And is the thing they're cutting the thing that actually matters to your business? If the discounted product is really a gateway to a larger platform or relationship, price it to win the gateway — and communicate the bigger value story to customers using the low price as leverage.",
+  "pullQuote": "When a rival slashes prices out of desperation, the answer isn't matching them — it's reminding your customers what game you're actually playing.",
+  "leadershipTraits": [
+    "reframes the real battleground",
+    "reads competitor desperation accurately",
+    "holds price under pressure",
+    "thinks in platforms, not products"
+  ]
+}
