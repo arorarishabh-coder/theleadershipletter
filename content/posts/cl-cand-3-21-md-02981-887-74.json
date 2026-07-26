@@ -1,0 +1,69 @@
+{
+  "slug": "cl-cand-3-21-md-02981-887-74",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Neutralize a Rival by Absorbing Their Ambition",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 6133",
+  "emailSubject": "Re: Samsung & Games",
+  "dateAuthored": "2019-02-07",
+  "authorsName": [
+    "Jamie Rosenberg",
+    "Tian Lim",
+    "Erin Crosby",
+    "Sameer Samat"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jamie Rosenberg",
+    "Tian Lim",
+    "Sameer Samat",
+    "Kate Lee",
+    "Mike Hochberg",
+    "Lydia Ash",
+    "Jim Kolotouros",
+    "Christopher Li",
+    "Paul Gennai",
+    "Megan Johnston",
+    "Erin Crosby"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Jim and I met with Jay Kim from Samsung yesterday, with the primary agenda item being how we can collaborate better on games/app store stuff. This was direct follow-up from the strong message we delivered to Samsung execs at GDC. TLDR: Potentially on orders from DJ, the Samsung games/app store teams are 'willing to work with us to figure out collaboration' and would like to have a workshop in SF on the afternoon of February 20, after the GS10 Unpacked Event.\n\nHere is what Jay said about Samsung's goals:\n• Primary motivation for investing in Games is to compete with Apple\n• Secondary motivation to have some differentiation vs. the Chinese OEMs\n• Also, YJ Kim (head of services) has a revenue target in this area\n\nThey have four areas of tactical focus:\n1) Deep dev tech collaboration with devs to get top games working well on Samsung devices.\n2) Ability to promote/curate games optimized for Samsung\n3) Ability to offer 'special things' to users in games on Samsung devices — i.e., unique IAP items\n4) Participation in revenue in some form\n\nSamsung would value tying up with a Google dev tech effort on games. They are open to a world in which games they promote in the Samsung Store are fulfilled by Google's back end, but would want some participation in economics and the ability to offer unique IAP items to users on Samsung devices.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-74-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 6133 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-74, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 6133 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-74-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 6133 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-74, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 6133 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/887/74/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 887-74, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Neutralize a Rival by Absorbing Their Ambition",
+  "situation": "In February 2019, Google executives Jamie Rosenberg and Jim (Tian Lim) met with Samsung's Jay Kim to discuss the Samsung Galaxy Store, a direct competitor to Google Play on Android's biggest OEM. The meeting followed a 'strong message' Google had delivered at GDC. Samsung wanted to build a real games business — to compete with Apple, differentiate from Chinese OEMs, and hit an internal revenue target set by YJ Kim.",
+  "insight": "Google isn't trying to shut Samsung's store down. They're trying to **hollow it out from the inside**. Notice the specific offer being explored: Samsung can promote and curate games, but those games would be 'fulfilled by Google's back end.' Samsung keeps the storefront and the marketing; Google keeps the payments rail, the developer relationships, and the transaction data. Samsung gets 'participation in economics' — a cut — instead of the whole pie.\n\nThis is a classic **co-opt-the-challenger** move. Samsung's real motivations (beat Apple, hit a revenue number, offer unique IAP items) can all be satisfied without Samsung owning the full stack. By reframing the conversation from 'your store vs. our store' to 'collaboration and workshops,' Google converts a would-be competitor into a distribution partner who depends on Google's infrastructure.",
+  "application": "When a big partner starts building something that looks like your product, don't lead with threats or lawyers. Map what they actually want — usually revenue, differentiation, or a boss's KPI — and design an offer that gives them those outcomes while you keep the part of the stack that compounds (payments, data, developer trust). Let them have the logo on the front; you own the plumbing.",
+  "pullQuote": "When a partner tries to build a competing store, don't fight the ambition — offer to power it.",
+  "leadershipTraits": [
+    "reads partner motivations carefully",
+    "prefers co-option to confrontation",
+    "protects the core, concedes the surface",
+    "follows up fast on executive signals"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-887-74.png"
+}

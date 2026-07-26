@@ -1,0 +1,68 @@
+{
+  "slug": "cl-cand-3-21-md-02981-888-37",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Fear Of Noise Beats The Better Plan",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 8526",
+  "emailSubject": "[Meeting Summary] Play Payment Policy",
+  "dateAuthored": "2023-12-21",
+  "authorsName": [
+    "Kirsten Rasanen",
+    "Samer Sayigh"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jamie Rosenberg",
+    "Sameer Samat",
+    "Claire Hart",
+    "Samer Sayigh",
+    "Paul Feng",
+    "Tia Arzu",
+    "Purnima Kochikar",
+    "Tian Lim",
+    "Larry Yang",
+    "Danielle Osler",
+    "Paul Gennai",
+    "Wilson White"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "policy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Policy change goals are to improve payment UX and ensure ecosystem consistency. Even though we have a defensible plan that achieves goals and made progress with many developers impacted, the sense is we'll likely not want to trigger Spotify agitation and associated noise with a policy change. I.e. the risk of likely Spotify agitation may be higher than the (harder to gauge) risk of status quo.\n\nOption Summary:\n\n• Remove Exception – Require exclusive Google Play Billing integration for all digital IAPs; provide generous grandfathering (2 yrs; minimal reqs). Advantage: removes policy ambiguity, improves payment UX, better positions Google to respond to regulatory inquiry. Key Risk: triggers Spotify agitation (high likelihood) and associated noise.\n\n• Keep Exception; Add Requirements. Advantage: partially achieves improved payment UX; new requirements are defensible. Key Risk: draws attention to ambiguous exception, which may prove hard to justify → contagion.\n\n• No Policy Change. Advantage: Google doesn't trigger noise. Key Risk: Regulator may deem exclusive Google Play Billing requirement unnecessary, partly due to current exception; more apps de-integrate Google Play Billing.\n\nQuestion raised: Is it worth one more chat with Spotify to better assess how displeased they'd be if we changed policy, but provided generous grandfathering (e.g. 2 years and no requirements)? We owe them a response on their grandfathering counterproposal anyhow.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-888-37-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 8526 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 888-37, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 8526 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-888-37-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 8526 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 888-37, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 8526 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/888/37/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 888-37, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "When Fear Of Noise Beats The Better Plan",
+  "situation": "In December 2023, Google employees Kirsten Rasanen and Samer Sayigh circulated an internal options memo weighing whether to tighten Play Store billing policy — specifically, whether to require Google Play Billing for all digital in-app purchases. They lay out three paths and admit the team has 'a defensible plan' but will 'likely not want to trigger Spotify agitation and associated noise.'",
+  "insight": "The memo shows a leadership team quietly letting one powerful counterparty veto a policy they believe is right. The authors explicitly frame it as a **risk comparison**: known noise from Spotify versus the 'harder to gauge' risk of the status quo. Loud, near-term political cost is being weighted heavier than diffuse, longer-term regulatory cost — even as they name that regulators may later deem their billing requirement unnecessary precisely because of the exception they're afraid to close.\n\nThis is a classic **squeaky-wheel problem**. One vocal partner distorts platform-wide policy. Notice the tell: the third option, 'No Policy Change,' has an advantage listed only as avoiding noise — not as being substantively better. That's a team talking itself into inaction while documenting, in writing, that inaction is the weakest choice on the merits.",
+  "application": "When you face a policy or pricing change, list the options like this memo does — but force yourself to write a *substantive* advantage for the status quo, not just 'avoids conflict.' If you can't, you've found your answer. Then ask: what's the smallest concession (here, 'generous grandfathering — 2 years') that lets you do the right thing while softening the loudest objector?",
+  "pullQuote": "The best-designed policy loses to the loudest possible critic — until you honestly weigh the cost of doing nothing.",
+  "leadershipTraits": [
+    "writes down the real tradeoff",
+    "sensitive to political blowback",
+    "willing to negotiate before deciding",
+    "candid about weaker options"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-888-37.png"
+}

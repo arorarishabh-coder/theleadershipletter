@@ -1,0 +1,71 @@
+{
+  "slug": "cl-vaed-1-23-cv-00108-1195-4",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Product Commoditizes, Bundle or Bleed",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — Exhibit PX 117",
+  "emailSubject": "Re: Rubicon margins",
+  "dateAuthored": "2017-11-04",
+  "authorsName": [
+    "Jim Giles",
+    "Eisar Lipkovitz",
+    "Jonathan Bellack",
+    "Payam Shodjai",
+    "Chris LaSala"
+  ],
+  "authorsCompany": "Google LLC",
+  "recipientNames": [
+    "Eisar Lipkovitz",
+    "Jonathan Bellack",
+    "Payam Shodjai",
+    "Chris LaSala",
+    "Sam Cox",
+    "Suzanne Blackburn",
+    "Ali Nasiri Amini",
+    "Aparna Pappu",
+    "Bahman Rabii",
+    "Brad Bender",
+    "Paul Muret",
+    "Scott Sheffer",
+    "Samuel Temes"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "finance"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Payam Shodjai (Google): SSP margins are coming down, way down, because the technology, demand and supply that SSPs offer have been commoditized. Rubicon's take home will be around 10% to 12% next quarter. I think SSP margins will stabilize at around 5%. This creates an obvious dilemma for us. AdX is the lifeblood of our programmatic business. Without AdX margins, our programmatic business doesn't seem like a worthwhile endeavor.\n\nWhat if we did something courageous? We drop the AdX/Demand Product margin to a transparent 5% for undifferentiated demand. AdX Buyer revenue is $1.8B growing at 2% yoy — net revenue would go from $360M to $90M, a total loss of $270M. However, demand/performance would likely increase significantly. The message to the market: AdX is now charging 5% for basic demand — what is your SSP charging you?\n\nJim Giles (Google): The other important thing versus most SSPs is that we also have the ad server. Pure SSP is definitely commoditizing — ultimately, I think only SSPs that also have an ad server will survive. The combination of ad server / exchange plus data gives us cover for total costs that are higher than other exchanges.\n\nEisar Lipkovitz (Google): While true that 20% for just sell-side platform/exchange isn't likely justified by value, I equally don't think Rubicon can run an actual business with 5% or even 10%. Until I see DBM actually charging for Google secret sauce anything but platform fee, I'd object to any changes on the sell-side.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1195-4-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PX 117 · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1195-4, filed 2024-08-22 (page 1)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PX 117 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1195-4-p2.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — Exhibit PX 117 · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1195-4, filed 2024-08-22 (page 2)",
+      "alt": "United States v. Google LLC (Ad Tech) — Exhibit PX 117 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/66753787/1195/4/united-states-v-google-llc/",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Doc. 1195-4, filed 2024-08-22",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Product Commoditizes, Bundle or Bleed",
+  "situation": "In November 2017, four Google ad-tech leaders debate an internal dilemma over email. SSP (sell-side platform) margins are collapsing toward 5%, and Google's AdX exchange charges 20%. Shodjai floats a 'courageous' move: cut AdX to a transparent 5% for undifferentiated demand, absorbing a $270M revenue hit, to reframe the market conversation. Giles and Lipkovitz push back.",
+  "insight": "Shodjai sees commoditization coming and wants to get ahead of it — take the margin hit voluntarily, then turn price into a marketing weapon: **'AdX is now charging 5% for basic demand — what is your SSP charging you?'** That's a classic disruptor's move, done to yourself before a competitor does it to you.\n\nGiles and Lipkovitz see a different game. Giles argues Google's real moat isn't the exchange alone — it's the **ad server + exchange + data bundle**. That bundle 'gives us cover for total costs that are higher than other exchanges.' Lipkovitz goes further: don't concede on the sell-side while the buy-side (DBM) still charges only a platform fee. In other words, don't unilaterally disarm one part of a stack that competitors can't match. The hidden logic: when one component commoditizes, defend margin by tying it to components that haven't.",
+  "application": "Map your product into components. Ask which pieces competitors have caught up on, and which are still genuinely differentiated. Price aggressively on the commoditized layer, but only if you can capture the value elsewhere in the bundle. Before cutting price to send a market signal, be sure you've located where the margin actually goes next.",
+  "pullQuote": "If the market is racing your margin to zero, either bundle your way out of the fight or pick which piece you're willing to give away first.",
+  "leadershipTraits": [
+    "reads commoditization early",
+    "willing to cannibalize",
+    "thinks in bundles, not products",
+    "argues openly with peers"
+  ],
+  "cardImage": "/cards/cl-vaed-1-23-cv-00108-1195-4.png"
+}

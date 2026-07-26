@@ -1,0 +1,56 @@
+{
+  "slug": "cl-cand-3-21-md-02981-886-96",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Biggest Partners Refuse Your Terms, Listen",
+  "documentTitle": "GPB Grandfathering Discussions Update",
+  "emailSubject": "GPB Grandfathering Discussions update",
+  "dateAuthored": "2018-02-07",
+  "authorsName": [
+    "Kirsten Rasanen"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jamie Rosenberg",
+    "Sameer Samat"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Neither partner seemed super concerned about integrating with Subscription Center, though both asked if this would be 'retroactive' or only for subs acquired through their flow after Play Billing integration. Neither partner was particularly moved by the continued offer of 10% rev share where ever they are all in on GPB. Both still think the economics are not there.\n\nSpotify still thinks they'll have to charge more for users acquired using GPB. Spotify is going to come back to us sometime during the week of 2/12 with a counter-proposal which they tell us we're 'probably not going to like.' Interestingly, Sue said they are hopeful we can arrive at a mutually agreed middle ground that could be applied to 'other stores.'\n\nNetflix maintains that they should be treated differently from other developers because 'not everyone gets a front row seat at the stadium.' Netflix asked if they could use Google Pay instead of GPB because it 'looks just like GPB.' Netflix is still continuing to test consumption-only vs. Play Billing. Their appetite for this grandfathering proposal will be impacted by the delta in results they see between both options.\n\nNeither partner responded well to the idea of timeboxing the grandfathering period. Spotify simply doesn't believe 'handing over control to a platform will ever be good for our business.'",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-96-p1.png",
+      "caption": "Source document — GPB Grandfathering Discussions Update · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-96, filed 2023-12-21 (page 1)",
+      "alt": "GPB Grandfathering Discussions Update — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-96-p2.png",
+      "caption": "Source document — GPB Grandfathering Discussions Update · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-96, filed 2023-12-21 (page 2)",
+      "alt": "GPB Grandfathering Discussions Update — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/886/96/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 886-96, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Biggest Partners Refuse Your Terms, Listen",
+  "situation": "In February 2018, Google's Kirsten Rasanen circulated an internal update on private talks with Spotify and Netflix. Google was trying to get both giants to route payments through Google Play Billing (GPB), offering a reduced 10% revenue share as an incentive. Both refused. Spotify promised a counter-proposal Google would 'probably not going to like.' Netflix wanted special treatment or a workaround using Google Pay.",
+  "insight": "The memo reveals a **negotiation from weakness dressed up as a concession**. Google offered 10% (down from the standard 30%) and still couldn't move either partner. Rasanen's own words — 'Both still think the economics are not there' — signal that price wasn't the real issue. Spotify said it plainly: 'handing over control to a platform will ever be good for our business.' The fight is about **control of the customer relationship**, not the take rate.\n\nThere's a second signal worth catching. Spotify hinted the deal could apply to 'other stores' — meaning they're negotiating not just for themselves but to set a precedent across platforms. Netflix's 'front row seat' line is the same move: extract a special carve-out that competitors won't get. Google was trying to standardize; its biggest partners were trying to fragment.",
+  "application": "When a concession fails to move a counterparty, stop sweetening and start diagnosing. Ask what they're actually protecting — usually it's control, data, or the customer relationship, not the headline number. If two of your largest partners both reject the same offer with the same underlying reason, the offer is not the problem; the structure is. Redesign the deal or expect them to route around it.",
+  "pullQuote": "A 10% discount can't buy compliance when the real objection is losing control of the customer.",
+  "leadershipTraits": [
+    "reports bad news plainly",
+    "quotes partners verbatim",
+    "reads what's unsaid in negotiations"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-886-96.png"
+}

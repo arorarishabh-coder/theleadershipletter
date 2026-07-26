@@ -1,0 +1,62 @@
+{
+  "slug": "doj-dcd-upx1108",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Ruth Porat and Jamie Rosenberg Discuss Samsung Search Revenue-Share Deal",
+  "documentTitle": "Email from Ruth Porat to Jamie Rosenberg Re: Samsung Search Agreement Status",
+  "emailSubject": "Re: samsung search agreement status",
+  "dateAuthored": "2017-07-21",
+  "authorsName": [
+    "Ruth Porat",
+    "Jamie Rosenberg"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jamie Rosenberg",
+    "Sundar Pichai",
+    "Matthew Bye",
+    "Philipp Schindler",
+    "Hiroshi Lockheimer",
+    "Jim Kolotouros",
+    "Cristina Bita"
+  ],
+  "topics": [
+    "strategy",
+    "partnerships",
+    "competition",
+    "finance"
+  ],
+  "leaderSlugs": [
+    "sundar-pichai"
+  ],
+  "excerptForBlog": "From: Ruth Porat\nTo: Jamie Rosenberg\nCC: Sundar [Pichai], Matthew Bye, Philipp Schindler, Hiroshi Lockheimer, Jim Kolotouros, Cristina Bita\nSubject: Re: samsung search agreement status\n\n\"thanks for the update and good luck getting to final!\"\n\n— Ruth Porat\n\n---\n\nFrom: Jamie Rosenberg (Thu, Jul 20, 2017, 1:32 PM)\n\nATTORNEY CLIENT PRIVILEGED (with Matthew for legal advice)\n\nRuth, Sundar, Hiroshi asked that we provide you with a quick summary of where we are with the Samsung search revenue share deal, in case you need it as context for earnings.\n\nStatus & Timeline:\n- We have verbally agreed to terms with Samsung (consistent with the terms in the deck).\n- We expect to send them a draft contract next week, and hope to have counter-signature by end of August.\n- We lost some time when the Samsung deal team pivoted its priority to completing a license agreement with us for our search backfill feed for the Bixby Voice Assistant, which launched on Tuesday. Back on track now.\n\nFinancials:\n- The revenue share is [confidential] after deducting [confidential] for expenses (for both new devices and the installed base).\n- We eliminated the [confidential] several months ago because Samsung could not commit to Chrome in the hot seat, and/or dedicating the -1 screen to the Google Feed.\n- Projected payments are [confidential] over the next [confidential], which is an increase of [confidential] over their current revenue share rate.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-dcd-upx1108-p1.png",
+      "caption": "Source document — Email from Ruth Porat to Jamie Rosenberg Re: Samsung Search Agreement Status · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX1108 — DOJ public archive (page 1)",
+      "alt": "Email from Ruth Porat to Jamie Rosenberg Re: Samsung Search Agreement Status — page 1"
+    },
+    {
+      "url": "/screenshots/doj-dcd-upx1108-p2.png",
+      "caption": "Source document — Email from Ruth Porat to Jamie Rosenberg Re: Samsung Search Agreement Status · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX1108 — DOJ public archive (page 2)",
+      "alt": "Email from Ruth Porat to Jamie Rosenberg Re: Samsung Search Agreement Status — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/d9/2023-11/417891.pdf",
+  "sourceCase": "United States v. Google LLC (Search)",
+  "sourceCitation": "1:20-cv-03010 (DCD), Trial Ex. UPX1108 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 4,
+  "postKind": "artifact",
+  "artifactNote": "On July 20–21, 2017, Google's VP of Android Jamie Rosenberg briefed CFO Ruth Porat — with Sundar Pichai, Philipp Schindler, and Hiroshi Lockheimer copied — on the status of a revenue-share agreement with Samsung that would keep Google as the default search provider on Samsung devices. The note also reveals that Samsung's Bixby Voice Assistant, which launched that week, had briefly complicated negotiations by drawing the deal team's attention toward a separate search-backfill feed license. The email became Trial Exhibit UPX1108 in United States v. Google LLC (D.D.C., No. 1:20-cv-03010), the DOJ's antitrust suit alleging that Google illegally maintained its search monopoly in part through exactly these kinds of revenue-share default agreements with major device partners.",
+  "lessonTitle": "Ruth Porat and Jamie Rosenberg Discuss Samsung Search Revenue-Share Deal",
+  "pullQuote": "A two-line executive sign-off on a Samsung search agreement captures, in near-real time, the commercial machinery at the heart of the U.S. government's landmark antitrust case against Google.",
+  "leadershipTraits": [
+    "Google antitrust case",
+    "Samsung default search deal",
+    "DOJ v. Google"
+  ],
+  "cardImage": "/cards/doj-dcd-upx1108.png"
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "cl-cand-4-20-cv-05640-66-3",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Reframe Your Product as a Bundle, Not a Fee",
+  "documentTitle": "Apple Legal Response to Epic Games Regarding App Store Policies",
+  "dateAuthored": "2020-09-08",
+  "authorsName": [
+    "Apple Legal Department"
+  ],
+  "authorsCompany": "Apple Inc.",
+  "recipientNames": [
+    "Mr. Pence",
+    "Epic Games, Inc."
+  ],
+  "topics": [
+    "competition",
+    "app-stores",
+    "policy",
+    "strategy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "The App Store is not simply a marketplace -- it is part of a larger bundle of tools, technologies and services that Apple makes available to developers to develop and create great applications for iPhone, iPad and other Apple products. Epic has made great use of Apple-provided tools, such as TestFlight, VOIP, Stickers, iCloud document storage, ARKit, Messages Extension, ReplayKit, and Push Notifications.\n\nEpic requests the right to offer a 'competing Epic Games Store app' through the App Store that would seemingly allow iOS device users to install apps from Epic directly. And Epic wants to offer 'competing payment processing options' in Fortnite and other Epic apps instead of using Apple's in-app purchase (IAP) system. As you know, Apple has never allowed this. Not when we launched the App Store in 2008. Not now.\n\nApple strongly believes these rules are vital to the health of the Apple platform and carry enormous benefits for both consumers and developers. The guiding principle of the App Store is to provide a safe, secure and reliable experience for users and a great opportunity for all developers to be successful but, to be clear, when it comes to striking the balance, Apple errs on the side of the consumer.\n\nIAP is the App Store's centralized payment system. It lets users purchase digital goods and services within apps without the inconvenience and security risks of registering their payment information with each developer. To take advantage of Apple's App Store, the bargain is simple: if you charge for software purchased through the App Store, Apple takes a percentage of the charge as commission. This business model has remained unchanged since the App Store launched.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-20-cv-05640-66-3-p1.png",
+      "caption": "Source document — Apple Legal Response to Epic Games Regarding App Store Policies · Epic Games, Inc. v. Apple Inc. · 4:20-cv-05640 (CAND), Doc. 66-3, filed 2020-09-08 (page 1)",
+      "alt": "Apple Legal Response to Epic Games Regarding App Store Policies — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-4-20-cv-05640-66-3-p2.png",
+      "caption": "Source document — Apple Legal Response to Epic Games Regarding App Store Policies · Epic Games, Inc. v. Apple Inc. · 4:20-cv-05640 (CAND), Doc. 66-3, filed 2020-09-08 (page 2)",
+      "alt": "Apple Legal Response to Epic Games Regarding App Store Policies — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/17442392/66/3/epic-games-inc-v-apple-inc/",
+  "sourceCase": "Epic Games, Inc. v. Apple Inc.",
+  "sourceCitation": "4:20-cv-05640 (CAND), Doc. 66-3, filed 2020-09-08",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Reframe Your Product as a Bundle, Not a Fee",
+  "situation": "In September 2020, Apple's legal team responded to Epic Games' demand for two things: the right to run its own app store inside the App Store, and the right to bypass Apple's in-app purchase system. The response, filed as a court exhibit in Epic v. Apple, sets out Apple's position that neither has ever been allowed since the App Store launched in 2008.",
+  "insight": "Notice how Apple opens. Not with law, not with the 30% commission, but with a list: TestFlight, VOIP, Stickers, iCloud, ARKit, Messages Extension, ReplayKit, Push Notifications. The message is that the App Store is 'part of a larger bundle of tools, technologies and services' — and Epic has been helping itself to all of it.\n\nThis is the hidden move. Epic wants to frame the fight as 'payment processing,' a commodity worth maybe 2-3%. Apple reframes it as access to an entire developer platform, where IAP is just the toll booth on a much longer road. Once you accept the bundle framing, 'competing payment processing' sounds like eating at the restaurant and paying the cook directly. Apple also plants a tiebreaker for every future argument: 'when it comes to striking the balance, Apple errs on the side of the consumer.' That line is doing real work — it preempts developer complaints by putting users first.",
+  "application": "When a customer or partner attacks one line item in your pricing, list everything they get for it before you defend the number. If you can't produce that list quickly, you have a positioning problem, not a pricing problem. Write the bundle down now, while nobody is negotiating.",
+  "pullQuote": "When someone attacks your price, don't defend the price — redefine what they're actually paying for.",
+  "leadershipTraits": [
+    "reframes the argument",
+    "anchors to first principles",
+    "consistent over time",
+    "picks a tiebreaker and states it plainly"
+  ],
+  "cardImage": "/cards/cl-cand-4-20-cv-05640-66-3.png"
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "doj-dcd-upx0128",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Never Run an Experiment You Can't Measure",
+  "documentTitle": "Fwd: Nexus Launcher Without QSB",
+  "emailSubject": "Fwd: Nexus launcher without QSB",
+  "dateAuthored": "2016-08-26",
+  "authorsName": [
+    "Tom Oliveri",
+    "Philipp Schindler",
+    "Hiroshi Lockheimer",
+    "John Giannandrea",
+    "Sundar Pichai"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Sundar Pichai",
+    "Philipp Schindler",
+    "Hiroshi Lockheimer",
+    "John Giannandrea",
+    "Brian Rakowski"
+  ],
+  "topics": [
+    "strategy",
+    "product",
+    "competition"
+  ],
+  "leaderSlugs": [
+    "sundar-pichai"
+  ],
+  "excerptForBlog": "So I had a mild heart attack today when I saw the new Nexus launcher without the QSB. I fully understand the urge to innovate, but taking such a potentially high revenue impact decision which a) despite the low Nexus volume carries the risk of other OEMs asking for a similar placement over time and b) cannot really be supported by robust testing data regarding query impact (as far as I know the frameworks aren't in place yet; I have been asking for this for a long time) feels audacious - to give it a positive spin.\n\nHiroshi Lockheimer replied: Here's the logic: 1) Users generally are tired (visually) of our widget. It's in the middle of the screen, obscures your family picture, etc. 2) OEMs are VERY tired (visually) of our widget, because of 1) and also because they feel like they don't get to differentiate. 3) Now that we think like an OEM (the Nexus team), 2) really resonates. 4) We're going to experiment with the Nexus population. ~2M over a year. 5) In terms of OEM reaction, we've already briefed Samsung that we're going to be doing this 'experiment' on Nexus and that we'll be updating them on usage / potential revenue (share) impact.\n\nSundar Pichai wrote: We should always do these things with the ability to measure. Can I get a firm timeline and schedule for the A/B testing framework for this.\n\nJohn Giannandrea responded: The Android cal says MR1 rolls out December 5th so if we make all the milestones in the A/B plan we will have data by the end of the year from the Search analyst teams. Not ideal, but it's where we are on this.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-dcd-upx0128-p1.png",
+      "caption": "Source document — Fwd: Nexus Launcher Without QSB · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX0128 — DOJ public archive (page 1)",
+      "alt": "Fwd: Nexus Launcher Without QSB — page 1"
+    },
+    {
+      "url": "/screenshots/doj-dcd-upx0128-p2.png",
+      "caption": "Source document — Fwd: Nexus Launcher Without QSB · United States v. Google LLC (Search) · 1:20-cv-03010 (DCD), Trial Ex. UPX0128 — DOJ public archive (page 2)",
+      "alt": "Fwd: Nexus Launcher Without QSB — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/d9/2023-11/417997.pdf",
+  "sourceCase": "United States v. Google LLC (Search)",
+  "sourceCitation": "1:20-cv-03010 (DCD), Trial Ex. UPX0128 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Never Run an Experiment You Can't Measure",
+  "situation": "August 2016. Tom Oliveri panics when the new Nexus launcher ships without the Google Search bar (QSB) on the home screen. Hiroshi Lockheimer defends the call as a small Nexus-only 'experiment' (~2M users) driven by user and OEM fatigue with the widget. Sundar Pichai steps in with one demand: get a firm timeline for A/B testing. John Giannandrea admits the data won't arrive until end of year.",
+  "insight": "Two different fears collide here. Oliveri's fear is **precedent risk**: even on tiny Nexus volume, removing the search bar could give Samsung and other OEMs cover to ask for the same treatment. That's why Lockheimer notes they 'already briefed Samsung' — he's managing the channel before it manages him.\n\nPichai's move is the sharpest. He doesn't debate the design choice. He asks whether they can actually learn from it. Oliveri admits the 'frameworks aren't in place yet' — meaning the team shipped a revenue-sensitive change without the instrumentation to know if it worked. Pichai's question ('firm timeline and schedule for the A/B testing') reframes the whole thread from taste to measurement. The lesson: at scale, a decision you can't measure isn't bold — it's blind.",
+  "application": "Before you ship anything that touches revenue or a strategic default, write down two things: the metric that would prove you right and the metric that would prove you wrong. If you can't name them, delay the launch or shrink the test until you can. And if a small experiment could set a precedent with a big partner, brief that partner first — like Lockheimer did with Samsung — so you control the narrative instead of reacting to it.",
+  "pullQuote": "If you can't measure it before you ship it, you're not experimenting — you're guessing with revenue.",
+  "leadershipTraits": [
+    "asks measurement questions instead of taste questions",
+    "escalates early when revenue is at stake",
+    "manages precedent risk with partners proactively",
+    "honest about gaps in tooling"
+  ],
+  "cardImage": "/cards/doj-dcd-upx0128.png"
+}

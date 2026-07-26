@@ -1,0 +1,78 @@
+{
+  "slug": "doj-vaed-ptx0238",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Platform Rules Create the Competition You Fear",
+  "documentTitle": "Email from Jonathan Bellack to Assaf Grabinsky et al. Re: The Rise Of 'Header Bidding' And The End Of The Publisher Waterfall",
+  "emailSubject": "Re: [xfp-optimization-tech] Re: Fwd: The Rise Of 'Header Bidding' And The End Of The Publisher Waterfall | AdExchanger",
+  "dateAuthored": "2015-08-04",
+  "authorsName": [
+    "Jonathan Bellack",
+    "Assaf Grabinsky",
+    "Nitish Korula",
+    "Drew Bradstock",
+    "Vahab Mirrokni",
+    "Martin Blais"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Assaf Grabinsky",
+    "Nitish Korula",
+    "Drew Bradstock",
+    "Jim Giles",
+    "Vahab Mirrokni",
+    "Martin Blais",
+    "Michelle Sarlo Dauwalter",
+    "Yan Xiong",
+    "Aparna Pappu",
+    "Nunzio Thron",
+    "Bryan Rowley",
+    "David Goodman",
+    "Jerome Grateau",
+    "Max Loubser",
+    "Chris Lasala",
+    "Russ Freyman",
+    "Roberto Ruju",
+    "Charles Delattre"
+  ],
+  "topics": [
+    "competition",
+    "product",
+    "strategy",
+    "technology"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Huge +1 to this proposal, Drew. I've lately been asking people why we don't allow third-party exchanges to bid on our auction, because this seemed to be the single fundamental problem that 'required' header bidding. —Nitish Korula\n\nOn the core tension, Vahab Mirrokni identified three strategic dimensions: First, on EDA (Enhanced Dynamic Allocation): \"other exchanges compete in EDA with their average bid, but AdX buyers get to compete with their real bid\" — an asymmetry publishers were beginning to notice. Second, on header bidding's appeal: publishers sought to escape paying high revenue share on high-margin impressions, suggesting Google consider \"a tier-based revenue sharing scheme that would take less % on very high revenue impressions.\" Third, on structural remedy: \"One solution would be to add it as a native part of the DFP ad serving and separate it from AdX\" — enabling the ad server to call all exchanges, match cookies, and award impressions independently of AdX's revenue-share layer.\n\nAssaf Grabinsky pressed for urgency: \"We are not able to prove to [publishers] they can make more money by working exclusively with AdX: we don't have stats to support this, and publishers are not able to easily conduct A/B testing in DFP.\" Jonathan Bellack closed the thread by announcing the discussion would move to a smaller working group led by Drew Bradstock and Jim Giles.",
+  "screenshots": [
+    {
+      "url": "/screenshots/doj-vaed-ptx0238-p1.png",
+      "caption": "Source document — Email from Jonathan Bellack to Assaf Grabinsky et al. Re: The Rise Of 'Header Bidding' And The End Of The Publisher Waterfall · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0238 — DOJ public archive (page 1)",
+      "alt": "Email from Jonathan Bellack to Assaf Grabinsky et al. Re: The Rise Of 'Header Bidding' And The End Of The Publisher Waterfall — page 1"
+    },
+    {
+      "url": "/screenshots/doj-vaed-ptx0238-p2.png",
+      "caption": "Source document — Email from Jonathan Bellack to Assaf Grabinsky et al. Re: The Rise Of 'Header Bidding' And The End Of The Publisher Waterfall · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Trial Ex. PTX0238 — DOJ public archive (page 2)",
+      "alt": "Email from Jonathan Bellack to Assaf Grabinsky et al. Re: The Rise Of 'Header Bidding' And The End Of The Publisher Waterfall — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.justice.gov/atr/media/1367866/dl",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Trial Ex. PTX0238 — DOJ public archive",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 7,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Platform Rules Create the Competition You Fear",
+  "situation": "In August 2015, a group of Google ad-tech leaders exchanged emails about 'header bidding' — a technique publishers were adopting to route ad impressions around Google's exchange (AdX). The thread surfaces a candid internal admission: Google's own auction rules may have made header bidding feel necessary to publishers in the first place.",
+  "insight": "The document exposes a classic platform tension. Nitish Korula asks directly why third-party exchanges couldn't bid in Google's auction, calling it 'the single fundamental problem that required header bidding.' That framing matters: Google's competition wasn't beating it on technology — publishers were engineering around a structural disadvantage baked into Google's own rules. Vahab Mirrokni names the asymmetry precisely: other exchanges competed on average bids while AdX buyers competed on real bids. Publishers noticed. Then Assaf Grabinsky lands the sharpest point — Google couldn't prove to publishers they made more money staying inside AdX, and A/B testing was too hard to run. That's a moat with a hole in it: high switching cost by design, but no data to justify the cost to the customer. The internal proposals (tiered revenue share, separating the ad server from the exchange layer) are attempts to patch the structural leak before publishers fully defect. This is competitive moat maintenance under pressure — but only because the moat was partly built on friction, not just value.",
+  "application": "If customers are building workarounds to your product, don't just study the workaround — audit the rule or pricing structure that made it attractive. List every place where your platform advantages you asymmetrically over the customer or a competitor. For each one, ask: can the customer prove they're better off? If you can't show the data, fix that before a competitor does it for you.",
+  "pullQuote": "When your own pricing structure drives customers to build workarounds, the real threat isn't the workaround — it's the rule.",
+  "leadershipTraits": [
+    "honest about structural weakness",
+    "moves to smaller working group fast",
+    "reads competitive signal early",
+    "asks the uncomfortable internal question"
+  ],
+  "cardImage": "/cards/doj-vaed-ptx0238.png"
+}

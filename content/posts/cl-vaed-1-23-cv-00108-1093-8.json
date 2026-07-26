@@ -1,0 +1,72 @@
+{
+  "slug": "cl-vaed-1-23-cv-00108-1093-8",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Price the Commodity Cheap, Charge for the Unique",
+  "documentTitle": "Internal Google Email Thread: Rubicon Margins and AdX Pricing Strategy",
+  "emailSubject": "Re: Rubicon margins",
+  "dateAuthored": "2017-11-04",
+  "authorsName": [
+    "Jim Giles",
+    "Eisar Lipkovitz",
+    "Jonathan Bellack",
+    "Payam Shodjai",
+    "Chris LaSala"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Eisar Lipkovitz",
+    "Jonathan Bellack",
+    "Payam Shodjai",
+    "Chris LaSala",
+    "Sam Cox",
+    "Suzanne Blackburn",
+    "Ali Nasiri Amini",
+    "Aparna Pappu",
+    "Bahman Rabii",
+    "Brad Bender",
+    "Paul Muret",
+    "Scott Sheffer",
+    "Samuel Temes"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product",
+    "finance"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "What if we did something courageous that leverages the fact that we have strong buy and sell-side offerings. We drop the AdX/Demand Product margin to a transparent 5% for undifferentiated demand. What I mean by undifferentiated demand is demand a publisher can get through any SSP that doesn't leverage the use of proprietary data. The pipes that deliver that demand should charge a 'utility fee'. Let's call it 5%.\n\nNow let's look at what happens to our business if we move to a 5% fee for undifferentiated demand. AdX Buyer Demand: Our take rate plunges from around 20% to 5%. 2018 forecast for AdX Buyer revenue is $1.8B growing at 2% yoy. Net revenue would go from $360M to $90M, for a total loss of $270M. However, demand/performance would likely increase significantly if we drop margins to 5%.\n\nFor differentiated DBM demand (i.e. demand where DBM uses proprietary Google data and targeting), AdX takes a non-transparent margin on top of the 5%. We don't disclose this margin and it's dynamic, but our average take rate may well surpass 20% for differentiated DBM demand.\n\nThe message to the market would be: AdX/DP is now charging 5% for basic demand — what is your SSP charging you? The second order effects of this strategy would be quite positive for Google, but those are best discussed in person.\n\n[Jim Giles adds:] I think pure SSP is definitely commoditizing — ultimately, I think only SSPs that also have an ad server will survive. The combination of ad server / exchange plus data gives us cover for total costs that are higher than other exchanges.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1093-8-p1.png",
+      "caption": "Source document — Internal Google Email Thread: Rubicon Margins and AdX Pricing Strategy · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1093-8, filed 2024-07-31 (page 1)",
+      "alt": "Internal Google Email Thread: Rubicon Margins and AdX Pricing Strategy — page 1"
+    },
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1093-8-p2.png",
+      "caption": "Source document — Internal Google Email Thread: Rubicon Margins and AdX Pricing Strategy · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1093-8, filed 2024-07-31 (page 2)",
+      "alt": "Internal Google Email Thread: Rubicon Margins and AdX Pricing Strategy — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/66753787/1093/8/united-states-v-google-llc/",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Doc. 1093-8, filed 2024-07-31",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Price the Commodity Cheap, Charge for the Unique",
+  "situation": "In November 2017, Google ad tech leaders debated whether to slash AdX's take rate from around 20% to a transparent 5% on 'undifferentiated demand' — demand any SSP could deliver. The pitch: signal to publishers that Google's pipes are cheap, while quietly keeping a 'non-transparent' margin on 'differentiated DBM demand' powered by Google's proprietary data. The $270M revenue hit is stated openly; the 'second order effects' are explicitly reserved for in-person discussion.",
+  "insight": "The hidden move is **price discrimination dressed as transparency**. The author sees the SSP layer commoditizing (Giles: 'pure SSP is definitely commoditizing'), so competing on that layer is a losing game. The play is to reframe the market: publicly benchmark rivals on the commodity part ('what is your SSP charging you?') where Google can undercut, while shifting the real margin onto the differentiated layer where nobody else competes — Google's own buyer data via DBM.\n\nThe deeper logic: when you own two sides of a market, you can afford to run one side at utility pricing to weaken standalone competitors, then recapture margin where you have a monopoly of capability. Giles makes the moat explicit — the ad server plus exchange plus data combination 'gives us cover for total costs that are higher than other exchanges.'",
+  "application": "If your product bundles a commodity input with a proprietary one, separate them in your pricing. Publish a low, clean price on the commoditized piece to reset customer expectations and pressure single-product rivals. Earn your margin on the piece only you can deliver — and don't itemize it. Before you do this, be honest with yourself about which half is actually differentiated; if you're wrong, you've just cut your own revenue by 75%.",
+  "pullQuote": "When your product bundles a commodity with something rare, price the commodity like a utility and hide your margin inside what only you can offer.",
+  "leadershipTraits": [
+    "separates commodity from moat",
+    "willing to trade near-term revenue for structural position",
+    "reads competitor weakness clearly",
+    "keeps sensitive logic off email"
+  ],
+  "cardImage": "/cards/cl-vaed-1-23-cv-00108-1093-8.png"
+}

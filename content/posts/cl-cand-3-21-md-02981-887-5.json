@@ -1,0 +1,60 @@
+{
+  "slug": "cl-cand-3-21-md-02981-887-5",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Choreograph the Meeting Before You Walk In",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1517",
+  "emailSubject": "Re: Privileged: Call script",
+  "dateAuthored": "2018-07-19",
+  "authorsName": [
+    "Purnima Kochikar",
+    "Jamie Rosenberg"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jamie Rosenberg",
+    "Purnima Kochikar",
+    "Adam Gutterman",
+    "Tia Arzu"
+  ],
+  "topics": [
+    "app-stores",
+    "partnerships",
+    "strategy",
+    "competition"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Thanks, Purnima. I copied into a doc and made some suggested edits. The line we're trying to walk is to try to get Mark on side in encouraging Tim to be open-minded, and giving just enough detail for Tim not to feel that it's an ambush of any sort (which it's not)... but also save some of our strongest points/specifics for the Friday discussion. I think as worded the script should be able to do that.\n\nThe tricky part will be if Mark asks directly, \"So, are you guys prepared to make any changes on commercial terms for Play?\" I think if he asks, you can just say, \"For a lot of reasons, Hiroshi & Jamie want to have a different conversation -- they will explain on Friday.\"\n\n— Jamie\n\n---\n\nHere's the draft script. We believe we are philosophically closer than what the previous call may have implied, and would like to have the opportunity to explore areas of collaboration with Tim. Then, Tim will meet Hiroshi (SVP of P&E), Jamie, and Phil Harrison. They are looking forward to presenting a comprehensive set of opportunities to partner with Google that will support Tim's objectives of supporting the dev ecosystem, making UE the best engine for innovation in gaming, and bring the joy of Fortnite to more gamers and viewers.\n\nWe also have a responsibility towards our users. Frankly, the experience of getting Fortnite on Android from the links Tim sent was frankly abysmal. This user experience and the security risks that come with it is giving us some real concern. There is a simpler way to get to what Tim wants without fracturing the user experience and the ecosystem.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-5-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1517 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-5, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1517 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-5-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1517 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-5, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1517 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/887/5/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 887-5, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Choreograph the Meeting Before You Walk In",
+  "situation": "On July 19, 2018, Google's Jamie Rosenberg edits a draft script that Purnima Kochikar will use with Mark (context suggests Mark Rein of Epic) to set up a Friday meeting between Epic's Tim Sweeney and Google executives Hiroshi Lockheimer, Rosenberg, and Phil Harrison. The backdrop: Epic had just launched Fortnite on Android outside the Play Store. Google wants Tim in the room, open-minded, and not tipped off to the full pitch.",
+  "insight": "Rosenberg is running a **two-layer information strategy**. Layer one: give Mark enough substance to sell Tim on showing up — framing it as \"opportunities to partner\" aligned with Tim's own stated goals. Layer two: hold back the specifics, especially on Play's commercial terms, for the live meeting where Google's most senior people can deliver them directly. Notice the pre-scripted deflection if Mark asks about commercial changes: redirect to Friday. That's not evasion for its own sake — it's protecting **leverage and staging**. Concessions revealed early through an intermediary lose their weight; revealed in person by an SVP, they carry relationship value. The parallel move is framing Epic's sideloaded install as \"abysmal\" — planting the user-experience argument early so it feels like shared concern, not a Google talking point.",
+  "application": "Before a high-stakes meeting, write the script for the pre-meeting. Decide three things: what the other side must know to say yes to showing up, what you deliberately hold for the room, and exactly how your intermediary deflects the predictable question. If you can't articulate all three, you're not ready to send the calendar invite.",
+  "pullQuote": "Great negotiators don't just prepare arguments — they stage-manage what the other side hears, when, and from whom.",
+  "leadershipTraits": [
+    "stages information carefully",
+    "anticipates the awkward question",
+    "uses intermediaries deliberately",
+    "frames own interests as shared concerns"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-887-5.png"
+}

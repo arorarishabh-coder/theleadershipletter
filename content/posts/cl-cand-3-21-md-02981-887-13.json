@@ -1,0 +1,63 @@
+{
+  "slug": "cl-cand-3-21-md-02981-887-13",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Customer Brings Demand, They Hold the Leverage",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1537",
+  "emailSubject": "Re: A/C Privileged: Update on Tinder / GPB",
+  "dateAuthored": "2019-07-23",
+  "authorsName": [
+    "Purnima Kochikar",
+    "Sarah Karam",
+    "Brandon Barras",
+    "Paul Feng",
+    "Sameer Samat"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Sarah Karam",
+    "Brandon Barras",
+    "Paul Feng",
+    "Sameer Samat",
+    "Donald Harrison"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Our team has also created a model to compare the value Play delivers against the revenue share paid by a developer on their consumer spend. Two key points that we believe may underlie Tinder's decision-making:\n\n• Despite generating the highest apps revenue from Play, Tinder severely under indexes on the % of installs coming from Play driven sources vs. dating peers and games. In 2018, only 8% of Tinder's installs came from Play driven sources vs. 15% for OKC and 27% for Meetic. This bolsters their assertion that 'people mostly come to Play looking for Tinder'.\n• The relative discovery value they have been deriving from Play has decreased since 2017, due to an increasing share of acquisitions coming from Search and Search driven re-installs. In parallel, their revenue has been increasing y/y. Thus the team estimates that if you compare the value of non-Search driven discovery vs. revenue share paid, Tinder is now deriving only 10% of the revenue share value vs. the 30% share they pay.\n\nPaul Feng added: 'The analysis does a nice job quantifying Tinder's \"people mostly come to Play looking for Tinder\" argument. As part of the Magical Bridge AND Payment Policy efforts, we're looking at ways to tier pricing — we can potentially use this. Consider a pricing tier based for apps / brands that bring an inordinate number of users / FOPs / NPUs to the store.'",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-13-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1537 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-13, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1537 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-13-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1537 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-13, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1537 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/887/13/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 887-13, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 7,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Customer Brings Demand, They Hold the Leverage",
+  "situation": "In July 2019, a Google Play team including executives Purnima Kochikar, Paul Feng, and others built an internal model to measure how much discovery value Play actually delivers to top app developers versus how much those developers pay in revenue share. The specific focus was Tinder. The stakes: Tinder was pushing back on Google's 30% cut, and Google needed to understand whether that argument had merit.",
+  "insight": "The data inside this memo quietly validates Tinder's negotiating position. Only 8% of Tinder's installs came from Play-driven sources in 2018, versus 27% for a peer app. And the team's own model estimated Tinder was getting only '10% of the revenue share value vs. the 30% share they pay.' That is a serious mismatch — and Google's team found it themselves. Paul Feng's response is the key strategic move: rather than dismiss the finding, he suggested using it to design a tiered pricing structure for brands that 'bring an inordinate number of users' to the store. This is platform strategy in action. Google recognized that some developers are demand generators, not demand consumers — they bring users to the platform, not the other way around. Treating them identically to smaller developers who genuinely depend on Play's discovery engine is both economically indefensible and a retention risk.",
+  "application": "If you run a platform or marketplace, segment your partners by who generates demand versus who consumes it. For each major partner, ask: would their users come here anyway? If yes, your standard pricing is vulnerable. Build a tiered model before your biggest partners build the argument for you — because as this document shows, your own data will eventually prove their case.",
+  "pullQuote": "If a user was already searching for your product before arriving at the platform, the platform didn't create that demand — and both sides know it.",
+  "leadershipTraits": [
+    "data-driven about uncomfortable truths",
+    "turns a threat into a pricing design problem",
+    "reads negotiating leverage before the negotiation happens"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-887-13.png"
+}

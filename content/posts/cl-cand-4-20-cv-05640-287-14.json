@@ -1,0 +1,49 @@
+{
+  "slug": "cl-cand-4-20-cv-05640-287-14",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Anonymous Developer Emails Tim Cook Over App Store Search Fairness",
+  "documentTitle": "Email to Tim Cook: Please Fix the App Store Search",
+  "emailSubject": "Please fix the app store search",
+  "dateAuthored": "2015-08-23",
+  "authorsName": [
+    "[redacted developer]"
+  ],
+  "authorsCompany": "Apple",
+  "recipientNames": [
+    "Tim Cook"
+  ],
+  "topics": [
+    "app-stores",
+    "product",
+    "competition"
+  ],
+  "leaderSlugs": [
+    "tim-cook"
+  ],
+  "excerptForBlog": "I do not want to take too much of your time, but can you please help to fix the app store search rankings? I have been a developer on the app store from the very beginning and working on my current main app since the launch of the original iPad. I have had a good amount of success on the store and it has allowed me to provide a living for me and my partner while he is in school. For the past year and a half it has been a lot harder to have success — specifically over the past 3 months the search rankings have changed so much my app's position has been all over the place. I used to have over 4,000 downloads a day on average; now recently it has been well under half that each day. I have noticed my app getting pushed down by other apps that receive less downloads per day, have a lower rating, or have not been updated in over a year. I work hard to make sure my app is optimized for the latest hardware, but apps that are not optimized for the iPhone 6 and 6 Plus push me down in rankings. I also often get pushed down by apps that have nothing to do with the keyword search term. I feel like the app store now is not helping individual developers like it used to and is only allowing the big guys to play.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-20-cv-05640-287-14-p1.png",
+      "caption": "Source document — Email to Tim Cook: Please Fix the App Store Search · Epic Games, Inc. v. Apple Inc. · 4:20-cv-05640 (CAND), Doc. 287-14, filed 2021-01-25",
+      "alt": "Email to Tim Cook: Please Fix the App Store Search — page 1"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/17442392/287/14/epic-games-inc-v-apple-inc/",
+  "sourceCase": "Epic Games, Inc. v. Apple Inc.",
+  "sourceCitation": "4:20-cv-05640 (CAND), Doc. 287-14, filed 2021-01-25",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 7,
+  "postKind": "artifact",
+  "artifactNote": "In August 2015, an unidentified independent developer emailed Tim Cook directly to report that App Store search ranking changes had cut their daily downloads by more than half, despite maintaining a higher-quality, more regularly updated app than competing titles. The email was unsealed in 2021 as part of Epic Games v. Apple, the landmark antitrust case in which App Store search manipulation and developer treatment were central issues. Its inclusion in that docket suggests Apple's internal awareness of small-developer grievances predates the public controversy by several years.",
+  "lessonTitle": "Anonymous Developer Emails Tim Cook Over App Store Search Fairness",
+  "pullQuote": "A small developer's 2015 complaint to Apple's CEO — later surfaced in federal antitrust litigation — captures the moment independent creators began to feel systematically squeezed out of the marketplace Apple had built around them.",
+  "leadershipTraits": [
+    "App Store antitrust",
+    "Epic v. Apple",
+    "developer economics"
+  ],
+  "cardImage": "/cards/cl-cand-4-20-cv-05640-287-14.png"
+}

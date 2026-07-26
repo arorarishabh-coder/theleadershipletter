@@ -1,0 +1,68 @@
+{
+  "slug": "cl-cand-3-21-md-02981-886-38",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Hide The Price By Bundling It",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 588",
+  "emailSubject": "Re: Hiroshi Monthly Review: Thursday Next Week",
+  "dateAuthored": "2019-03-26",
+  "authorsName": [
+    "Paul Gennai",
+    "Atul Kumar",
+    "Samer Sayigh",
+    "Jamie Rosenberg",
+    "Alexi Douvas",
+    "Shafiq Ahmed",
+    "Mike Petrillo"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Atul Kumar",
+    "Samer Sayigh",
+    "Jamie Rosenberg",
+    "Paul Gennai",
+    "Alexi Douvas",
+    "Shafiq Ahmed",
+    "Mike Petrillo"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "In terms of the Samsung proposal, a few thoughts: I realize that Jim noted a $50M a year number, but it'd be helpful to put that into perspective. What would that be in terms rev-share number, recognizing that we might prefer to hide it in some way? Note that I do think that a rev-share would be better at disincentizing other app stores being preloaded (given it'd defray revenues), which is why I liked the idea of offering a rev-share across Search and Play, but not breaking out the figures in our accounting to them. I'm confused on the homescreen exclusivity part. If they're distributing via Play, is the fight to have them remove Galaxy Store from the homescreen really worth fighting? I can see them digging in here and I'm not sure it's worth us being tied to it. For Hug, my main comment is: given there's now some larger thinking being kicked off around different rev-share models for Play (progressive rates, all-ads based, etc.), I wonder if the messaging around reducing effective rev-share can be toned down — this all becomes about (a) unifying our cross-Google product story to developers and (b) working with large partners in the way we / they should expect.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-38-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 588 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-38, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 588 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-38-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 588 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-38, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 588 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/886/38/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 886-38, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Hide The Price By Bundling It",
+  "situation": "In March 2019, a Google executive weighs in on a proposed deal with Samsung. Jim had floated a flat $50M/year payment. The email pushes back: convert it to a revenue share, bundle it across Search and Play, and don't itemize the numbers for Samsung. It also questions whether fighting to remove the Galaxy Store from Samsung's homescreen is worth the friction.",
+  "insight": "The core move is **obscuring the unit economics of a deal to shape partner behavior**. A flat $50M is easy to compare, cancel, or beat. A rev-share is harder to walk away from — as the author notes, it would be **better at disincentizing other app stores being preloaded (given it'd defray revenues)**. Bundling Search and Play into one blended figure, without **breaking out the figures in our accounting to them**, removes Samsung's ability to renegotiate one lever at a time.\n\nThere's also a second instinct worth noting: pick your fights. The author openly questions whether homescreen exclusivity for the Galaxy Store is worth the fight if Samsung is already distributing via Play. And on the 'Hug' program, he wants to **tone down** talk of reducing rev-share, reframing it as a unified developer story — a messaging discipline point.",
+  "application": "When structuring a partner deal, ask: which number do you want them anchored to? If a single line item invites haggling, bundle it into a broader arrangement tied to their revenue or usage. Make walking away costly, not just expensive. And separately: list every clause you're pushing for, and cut the ones your counterparty will die on if you don't actually need them.",
+  "pullQuote": "When one number scares a partner, wrap it inside a bigger one they can't easily unpack.",
+  "leadershipTraits": [
+    "thinks in incentives",
+    "picks fights selectively",
+    "controls the framing",
+    "attentive to how numbers are presented"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-886-38.png"
+}

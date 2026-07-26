@@ -1,0 +1,67 @@
+{
+  "slug": "cl-vaed-1-23-cv-00108-1247-9",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Own Plumbing Becomes The Problem",
+  "documentTitle": "United States v. Google LLC (Ad Tech) — PTX0256: Email Thread on Ad Blocking and Header Bidding",
+  "emailSubject": "Re: CONFIDENTIAL: Ad Blocking, CLEAN Ads by the Tech Lab",
+  "dateAuthored": "2015-10-11",
+  "authorsName": [
+    "Scott Spencer",
+    "Jonathan Bellack",
+    "Scott Cunningham"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Michael Smith",
+    "Gabby Klass",
+    "Tom Shields",
+    "David Moore",
+    "Anand Das",
+    "Kelly Petersen",
+    "Srini Venkatesan",
+    "Sara Walsh",
+    "Sunni Yuen",
+    "Kenneth Rubenstein"
+  ],
+  "topics": [
+    "competition",
+    "product",
+    "strategy",
+    "technology"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Google's DFP is the dominant ad server for publishers in the US marketplace. Google has configured the ad server to work in a more integrated manner with its own ad exchange AdX. This has the unintended effect of preventing, technologically, the creation of a truly open RTB marketplace with 3rd party exchanges: the integration of DFP and AdX via dynamic allocation results in Google as the exclusive indirect demand source that can 'see' (and then bid on) booked impressions. These inequities have led other exchanges (and therefore publishers) to develop workarounds that compromise user experience — heavy tag usage, pre-bidding — leading to higher load times, reduced mobile device battery life for consumers, increased data usage for consumer mobile plans. If Google reconfigured DFP to permit open 3rd party auctions on all impressions, including through dynamic allocation, advertisers would reduce the number of exchanges through which it tries to purchase a single impression and publishers wouldn't have to install additional ad tech that worsens user experience just to increase yield on impressions. Is perhaps the solution to ad blocking cured if Google can somehow configure dynamic allocation to service 3rd party exchange systems in a manner comparable to the integration with AdX?",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1247-9-p1.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — PTX0256: Email Thread on Ad Blocking and Header Bidding · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1247-9, filed 2024-08-24 (page 1)",
+      "alt": "United States v. Google LLC (Ad Tech) — PTX0256: Email Thread on Ad Blocking and Header Bidding — page 1"
+    },
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1247-9-p2.png",
+      "caption": "Source document — United States v. Google LLC (Ad Tech) — PTX0256: Email Thread on Ad Blocking and Header Bidding · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1247-9, filed 2024-08-24 (page 2)",
+      "alt": "United States v. Google LLC (Ad Tech) — PTX0256: Email Thread on Ad Blocking and Header Bidding — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/66753787/1247/9/united-states-v-google-llc/",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Doc. 1247-9, filed 2024-08-24",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Own Plumbing Becomes The Problem",
+  "situation": "This is an internal Google email thread from October 2015 among ad tech leaders (Spencer, Bellack, Cunningham). The writer plainly states that Google's ad server DFP is 'dominant' and is wired to favor Google's own exchange AdX through 'dynamic allocation.' The stakes: rival exchanges and publishers are bolting on 'pre-bidding' and 'heavy tag usage' — what the industry called header bidding — to get around it, and users are paying the cost in load times, battery, and data.",
+  "insight": "The hidden move here is an insider naming the **second-order cost** of a moat. The integration between DFP and AdX is a competitive advantage — Google alone can 'see' and bid on booked impressions. But the writer sees the feedback loop: when you close a market, competitors don't leave, they route around you. Those workarounds degrade the user experience so badly they may be fueling ad blocking — an existential threat to the whole revenue base.\n\nThe strategic question posed at the end is striking: would opening dynamic allocation to third-party exchanges actually **solve ad blocking**? That reframes an antitrust-flavored concession as a growth move. It's a classic **ecosystem vs. extraction** tension: the short-term rent from a closed integration may be smaller than the long-term damage to the medium itself.",
+  "application": "Audit where your product's 'advantage' is forcing customers or partners to build painful workarounds. List those workarounds. Then ask: if we opened that interface, would the pie grow faster than our slice shrinks? Especially watch for workarounds that hurt the end user — those are the ones that eventually get regulated, blocked, or disrupted by a cleaner competitor.",
+  "pullQuote": "If your product's integration advantage forces the market to build ugly workarounds, the workarounds eventually become the market.",
+  "leadershipTraits": [
+    "names uncomfortable truths internally",
+    "thinks in second-order effects",
+    "connects user experience to business risk",
+    "willing to question a moat"
+  ],
+  "cardImage": "/cards/cl-vaed-1-23-cv-00108-1247-9.png"
+}

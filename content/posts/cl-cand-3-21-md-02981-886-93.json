@@ -1,0 +1,68 @@
+{
+  "slug": "cl-cand-3-21-md-02981-886-93",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Preview Bad News Before You Ship It",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1417",
+  "emailSubject": "Re: Spotify Policy Meeting Notes",
+  "dateAuthored": "2017-10-17",
+  "authorsName": [
+    "Kirsten Rasanen",
+    "Sameer Samat",
+    "Wilson White",
+    "Paul Feng"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Sameer Samat",
+    "Wilson White",
+    "Paul Feng",
+    "Jamie Rosenberg",
+    "Purnima Kochikar",
+    "Claire Hart",
+    "Tia Arzu",
+    "Harry Johnson",
+    "Samer Sayigh"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships",
+    "policy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Met with Spotify team at their offices this afternoon. The discussion went as expected. They were surprised and concerned but appreciated the in-person meeting, advance warning and the open dialogue.\n\nThey didn't seem to think we would go this direction, \"We thought Google would remain an open platform and do what's right for users and developers.\"\n\nKey Takeaways:\n\nTransaction Fee — The 10% rev share offer was met with some head nods but no firm commitment that this is sufficient. \"Well 10% is a lot better than 15%.\" They seemed surprised that we went down to 10%. I anticipate they will ask for a deeper discount.\n\nPricing Parity / User Communication — They haven't done the math to know if 10% rev share means they'd need to raise prices in the app or not. If they do, they would want to be able to tell users that they can purchase for less elsewhere (something our new policy will expressly prohibit). This piece is very important and is a crux of the Apple debate: They believe users should be fully informed about their choices; disadvantaging app users by not being able to tell them that pricing is lower elsewhere isn't fair to users.\n\nPolicy Principle: It is a principle for them to protect user choice and to have as much control over their relationship with the user as possible.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-93-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1417 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-93, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1417 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-93-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1417 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-93, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1417 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/886/93/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 886-93, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Preview Bad News Before You Ship It",
+  "situation": "In October 2017, a Google team (Rasanen, Samat, White, Feng) visited Spotify's offices to preview a coming Play Store policy change: a reduced 10% revenue share, plus rules that would block Spotify from telling users they could pay less elsewhere. This internal recap captures Spotify's live reaction before the policy was public.",
+  "insight": "Google used the meeting to **test price and probe resistance** without committing. They floated 10% and watched the reaction: 'head nods but no firm commitment.' The team immediately inferred Spotify would push for a 'deeper discount.' That's market research done under the cover of courtesy.\n\nThe recap also surfaces the real fight, which isn't the fee. Spotify hadn't 'done the math' on 10%, but they had a clear principle: users should be told when prices are cheaper elsewhere, and Spotify wants to 'have as much control over their relationship with the user' as possible. Google now knows the fee is negotiable but **anti-steering is the wall**. That intelligence is worth more than the meeting cost. It also shows Google understood the reputational gap between their self-image and the move: Spotify's line — 'We thought Google would remain an open platform' — is logged without rebuttal.",
+  "application": "Before you roll out a policy that hurts a key partner, brief them in person first. You'll learn three things you can't learn from a press release: which term they'll actually fight over, which term is just noise, and how they'll frame the story publicly. Take notes the same day. Separate their stated principle from their negotiable math — the principle is where the real deal lives.",
+  "pullQuote": "When you're about to close a door on a big partner, walking through it in person costs you nothing and buys you information you can't get any other way.",
+  "leadershipTraits": [
+    "previews hard news in person",
+    "listens for the real objection",
+    "separates price from principle",
+    "documents reactions immediately"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-886-93.png"
+}

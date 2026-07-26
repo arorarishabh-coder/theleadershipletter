@@ -1,0 +1,61 @@
+{
+  "slug": "cl-cand-3-21-md-02981-887-6",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "The Real Moat Is Distribution, Not Billing",
+  "documentTitle": "Re: Facebook Connect... er, Casual Connect",
+  "emailSubject": "Re: Facebook Connect... er, Casual Connect",
+  "dateAuthored": "2013-08-03",
+  "authorsName": [
+    "Purnima Kochikar",
+    "Jamie Rosenberg",
+    "Bob Meese"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jamie Rosenberg",
+    "Purnima Kochikar",
+    "Paul Gennai",
+    "Greg Hartrell"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "I'll re-review Pat's proposal and likely approve... but we need a comprehensive strategy for how to win in games that stretches across product, marketing and BD. A sponsorship here or there won't do it, nor will a feature banner here and there. We need a systemic approach that strengthens Play's position over the long term. I want to make sure that we are driving our own view of the world and not just reacting to what we see around us or the developer that complains the loudest (though we shouldn't be blind to that either).\n\nCompetitors are getting more aggressive because we are getting stronger and driving more value into the ecosystem - in the last 3 days alone we processed more than $80m in transactions from apps and games, most of which was likely games. We need to understand what we're doing right as well as what we're doing wrong... and do more of the former.\n\nOur key partners were actively talking to people who were promising them better development tools (Unity), better discovery and distribution (FB) and analytics (Flurry, Distimo). As the market gets increasingly crowded the real $$ will be in distribution. Partners would be more than willing to pay us 30% or even more if we provide them distribution and discovery. They are less likely to pay us for billing.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-6-p1.png",
+      "caption": "Source document — Re: Facebook Connect... er, Casual Connect · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-6, filed 2023-12-21 (page 1)",
+      "alt": "Re: Facebook Connect... er, Casual Connect — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-6-p2.png",
+      "caption": "Source document — Re: Facebook Connect... er, Casual Connect · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-6, filed 2023-12-21 (page 2)",
+      "alt": "Re: Facebook Connect... er, Casual Connect — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/887/6/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 887-6, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "The Real Moat Is Distribution, Not Billing",
+  "situation": "August 2013. Senior Google Play leaders — Jamie Rosenberg, Purnima Kochikar, and Bob Meese — trade views on how to defend Play's position in games. Facebook, Unity, Flurry, and Distimo are peeling off key partners with better tools, discovery, and analytics. Play is processing over $80M in three days, mostly games. The question: keep reacting with sponsorships and banners, or build a durable strategy.",
+  "insight": "The sharp line is this: **\"the real $$ will be in distribution. Partners would be more than willing to pay us 30% or even more if we provide them distribution and discovery. They are less likely to pay us for billing.\"** That's a clear read on where value actually sits in an app store. Billing is a commodity service. Discovery — putting a game in front of the right player — is the scarce resource developers will pay a premium for.\n\nThe second move is the framing: competitors are attacking *because* Play is winning, not in spite of it. That reframes the anxiety. It also pushes the team away from whack-a-mole responses — \"a feature banner here and there\" — toward a systemic plan across product, marketing, and BD. Drive your own view; don't chase the loudest complainer.",
+  "application": "Ask what your customers are actually paying you for versus what you *think* they're paying for. If a piece of your bundle is easily replaceable (payments, hosting, basic analytics), a competitor will unbundle it. Invest disproportionately in the part that is hardest to replicate and most tied to the customer's revenue — for a marketplace, that's usually distribution and discovery. Then build a written plan against it, not a list of one-off promotions.",
+  "pullQuote": "Developers won't pay you 30% to process a credit card. They'll pay it to reach customers.",
+  "leadershipTraits": [
+    "reads competitive pressure as a signal of strength",
+    "separates commodity value from scarce value",
+    "resists reactive tactics",
+    "pushes for systemic strategy over one-offs"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-887-6.png"
+}

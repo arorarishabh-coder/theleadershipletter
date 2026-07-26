@@ -1,0 +1,65 @@
+{
+  "slug": "cl-vaed-1-23-cv-00108-1247-10",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Sales Team Can't Explain a Gap, You Have a Strategy Problem",
+  "documentTitle": "Re: Fwd: [programmatic-news] Another header bidding push from Appnexus",
+  "emailSubject": "Re: Fwd: [programmatic-news] Another header bidding push from Appnexus",
+  "dateAuthored": "2015-11-11",
+  "authorsName": [
+    "Julie Sterling",
+    "Jonathan Bellack",
+    "Drew Bradstock",
+    "Alex Shellhammer"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jonathan Bellack",
+    "Shane Peros",
+    "Drew Bradstock",
+    "Bryan",
+    "David",
+    "Damian",
+    "Alex Shellhammer"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "product",
+    "comms"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "I hope all is well! In speaking with Shane yesterday, we both agree that our sales team is still having some difficulty addressing the following question from publishers: 'the only reason we are considering header bidding is because DFP / AdX does not allow other SSP demand sources to bid in real time — why don't you allow this / have you any plans on allowing it so we can better maximize yield?' The training last week was FANTASTIC and provided a ton of value to the team. However, this question was not addressed and tends to be the 'elephant in the room'. I have seen the teams lose credibility when they cannot answer this question well and I worry we are not giving consistent and accurate info to our partners.\n\nThe sales team needs to better understand our stance (and have a company approved message) on why we do not currently offer dynamic integration with other SSPs (i.e. Rubicon). I polled a few senior vertical leads, revenue account managers and SPLs and no one had a great answer to the question — 'we are only doing header-bidding to max yield across multiple demand partners, we would not do this if DFP had this capability — why don't you?' I believe we should arm the sales team with a 4-part response: (1) Empathy — explain that we understand the quickly changing market dynamics; (2) Capabilities — what we have built to protect publisher data and drive max revenue; (3) Why no dynamic calls today — tech, policy, or product prioritization issues; (4) Things to consider when choosing to adopt header bidding — latency, data leakage, complexity. I fear we are not being as effective as possible when having these conversations today and I worry about losing trust with our partners.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1247-10-p1.png",
+      "caption": "Source document — Re: Fwd: [programmatic-news] Another header bidding push from Appnexus · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1247-10, filed 2024-08-24 (page 1)",
+      "alt": "Re: Fwd: [programmatic-news] Another header bidding push from Appnexus — page 1"
+    },
+    {
+      "url": "/screenshots/cl-vaed-1-23-cv-00108-1247-10-p2.png",
+      "caption": "Source document — Re: Fwd: [programmatic-news] Another header bidding push from Appnexus · United States v. Google LLC (Ad Tech) · 1:23-cv-00108 (VAED), Doc. 1247-10, filed 2024-08-24 (page 2)",
+      "alt": "Re: Fwd: [programmatic-news] Another header bidding push from Appnexus — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/66753787/1247/10/united-states-v-google-llc/",
+  "sourceCase": "United States v. Google LLC (Ad Tech)",
+  "sourceCitation": "1:23-cv-00108 (VAED), Doc. 1247-10, filed 2024-08-24",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 5,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Sales Team Can't Explain a Gap, You Have a Strategy Problem",
+  "situation": "In November 2015, a Google sales leader wrote internally about a recurring problem: publishers kept asking why DFP and AdX wouldn't let competing ad exchanges bid in real time — and Google's own salespeople had no good answer. The email notes that 'no one had a great answer' when polled across senior leads. Header bidding was gaining ground precisely because publishers saw Google's closed loop as the reason they needed a workaround.",
+  "insight": "The hidden tension here isn't a training gap — it's a messaging gap that reveals an unresolved product stance. Google hadn't told its own team whether the absence of 'dynamic integration with other SSPs' was a technical limit, a policy choice, or a deliberate product decision. Each of those has a different honest answer. When you can't give your salespeople a clear 'why,' it usually means leadership hasn't committed to one internally. The author's proposed four-part framework — empathy, capabilities, rationale, risks of the alternative — is a smart structure, but it only works if part three ('Why no dynamic calls today') has a real, approved answer behind it. That answer is exactly what the email says the team is missing. This is a classic **competitive moat under pressure** moment: a platform's closed architecture is being challenged by an open workaround, and the company must decide whether to defend the moat, open it, or at least explain it clearly.",
+  "application": "When competitors expose a gap in your product, get your internal story straight before it reaches customers. Gather your product, policy, and sales leads in one room. Force a single written answer to the hardest version of the question — not a talking-point, but a real rationale. Then give that answer to every customer-facing person before the next sales call.",
+  "pullQuote": "If your frontline can't answer the obvious question, the problem isn't training — it's that you haven't decided what you actually believe.",
+  "leadershipTraits": [
+    "surfaces problems before they compound",
+    "builds structured responses under pressure",
+    "honest about internal dysfunction",
+    "advocates for frontline teams"
+  ],
+  "cardImage": "/cards/cl-vaed-1-23-cv-00108-1247-10.png"
+}

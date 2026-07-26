@@ -1,0 +1,66 @@
+{
+  "slug": "cl-cand-3-21-md-02981-887-16",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Grant the Favor Without Changing the Contract",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1549",
+  "emailSubject": "Re: next steps + a question",
+  "dateAuthored": "2020-06-10",
+  "authorsName": [
+    "Purnima Kochikar",
+    "Jamie Rosenberg",
+    "Sidney Lee",
+    "Marc Shedroff"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Sidney Lee",
+    "Jamie Rosenberg",
+    "Kate Lee",
+    "Anna Kartasheva",
+    "Jim Kolotouros",
+    "Sagar Kamdar",
+    "Tristan Ostrowski",
+    "Purnima Kochikar"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Hi Purnima,\n\nThat's a helpful clarification. While I do think the waiver language we put into our OEM agreements focused narrowly on 1p updates by design, I'm OK in the spirit of this interim waiver period to give OEMs the OK on the 1p install case as well. Facebook doesn't need to know what's in or not in our agreements, but you can tell FB that while we're waiting for the larger exec discussion between our companies, we will clarify to OEMs that we are OK with the 1p install case, in addition to the 1p update case.\n\nAnd then I would suggest that Sidney & team clarify to Oppo that this 1p install case is OK as part of the waivers we have granted. I would rather not amend our contracts on this, so maybe there is a lighter weight way for us to make this clarification to the OEMs as needed or requested from us.\n\nWe can then revisit the more permanent approach after the larger Google/FB exec sync.\n\nThanks,\nJamie",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-16-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1549 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-16, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1549 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-16-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1549 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-16, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 1549 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/887/16/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 887-16, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 7,
+  "postKind": "lesson",
+  "lessonTitle": "Grant the Favor Without Changing the Contract",
+  "situation": "On June 10, 2020, Google executive Jamie Rosenberg wrote internally to Purnima Kochikar and colleagues about a specific ask from Facebook. The question: should Google allow device makers (OEMs) to pre-install Facebook's first-party apps? Rosenberg is deciding how to say yes — without rewriting any contracts to do it.",
+  "insight": "Rosenberg's move here is precise. He extends the concession Facebook wants — telling OEMs that first-party installs are permitted — but explicitly says, 'I would rather not amend our contracts on this.' He keeps the legal text unchanged and finds a 'lighter weight way' to communicate the clarification. This is deliberate. A contract amendment is permanent, negotiable, discoverable, and precedent-setting. A verbal clarification to OEMs is none of those things. He also rings fences Facebook's visibility: 'Facebook doesn't need to know what's in or not in our agreements.' The concession is real enough to satisfy the relationship in the short term, but it preserves Google's structural position. The whole thing is explicitly temporary — he proposes revisiting after a larger exec sync between the two companies. That's classic optionality management: give ground tactically, hold the formal position strategically.",
+  "application": "When a partner or customer pushes for a policy exception, before you rewrite your terms, ask whether a direct confirmation — an email, a call, a side letter — solves their immediate need. Document the exception clearly so it doesn't create ambiguity later, but keep it scoped and time-limited. Review whether to make it permanent only after you have more information. Changing contracts changes power; a scoped confirmation keeps it.",
+  "pullQuote": "The most powerful concession is one you give verbally and can quietly take back — without ever touching the written agreement.",
+  "leadershipTraits": [
+    "separates relationship moves from legal moves",
+    "protects optionality under pressure",
+    "scopes concessions deliberately",
+    "buys time without stalling"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-887-16.png"
+}

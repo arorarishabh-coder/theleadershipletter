@@ -1,0 +1,63 @@
+{
+  "slug": "cl-cand-3-21-md-02981-887-4",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When a Rival Skips Your Platform, Build the Data Case First",
+  "documentTitle": "Google Internal Email Thread Re: Fortnite/Epic Next Steps",
+  "emailSubject": "Re: Next steps?",
+  "dateAuthored": "2018-06-23",
+  "authorsName": [
+    "Purnima Kochikar",
+    "Tia Arzu",
+    "Paul Gennai",
+    "Jamie Rosenberg"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Tia Arzu",
+    "John McGuire",
+    "Paul Gennai",
+    "Jamie Rosenberg",
+    "Adam Gutterman"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "policy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Jamie Rosenberg to team, June 22, 2018: \"Just wanted to check in on next steps with respect to Fortnite. I think we need to call a small internal meeting as soon as possible... my interest is in seeing some fleshed out thinking and talking points on: Compromises/Tradeoffs with their approach along the following vectors: User experience; 'Health' risks associated with security & updatability; Billing/FOP coverage, and why certain FOPs are more important on mobile than on PC/Web; Marketing/Promotional support; Availability of Google ads platforms (do we accept ads for sideloaded apps?); Technical support; Compliance/Regulatory/Family Fraud, etc.\"\n\nPaul Gennai added: \"Even if we can't share partner specific data, it would be useful to get some data points on how many installs even the large players get when they choose to distribute off of Play. The Amazon App Store would be a good example... Also, would be good to get the latest numbers on what % of devices have unknown sources turned off by country... to highlight that there'll be large hurdles for distribution, unless they were to get preloaded (which is a very long game). She can also give the latest stats on % of malware coming from off-Play installs.\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-4-p1.png",
+      "caption": "Source document — Google Internal Email Thread Re: Fortnite/Epic Next Steps · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-4, filed 2023-12-21 (page 1)",
+      "alt": "Google Internal Email Thread Re: Fortnite/Epic Next Steps — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-4-p2.png",
+      "caption": "Source document — Google Internal Email Thread Re: Fortnite/Epic Next Steps · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-4, filed 2023-12-21 (page 2)",
+      "alt": "Google Internal Email Thread Re: Fortnite/Epic Next Steps — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/887/4/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 887-4, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 7,
+  "postKind": "lesson",
+  "lessonTitle": "When a Rival Skips Your Platform, Build the Data Case First",
+  "situation": "On June 22, 2018, Google executive Jamie Rosenberg emailed a small internal team asking for an urgent meeting about Fortnite — specifically about Epic's apparent plan to distribute the game outside the Google Play Store. Rosenberg wanted talking points across several dimensions: user experience, security, billing, ads, and regulatory risk. The stakes: if a game as large as Fortnite succeeded without Play, other developers might follow.",
+  "insight": "Rosenberg's list is not a wish list — it's a negotiation preparation checklist. He wants to know every cost Epic would bear by going around Play, framed as 'compromises and tradeoffs.' That framing matters. It shifts the internal conversation from 'how do we keep them?' to 'what leverage do we actually have?' Paul Gennai's follow-up sharpens this: he asks for hard data on how few installs off-Play distributors actually get (citing Amazon's App Store as a benchmark), what share of Android devices block unknown sources by country, and what percentage of malware comes from off-Play installs. That's a team assembling a factual case that sideloading is harder and riskier than it looks — data that could be used in a partner conversation to make Play's value concrete, not just assumed. The underlying move is **switching-cost mapping**: before any conversation with Epic, Google wants to quantify how costly it would be for Epic to leave, so the team walks in knowing whether they are negotiating from strength or from fear.",
+  "application": "When a key partner or customer signals they might go around you, your first move is internal: build the data on how much they actually need your platform. What does distribution, trust, or reach cost them without you? Quantify it before you pick up the phone. You will negotiate differently — and more honestly — when you know the real number.",
+  "pullQuote": "Before you negotiate, know exactly how much the other side needs you — and make sure your team does too.",
+  "leadershipTraits": [
+    "prepares before negotiating",
+    "asks for data, not opinions",
+    "maps the other side's alternatives",
+    "coordinates team quickly on a threat"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-887-4.png"
+}

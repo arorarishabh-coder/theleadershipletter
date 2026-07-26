@@ -1,0 +1,63 @@
+{
+  "slug": "cl-cand-3-21-md-02981-886-58",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Bundle Your Assets Before A Partner Unbundles You",
+  "documentTitle": "Re: Samsung Store Proposal — Google Internal Email Thread (Exhibit 783)",
+  "emailSubject": "Re: Samsung store proposal",
+  "dateAuthored": "2019-05-30",
+  "authorsName": [
+    "Jim Kolotouros",
+    "Jamie Rosenberg",
+    "Hiroshi Lockheimer",
+    "Sameer Samat"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Hiroshi Lockheimer",
+    "Jamie Rosenberg",
+    "Sameer Samat",
+    "Tristan Ostrowski",
+    "Donald Harrison"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "To quickly answer Jamie's question, the answer is yes... I do believe search revenue share and Play should be contemplated as one commercial/value exchange.\n\nSome quick facts:\n- In 2018, Samsung devices were responsible for ~53% of all search revenue through Android\n- With respect to Play, the number is around 50%.\n- Approximately 20% of search revenue on Samsung devices flows through S-browser. 25-30% through Chrome. The rest through the widget.\n- Samsung Mobile spends around $400M per year on cloud services through AWS.\n\nThe things I want to maintain or introduce in the RSA are: i) S-browser defaults (maintain) ii) 2 search/assistant training screens out of box (maintain) iii) button remappability (new) iv) do not pay on the search widget for text-based searches (new) v) only pay on the widget for voice-based searches (new).\n\nCurrent revenue share rate is 25% (after 20% deduction). I'd reduce the revenue share on S-browser to 20%. I'd increase the revenue share on Chrome to 30% IF it is in the hotseat. This saves around $2B in TAC over 4 years.\n\nOn the store proposal, [Samsung's Patrick] said, 'So you're basically asking us to get out of the store business.' [Jamie Rosenberg] said, 'We're proposing that we focus together on helping you achieve your goals in a different way, and in a way that keeps us aligned to collaborate technically and with our message to the ecosystem.' He said, 'I would just encourage you to be as aggressive as possible on this in your proposal.'",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-58-p1.png",
+      "caption": "Source document — Re: Samsung Store Proposal — Google Internal Email Thread (Exhibit 783) · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-58, filed 2023-12-21 (page 1)",
+      "alt": "Re: Samsung Store Proposal — Google Internal Email Thread (Exhibit 783) — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-58-p2.png",
+      "caption": "Source document — Re: Samsung Store Proposal — Google Internal Email Thread (Exhibit 783) · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-58, filed 2023-12-21 (page 2)",
+      "alt": "Re: Samsung Store Proposal — Google Internal Email Thread (Exhibit 783) — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/886/58/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 886-58, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Bundle Your Assets Before A Partner Unbundles You",
+  "situation": "In May 2019, senior Google executives (Kolotouros, Rosenberg, Lockheimer, Samat) traded internal notes on how to restructure Google's deal with Samsung. Samsung drove roughly 53% of Android search revenue and 50% of Play revenue in 2018. The stakes: keep Samsung from building a rival app store and browser, while cutting the payments Google made to sit on Samsung phones.",
+  "insight": "Kolotouros treats search and Play as **one commercial exchange**, not two. That reframing is the whole move. Instead of paying Samsung twice — once for search defaults, once for Play cooperation — Google bundles the asks so Samsung has to trade its store ambitions for continued search economics. The specifics reveal the mechanics: pay less on S-browser (20%), pay more on Chrome only if Chrome is in the 'hotseat', and stop paying on typed widget searches. Net: about $2B in TAC saved over four years while tightening defaults and adding button remap rights.\n\nThe deeper pattern is leverage stacking. Google isn't just buying distribution; it is using every point of contact — search, Play, and implicitly the $400M Samsung spends on AWS (a competitor) — as chips at one table. Rosenberg's line to Samsung's Patrick — 'focus together on helping you achieve your goals in a different way' — is the polite version of: exit the store business, and we'll make the rest worth your while.",
+  "application": "If a single partner or customer drives a huge share of your revenue, map every dollar and every default that flows between you. Then negotiate as one deal, not five. Before your next renewal, list what you give them, what they give you, and where their strategic ambitions collide with yours — and put it all on one page.",
+  "pullQuote": "When one partner controls half your revenue, stop negotiating deal by deal — treat every dollar you send them as one connected bet.",
+  "leadershipTraits": [
+    "thinks in bundles, not line items",
+    "quantifies leverage precisely",
+    "frames hard asks as shared goals",
+    "willing to pay more in one place to pay less overall"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-886-58.png"
+}

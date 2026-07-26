@@ -1,0 +1,65 @@
+{
+  "slug": "cl-cand-3-21-md-02981-887-63",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Frame Your Fight as an Industry Problem, Not a Favor",
+  "documentTitle": "Re: Fortnite on Google Play — Internal Google Email Thread",
+  "emailSubject": "Re: Fortnite on Google Play",
+  "dateAuthored": "2019-12-10",
+  "authorsName": [
+    "Purnima Kochikar",
+    "Tim Sweeney",
+    "Donald Harrison",
+    "Hiroshi Lockheimer"
+  ],
+  "authorsCompany": "Google / Epic Games",
+  "recipientNames": [
+    "Donald Harrison",
+    "Lawrence Koh",
+    "Tia Arzu",
+    "Hiroshi Lockheimer",
+    "Jamie Rosenberg",
+    "Canon Pence",
+    "Kent Walker"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "policy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Epic will be submitting Fortnite to Google Play shortly. Epic doesn't seek a special exception for ourselves; rather we expect to see a general change to smartphone industry practices in this regard. We have asked that Google not enforce its publicly stated expectation that products distributed through Google Play use Google's payment service for in-app purchase. We believe this form of tying of a mandatory payment service with a 30% fee is illegal in the case of a distribution platform with over 50% market share. We note that Google Play's Developer Distribution Agreement does not require developers use Google payments. It merely references a number of non-contractual documents asking developers to do so. Further, Epic operates a major PC storefront and payment service and we do not force developers using our store to use our payment ecosystem. Anyway, we hope to see a positive and industry-shaping outcome in Google's ultimate decision on our Fortnite submission. The whole world's watching now!",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-63-p1.png",
+      "caption": "Source document — Re: Fortnite on Google Play — Internal Google Email Thread · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-63, filed 2023-12-21 (page 1)",
+      "alt": "Re: Fortnite on Google Play — Internal Google Email Thread — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-887-63-p2.png",
+      "caption": "Source document — Re: Fortnite on Google Play — Internal Google Email Thread · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 887-63, filed 2023-12-21 (page 2)",
+      "alt": "Re: Fortnite on Google Play — Internal Google Email Thread — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/887/63/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 887-63, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Frame Your Fight as an Industry Problem, Not a Favor",
+  "situation": "On December 10, 2019, Epic CEO Tim Sweeney writes to Google leadership announcing Epic will submit Fortnite to Google Play — but on Epic's terms. He asks Google not to enforce its 30% payment requirement, calls that requirement 'illegal' given Google Play's market share, and closes with 'The whole world's watching now!' The stakes: the default economics of mobile app distribution.",
+  "insight": "Sweeney is doing three things at once. First, he **refuses the 'special deal' framing**: 'Epic doesn't seek a special exception for ourselves.' A private carve-out would let Google keep the system intact; a public rule change breaks it. Second, he **pre-builds the legal record**. He names the market share threshold ('over 50%'), points out that the Developer Distribution Agreement 'does not require developers use Google payments,' and calls the payment mandate 'tying' — the exact language of an antitrust claim. Third, he **removes Google's easiest defense** by noting Epic's own PC store does not force developers onto Epic's payment system.\n\nThe deeper move: Sweeney is negotiating in writing, for an audience that isn't in the room yet — regulators, courts, other developers, the press. 'The whole world's watching' isn't bravado; it's telling Google that whatever they reply becomes evidence.",
+  "application": "When you challenge a much larger partner, write the email as if it will be read aloud in a courtroom or a Senate hearing. State the principle, not the personal ask. Cite the actual contract language. Show you already live by the standard you're demanding. And create witnesses — the more public the frame, the harder it is for the bigger party to quietly say no.",
+  "pullQuote": "When you're picking a fight with a giant, don't ask for an exception — demand a rule change, and make sure everyone is watching.",
+  "leadershipTraits": [
+    "plays the long game",
+    "negotiates for the record",
+    "reframes asks as principles",
+    "willing to pick public fights"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-887-63.png"
+}

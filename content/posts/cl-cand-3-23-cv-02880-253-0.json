@@ -1,0 +1,53 @@
+{
+  "slug": "cl-cand-3-23-cv-02880-253-0",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Buy Your Way Off a Shrinking Island",
+  "documentTitle": "Declaration of Amy Hood — FTC v. Microsoft Corp. & Activision Blizzard",
+  "dateAuthored": "2023-06-26",
+  "authorsName": [
+    "Amy Hood"
+  ],
+  "authorsCompany": "Microsoft",
+  "recipientNames": [],
+  "topics": [
+    "acquisitions",
+    "strategy",
+    "competition",
+    "finance"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "To succeed financially, Xbox must make more games available on more platforms. To improve its financial performance, Xbox has been seeking to move away from being tied to exclusive hardware (Xbox consoles) towards wider distribution of its software (games). Minecraft, a multi-platform game that Microsoft acquired in 2014, is the perfect example of this strategy. Minecraft is available on every console, on PCs, and on iOS and Android phones.\n\nAs a key component of its multi-platform strategy, Xbox and Microsoft leadership have been looking for opportunities to expand into the mobile gaming and PC gaming markets. The potential acquisition of Zynga Inc., a mobile game developer, was one such opportunity that we looked at very closely just prior to the acquisition of Activision Blizzard Inc. The strategic rationale for the Acquisition was Activision's presence across multiple platforms, particularly on mobile.\n\nDuring our first session with the Board on December 8, 2021, we briefed the Board on the gaming industry's landscape, including the fact that $113 billion of the game industry's total revenues of $210 billion came from mobile gaming in 2020, and that Microsoft is smaller in terms of reported revenue than Tencent, Sony, Google (Alphabet), Nintendo, and Apple. We detailed our goal of increasing Xbox revenue from mobile transactions and generally expanding Xbox's presence on mobile and PC platforms.\n\nWe also briefed the Board on Activision Blizzard's key assets across differentiated platforms: Activision's Call of Duty console and mobile franchises; Blizzard's PC games, like Diablo and World of Warcraft; and King's mobile game Candy Crush. Activision's PC and mobile assets in Blizzard and King generate more revenue and more than double the monthly average users than Activision's console gaming assets.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-23-cv-02880-253-0-p1.png",
+      "caption": "Source document — Declaration of Amy Hood — FTC v. Microsoft Corp. & Activision Blizzard · FTC v. Microsoft Corp. & Activision Blizzard · 3:23-cv-02880 (CAND), Doc. 253, filed 2023-06-28 (page 1)",
+      "alt": "Declaration of Amy Hood — FTC v. Microsoft Corp. & Activision Blizzard — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-23-cv-02880-253-0-p2.png",
+      "caption": "Source document — Declaration of Amy Hood — FTC v. Microsoft Corp. & Activision Blizzard · FTC v. Microsoft Corp. & Activision Blizzard · 3:23-cv-02880 (CAND), Doc. 253, filed 2023-06-28 (page 2)",
+      "alt": "Declaration of Amy Hood — FTC v. Microsoft Corp. & Activision Blizzard — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/67494594/253/federal-trade-commission-v-microsoft-corporation/",
+  "sourceCase": "FTC v. Microsoft Corp. & Activision Blizzard",
+  "sourceCitation": "3:23-cv-02880 (CAND), Doc. 253, filed 2023-06-28",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Buy Your Way Off a Shrinking Island",
+  "situation": "Amy Hood, Microsoft's CFO, filed this declaration in June 2023 defending the Activision acquisition against the FTC. She explains what Microsoft's board was told on December 8, 2021, about why buying Activision made sense. The stakes: whether a court blocks the largest gaming deal in history.",
+  "insight": "Hood reframes the deal in a way that undercuts the FTC's console-focused theory. Xbox's real problem isn't console competition — it's that **consoles are the small part of gaming**. She tells the board mobile alone was $113B of a $210B market in 2020, and that Microsoft is smaller than Tencent, Sony, Google, Nintendo, and Apple in gaming revenue. Xbox needs to 'move away from being tied to exclusive hardware.'\n\nActivision isn't being bought for Call of Duty on Xbox. It's being bought because **King (Candy Crush) and Blizzard generate more revenue and more than double the users of Activision's console business**. Minecraft is cited as the proof of concept: own the software, put it everywhere. This is a distribution pivot dressed as a content acquisition — and looking at Zynga first shows mobile, not consoles, was the target all along.",
+  "application": "When your core channel is shrinking, stop optimizing it and ask where the users actually are. Then look at acquisitions by **the platforms you're weak on**, not the products you already sell. If you have to justify the deal to a board, lead with the market-size gap and your relative position, the way Hood led with the $113B mobile number and Microsoft's rank against Tencent and Apple. That framing turns a defensive move into an obvious one.",
+  "pullQuote": "When your platform is losing relevance, don't defend it — buy the assets that live on the platforms that are winning.",
+  "leadershipTraits": [
+    "reframes the real question",
+    "leads with market-size math",
+    "willing to cannibalize the legacy business",
+    "uses prior deals as proof points"
+  ],
+  "cardImage": "/cards/cl-cand-3-23-cv-02880-253-0.png"
+}

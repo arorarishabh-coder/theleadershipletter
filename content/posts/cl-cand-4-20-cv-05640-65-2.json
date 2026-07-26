@@ -1,0 +1,56 @@
+{
+  "slug": "cl-cand-4-20-cv-05640-65-2",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Reframe the Fight: You're Not a Toll Booth, You're a Bundle",
+  "documentTitle": "Apple Legal Response to Epic Games — App Store Dispute",
+  "dateAuthored": "2020-09-04",
+  "authorsName": [
+    "Apple Legal Department"
+  ],
+  "authorsCompany": "Apple Inc.",
+  "recipientNames": [
+    "Mr. Pence",
+    "Epic Games, Inc."
+  ],
+  "topics": [
+    "competition",
+    "app-stores",
+    "policy",
+    "strategy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "The App Store is not simply a marketplace -- it is part of a larger bundle of tools, technologies and services that Apple makes available to developers to develop and create great applications for iPhone, iPad and other Apple products. We know Epic knows this. Epic has been a major beneficiary of this investment and support.\n\nBecause of the App Store, Epic has been able to get Fortnite and other apps into the hands of millions instantly and at no cost, as Apple charges nothing upfront to distribute apps that are free to download. This exposure has earned Epic hundreds of millions of dollars from sales of in-app content, and brought with it lucrative brand partnerships and paid product placement.\n\nEpic requests the right to offer a 'competing Epic Games Store app' through the App Store that would seemingly allow iOS device users to install apps from Epic directly. And Epic wants to offer 'competing payment processing options' in Fortnite and other Epic apps instead of using Apple's in-app purchase (IAP) system. As you know, Apple has never allowed this. Not when we launched the App Store in 2008. Not now. We understand this might be in Epic's financial interests, but Apple strongly believes these rules are vital to the health of the Apple platform and carry enormous benefits for both consumers and developers. The guiding principle of the App Store is to provide a safe, secure and reliable experience for users and a great opportunity for all developers to be successful but, to be clear, when it comes to striking the balance, Apple errs on the side of the consumer.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-20-cv-05640-65-2-p1.png",
+      "caption": "Source document — Apple Legal Response to Epic Games — App Store Dispute · Epic Games, Inc. v. Apple Inc. · 4:20-cv-05640 (CAND), Doc. 65-2, filed 2020-09-04 (page 1)",
+      "alt": "Apple Legal Response to Epic Games — App Store Dispute — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-4-20-cv-05640-65-2-p2.png",
+      "caption": "Source document — Apple Legal Response to Epic Games — App Store Dispute · Epic Games, Inc. v. Apple Inc. · 4:20-cv-05640 (CAND), Doc. 65-2, filed 2020-09-04 (page 2)",
+      "alt": "Apple Legal Response to Epic Games — App Store Dispute — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/17442392/65/2/epic-games-inc-v-apple-inc/",
+  "sourceCase": "Epic Games, Inc. v. Apple Inc.",
+  "sourceCitation": "4:20-cv-05640 (CAND), Doc. 65-2, filed 2020-09-04",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Reframe the Fight: You're Not a Toll Booth, You're a Bundle",
+  "situation": "In September 2020, Apple's legal team filed this response after Epic Games sued to break Apple's control over iOS app distribution and payments. Epic wanted to run its own store inside the App Store and use its own payment system in Fortnite. Billions in commission revenue — and the closed model of iOS — were on the line.",
+  "insight": "Apple's opening move is a **reframing play**. Epic's story is 'Apple is a gatekeeper taxing our sales.' Apple's counter, in the first sentence, is that the App Store 'is not simply a marketplace' but 'part of a larger bundle of tools, technologies and services.' If it's a marketplace, 30% looks like a toll. If it's a bundle, 30% looks like the price of a whole development platform.\n\nNotice the second move: Apple reminds the court that Epic got Fortnite 'into the hands of millions instantly and at no cost' and earned 'hundreds of millions of dollars' through that channel. This positions Epic not as a victim but as a beneficiary asking to change the deal after winning. Then Apple locks in consistency — these rules existed 'when we launched the App Store in 2008' — and picks a tiebreaker: 'Apple errs on the side of the consumer.' Every sentence is doing defensive work.",
+  "application": "When a customer or partner attacks one line item in your pricing, don't argue the number. Redraw the boundary of what they're buying. List everything bundled in — distribution, tooling, audience, trust, support — and show the value they've already extracted. Then anchor to a principle bigger than the dispute (safety, quality, users) so the fight isn't about your margin, it's about your mission.",
+  "pullQuote": "When someone attacks your pricing, don't defend the price — redefine what they're actually paying for.",
+  "leadershipTraits": [
+    "reframes the argument",
+    "anchors to consistency",
+    "picks a clear tiebreaker",
+    "makes the counterparty's wins part of the record"
+  ],
+  "cardImage": "/cards/cl-cand-4-20-cv-05640-65-2.png"
+}

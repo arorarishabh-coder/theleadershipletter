@@ -1,0 +1,64 @@
+{
+  "slug": "cl-cand-3-21-md-02981-886-95",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Pre-Sell The Policy Before You Announce It",
+  "documentTitle": "Re: [For your review] Policy Update Open Questions",
+  "emailSubject": "Re: [For your review] Policy Update Open Questions",
+  "dateAuthored": "2017-09-18",
+  "authorsName": [
+    "Kirsten Rasanen",
+    "Jamie Rosenberg",
+    "Sameer Samat"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Jamie Rosenberg",
+    "Sameer Samat",
+    "Tia Arzu",
+    "Kevin Wang",
+    "Claire Hart",
+    "David Faye",
+    "Purnima Kochikar"
+  ],
+  "topics": [
+    "app-stores",
+    "strategy",
+    "partnerships",
+    "policy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "On the timing piece specifically, BD is fine to start talking to partners now and announce on 10/19, but we can't reasonably expect any of our largest partners to execute an agreement in 30 days. They will need to socialize internally, want to negotiate terms, etc.\n\nJamie Rosenberg (Sep 17): \"Have you guys thought about flipping the model, where we do a private 'announcement' now to the 30 or so devs we are worried about, and tell them that the policy will go into effect and be announced publicly in 6-9 months? We would pick a definitive date and at the same time present them with whatever incentives we need for them to be compliant by the time of policy launch. This delays the announced policy update... but seems to be the only way to truly ensure partners are on board (and ideally even integrated) before the policy rollout happens.\"\n\nFor LRAP++/ADAP++, Rosenberg noted discomfort with the spend threshold concept, proposing instead a 'Platform Development Partner' designation — inviting select partners to help refine Google's subscriptions platform in exchange for enhanced revenue share terms. Netflix, Spotify, and Deezer were flagged as key targets, with Netflix recommended for a direct Jamie-to-Bill executive conversation and a proposed 10% revenue share under LRAP++. Regarding Spotify: \"There is likelihood that no matter how we approach this, they may still complain. Better to try to partner first rather than blind-side them.\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-95-p1.png",
+      "caption": "Source document — Re: [For your review] Policy Update Open Questions · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-95, filed 2023-12-21 (page 1)",
+      "alt": "Re: [For your review] Policy Update Open Questions — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-95-p2.png",
+      "caption": "Source document — Re: [For your review] Policy Update Open Questions · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-95, filed 2023-12-21 (page 2)",
+      "alt": "Re: [For your review] Policy Update Open Questions — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/886/95/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 886-95, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "Pre-Sell The Policy Before You Announce It",
+  "situation": "In September 2017, Google executives Kirsten Rasanen, Jamie Rosenberg, and Sameer Samat were debating how to roll out a Play Store policy change scheduled to be announced on October 19. The core problem: their largest partners couldn't realistically sign new agreements in 30 days, and some — like Spotify, Netflix, and Deezer — might publicly resist. The stakes were the smooth adoption of a policy affecting Google's most valuable app developers.",
+  "insight": "Rosenberg proposes **flipping the sequence**. Instead of announce-then-negotiate, he suggests a private notice to \"the 30 or so devs we are worried about\" with a 6-9 month runway and pre-packaged incentives, so partners are already \"on board (and ideally even integrated)\" by the time of public launch. This is classic **stakeholder management under leverage asymmetry**: when you hold the rulebook but they hold the reach, a surprise announcement invites a coalition against you. A quiet pre-commitment converts potential opponents into early participants.\n\nThe Spotify line — \"Better to try to partner first rather than blind-side them\" — shows the deeper read. Rosenberg isn't sure the partnership will prevent complaints. He's making sure that if Spotify does complain, Google can say it offered a seat at the table first. The 'Platform Development Partner' designation reframes a commercial concession as a collaboration, which is easier to defend than a spend-threshold discount.",
+  "application": "Before you roll out a change that hurts your biggest customers, list the 10-30 accounts most likely to revolt. Talk to them privately weeks or months ahead. Bring the incentive, not just the news. Give them time to save face internally. You are not asking permission — you are removing their reason to organize against you publicly.",
+  "pullQuote": "When a policy will anger your biggest partners, negotiate them into it privately before the world hears about it.",
+  "leadershipTraits": [
+    "sequences announcements carefully",
+    "anticipates partner reactions",
+    "reframes concessions as collaboration",
+    "prefers private negotiation to public confrontation"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-886-95.png"
+}

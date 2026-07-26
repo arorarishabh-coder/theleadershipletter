@@ -1,0 +1,58 @@
+{
+  "slug": "cl-cand-3-23-cv-02880-161-7",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Phil Spencer and Jeff Fisher Exchange After Microsoft-NVIDIA GeForce NOW Deal",
+  "documentTitle": "Microsoft and NVIDIA GeForce NOW Cloud Gaming Agreement Email Thread",
+  "emailSubject": "RE: MSFT and GeForce NOW",
+  "dateAuthored": "2023-02-22",
+  "authorsName": [
+    "Phil Spencer",
+    "Jeff D Fisher"
+  ],
+  "authorsCompany": "Microsoft",
+  "recipientNames": [
+    "Jeff D Fisher",
+    "Phil Spencer",
+    "Sarah Bond",
+    "Lori Wright",
+    "Phil Eisler"
+  ],
+  "topics": [
+    "partnerships",
+    "competition",
+    "strategy",
+    "product"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Thanks, good outcome. I think there will be technical work to ensure a great user experience but I'm encouraged to see us work together to grow the market for cloud gaming. I love the innovation and investments nvidia continues to make here and I'm looking forward to more players getting to experience. I think there is more we could be doing so we should keep conversations going.\n\nAlso, thank you Phil for your voice in the EC meeting yesterday. We really appreciated your professionalism and insight in the hearing.\n\n— Phil Spencer\n\n---\n\nHi Phil, I want to thank you and your team for working 24/7 to pull our cloud gaming agreement together. The community reaction has been awesome. We are looking forward to our joint work to offer Xbox games on GFN in the near future.\n\n— Jeff D Fisher",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-23-cv-02880-161-7-p1.png",
+      "caption": "Source document — Microsoft and NVIDIA GeForce NOW Cloud Gaming Agreement Email Thread · FTC v. Microsoft Corp. & Activision Blizzard · 3:23-cv-02880 (CAND), Doc. 161-7, filed 2023-06-21 (page 1)",
+      "alt": "Microsoft and NVIDIA GeForce NOW Cloud Gaming Agreement Email Thread — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-23-cv-02880-161-7-p2.png",
+      "caption": "Source document — Microsoft and NVIDIA GeForce NOW Cloud Gaming Agreement Email Thread · FTC v. Microsoft Corp. & Activision Blizzard · 3:23-cv-02880 (CAND), Doc. 161-7, filed 2023-06-21 (page 2)",
+      "alt": "Microsoft and NVIDIA GeForce NOW Cloud Gaming Agreement Email Thread — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/67494594/161/7/federal-trade-commission-v-microsoft-corporation/",
+  "sourceCase": "FTC v. Microsoft Corp. & Activision Blizzard",
+  "sourceCitation": "3:23-cv-02880 (CAND), Doc. 161-7, filed 2023-06-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 5,
+  "postKind": "artifact",
+  "artifactNote": "On February 22, 2023, Xbox chief Phil Spencer and NVIDIA Senior Vice President Jeff Fisher exchanged brief congratulatory notes following the announcement of a ten-year agreement to bring Xbox games to NVIDIA's GeForce NOW cloud-gaming service. The deal was widely seen as a strategic move by Microsoft to demonstrate to regulators — including the European Commission, which Fisher explicitly references — that its pending $68.7 billion acquisition of Activision Blizzard would expand rather than restrict access to games. The email thread became public when it was filed as an exhibit in FTC v. Microsoft Corp. & Activision Blizzard, offering a rare, unguarded glimpse of how two major platform companies coordinated their public and regulatory messaging around the same agreement.",
+  "lessonTitle": "Phil Spencer and Jeff Fisher Exchange After Microsoft-NVIDIA GeForce NOW Deal",
+  "pullQuote": "Captured days after Microsoft signed a ten-year cloud-gaming agreement with NVIDIA, this brief exchange between the heads of Xbox and NVIDIA's GeForce unit surfaced inside the FTC's lawsuit to block Microsoft's Activision Blizzard acquisition — making private deal-making correspondence part of the public antitrust record.",
+  "leadershipTraits": [
+    "Microsoft-Activision merger",
+    "FTC antitrust litigation",
+    "Cloud gaming history"
+  ],
+  "cardImage": "/cards/cl-cand-3-23-cv-02880-161-7.png"
+}

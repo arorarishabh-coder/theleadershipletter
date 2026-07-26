@@ -1,0 +1,64 @@
+{
+  "slug": "cl-cand-3-21-md-02981-886-10",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Stop the Bleeding First, Then Sign the Contract",
+  "documentTitle": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 154",
+  "emailSubject": "Fwd: [Privileged & Confidential] Riot - Update",
+  "dateAuthored": "2020-02-13",
+  "authorsName": [
+    "Lawrence Koh"
+  ],
+  "authorsCompany": "Google",
+  "recipientNames": [
+    "Brian Brazinski",
+    "Christian Cramer",
+    "Cyrous Jane",
+    "George Yousling",
+    "Josh OConnor",
+    "Karan Gambhir",
+    "Mike Marchak",
+    "Purnima Kochikar",
+    "Tamar Fruchtman"
+  ],
+  "topics": [
+    "app-stores",
+    "competition",
+    "strategy",
+    "partnerships"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Riot was on the verge of becoming the next major game company to follow Epic in moving forward with an off-Play Android distribution strategy. To convince Riot and their BoD to change their strategy, we tried putting our best foot forward with the following deal (this was pre-GVP/Project Hug being approved by BC) below in advance of the Riot board meeting that happened in early April last year.\n\n- merchandising and consultation support\n- comarketing = $15m (split 50/50 in 2019 and 2020)\n- YT influencer campaign $1m\n- esports sponsorship $1m\n\nAt this time, we didn't ask for contractual commitments to sim-ship and requiring feature parity since the focus was getting Riot to shift their focus away from launching their off-Play distribution platform. Once Riot agreed to put aside their off-Play distribution platform and launch on Play in April, we decided to move to the next phase of leveling up our partnership last summer with Riot by asking them to commit to the GVP terms of simship/feature parity for all of their new games. In order to accomplish the GVP objectives, the UAC and GCP credits were the incentives we used to get Riot to agree to our GVP terms.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-10-p1.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 154 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-10, filed 2023-12-21 (page 1)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 154 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-21-md-02981-886-10-p2.png",
+      "caption": "Source document — In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 154 · In re Google Play Store Antitrust Litigation (Epic v. Google) · 3:21-md-02981 (CAND), Doc. 886-10, filed 2023-12-21 (page 2)",
+      "alt": "In re Google Play Store Antitrust Litigation (Epic v. Google) — Exhibit 154 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/59195373/886/10/in-re-google-play-store-antitrust-litigation/",
+  "sourceCase": "In re Google Play Store Antitrust Litigation (Epic v. Google)",
+  "sourceCitation": "3:21-md-02981 (CAND), Doc. 886-10, filed 2023-12-21",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Stop the Bleeding First, Then Sign the Contract",
+  "situation": "In February 2020, Google's Lawrence Koh recaps how Google kept Riot Games from launching its own Android distribution outside the Play Store. Just before Riot's April 2019 board meeting, Google offered a package — $15M co-marketing, $1M YouTube influencer campaign, $1M esports sponsorship, plus merchandising and consultation — to get Riot to stay on Play. The stakes: another major publisher following Epic off Play would crack Google's app-store moat.",
+  "insight": "Koh describes a **two-stage deal**. Stage one was purely defensive: stop Riot from launching an off-Play store. Notably, Google \"didn't ask for contractual commitments to sim-ship and requiring feature parity\" — they deliberately left the tough asks off the table because \"the focus was getting Riot to shift their focus away from launching their off-Play distribution platform.\" Stage two came \"last summer,\" after Riot was safely on Play, when Google used UAC and GCP credits to extract the GVP terms (simship and feature parity) they actually wanted.\n\nThe hidden logic: **sequencing beats bundling** when a partner has one foot out the door. Loading every demand into the first offer risks blowing up the whole conversation. Solve the urgent threat first, then use the now-active relationship — and new incentives — to get the structural commitments.",
+  "application": "When a key customer, hire, or partner is about to defect, separate the emergency from the wishlist. Figure out the single decision you need reversed this week, and price that alone. Save your contractual asks — exclusivity, term length, SLAs — for a second conversation once the immediate risk is gone. Bundling everything in one negotiation often loses both.",
+  "pullQuote": "When a partner is about to walk, buy the pause first and negotiate the terms later.",
+  "leadershipTraits": [
+    "sequences negotiations deliberately",
+    "reads competitive threats early",
+    "willing to pay to buy time",
+    "keeps leverage in reserve"
+  ],
+  "cardImage": "/cards/cl-cand-3-21-md-02981-886-10.png"
+}
