@@ -1,0 +1,65 @@
+{
+  "slug": "cl-nysd-1-24-cv-03973-1252-18",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Two Teams Both Have Leverage, You Need One Voice",
+  "documentTitle": "Jonas Brothers Venue Deal Request — Internal Email Thread",
+  "emailSubject": "Re: Jonas Brothers Venue Deal Request",
+  "dateAuthored": "2019-04-18",
+  "authorsName": [
+    "Michael Rapino",
+    "Mark Campana",
+    "Irving Azoff",
+    "Peter Luukko",
+    "Eric Gardner",
+    "Brad Wavra"
+  ],
+  "authorsCompany": "Live Nation / Ticketmaster",
+  "recipientNames": [
+    "Mark Campana",
+    "Bob Roux",
+    "Michael Rapino",
+    "Peter Luukko",
+    "Jeff Nickler",
+    "Kevin Grove",
+    "Irving Azoff"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "comms"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "From: Mark Campana, April 18, 2019: \"I caught wind of this last Friday and Bob went to the touring team yesterday, told them to work with me going forward on what we are doing with the individual buildings. Brad as it turns out not only was asking for more money which he intended on sharing with the artist, he also was attacking the AXS venues to dump AXS and drop in TM. Thus the call you got. I have been coordinating through Omar where we need the touring guys to 'Lean' into a venue in support of what I am pressing for in rebates and deal points. I know that he also sent Brad specific email telling him to stop his Lone Ranger approach to beating up venues.\"\n\nFrom: Michael Rapino, April 18, 2019: \"I don't get this Bob. How can we drive a central arena per head charge and then let Touring go rogue asking for $3?\"\n\nFrom: Irving Azoff, April 18, 2019: \"Buildings are confused on how to respond. I told them I would get guidance from you guys but they are just going to turn around and call their locals for reduction in their Live Nation rebates. Shouldn't this be handled by you guys just like you do with Eagles?\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-nysd-1-24-cv-03973-1252-18-p1.png",
+      "caption": "Source document — Jonas Brothers Venue Deal Request — Internal Email Thread · United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C. · 1:24-cv-03973 (NYSD), Doc. 1252-18, filed 2026-03-18 (page 1)",
+      "alt": "Jonas Brothers Venue Deal Request — Internal Email Thread — page 1"
+    },
+    {
+      "url": "/screenshots/cl-nysd-1-24-cv-03973-1252-18-p2.png",
+      "caption": "Source document — Jonas Brothers Venue Deal Request — Internal Email Thread · United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C. · 1:24-cv-03973 (NYSD), Doc. 1252-18, filed 2026-03-18 (page 2)",
+      "alt": "Jonas Brothers Venue Deal Request — Internal Email Thread — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/68557723/1252/18/united-states-of-america-v-live-nation-entertainment-inc/",
+  "sourceCase": "United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C.",
+  "sourceCitation": "1:24-cv-03973 (NYSD), Doc. 1252-18, filed 2026-03-18",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 7,
+  "postKind": "lesson",
+  "lessonTitle": "When Two Teams Both Have Leverage, You Need One Voice",
+  "situation": "On April 18, 2019, executives at Live Nation — including CEO Michael Rapino, promoter Mark Campana, and manager Irving Azoff — exchanged emails about the Jonas Brothers tour. The core problem: a touring-side executive named Brad was independently pressuring venues for extra money and, separately, pushing them to drop a rival ticketing system (AXS) in favor of Ticketmaster. Campana had to escalate to stop what Rapino called Brad's team going 'rogue.' Venues, caught between two Live Nation factions, were calling their local contacts and threatening to cut Live Nation's rebates to offset the pressure.",
+  "insight": "Rapino's one-line question — 'How can we drive a central arena per head charge and then let Touring go rogue asking for $3?' — is the whole lesson. He had set a unified pricing structure. A separate team was undercutting it by negotiating on top of it. The strategic damage is compounding: venues don't know which Live Nation voice to trust, so they protect themselves by reducing the rebates they owe — exactly the opposite of what either team wanted. Azoff's note that buildings 'are just going to turn around and call their locals' shows how quickly counterparties exploit internal confusion. When you have pricing power, internal coordination is what protects it. Fragmentation is the moat collapsing from the inside.",
+  "application": "If you have more than one team touching the same customer or partner, write down who owns each ask before the outreach starts. One owner per relationship, one message per negotiation window. When a second team needs something from the same counterparty, route it through the first — not around them. The cost of that coordination step is always lower than the cost of a confused counterparty going on defense.",
+  "pullQuote": "If your sales team and your operations team are both hitting the same customer with different asks, you don't have a strategy — you have a turf war.",
+  "leadershipTraits": [
+    "moves to contain damage fast",
+    "ties tactical decisions back to central pricing structure",
+    "reads when internal chaos is costing external leverage"
+  ],
+  "cardImage": "/cards/cl-nysd-1-24-cv-03973-1252-18.png"
+}

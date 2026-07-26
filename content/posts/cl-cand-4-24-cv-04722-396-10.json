@@ -1,0 +1,61 @@
+{
+  "slug": "cl-cand-4-24-cv-04722-396-10",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Design Board Math Before You Need It",
+  "documentTitle": "Musk to Sutskever Re: Current State — OpenAI Board Governance",
+  "emailSubject": "Re: Current State",
+  "dateAuthored": "2017-09-13",
+  "authorsName": [
+    "Elon Musk",
+    "Ilya Sutskever"
+  ],
+  "authorsCompany": "OpenAI",
+  "recipientNames": [
+    "Ilya Sutskever",
+    "Greg Brockman"
+  ],
+  "topics": [
+    "board-governance",
+    "founding-moments",
+    "strategy",
+    "finance"
+  ],
+  "leaderSlugs": [
+    "elon-musk",
+    "greg-brockman"
+  ],
+  "excerptForBlog": "Sounds good. The three common stock seats (you, Greg and Sam) should be elected by common shareholders. They will de facto be yours, but not in the unlikely event that you lose the faith of a huge percentage of common stockholders over time or step away from the company by choice. I think that the Preferred A investment round (supermajority me) should have the right to appoint four (not three) seats. I would not expect to appoint them immediately, but, like I said I would unequivocally have initial control of the company, but this will change quickly. The rough target would be to get to a 12 person board (probably more like 16 if this board really ends up deciding the fate of the world) where each board member has a deep understanding of technology, at least a basic understanding of AI and strong & sensible morals. Apart from the Series A four and the Common three, there would likely be a board member with each new lead investor/ally. However the specific individual new board members can only be added if all but one existing board members agrees. Same for removing board members. At the sixteen person board level, we would have 7/16 votes and I'd have a 25% influence, which is my min comfort level. That sounds about right to me. If everyone else we asked to join our board is truly against us, we should probably lose.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-396-10-p1.png",
+      "caption": "Source document — Musk to Sutskever Re: Current State — OpenAI Board Governance · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 396-10, filed 2026-01-30 (page 1)",
+      "alt": "Musk to Sutskever Re: Current State — OpenAI Board Governance — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-396-10-p2.png",
+      "caption": "Source document — Musk to Sutskever Re: Current State — OpenAI Board Governance · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 396-10, filed 2026-01-30 (page 2)",
+      "alt": "Musk to Sutskever Re: Current State — OpenAI Board Governance — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/69013420/396/10/musk-v-altman/",
+  "sourceCase": "Musk v. Altman (OpenAI)",
+  "sourceCitation": "4:24-cv-04722 (CAND), Doc. 396-10, filed 2026-01-30",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 9,
+  "postKind": "lesson",
+  "lessonTitle": "Design Board Math Before You Need It",
+  "situation": "In September 2017, Elon Musk writes to Ilya Sutskever laying out how OpenAI's board should be structured. He proposes three common stock seats (Sutskever, Brockman, Altman), four seats controlled by his Preferred A round, and a path to a 12–16 person board as new investors join. He is explicitly negotiating how power will be shared as the organization grows.",
+  "insight": "Musk is doing the **cap-table-as-governance** math out loud. He states his floor plainly: at a 16-person board he would hold 7 of 16 votes — \"25% influence, which is my min comfort level.\" Everything else — who elects whom, the unanimous-minus-one rule for adding or removing directors, the assumption each new lead investor gets a seat — is engineered backward from that number.\n\nThe hidden move is time-shaping control. He concedes the common seats \"will de facto be yours,\" and expects his own influence to \"change quickly\" as more investors arrive. So he isn't grabbing maximum power today; he's setting the *decay curve* of his power and putting a floor under it. The closing line — \"If everyone else we asked to join our board is truly against us, we should probably lose\" — shows he's willing to be outvoted, but only by a coalition he helped choose.",
+  "application": "Before you take your next round, write down the board you expect in three rounds' time. Count seats, not sentiment. Decide your minimum tolerable influence at each stage, and negotiate the appointment and removal rules now — while you still have leverage — so future dilution doesn't quietly erase your vote.",
+  "pullQuote": "Control isn't a feeling — it's a seat count, and smart founders draw the arithmetic before the fight, not during it.",
+  "leadershipTraits": [
+    "thinks in numbers, not vibes",
+    "plans dilution before it happens",
+    "sets explicit floors on control",
+    "willing to lose a fair vote"
+  ],
+  "cardImage": "/cards/cl-cand-4-24-cv-04722-396-10.png"
+}

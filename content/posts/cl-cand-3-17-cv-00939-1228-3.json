@@ -1,0 +1,59 @@
+{
+  "slug": "cl-cand-3-17-cv-00939-1228-3",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Levandowski and Uber Coordinate Messaging Days Before His Firing",
+  "documentTitle": "Waymo LLC v. Uber Technologies — Exhibit 1: ATG/Tempe All-Hands Questions Email Thread",
+  "emailSubject": "Re: ATG/Tempe all-hands questions",
+  "dateAuthored": "2017-03-28",
+  "authorsName": [
+    "Anthony Levandowski",
+    "Suzy Sammons"
+  ],
+  "authorsCompany": "Uber",
+  "recipientNames": [
+    "Anthony Levandowski",
+    "Austin Geidt",
+    "Suzy Sammons",
+    "Travis Kalanick",
+    "Angela Padilla",
+    "Chelsea Kohler",
+    "Rachel Keitzer"
+  ],
+  "topics": [
+    "crisis-management",
+    "comms",
+    "strategy"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Suzy Sammons to Anthony Levandowski, Austin Geidt, and Travis Kalanick, March 27, 2017:\n\n\"There are a handful of questions on ATG/Tempe for tomorrow's all hands. For any Waymo question, Angela will answer. We clarified last week that we can't provide any more detail on the lawsuit.\"\n\nThe prepared answer for the all-hands included: \"On Friday, one of our self-driving vehicles was involved in an incident in Tempe. We paused our development operations and passenger pilots in Tempe, SF and Pittsburgh this weekend while we worked to understand what had happened. We were able to quickly confirm that our vehicle was in self-driving mode, with no backseat passengers, and that no one reported serious injuries. Police in Tempe confirmed the self-driving SUV was obeying the law and the driver in the other car who didn't yield at an intersection was cited for a moving violation. On the messaging, our car was in self-driving mode, and we believe that's still an accurate description of the capabilities we are testing.\"\n\nAnthony Levandowski replied: \"I am prepared to answer the Tempe collision question, and will let Angela answer any Waymo question that might pop up.\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-17-cv-00939-1228-3-p1.png",
+      "caption": "Source document — Waymo LLC v. Uber Technologies — Exhibit 1: ATG/Tempe All-Hands Questions Email Thread · Waymo LLC v. Uber Technologies, Inc. · 3:17-cv-00939 (CAND), Doc. 1228-3, filed 2017-08-16 (page 1)",
+      "alt": "Waymo LLC v. Uber Technologies — Exhibit 1: ATG/Tempe All-Hands Questions Email Thread — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-17-cv-00939-1228-3-p2.png",
+      "caption": "Source document — Waymo LLC v. Uber Technologies — Exhibit 1: ATG/Tempe All-Hands Questions Email Thread · Waymo LLC v. Uber Technologies, Inc. · 3:17-cv-00939 (CAND), Doc. 1228-3, filed 2017-08-16 (page 2)",
+      "alt": "Waymo LLC v. Uber Technologies — Exhibit 1: ATG/Tempe All-Hands Questions Email Thread — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/4609586/1228/3/waymo-llc-v-uber-technologies-inc/",
+  "sourceCase": "Waymo LLC v. Uber Technologies, Inc.",
+  "sourceCitation": "3:17-cv-00939 (CAND), Doc. 1228-3, filed 2017-08-16",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 4,
+  "postKind": "artifact",
+  "artifactNote": "Dated March 27–28, 2017, this thread was entered into evidence in Waymo LLC v. Uber Technologies (N.D. Cal. 3:17-cv-00939), the lawsuit Waymo had filed the previous month alleging that Levandowski stole trade secrets before leaving Google to found Otto, which Uber acquired in 2016. The exchange shows Levandowski and Uber communications staff scripting separate lanes of response — one for the Tempe crash, one for Waymo litigation questions — at a moment when federal litigation and a concurrent NHTSA inquiry were already encircling the program. Levandowski was fired from Uber roughly six weeks later, in May 2017, and the case ultimately settled in February 2018 with Uber paying Waymo approximately $245 million in equity.",
+  "lessonTitle": "Levandowski and Uber Coordinate Messaging Days Before His Firing",
+  "pullQuote": "This internal email captures Anthony Levandowski, at the center of the most significant trade-secret lawsuit in autonomous-vehicle history, calmly dividing talking points with Uber colleagues just weeks before he was pushed out of the company.",
+  "leadershipTraits": [
+    "Waymo v. Uber",
+    "autonomous vehicle history",
+    "Levandowski legal saga"
+  ],
+  "cardImage": "/cards/cl-cand-3-17-cv-00939-1228-3.png"
+}

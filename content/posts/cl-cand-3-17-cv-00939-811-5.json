@@ -1,0 +1,53 @@
+{
+  "slug": "cl-cand-3-17-cv-00939-811-5",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Partner Stops Taking Meetings, Believe the Silence",
+  "documentTitle": "Waymo LLC v. Uber Technologies — Exhibit E",
+  "emailSubject": "Re: Fwd: Google Intel",
+  "dateAuthored": "2015-03-07",
+  "authorsName": [
+    "Travis Kalanick",
+    "David Drummond"
+  ],
+  "authorsCompany": "Uber / Google",
+  "recipientNames": [
+    "David Drummond",
+    "Travis Kalanick"
+  ],
+  "topics": [
+    "strategy",
+    "partnerships",
+    "competition",
+    "crisis-management"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "Travis Kalanick to David Drummond, March 7, 2015:\n\n\"Is the below true? We get stuff like this more than I would like. A meeting with Larry could calm this down if it's not true but he has been avoiding any meeting with me since last fall. Without any dialogue we get pushed into the assumption that Google is competing in the short term and has probably been planning to do so for quite a bit longer than has been let on. I hope I'm wrong here, just need to do a meeting with Larry ASAP to get clarity and a mutual understanding of how to do a proper partnership here.\"\n\nDavid Drummond replied later that evening:\n\n\"I'm sorry that these things keep coming up in this way. I will speak to Larry again to reiterate the importance of a meeting with you very soon. I'm returning from London tomorrow and will report back with next steps. I continue to believe that the value of a partnership now far outweighs concerns about an uncertain future.\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-17-cv-00939-811-5-p1.png",
+      "caption": "Source document — Waymo LLC v. Uber Technologies — Exhibit E · Waymo LLC v. Uber Technologies, Inc. · 3:17-cv-00939 (CAND), Doc. 811-5, filed 2017-07-06",
+      "alt": "Waymo LLC v. Uber Technologies — Exhibit E — page 1"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/4609586/811/5/waymo-llc-v-uber-technologies-inc/",
+  "sourceCase": "Waymo LLC v. Uber Technologies, Inc.",
+  "sourceCitation": "3:17-cv-00939 (CAND), Doc. 811-5, filed 2017-07-06",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 8,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Partner Stops Taking Meetings, Believe the Silence",
+  "situation": "On March 7, 2015, Uber CEO Travis Kalanick emailed Google's David Drummond — then also an Uber board member — asking whether a rumor about Google entering ride-hailing was true. Kalanick notes Larry Page has been 'avoiding any meeting with me since last fall.' Drummond replies that he'll push Page again and still believes 'the value of a partnership now far outweighs concerns about an uncertain future.'",
+  "insight": "Kalanick is reading a **behavioral signal**, not a rumor. His own words show the logic: 'Without any dialogue we get pushed into the assumption that Google is competing.' A partner who won't meet is telling you something. The absence of a meeting is the data.\n\nNotice the asymmetry. Kalanick wants a face-to-face to force clarity. Drummond keeps selling the partnership narrative without delivering the meeting. When one side keeps talking about the relationship's value while the other side can't get on the calendar, the relationship has already changed — even if no one has said so out loud. Kalanick sees it and is trying to name it before it hardens.",
+  "application": "Track access, not assurances. If a key partner, investor, or customer stops taking meetings, treat that as the real update — not the warm emails from their deputy. Write down the last time you had direct contact with the decision-maker. If that gap is growing, start planning for a world where the partnership ends, while you still have time to build alternatives.",
+  "pullQuote": "A calendar tells you more about a partnership than any press release ever will.",
+  "leadershipTraits": [
+    "reads behavioral signals",
+    "names uncomfortable patterns directly",
+    "seeks clarity over comfort",
+    "willing to be wrong on the record"
+  ],
+  "cardImage": "/cards/cl-cand-3-17-cv-00939-811-5.png"
+}

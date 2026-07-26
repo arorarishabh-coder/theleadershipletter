@@ -1,0 +1,49 @@
+{
+  "slug": "cl-cand-4-24-cv-04722-379-70",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "Ilya Sutskever Writes Elon Musk a New Year's Note from Inside OpenAI",
+  "documentTitle": "Ilya Sutskever to Elon Musk — New Year's Note",
+  "emailSubject": "Note",
+  "dateAuthored": "2018-01-01",
+  "authorsName": [
+    "Ilya Sutskever"
+  ],
+  "authorsCompany": "OpenAI",
+  "recipientNames": [
+    "Elon Musk"
+  ],
+  "topics": [
+    "founding-moments",
+    "strategy",
+    "leadership-transitions"
+  ],
+  "leaderSlugs": [
+    "elon-musk"
+  ],
+  "excerptForBlog": "Hi Elon, We've been working together for almost exactly two years, so it felt appropriate to send this note. I enjoy working together. You quickly pushed me out of my academic comfort zone. With time, I grew to appreciate the vast depth of your strategic insight -- I can think of many examples, the biggest one is the decision to build the custom hardware. I've made my share of non-negligible mistakes in 2017, but their lessons will help us overcome the harder challenges of the future. We're trying to accomplish a difficult task, but with effort, we may be able to do it. It helps that we have the most overwhelmingly competent person in the world helping us. Happy 2018. Let's make 2017 pale in comparison.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-4-24-cv-04722-379-70-p1.png",
+      "caption": "Source document — Ilya Sutskever to Elon Musk — New Year's Note · Musk v. Altman (OpenAI) · 4:24-cv-04722 (CAND), Doc. 379-70, filed 2026-01-06",
+      "alt": "Ilya Sutskever to Elon Musk — New Year's Note — page 1"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/69013420/379/70/musk-v-altman/",
+  "sourceCase": "Musk v. Altman (OpenAI)",
+  "sourceCitation": "4:24-cv-04722 (CAND), Doc. 379-70, filed 2026-01-06",
+  "licensingPath": "public_domain",
+  "textSource": "extracted",
+  "leadershipSignal": 6,
+  "postKind": "artifact",
+  "artifactNote": "On January 1, 2018, Ilya Sutskever — then co-founder and research director at OpenAI — sent Elon Musk a brief personal note marking roughly two years of working together at the organization they had co-founded. Sutskever credits Musk with strategic foresight, singling out a decision to pursue custom hardware, and describes having been pushed out of an academic mindset. The note entered the public record as a litigation exhibit in Musk v. Altman (OpenAI), filed in the Northern District of California in January 2026, a lawsuit in which Musk alleged that OpenAI had abandoned its founding nonprofit mission — making this early expression of trust and shared purpose a pointed historical counterpoint to that later legal dispute.",
+  "lessonTitle": "Ilya Sutskever Writes Elon Musk a New Year's Note from Inside OpenAI",
+  "pullQuote": "Written just weeks before Musk's departure from the OpenAI board, this note captures a moment of genuine collegiality between two figures who would later become adversaries in court.",
+  "leadershipTraits": [
+    "OpenAI founding era",
+    "Musk vs. Altman litigation",
+    "AI hardware strategy"
+  ],
+  "cardImage": "/cards/cl-cand-4-24-cv-04722-379-70.png"
+}

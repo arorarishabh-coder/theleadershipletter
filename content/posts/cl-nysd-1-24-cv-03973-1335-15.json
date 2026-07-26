@@ -1,0 +1,66 @@
+{
+  "slug": "cl-nysd-1-24-cv-03973-1335-15",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When a Customer Calls Your Fee Structure a Problem, Listen Fast",
+  "documentTitle": "United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0644",
+  "emailSubject": "Re:",
+  "dateAuthored": "2022-08-22",
+  "authorsName": [
+    "Michael Rapino",
+    "David Marcus",
+    "Tara Traub",
+    "Mark Yovich",
+    "Michael Wichser"
+  ],
+  "authorsCompany": "Live Nation Entertainment / Ticketmaster",
+  "recipientNames": [
+    "David Marcus",
+    "Tara Traub",
+    "Michael Rapino",
+    "Bob Roux",
+    "Omar Al-Joulani",
+    "Mark Yovich",
+    "Michael Wichser"
+  ],
+  "topics": [
+    "strategy",
+    "finance",
+    "comms",
+    "crisis-management"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "From: David Marcus (8/23/2022): \"Danger, will robinson . . . Hopefully this stays contained to Harry. Irving thinks we make too much money . . .\"\n\nFrom: Tara Traub (8/22/2022): \"There are two issues at play with her: 1. 'Double Dipping' on the fees ([REDACTED] inside [REDACTED] outside) 2. The show paying tax on the [REDACTED]% . . . totaling [REDACTED]k on this tour.\"\n\nFrom: David Marcus (8/22/2022): \"Harry shows: Platinum FV - [REDACTED] / Lift - [REDACTED] / [REDACTED] inside fee - [REDACTED]. We do have a limitation on taxes that we have not been able to overcome – our fee is taxed out of the gross. Platinum at TM has its own org, platform, operations, etc. that serves promoters, in addition to what we do to support venues. Inside fee pays for former, outside fee pays for latter.\"\n\nFrom: Michael Rapino (8/22/2022): \"So what will we say on biz mgr double dipping ie two service charges / Given huge play on these 50 dates how much is the [REDACTED]% for TM total adding to?\"\n\nFrom: Michael Wichser (8/23/2022): \"gulp... Thanks.\"",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-nysd-1-24-cv-03973-1335-15-p1.png",
+      "caption": "Source document — United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0644 · United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C. · 1:24-cv-03973 (NYSD), Doc. 1335-15, filed 2026-03-27 (page 1)",
+      "alt": "United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0644 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-nysd-1-24-cv-03973-1335-15-p2.png",
+      "caption": "Source document — United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0644 · United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C. · 1:24-cv-03973 (NYSD), Doc. 1335-15, filed 2026-03-27 (page 2)",
+      "alt": "United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0644 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/68557723/1335/15/united-states-of-america-v-live-nation-entertainment-inc/",
+  "sourceCase": "United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C.",
+  "sourceCitation": "1:24-cv-03973 (NYSD), Doc. 1335-15, filed 2026-03-27",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 7,
+  "postKind": "lesson",
+  "lessonTitle": "When a Customer Calls Your Fee Structure a Problem, Listen Fast",
+  "situation": "On August 22–23, 2022, Live Nation CEO Michael Rapino and several colleagues exchanged messages about a fee dispute tied to Harry Styles tour dates. A business manager — referred to as 'her' — had flagged two specific complaints: fees charged on both the inside and outside of a ticket transaction, and taxes applied to a percentage-based fee. Rapino's direct question was simple: 'what will we say' when asked about two service charges on 50 dates?",
+  "insight": "Rapino's first move isn't to defend the fees — it's to ask how much they add up to. That's a containment reflex: understand the magnitude before you message. Marcus's follow-up — 'Danger, will robinson... Hopefully this stays contained to Harry' — shows the real fear isn't this one client, it's contagion. Irving (presumably a manager or industry figure, context unclear) already thinks the company 'makes too much money.' One vocal complaint on a high-profile tour could harden that view across the industry. **The hidden strategic logic is protecting pricing power.** Marcus then offers the business justification: inside fees fund one organizational layer, outside fees fund another. That's a **cost-allocation defense** — legitimate or not, it exists in writing. The problem is that it hadn't been communicated to the client before the dispute.",
+  "application": "If your product has multiple fees — even structurally justified ones — write one plain sentence explaining each before a customer sees their invoice. Don't wait for a complaint to build your rationale. Rapino had to ask 'what will we say' in real time, on a major tour. You want that answer drafted and rehearsed before you're in the spotlight.",
+  "pullQuote": "The moment a client's manager whispers 'double dipping,' you have minutes to build a clear answer — or you have a narrative crisis.",
+  "leadershipTraits": [
+    "quantifies exposure before reacting",
+    "tracks reputational spread, not just individual disputes",
+    "seeks defensible rationale quickly",
+    "reads early warning signs in client complaints"
+  ],
+  "cardImage": "/cards/cl-nysd-1-24-cv-03973-1335-15.png"
+}

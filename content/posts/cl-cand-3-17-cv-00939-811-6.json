@@ -1,0 +1,61 @@
+{
+  "slug": "cl-cand-3-17-cv-00939-811-6",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When Your Investor Becomes Your Biggest Competitor",
+  "documentTitle": "Waymo LLC v. Uber Technologies, Inc. — Exhibit F",
+  "emailSubject": "Takeaway: Why Uber and Google Will Become Big Rivals",
+  "dateAuthored": "2014-12-26",
+  "authorsName": [
+    "Ed Baker",
+    "Jessica E. Lessin"
+  ],
+  "authorsCompany": "Uber",
+  "recipientNames": [
+    "Travis Kalanick",
+    "Emil Michael",
+    "Nairi Hourdajian"
+  ],
+  "topics": [
+    "competition",
+    "strategy",
+    "technology",
+    "partnerships",
+    "board-governance"
+  ],
+  "leaderSlugs": [
+    "eric-schmidt"
+  ],
+  "excerptForBlog": "Anyone who has been in Silicon Valley long enough knows all big tech companies eventually encroach upon each other's turf. And I think 2015 will be the year we see the early signs of a new tech battle for the ages: Uber vs. Google.\n\nBoth companies would have you believe they are more friend than foe. After all, Google senior vice president David Drummond is on Uber's board of directors. And Google Ventures has invested at least $250 million in the startup, making it one of the ride-sharing behemoth's largest investors.\n\nBut Google and Apple were once close partners too. So were Apple and Samsung, Google and Amazon, Intel and AMD and many others before them.\n\nIn this case, the battlefield will be real-time delivery of goods and services—specifically, bringing the on-demand and data-rich nature of the digital world into the physical world. At the highest level, both want to dominate the business of getting you a burrito or a babysitter or stocking your refrigerator as quickly as possible. It's about moving atoms as fluidly as bits.\n\nSelf-driving cars are another potential conflict zone. Does Google just want to make self-driving cars and use them to deploy its software and services? Or does it want to operate the network too?\n\nI have no doubt that Mr. Drummond will one day start recusing himself from Uber board meetings just as Eric Schmidt did when Apple directors started discussing the iPhone years ago. The result will be a great battle—great for consumers and great to watch.",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-cand-3-17-cv-00939-811-6-p1.png",
+      "caption": "Source document — Waymo LLC v. Uber Technologies, Inc. — Exhibit F · Waymo LLC v. Uber Technologies, Inc. · 3:17-cv-00939 (CAND), Doc. 811-6, filed 2017-07-06 (page 1)",
+      "alt": "Waymo LLC v. Uber Technologies, Inc. — Exhibit F — page 1"
+    },
+    {
+      "url": "/screenshots/cl-cand-3-17-cv-00939-811-6-p2.png",
+      "caption": "Source document — Waymo LLC v. Uber Technologies, Inc. — Exhibit F · Waymo LLC v. Uber Technologies, Inc. · 3:17-cv-00939 (CAND), Doc. 811-6, filed 2017-07-06 (page 2)",
+      "alt": "Waymo LLC v. Uber Technologies, Inc. — Exhibit F — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/4609586/811/6/waymo-llc-v-uber-technologies-inc/",
+  "sourceCase": "Waymo LLC v. Uber Technologies, Inc.",
+  "sourceCitation": "3:17-cv-00939 (CAND), Doc. 811-6, filed 2017-07-06",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 7,
+  "postKind": "lesson",
+  "lessonTitle": "When Your Investor Becomes Your Biggest Competitor",
+  "situation": "This is a December 2014 article by Ed Baker and Jessica Lessin, submitted as a court exhibit in the Waymo v. Uber litigation. It argues that Google and Uber — at that moment linked by a $250 million investment and a shared board seat held by Google SVP David Drummond — are quietly heading toward direct competition in on-demand physical delivery and self-driving vehicles.",
+  "insight": "The article's sharpest move is using the board seat as a clock. The authors write that Drummond 'will one day start recusing himself from Uber board meetings just as Eric Schmidt did when Apple directors started discussing the iPhone.' That's a pattern, not a prediction — and patterns are more reliable than forecasts. The underlying logic is classic **platform conflict**: Google and Uber both want to own the network that moves physical goods and people. One invests in the other while building the same thing. The investment buys access and signals peace; the board seat is the canary. When it goes quiet, the war has started. The authors also identify the real prize clearly: not rides or maps, but 'moving atoms as fluidly as bits' — whoever controls real-time physical delivery at scale wins the next layer of commerce.",
+  "application": "If a strategic investor sits on your board, map exactly where your five-year roadmap overlaps with theirs. Do it now, not when the conflict is obvious. Define in writing — ideally in your investment agreement — which topics trigger recusal and under what conditions. That clarity protects you legally and forces an honest conversation about alignment before the relationship quietly turns competitive.",
+  "pullQuote": "The moment a board member starts leaving the room, the partnership is already over — the question is just who moves first.",
+  "leadershipTraits": [
+    "reads competitive patterns early",
+    "uses historical precedent as a strategic tool",
+    "identifies the structural incentive beneath a friendly surface"
+  ],
+  "cardImage": "/cards/cl-cand-3-17-cv-00939-811-6.png"
+}

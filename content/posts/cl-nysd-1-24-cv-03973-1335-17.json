@@ -1,0 +1,59 @@
+{
+  "slug": "cl-nysd-1-24-cv-03973-1335-17",
+  "publishedAt": "2026-07-26",
+  "isFeatured": false,
+  "title": "When You Already Own the Market, Your Deal Goal Changes",
+  "documentTitle": "United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0600",
+  "emailSubject": "Re: OVG -- Next Steps / Terms",
+  "dateAuthored": "2022-08-12",
+  "authorsName": [
+    "Joe Berchtold",
+    "Michael Wichser"
+  ],
+  "authorsCompany": "Live Nation/Ticketmaster",
+  "recipientNames": [
+    "Michael Wichser",
+    "Joe Berchtold",
+    "Mark Yovich",
+    "Marla Ostroff"
+  ],
+  "topics": [
+    "strategy",
+    "partnerships",
+    "competition"
+  ],
+  "leaderSlugs": [],
+  "excerptForBlog": "We are aiming to go back to Francesca and Andy with our response on their proposed deal terms.\n\nAt a high level, we suggest accepting most of the fixed $s but clarifying:\n1. Deal structure / royalty splits\n2. True-ups for volume miss (or if over-deliver)\n3. All int'l deals are outside of deal for now: we suggest including Manchester in this deal since venue is further along than others\n\nThe 'win' for TM is extending term with same economics and structure and then incentivizing OVG to convert all the Pac buildings to TM.\n\nHigh level summary: 10 year deal to 2032 (all coterminous) with [REDACTED] upfront bonus. Annual sponsorship for 360 buildings (62 arenas) — outstanding question on whether to push back here: TM has 2/3rds of these buildings already and most would not warrant fixed sponsorship on own.\n\nDeal template: 360 buildings (Spectra buildings, smaller markets, etc.) — this is consistent with current royalty splits but we are swapping fixed per ticket for variable rate.\n\nVolume assumptions: TM suggests pro rata up/down adjustment based on prior year volume. So if OVG model says 10M tickets and they do 8M, the next year we claw back [REDACTED] of the prior year sponsorship total.\n\nIn reply, Joe Berchtold wrote: 'Agree all about getting enough to justify [REDACTED]/yr in sponsorship esp when already have most tickets and shortfall mechanism.'",
+  "screenshots": [
+    {
+      "url": "/screenshots/cl-nysd-1-24-cv-03973-1335-17-p1.png",
+      "caption": "Source document — United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0600 · United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C. · 1:24-cv-03973 (NYSD), Doc. 1335-17, filed 2026-03-27 (page 1)",
+      "alt": "United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0600 — page 1"
+    },
+    {
+      "url": "/screenshots/cl-nysd-1-24-cv-03973-1335-17-p2.png",
+      "caption": "Source document — United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0600 · United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C. · 1:24-cv-03973 (NYSD), Doc. 1335-17, filed 2026-03-27 (page 2)",
+      "alt": "United States v. Live Nation Entertainment & Ticketmaster — Exhibit PX0600 — page 2"
+    }
+  ],
+  "sourceType": "court_exhibit",
+  "sourceUrl": "https://www.courtlistener.com/docket/68557723/1335/17/united-states-of-america-v-live-nation-entertainment-inc/",
+  "sourceCase": "United States v. Live Nation Entertainment, Inc. & Ticketmaster L.L.C.",
+  "sourceCitation": "1:24-cv-03973 (NYSD), Doc. 1335-17, filed 2026-03-27",
+  "licensingPath": "public_domain",
+  "textSource": "ocr_transcribed",
+  "leadershipSignal": 6,
+  "postKind": "lesson",
+  "lessonTitle": "When You Already Own the Market, Your Deal Goal Changes",
+  "situation": "On August 12, 2022, Ticketmaster executives Joe Berchtold and Michael Wichser were drafting a response to OVG (Oak View Group) on a proposed long-term venue ticketing deal. The stakes: a proposed 10-year contract to 2032 covering 360 buildings, 62 arenas, with an upfront bonus and annual sponsorship payments — terms and bonus amounts partially redacted in the court exhibit.",
+  "insight": "The document's most revealing line is Berchtold's reply: 'Agree all about getting enough to justify [REDACTED]/yr in sponsorship esp when already have most tickets and shortfall mechanism.' He's naming the actual problem directly. Ticketmaster already holds roughly two-thirds of these buildings. That means the annual sponsorship payment isn't buying new customers — it's paying to keep customers they already have. That changes the math completely. The 'win' the memo identifies isn't revenue growth; it's term extension with the same economics, plus a mechanism to convert the remaining OVG venues they don't yet control. This is classic **switching-cost strategy**: extend the relationship long enough, and the other side has no practical reason to leave. The volume true-up clause — clawing back sponsorship if ticket sales fall short — is the discipline mechanism that keeps the economics honest even inside a locked relationship.",
+  "application": "Before you sign or renew any partnership, ask honestly: what percentage of this partner's business do I already have? If the answer is 'most of it,' your goal shifts from winning new share to locking in what exists and converting the remainder. Price your deal accordingly — and build a shortfall mechanism so you're not overpaying if volume disappoints.",
+  "pullQuote": "When you already have most of the volume, the only deal worth signing is one that locks in the future and protects what you have.",
+  "leadershipTraits": [
+    "cuts through to the real business question",
+    "honest about existing position before negotiating",
+    "builds in downside protection",
+    "focuses on term and conversion, not headline price"
+  ],
+  "cardImage": "/cards/cl-nysd-1-24-cv-03973-1335-17.png"
+}
