@@ -265,3 +265,29 @@ model ReplyDigest {
 
   @@index([tier, generatedAt])
 }
+
+// ---------- Email engagement ----------
+// One row per Resend webhook event (email.delivered / opened / clicked / bounced
+// / complained). This is the "DB event log" the metrics module flagged as the
+// fast-follow for open/click rates — Resend has no aggregate broadcast-stats API,
+// so we capture the per-recipient events ourselves and aggregate them (see
+// lib/metrics/email-events.ts). broadcastId ties an event back to a daily
+// edition; we resolve broadcastId → post slug at read time (no stale slug column).
+// svixId dedups webhook redeliveries (Svix sends the same message id on retry).
+model EmailEvent {
+  id          String   @id @default(cuid())
+  svixId      String?  @unique // Svix message id — idempotency across redeliveries
+  type        String            // delivered | opened | clicked | bounced | complained | sent | delivery_delayed
+  email       String            // recipient address
+  broadcastId String?           // Resend broadcast id (present for broadcast sends)
+  emailId     String?           // Resend per-email id (data.email_id)
+  link        String?           // clicked URL, for email.clicked
+  occurredAt  DateTime          // event timestamp from the payload
+  createdAt   DateTime @default(now())
+  raw         Json?             // full webhook payload — insurance if Resend's broadcast
+                                // attribution key differs from what we parse; lets us
+                                // re-map without data loss (verify after first real send)
+
+  @@index([broadcastId, type])
+  @@index([type, occurredAt])
+}

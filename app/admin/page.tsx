@@ -4,6 +4,8 @@ import { Dateline } from "@/components/dateline";
 import { requireAdmin, AdminRedirect } from "@/lib/admin";
 import { getAdminStats, formatSource, formatThousands } from "@/lib/admin-stats";
 import type { DailyBucket } from "@/lib/admin-stats";
+import { getEmailEngagement } from "@/lib/metrics/email-events";
+import { EngagementSection } from "@/app/admin/engagement-section";
 
 export const dynamic = "force-dynamic";
 
@@ -33,7 +35,7 @@ export default async function AdminPage({
   }
 
   const days = clampDays(searchParams.days);
-  const stats = await getAdminStats(days);
+  const [stats, engagement] = await Promise.all([getAdminStats(days), getEmailEngagement()]);
 
   const maxBar = Math.max(1, ...stats.perDay.map((d) => Math.max(d.published, d.newsletters)));
 
@@ -96,6 +98,9 @@ export default async function AdminPage({
       <p className="mt-4 font-serif text-[14px] italic text-ink-faded">
         Pace: <strong className="not-italic text-ink">{stats.totals.avgPerDay}</strong> article{stats.totals.avgPerDay === 1 ? "" : "s"} per day across the window.
       </p>
+
+      {/* Newsletter engagement */}
+      <EngagementSection engagement={engagement} />
 
       {/* Daily activity */}
       <section className="mt-12 border-y border-ink py-10">
