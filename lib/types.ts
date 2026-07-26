@@ -64,6 +64,13 @@ export interface Post {
   // email with one. Used as the card's "Subject:" — falls back to documentTitle
   // (the exhibit/letter label) when absent (threads, letters, no visible subject).
   emailSubject?: string;
+  // Optional overrides for the DAILY EMAIL's inbox fields (see lib/publish/email-craft.ts).
+  // When absent, both are derived deterministically at send time from the fields above;
+  // set them to pin a hand-picked (or future LLM-crafted) subject/preview without
+  // touching the send path. emailSubjectLine = the "From-line-style" subject shown in
+  // the inbox; emailPreview = the grey preview text next to it.
+  emailSubjectLine?: string;
+  emailPreview?: string;
   screenshots: PostScreenshot[];
   // Hosted path (e.g. "/cards/{slug}.png") to the recreated ITE-style card — our
   // own clean reproduction of the correspondence (buildMessageCardHtml). Generated

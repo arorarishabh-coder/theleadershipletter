@@ -27,6 +27,7 @@
 
 import type { Post } from "@/lib/types";
 import { buildPostHtml } from "@/lib/publish/beehiiv";
+import { craftEmailSubject, craftEmailPreview } from "@/lib/publish/email-craft";
 
 const API = "https://api.resend.com";
 
@@ -105,7 +106,10 @@ export function buildBroadcastPayload(post: Post): Record<string, unknown> {
   return {
     audience_id: process.env.RESEND_AUDIENCE_ID,
     from: process.env.RESEND_FROM || "The Leadership Letter <onboarding@resend.dev>",
-    subject: post.title,
+    // Artifact-anchored subject + the document's own opening as preview text —
+    // the two inbox fields that decide the open. See lib/publish/email-craft.ts.
+    subject: craftEmailSubject(post),
+    preview_text: craftEmailPreview(post),
     name: post.slug,
     html: buildEmailDocument(post, siteUrl),
   };
