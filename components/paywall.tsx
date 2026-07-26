@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Dateline } from "@/components/dateline";
+import { NewsletterCTA } from "@/components/newsletter-cta";
 import type { MembershipState } from "@/lib/membership";
 
 interface PaywallProps {
@@ -54,17 +55,67 @@ function copyFor(state: MembershipState, callbackUrl: string): Copy {
 
 export function Paywall({ state, postSlug, simulated = false }: PaywallProps) {
   const callbackUrl = encodeURIComponent(`/post/${postSlug}`);
+
+  const simulateBanner = simulated ? (
+    <div className="border-b border-ink/40 bg-brick/10 px-6 py-2 text-center">
+      <span className="font-mono text-[11px] uppercase tracking-dateline text-brick">
+        Admin simulate · rendering as: {state}
+      </span>
+    </div>
+  ) : null;
+
+  // Anonymous readers arrive cold from a shared link or search. Rather than a
+  // dead-end "sign in / pay" wall, capture them into the FREE daily first — the
+  // top-of-funnel that matters most — and keep the members upsell as secondary.
+  if (state === "anonymous") {
+    return (
+      <section className="border-y border-ink bg-parchment-deep/40">
+        {simulateBanner}
+        <div className="mx-auto max-w-2xl px-6 py-16 md:py-20 text-center">
+          <Dateline strong>The daily letter &middot; Free</Dateline>
+          <h2
+            className="mt-4 font-display text-display-3 leading-tight text-ink text-balance"
+            style={{ fontVariationSettings: '"opsz" 60, "wght" 500, "SOFT" 30' }}
+          >
+            This edition is for members — but the daily letter is free.
+          </h2>
+          <p
+            className="mx-auto mt-5 max-w-xl font-serif text-[1.0625rem] leading-relaxed text-ink-faded text-balance"
+            style={{ fontVariationSettings: '"opsz" 17' }}
+          >
+            One real corporate email, and the lesson it teaches, in your inbox every weekday morning.
+            Free. Unsubscribe in one click.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <NewsletterCTA />
+          </div>
+          <div className="mt-8 flex flex-col items-center gap-3 border-t border-rule pt-8">
+            <p className="font-serif text-[15px] italic text-ink-faded">
+              Want this edition and the full searchable archive?
+            </p>
+            <Link
+              href={`/signin?callbackUrl=${callbackUrl}`}
+              className="inline-flex items-center gap-2 bg-ink px-6 py-3.5 font-sans text-[12px] uppercase tracking-[0.18em] text-parchment transition-colors hover:bg-brick"
+            >
+              Start your free week →
+            </Link>
+            <Link
+              href="/membership"
+              className="border-b border-ink pb-0.5 font-sans text-[12px] uppercase tracking-[0.18em] text-ink transition-colors hover:text-brick hover:border-brick"
+            >
+              What members get →
+            </Link>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const c = copyFor(state, callbackUrl);
 
   return (
     <section className="border-y border-ink bg-parchment-deep/40">
-      {simulated && (
-        <div className="border-b border-ink/40 bg-brick/10 px-6 py-2 text-center">
-          <span className="font-mono text-[11px] uppercase tracking-dateline text-brick">
-            Admin simulate · rendering as: {state}
-          </span>
-        </div>
-      )}
+      {simulateBanner}
       <div className="mx-auto max-w-2xl px-6 py-16 md:py-20 text-center">
         <Dateline strong>Members &middot; Archive</Dateline>
         <h2

@@ -9,6 +9,7 @@ import { ProvenanceFooter } from "@/components/provenance-footer";
 import { PullQuote } from "@/components/pull-quote";
 import { TopicPill } from "@/components/topic-pill";
 import { NewsletterCTA } from "@/components/newsletter-cta";
+import { ShareButtons } from "@/components/share-buttons";
 import { SectionRule } from "@/components/section-rule";
 import { ArticleCard } from "@/components/article-card";
 import { Dateline } from "@/components/dateline";
@@ -190,6 +191,11 @@ export default async function PostPage({
               <TopicPill key={t} topic={t} size="md" />
             ))}
           </div>
+          {/* Always-visible share row — every visitor (incl. those who'll hit the
+              paywall) can spread the letter. Leads with the pull quote. */}
+          <div className="mt-7">
+            <ShareButtons url={canonical} title={post.title} quote={post.pullQuote} />
+          </div>
         </div>
       </header>
 
@@ -254,6 +260,10 @@ export default async function PostPage({
               </span>
             ))}
           </div>
+          {/* Finisher share — highest intent is right after reading the lesson. */}
+          <div className="mt-10 border-t border-rule pt-6">
+            <ShareButtons url={canonical} title={post.title} quote={post.pullQuote} />
+          </div>
         </div>
       </section>
       ) : (
@@ -265,10 +275,11 @@ export default async function PostPage({
         <ProvenanceFooter post={post} />
       </div>
 
-      {/* Newsletter CTA — only shown to anonymous readers. Signed-in users
-          (members or not) are already in the audience, so suppressing it
-          removes a redundant ask and keeps the page calmer. */}
-      {!session && <NewsletterCTA variant="boxed" />}
+      {/* Newsletter CTA — shown to anonymous readers who already have access to
+          this edition (the free daily). When access is gated, the paywall itself
+          now carries the free-subscribe capture, so this would be a redundant
+          second form — suppress it. Signed-in users are already in the audience. */}
+      {!session && access.hasAccess && <NewsletterCTA variant="boxed" />}
 
       {/* Related */}
       <section className="mx-auto max-w-7xl px-6 pb-24">
