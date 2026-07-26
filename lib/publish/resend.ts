@@ -58,6 +58,31 @@ export function buildEmailDocument(post: Post, siteUrl = ""): string {
       <a href="${esc(trialUrl)}" style="display:inline-block;background:#1c1a17;color:#fbf8f1;padding:13px 28px;font-family:Arial,Helvetica,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.18em;text-decoration:none;border:1px solid #1c1a17;">Start your free week &rarr;</a>
     </div>`
     : "";
+
+  // Referral block — the cheapest growth lever is an existing reader forwarding
+  // the edition. Give them a one-tap forward + an X share, and give the forward
+  // *recipient* a "subscribe free" line in the footer. UTM-tagged so referred
+  // signups are attributable in analytics.
+  const shareUrl = postUrl ? `${postUrl}?utm_source=newsletter&utm_medium=referral` : "";
+  const subscribeUrl = siteUrl ? `${siteUrl}/subscribe?utm_source=newsletter&utm_medium=referral` : "";
+  const xShareUrl = shareUrl
+    ? `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(shareUrl)}`
+    : "";
+  const forwardMailto = shareUrl
+    ? `mailto:?subject=${encodeURIComponent("You should read this")}&body=${encodeURIComponent(
+        `Thought you'd get value from this edition of The Leadership Letter:\n\n${post.title}\n${shareUrl}\n\nIt's one real corporate email, and the lesson it teaches, every weekday morning.`,
+      )}`
+    : "";
+  const referralBlock = shareUrl
+    ? `<div style="margin:28px 0 8px;padding:20px 24px 4px;border-top:1px solid #ddd6c8;text-align:center;">
+      <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8378;font-family:Arial,Helvetica,sans-serif;">Spread the word</div>
+      <div style="font-size:17px;font-weight:600;margin:8px 0 6px;letter-spacing:-0.01em;">Know someone who&rsquo;d get value from this?</div>
+      <div style="font-size:14px;color:#5c574e;margin:0 auto 14px;max-width:420px;">Forwarding today&rsquo;s edition is the single best way to help the letter grow.</div>
+      <a href="${esc(forwardMailto)}" style="display:inline-block;margin:0 6px 8px;padding:11px 22px;background:#1c1a17;color:#fbf8f1;font-family:Arial,Helvetica,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.16em;text-decoration:none;">Forward this &rarr;</a>
+      <a href="${esc(xShareUrl)}" style="display:inline-block;margin:0 6px 8px;padding:11px 22px;border:1px solid #1c1a17;color:#1c1a17;font-family:Arial,Helvetica,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.16em;text-decoration:none;">Post on X &rarr;</a>
+    </div>`
+    : "";
+
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -75,8 +100,10 @@ export function buildEmailDocument(post: Post, siteUrl = ""): string {
     <h1 style="font-size:24px;line-height:1.25;margin:0 0 16px;">${esc(post.title)}</h1>
     ${body}
     ${trialCta}
+    ${referralBlock}
     <div style="margin-top:32px;border-top:1px solid #ddd6c8;padding-top:16px;font-size:12px;color:#8a8378;font-family:Arial,Helvetica,sans-serif;text-align:center;">
       ${postUrl ? `<p style="margin:0 0 8px;"><a href="${esc(postUrl)}" style="color:#b5482f;">Read this on the web</a></p>` : ""}
+      ${subscribeUrl ? `<p style="margin:0 0 8px;">Got this from a friend? <a href="${esc(subscribeUrl)}" style="color:#b5482f;">Subscribe free &rarr;</a></p>` : ""}
       <p style="margin:0;">You're receiving this because you subscribed to The Leadership Letter daily edition.</p>
       <p style="margin:8px 0 0;"><a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#8a8378;">Unsubscribe</a></p>
     </div>
