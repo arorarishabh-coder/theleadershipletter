@@ -55,7 +55,17 @@ function Block({ label, text, limit }: { label: string; text: string; limit: num
   );
 }
 
-export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[]; defaultSlug: string; todaySlug: string }) {
+export function SocialPanel({
+  posts,
+  defaultSlug,
+  todaySlug,
+  artifacts = {},
+}: {
+  posts: PostRef[];
+  defaultSlug: string;
+  todaySlug: string;
+  artifacts?: Record<string, { tweet: string; replyText: string }>;
+}) {
   const [slug, setSlug] = useState(defaultSlug);
   const [status, setStatus] = useState<"idle" | "loading" | "error" | "done">("idle");
   const [error, setError] = useState("");
@@ -202,7 +212,30 @@ export function SocialPanel({ posts, defaultSlug, todaySlug }: { posts: PostRef[
       {cardStatus === "error" && <p className="mt-3 font-mono text-[12px] text-brick">Card error: {cardError}</p>}
       {pdfStatus === "error" && <p className="mt-3 font-mono text-[12px] text-brick">PDF error: {pdfError}</p>}
       {status === "error" && <p className="mt-4 font-mono text-[12px] text-brick">Error: {error}</p>}
-      {status === "idle" && <p className="mt-6 font-serif italic text-ink-faded">Pick a post and generate copy-ready Twitter + LinkedIn drafts.</p>}
+
+      {/* Artifact-first caption — deterministic, no Claude call. The cold-account
+          reach mode: minimal factual caption, the card image carries the content,
+          link in the first reply. Always available for the selected post. */}
+      {artifacts[slug] && (
+        <section className="mt-6 border border-brick/40 bg-parchment-deep/30 p-5">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="font-mono text-[11px] uppercase tracking-dateline text-brick">
+              ★ Artifact-first — post this on X (no lesson, best for cold accounts)
+            </span>
+            <CopyButton text={`${artifacts[slug].tweet}\n\n(first reply) ${artifacts[slug].replyText}`} label="Copy caption + reply" />
+          </div>
+          <p className="mt-3 whitespace-pre-wrap font-serif text-[15px] leading-relaxed text-ink">{artifacts[slug].tweet}</p>
+          <div className="mt-3 border-t border-rule/60 pt-3">
+            <span className="font-mono text-[10px] uppercase tracking-dateline text-ink-faded">First reply / comment</span>
+            <p className="mt-1 whitespace-pre-wrap font-serif text-[13px] leading-relaxed text-ink-faded">{artifacts[slug].replyText}</p>
+          </div>
+          <p className="mt-3 font-mono text-[10px] uppercase tracking-dateline text-ink-light">
+            Attach the ⬇ Card image above. Keep the link out of the post body — put it in the first reply.
+          </p>
+        </section>
+      )}
+
+      {status === "idle" && <p className="mt-6 font-serif italic text-ink-faded">The artifact-first caption above is ready to post. Or generate full Twitter + LinkedIn drafts below.</p>}
 
       {pkg && status !== "loading" && (
         <div className="mt-8 space-y-12">

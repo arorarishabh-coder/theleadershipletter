@@ -2,9 +2,11 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { Dateline } from "@/components/dateline";
 import { requireAdmin, AdminRedirect } from "@/lib/admin";
-import { getAllPosts } from "@/lib/queries";
+import { getAllPosts, getPostBySlug } from "@/lib/queries";
 import { listBroadcastsByName } from "@/lib/publish/resend";
+import { buildArtifactFirst } from "@/lib/social/artifact-first";
 import { SocialPanel } from "./social-panel";
+import { NewsjackBox } from "./newsjack-box";
 
 export const dynamic = "force-dynamic";
 
@@ -67,6 +69,17 @@ export default async function SocialPage() {
   const posts = list.map((p) => ({ slug: p.slug, title: p.title, publishedAt: p.publishedAt }));
   const defaultSlug = (freeSlug && posts.some((p) => p.slug === freeSlug) ? freeSlug : posts[0]?.slug) ?? "";
 
+  // Deterministic artifact-first caption per listed post (no Claude call) — shown
+  // in the panel the instant a post is selected, for cold-account reach.
+  const artifacts: Record<string, { tweet: string; replyText: string }> = {};
+  for (const p of posts) {
+    const full = getPostBySlug(p.slug);
+    if (full) {
+      const af = buildArtifactFirst(full);
+      artifacts[p.slug] = { tweet: af.tweet, replyText: af.replyText };
+    }
+  }
+
   return (
     <div className="mx-auto max-w-4xl px-6 py-14 md:py-20">
       <header className="flex flex-wrap items-end justify-between gap-4 border-b border-ink pb-6">
@@ -105,7 +118,11 @@ export default async function SocialPage() {
       </details>
 
       <div className="mt-8">
-        <SocialPanel posts={posts} defaultSlug={defaultSlug} todaySlug={freeSlug ?? ""} />
+        <NewsjackBox />
+      </div>
+
+      <div className="mt-8">
+        <SocialPanel posts={posts} defaultSlug={defaultSlug} todaySlug={freeSlug ?? ""} artifacts={artifacts} />
       </div>
     </div>
   );
