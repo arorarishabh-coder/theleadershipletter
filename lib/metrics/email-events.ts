@@ -2,9 +2,18 @@
  * Aggregate the raw EmailEvent log into open/click rates per daily edition.
  *
  * Resend exposes no aggregate broadcast-stats API, so we log every per-recipient
- * webhook event (see app/api/webhooks/resend) and roll them up here. Rates are
- * UNIQUE-recipient based (a recipient opening twice counts once), with delivered
- * as the denominator — the honest denominator for "who could have opened."
+ * event and roll them up here. Rates are UNIQUE-recipient based (a recipient
+ * opening twice counts once), with delivered as the denominator — the honest
+ * denominator for "who could have opened."
+ *
+ * TWO SOURCES feed the EmailEvent table and they key differently:
+ *   - Resend webhook (app/api/webhooks/resend) — sent/delivered/bounced, keyed by
+ *     `broadcastId`. This is where the delivery denominator comes from.
+ *   - Our own pixel + click redirect (app/api/track/*) — opened/clicked, keyed by
+ *     `slug`, because the broadcast id doesn't exist yet when the HTML is built.
+ *     We host these ourselves because Resend reports open/click tracking as enabled
+ *     but does not apply it to sends; see lib/publish/track.ts for the evidence.
+ * Both are resolved to an edition (slug) below so they aggregate into one row.
  *
  * Volume is tiny (a small audience × dozens of editions), so we fetch the events
  * and aggregate in memory rather than fighting Prisma groupBy-distinct.
@@ -54,11 +63,20 @@ function rate(n: number, d: number): number | null {
 }
 
 export async function getEmailEngagement(limit = 5000): Promise<EmailEngagementSummary> {
-  let events: Array<{ type: string; email: string; broadcastId: string | null; occurredAt: Date }>;
+  let events: Array<{
+    type: string;
+    email: string;
+    broadcastId: string | null;
+    slug: string | null;
+    occurredAt: Date;
+  }>;
   try {
     events = await db.emailEvent.findMany({
-      where: { broadcastId: { not: null } },
-      select: { type: true, email: true, broadcastId: true, occurredAt: true },
+      // Two sources feed this table and they key differently: Resend's webhook
+      // events carry a broadcastId, our own pixel/redirect hits carry a slug
+      // (the broadcast id doesn't exist yet when the HTML is built).
+      where: { OR: [{ broadcastId: { not: null } }, { slug: { not: null } }] },
+      select: { type: true, email: true, broadcastId: true, slug: true, occurredAt: true },
       orderBy: { occurredAt: "desc" },
       take: limit,
     });
@@ -69,18 +87,30 @@ export async function getEmailEngagement(limit = 5000): Promise<EmailEngagementS
 
   if (events.length === 0) return EMPTY;
 
-  // broadcastId -> per-type set of unique recipient emails.
+  // Resolve broadcastId -> { slug, sentAt } and slug -> title.
+  const bySlug = await listBroadcastsByName().catch(() => new Map());
+  const idToMeta = new Map<string, { slug: string; sentAt: string | null }>();
+  for (const [slug, info] of bySlug) idToMeta.set(info.id, { slug, sentAt: info.sentAt });
+  const titleBySlug = new Map(getAllPosts().map((p) => [p.slug.toLowerCase(), p.title]));
+
+  // Bucket on the EDITION (slug), so delivery counts from Resend and opens/clicks
+  // from our own tracking land in the same row.
   type Buckets = { delivered: Set<string>; opened: Set<string>; clicked: Set<string> };
-  const byBroadcast = new Map<string, Buckets>();
+  const byEdition = new Map<string, Buckets>();
   let lastEventAt: string | null = null;
 
   for (const e of events) {
-    if (!e.broadcastId) continue;
+    const key = e.slug?.trim().toLowerCase() || (e.broadcastId ? idToMeta.get(e.broadcastId)?.slug : null);
+    // An event we can't attribute to an edition (e.g. a broadcast Resend has since
+    // deleted) still shouldn't be silently dropped — bucket it under its raw id.
+    const editionKey = key || (e.broadcastId ? `broadcast:${e.broadcastId}` : null);
+    if (!editionKey) continue;
+
     if (!lastEventAt) lastEventAt = e.occurredAt.toISOString(); // first row = newest (desc order)
-    let b = byBroadcast.get(e.broadcastId);
+    let b = byEdition.get(editionKey);
     if (!b) {
       b = { delivered: new Set(), opened: new Set(), clicked: new Set() };
-      byBroadcast.set(e.broadcastId, b);
+      byEdition.set(editionKey, b);
     }
     const who = e.email || "?";
     if (e.type === "delivered" || e.type === "sent") b.delivered.add(who);
@@ -88,33 +118,27 @@ export async function getEmailEngagement(limit = 5000): Promise<EmailEngagementS
     else if (e.type === "clicked") b.clicked.add(who);
   }
 
-  // Resolve broadcastId -> { slug, sentAt } and slug -> title.
-  const bySlug = await listBroadcastsByName().catch(() => new Map());
-  const idToMeta = new Map<string, { slug: string; sentAt: string | null }>();
-  for (const [slug, info] of bySlug) idToMeta.set(info.id, { slug, sentAt: info.sentAt });
-  const titleBySlug = new Map(getAllPosts().map((p) => [p.slug.toLowerCase(), p.title]));
-
   const broadcasts: BroadcastEngagement[] = [];
   let tDel = 0,
     tOpen = 0,
     tClick = 0;
 
-  for (const [broadcastId, b] of byBroadcast) {
+  for (const [editionKey, b] of byEdition) {
     const delivered = b.delivered.size;
     // An open/click implies delivery even if the delivered event was missed — so
     // the denominator is at least the number of unique openers.
     const deliveredEff = Math.max(delivered, b.opened.size);
     const opens = b.opened.size;
     const clicks = b.clicked.size;
-    const meta = idToMeta.get(broadcastId);
+    const info = bySlug.get(editionKey);
     tDel += deliveredEff;
     tOpen += opens;
     tClick += clicks;
     broadcasts.push({
-      broadcastId,
-      slug: meta?.slug ?? null,
-      title: meta ? titleBySlug.get(meta.slug.toLowerCase()) ?? null : null,
-      sentAt: meta?.sentAt ?? null,
+      broadcastId: info?.id ?? editionKey,
+      slug: info ? editionKey : null,
+      title: titleBySlug.get(editionKey) ?? null,
+      sentAt: info?.sentAt ?? null,
       delivered: deliveredEff,
       opens,
       clicks,

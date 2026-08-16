@@ -34,7 +34,8 @@
     "qa:runway": "tsx scripts/qa-runway.ts",
     "qa:schedule": "tsx scripts/qa-schedule.ts",
     "qa:e2e": "tsx scripts/qa-e2e.ts",
-    "regen:analysis": "tsx scripts/regen-analysis.ts"
+    "regen:analysis": "tsx scripts/regen-analysis.ts",
+    "qa:tracking": "tsx scripts/qa-tracking.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.98.0",

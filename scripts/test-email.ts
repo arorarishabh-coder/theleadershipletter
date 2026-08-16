@@ -45,7 +45,9 @@ async function main() {
       from: process.env.RESEND_FROM || "The Leadership Letter <onboarding@resend.dev>",
       to: [to],
       subject: `[Preview] ${post.title}`,
-      html: buildEmailDocument(post, process.env.SITE_URL || ""),
+      // Transactional send — merge tags aren't interpolated here, so bind the
+      // recipient explicitly or the pixel would report an unknown reader.
+      html: buildEmailDocument(post, process.env.SITE_URL || "", { recipient: to }),
     }),
   });
   const json = await res.json().catch(() => ({}));

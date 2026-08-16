@@ -83,7 +83,8 @@ async function main() {
     const outDir = path.join(process.cwd(), "content", "outbox");
     await fs.mkdir(outDir, { recursive: true });
     const out = path.join(outDir, `${post.slug}.html`);
-    await fs.writeFile(out, buildEmailDocument(post, process.env.SITE_URL || ""), "utf8");
+    // track:false — a preview on disk shouldn't carry a pixel or an unrendered merge tag.
+    await fs.writeFile(out, buildEmailDocument(post, process.env.SITE_URL || "", { track: false }), "utf8");
     console.log(`\nTitle:    ${post.title}`);
     console.log(`Subtitle: ${post.pullQuote}`);
     console.log(`HTML →    ${out}`);

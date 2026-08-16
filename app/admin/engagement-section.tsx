@@ -32,13 +32,15 @@ export function EngagementSection({ engagement }: { engagement: EmailEngagementS
       {!engagement.configured ? (
         <div className="mt-6 border border-rule bg-parchment-light px-6 py-6">
           <p className="font-serif text-[15px] leading-relaxed text-ink">
-            No open/click events captured yet. The receiver is live — it just needs to be switched on in Resend.
+            No opens or clicks recorded yet. Tracking is first-party — an open pixel and signed click
+            redirects served from this domain — so it starts reporting on the next edition sent.
           </p>
-          <ol className="mt-4 list-decimal space-y-1.5 pl-5 font-serif text-[14px] text-ink-light">
-            <li>Resend → your domain → enable <strong className="text-ink">Open tracking</strong> and <strong className="text-ink">Click tracking</strong>.</li>
-            <li>Resend → Webhooks → add an endpoint at <code className="font-mono text-[12px] text-brick">/api/webhooks/resend</code> for the <em>email.delivered / opened / clicked / bounced</em> events.</li>
-            <li>Set <code className="font-mono text-[12px] text-brick">RESEND_WEBHOOK_SECRET</code> (the endpoint&rsquo;s signing secret) in Vercel.</li>
-          </ol>
+          <p className="mt-3 font-serif text-[14px] leading-relaxed text-ink-light">
+            We don&rsquo;t rely on Resend&rsquo;s open/click tracking: it reports as enabled on the verified
+            domain but is not applied to sends — messages arrive with no pixel, no rewritten links and no{" "}
+            <code className="font-mono text-[12px] text-brick">X-SES-CONFIGURATION-SET</code> header. Every
+            earlier edition was therefore unmeasurable, not unread.
+          </p>
           <p className="mt-4 font-mono text-[10px] uppercase tracking-dateline text-ink-faded">
             Rates appear here from the next send onward.
           </p>
@@ -103,6 +105,11 @@ export function EngagementSection({ engagement }: { engagement: EmailEngagementS
               </tbody>
             </table>
           </div>
+          <p className="mt-4 font-serif text-[13px] italic leading-relaxed text-ink-light">
+            Opens are measured by a pixel, so they undercount readers with images off and overcount those
+            behind a privacy proxy that prefetches images (Apple Mail Privacy Protection). Clicks are the
+            trustworthy signal; treat open rate as directional.
+          </p>
         </>
       )}
     </section>

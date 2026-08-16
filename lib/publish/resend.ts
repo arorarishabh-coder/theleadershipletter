@@ -28,11 +28,26 @@
 import type { Post } from "@/lib/types";
 import { buildPostHtml } from "@/lib/publish/beehiiv";
 import { craftEmailSubject, craftEmailPreview } from "@/lib/publish/email-craft";
+import { EMAIL_MERGE_TAG, instrumentEmailHtml } from "@/lib/publish/track";
 
 const API = "https://api.resend.com";
 
 function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+export interface EmailDocumentOptions {
+  /**
+   * Add the open pixel + rewrite links through /api/track/click. On by default
+   * for real sends; pass false for on-disk previews so the HTML stays clean.
+   */
+  track?: boolean;
+  /**
+   * Who this copy is for. Defaults to Resend's `{{{EMAIL}}}` merge tag, which is
+   * rendered per-contact in a broadcast. Pass a real address for a one-off
+   * transactional send (merge tags are NOT interpolated outside broadcasts).
+   */
+  recipient?: string;
 }
 
 /**
@@ -41,7 +56,7 @@ function esc(s: string): string {
  * merge tag — it renders a per-recipient one-click unsubscribe link (required
  * for broadcasts / CAN-SPAM compliance).
  */
-export function buildEmailDocument(post: Post, siteUrl = ""): string {
+export function buildEmailDocument(post: Post, siteUrl = "", opts: EmailDocumentOptions = {}): string {
   const body = buildPostHtml(post, siteUrl);
   const postUrl = siteUrl ? `${siteUrl}/post/${post.slug}` : "";
   // Free-week trial CTA — converts daily readers into archive trialists. Only
@@ -83,7 +98,7 @@ export function buildEmailDocument(post: Post, siteUrl = ""): string {
     </div>`
     : "";
 
-  return `<!doctype html>
+  const document = `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -110,6 +125,16 @@ export function buildEmailDocument(post: Post, siteUrl = ""): string {
   </div>
 </body>
 </html>`;
+
+  // Open pixel + click redirects. Resend's own tracking is reported as enabled but
+  // is not applied to our sends (see lib/publish/track.ts), so we instrument the
+  // document ourselves. No-ops safely when there's no SITE_URL or signing secret.
+  if (opts.track === false) return document;
+  return instrumentEmailHtml(document, {
+    slug: post.slug,
+    siteUrl,
+    recipient: opts.recipient ?? EMAIL_MERGE_TAG,
+  });
 }
 
 export interface ResendResult {

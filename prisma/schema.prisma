@@ -282,6 +282,12 @@ model EmailEvent {
   broadcastId String?           // Resend broadcast id (present for broadcast sends)
   emailId     String?           // Resend per-email id (data.email_id)
   link        String?           // clicked URL, for email.clicked
+  slug        String?           // post slug — set by FIRST-PARTY tracking (lib/publish/track.ts),
+                                // which knows the edition at HTML-build time but not the
+                                // broadcast id (that only exists after the broadcast is created).
+                                // Resend webhook events carry broadcastId instead; the aggregator
+                                // joins the two on slug. See lib/metrics/email-events.ts.
+  source      String   @default("resend") // "resend" (webhook) | "first-party" (our pixel/redirect)
   occurredAt  DateTime          // event timestamp from the payload
   createdAt   DateTime @default(now())
   raw         Json?             // full webhook payload — insurance if Resend's broadcast
@@ -290,4 +296,5 @@ model EmailEvent {
 
   @@index([broadcastId, type])
   @@index([type, occurredAt])
+  @@index([slug, type, email])
 }
